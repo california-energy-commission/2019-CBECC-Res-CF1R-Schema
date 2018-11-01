@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+   targetNamespace="http://www.lmonte.com/besm/bld"
+   xmlns:bld="http://www.lmonte.com/besm/bld"
+   xmlns:env="http://www.lmonte.com/besm/env"
+   xmlns:lit="http://www.lmonte.com/besm/lit"
+   xmlns:hvac="http://www.lmonte.com/besm/hvac"
+   xmlns:com="http://www.lmonte.com/besm/com"
+   xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2016.1.010">
+   <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="ResCommon.xsd"/>
+   <xsd:import namespace="http://www.lmonte.com/besm/env" schemaLocation="ResEnvelope.xsd"/>
+   <xsd:import namespace="http://www.lmonte.com/besm/lit" schemaLocation="ResLighting.xsd"/>
+   <xsd:import namespace="http://www.lmonte.com/besm/hvac" schemaLocation="ResHvac.xsd"/>
+   <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
+   <xsd:simpleType name="BuildingAdditionalConditionedFloorArea">
+      <xsd:annotation>
+         <xsd:documentation>Conditioned floor area for an addition to the Building.  Units: ft2</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="BuildingAdditionalSlabArea">
+      <xsd:annotation>
+         <xsd:documentation>Floor area for a slab addition to the Building.  Units: ft2</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="BuildingDescription">
+      <xsd:annotation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Property Notes</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="ExistingConditionedFloorArea">
+      <xsd:annotation>
+         <xsd:documentation>Conditioned floor area for an addition to the Building.  Units: ft2</xsd:documentation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Existing Conditioned Floor Area</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="NewAdditionConditionedFloorArea">
+      <xsd:annotation>
+         <xsd:documentation>All conditioned floor area in an addition project.  It can be derived from all conditioned area in the Zones  Units: ft2</xsd:documentation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Total Conditioned Floor Area New Construction/Addition</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:complexType name="Building">
+      <xsd:annotation>
+         <xsd:documentation>The root element of the building description file,  Building is any structure or space covered by Section 100.0 of the Building Energy Efficiency Standards. 
+
+ASHRAE: a structure wholly or partially enclosed within exterior walls, or within exterior and party walls, and a roof, affording shelter to persons, animals, or property.  Standards: The Standards refer to any construction project as a building.  Entire Building is the term used to represent a stand alone structure and the ensemble of all enclosed spaces including the space for which a permit is sought, plus all existing conditioned and unconditioned space within the structure.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="additionTotalConditionedFloorArea" type="com:AdditionTotalConditionedFloorArea" ></xsd:element>
+         <xsd:element name="buildingAdditionalConditionedFloorArea" type="bld:BuildingAdditionalConditionedFloorArea" ></xsd:element>
+         <xsd:element name="buildingAdditionalSlabArea" type="bld:BuildingAdditionalSlabArea" ></xsd:element>
+         <xsd:element name="constructionPhase" type="com:ConstructionPhase" ></xsd:element>
+         <xsd:element name="buildingTerrain" type="com:BuildingTerrain" ></xsd:element>
+         <xsd:element name="totalConditionedFloorArea" type="com:TotalConditionedFloorArea" ></xsd:element>
+         <xsd:element name="totalConditionedVolume" type="com:TotalConditionedVolume" ></xsd:element>
+         <xsd:element name="totalGrossFloorArea" type="com:TotalGrossFloorArea" ></xsd:element>
+         <xsd:element name="totalStoryCount" type="com:TotalStoryCount" ></xsd:element>
+         <xsd:element name="totalUnconditionedFloorArea" type="com:TotalUnconditionedFloorArea" ></xsd:element>
+         <xsd:element name="buildingUniqueID_CEC" type="com:BuildingUniqueID_CEC" ></xsd:element>
+         <xsd:element name="city" type="com:City" ></xsd:element>
+         <xsd:element name="designCoolingLoad" type="com:DesignCoolingLoad" ></xsd:element>
+         <xsd:element name="fenestrationFloorRatio" type="env:FenestrationFloorRatio" ></xsd:element>
+         <xsd:element name="northAngle" type="com:NorthAngle" ></xsd:element>
+         <xsd:element name="relocatablePublicSchoolBuilding" type="com:RelocatablePublicSchoolBuilding" ></xsd:element>
+         <xsd:element name="dwellingUnitCount" type="com:DwellingUnitCount" ></xsd:element>
+         <xsd:element name="streetAddress" type="com:StreetAddress" ></xsd:element>
+         <xsd:element name="wholeHouseCoolingVentilationLimit" type="com:WholeHouseCoolingVentilationLimit" ></xsd:element>
+         <xsd:element name="yearBuilt" type="com:YearBuilt" ></xsd:element>
+         <xsd:element name="zipcode" type="dtyp:Zipcode" ></xsd:element>
+         <xsd:element name="BuildingFrontOrientation" type="bld:BuildingFrontOrientation" minOccurs="1" maxOccurs="1" ></xsd:element>
+         <xsd:element name="DwellingUnits" type="bld:DwellingUnits" ></xsd:element>
+         <xsd:element name="AddressDetailed" type="com:AddressDetailed" ></xsd:element>
+         <xsd:element name="ExternalConstructedShadingObject" type="env:ExternalConstructedShadingObject" ></xsd:element>
+         <xsd:element name="ThermalZone" type="hvac:ThermalZone" minOccurs="1" maxOccurs="unbounded" ></xsd:element>
+         <xsd:element name="ResidentialWaterHeatingSystem" type="hvac:ResidentialWaterHeatingSystem" minOccurs="1" ></xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="buildingName" type="com:BuildingName" use="required"></xsd:attribute>
+      <xsd:attribute name="complianceBuilding" type="com:ComplianceBuilding" use="required"></xsd:attribute>
+   </xsd:complexType>
+   <xsd:complexType name="BuildingFrontOrientation">
+      <xsd:sequence>
+         <xsd:element name="azimuth" type="dtyp:Azimuth" ></xsd:element>
+         <xsd:element name="cardinalOrientation" type="com:CardinalOrientation" ></xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="BuildingStory">
+      <xsd:annotation>
+         <xsd:documentation>The portion of a building included between the upper surface of a floor and the upper surface of the next floor or roof if it is the top floor..  It is measured as the vertical distance from top to top of two successive tiers of beams or finished floor surfaces.  Source: definition in CBC   
+
+ASHRAE: portion of a building that is between one finished floor level and the next higher finished floor level or the roof, provided, however, that a basement or cellar shall not be considered a story.  Standards: 2013 T24:  The number of stories is used to differentiate between low rise residential and high rise residential which uses the nonresidential standards for the most part.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="floorToCeilingHeight" type="com:FloorToCeilingHeight" ></xsd:element>
+         <xsd:element name="InteriorEnvelope" type="env:InteriorEnvelope" maxOccurs="unbounded" ></xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="improvementStatus" type="com:ImprovementStatus" use="required"></xsd:attribute>
+   </xsd:complexType>
+   <xsd:complexType name="DesignDays">
+      <xsd:annotation>
+         <xsd:documentation>  Standards: 2013 T24:  Section 140.4 - references JA2-68</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="DesignDay" type="com:DesignDay" maxOccurs="unbounded" ></xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="DwellingUnit">
+      <xsd:sequence>
+         <xsd:element name="bedroomCount" type="com:BedroomCount" ></xsd:element>
+         <xsd:element name="designCoolingLoad" type="com:DesignCoolingLoad" ></xsd:element>
+         <xsd:element name="dwellingUnitClothesWasher" type="com:DwellingUnitClothesWasher" ></xsd:element>
+         <xsd:element name="dwellingUnitConditionedFloorArea" type="com:DwellingUnitConditionedFloorArea" ></xsd:element>
+         <xsd:element name="dwellingUnitDishwasher" type="com:DwellingUnitDishwasher" ></xsd:element>
+         <xsd:element name="zoneCount" type="com:ZoneCount" ></xsd:element>
+         <xsd:element name="envelopAirLeakageRateLimit" type="env:EnvelopAirLeakageRateLimit" ></xsd:element>
+         <xsd:element name="naturalVentilationMethod" type="com:NaturalVentilationMethod" ></xsd:element>
+         <xsd:element name="BuildingStory" type="bld:BuildingStory" minOccurs="1" maxOccurs="unbounded" ></xsd:element>
+         <xsd:element name="BuildingEnvelope" type="env:BuildingEnvelope" minOccurs="1" ></xsd:element>
+         <xsd:element name="LightingSystems" type="lit:LightingSystems" ></xsd:element>
+         <xsd:element name="ResidentialSpaceConditioningSystem" type="hvac:ResidentialSpaceConditioningSystem" minOccurs="1" maxOccurs="unbounded" ></xsd:element>
+         <xsd:element name="VentilationSystem" type="hvac:VentilationSystem" minOccurs="0" ></xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="residentialDwellingUnitName" type="com:ResidentialDwellingUnitName" use="required"></xsd:attribute>
+   </xsd:complexType>
+   <xsd:complexType name="DwellingUnits">
+      <xsd:sequence>
+         <xsd:element name="DwellingUnit" type="bld:DwellingUnit" maxOccurs="unbounded" ></xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="Site">
+      <xsd:sequence>
+         <xsd:element name="naturalGasOnSite" type="com:NaturalGasOnSite" ></xsd:element>
+         <xsd:element name="siteFuelType" type="com:SiteFuelType" ></xsd:element>
+         <xsd:element name="Building" type="bld:Building" minOccurs="1" ></xsd:element>
+         <xsd:element name="DesignDays" type="bld:DesignDays" ></xsd:element>
+         <xsd:element name="AddressDetailed" type="com:AddressDetailed" ></xsd:element>
+         <xsd:element name="SiteGeographicAndClimateData" type="com:SiteGeographicAndClimateData" ></xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="projectName" type="com:ProjectName" use="required"></xsd:attribute>
+   </xsd:complexType>
+   <xsd:element name="building" type="bld:Building">
+   </xsd:element>
+</xsd:schema>
