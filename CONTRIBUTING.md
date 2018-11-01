@@ -1,5 +1,7 @@
 # CONTRIBUTING
 
+Discussion about code base improvements happens in GitHub issues and on pull requests.
+
 ## Contributor Workflow
 
 To contribute a patch, the workflow is as follows:
