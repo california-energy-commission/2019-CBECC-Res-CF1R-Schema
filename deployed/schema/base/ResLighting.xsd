@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:com="http://www.lmonte.com/besm/com"
-            xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
-            xmlns:lit="http://www.lmonte.com/besm/lit"
-            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            attributeFormDefault="unqualified"
-            elementFormDefault="qualified"
-            targetNamespace="http://www.lmonte.com/besm/lit"
-            version="2016.1.010">
-   <xsd:import namespace="http://www.lmonte.com/besm/com"
-               schemaLocation="ResCommon.xsd"/>
-   <xsd:import namespace="http://www.lmonte.com/besm/dtyp"
-               schemaLocation="DataTypes.xsd"/>
-   <xsd:complexType name="InteriorLightingSystem">
-      <xsd:annotation>
-         <xsd:documentation>Container for building descriptors provided for each lighting system in a space. Typically a space will have only one lighting system, but in some cases, it could have two or more . Examples include a general and task lighting system in offices or hotel multi-purpose rooms that have lighting systems for different functions.  Standards: 2013 Draft ACM Sec 5.4</xsd:documentation>
-      </xsd:annotation>
-      <xsd:sequence>
-         <xsd:element name="luminaireMountingHeight" type="lit:LuminaireMountingHeight"/>
-         <xsd:element name="Luminaires" type="lit:Luminaires"/>
-      </xsd:sequence>
-      <xsd:attribute name="interiorLightingSystemResidentialSpaceName"
-                     type="com:InteriorLightingSystemResidentialSpaceName"
-                     use="required"/>
-   </xsd:complexType>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.lmonte.com/besm/lit" version="2019.1.000" xmlns:com="http://www.lmonte.com/besm/com" xmlns:d="http://www.lmonte.com/besm/d" xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:lit="http://www.lmonte.com/besm/lit" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="ResCommon.xsd"/>
+   <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
    <xsd:simpleType name="InteriorLightingSystemName">
       <xsd:annotation>
          <xsd:documentation>Unique identification name for an InteriorLightingSystem instance</xsd:documentation>
@@ -31,7 +10,7 @@
    </xsd:simpleType>
    <xsd:simpleType name="InteriorLightingSystemPower">
       <xsd:annotation>
-         <xsd:documentation>  Units: W</xsd:documentation>
+         <xsd:documentation>Units: W</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
    </xsd:simpleType>
@@ -46,37 +25,37 @@
    </xsd:simpleType>
    <xsd:simpleType name="KitchenLuminaireHighEfficacySameTypeTotalPower">
       <xsd:annotation>
-         <xsd:documentation>  Units: W</xsd:documentation>
+         <xsd:documentation>Units: W</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
    </xsd:simpleType>
    <xsd:simpleType name="KitchenLuminaireLowEfficacySameTypeTotalPower">
       <xsd:annotation>
-         <xsd:documentation>  Units: W</xsd:documentation>
+         <xsd:documentation>Units: W</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
    </xsd:simpleType>
    <xsd:simpleType name="KitchenLuminairesHighEfficacyAllTypesTotalPower">
       <xsd:annotation>
-         <xsd:documentation>  Units: W</xsd:documentation>
+         <xsd:documentation>Units: W</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
    </xsd:simpleType>
    <xsd:simpleType name="KitchenLuminairesLowEfficacyAdditionalPowerAllowance">
       <xsd:annotation>
-         <xsd:documentation>  Units: W</xsd:documentation>
+         <xsd:documentation>Units: W</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
    </xsd:simpleType>
    <xsd:simpleType name="KitchenLuminairesLowEfficacyAllTypesTotalPower">
       <xsd:annotation>
-         <xsd:documentation>  Units: W</xsd:documentation>
+         <xsd:documentation>Units: W</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
    </xsd:simpleType>
    <xsd:simpleType name="KitchenLuminairesTotalLowEfficacyPowerAllowed">
       <xsd:annotation>
-         <xsd:documentation>  Units: W</xsd:documentation>
+         <xsd:documentation>Units: W</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
    </xsd:simpleType>
@@ -121,31 +100,13 @@
    </xsd:simpleType>
    <xsd:simpleType name="LightingPowerReductionPercent">
       <xsd:annotation>
-         <xsd:documentation>  Units: none</xsd:documentation>
+         <xsd:documentation>Units: none</xsd:documentation>
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Percent Lighting Power Reduction for Space</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
    </xsd:simpleType>
-   <xsd:complexType name="LightingSystems">
-      <xsd:sequence>
-         <xsd:element name="InteriorLightingSystem"
-                      type="lit:InteriorLightingSystem"
-                      maxOccurs="unbounded"/>
-      </xsd:sequence>
-   </xsd:complexType>
-   <xsd:complexType name="Luminaire">
-      <xsd:annotation>
-         <xsd:documentation>Container for details of a luminaire type.  Standards: 2013 Draft ACM Sec 5.4</xsd:documentation>
-      </xsd:annotation>
-      <xsd:sequence>
-         <xsd:element name="luminaireDescription" type="lit:LuminaireDescription"/>
-         <xsd:element name="luminaireMountingHeight" type="lit:LuminaireMountingHeight"/>
-         <xsd:element name="luminairePower" type="lit:LuminairePower"/>
-      </xsd:sequence>
-      <xsd:attribute name="luminaireName" type="lit:LuminaireName" use="required"/>
-   </xsd:complexType>
    <xsd:simpleType name="LuminaireCategory">
       <xsd:annotation>
          <xsd:documentation>Enumeration type for determining luminaire heat gain distribution</xsd:documentation>
@@ -188,16 +149,8 @@
    </xsd:simpleType>
    <xsd:simpleType name="LuminairePower">
       <xsd:annotation>
-         <xsd:documentation>  Units: W</xsd:documentation>
+         <xsd:documentation>Units: W</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
    </xsd:simpleType>
-   <xsd:complexType name="Luminaires">
-      <xsd:annotation>
-         <xsd:documentation>Library container of all Luminaires available.  Standards: 2013 Draft ACM Sec 5.4</xsd:documentation>
-      </xsd:annotation>
-      <xsd:sequence>
-         <xsd:element name="Luminaire" type="lit:Luminaire" maxOccurs="unbounded"/>
-      </xsd:sequence>
-   </xsd:complexType>
 </xsd:schema>
