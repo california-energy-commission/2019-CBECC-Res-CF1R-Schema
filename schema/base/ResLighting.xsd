@@ -5,7 +5,8 @@
    xmlns:com="http://www.lmonte.com/besm/com"
    xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2016.1.010">
+   xmlns:d="http://www.lmonte.com/besm/d"
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2016.1.000">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
    <xsd:simpleType name="InteriorLightingSystemName">
@@ -174,38 +175,4 @@
       <xsd:restriction base="dtyp:DecimalNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
-   <xsd:complexType name="InteriorLightingSystem">
-      <xsd:annotation>
-         <xsd:documentation>Container for building descriptors provided for each lighting system in a space. Typically a space will have only one lighting system, but in some cases, it could have two or more . Examples include a general and task lighting system in offices or hotel multi-purpose rooms that have lighting systems for different functions.  Standards: 2013 Draft ACM Sec 5.4</xsd:documentation>
-      </xsd:annotation>
-      <xsd:sequence>
-         <xsd:element name="luminaireMountingHeight" type="lit:LuminaireMountingHeight" ></xsd:element>
-         <xsd:element name="Luminaires" type="lit:Luminaires" ></xsd:element>
-      </xsd:sequence>
-      <xsd:attribute name="interiorLightingSystemResidentialSpaceName" type="com:InteriorLightingSystemResidentialSpaceName" use="required"></xsd:attribute>
-   </xsd:complexType>
-   <xsd:complexType name="LightingSystems">
-      <xsd:sequence>
-         <xsd:element name="InteriorLightingSystem" type="lit:InteriorLightingSystem" maxOccurs="unbounded" ></xsd:element>
-      </xsd:sequence>
-   </xsd:complexType>
-   <xsd:complexType name="Luminaire">
-      <xsd:annotation>
-         <xsd:documentation>Container for details of a luminaire type.  Standards: 2013 Draft ACM Sec 5.4</xsd:documentation>
-      </xsd:annotation>
-      <xsd:sequence>
-         <xsd:element name="luminaireDescription" type="lit:LuminaireDescription" ></xsd:element>
-         <xsd:element name="luminaireMountingHeight" type="lit:LuminaireMountingHeight" ></xsd:element>
-         <xsd:element name="luminairePower" type="lit:LuminairePower" ></xsd:element>
-      </xsd:sequence>
-      <xsd:attribute name="luminaireName" type="lit:LuminaireName" use="required"></xsd:attribute>
-   </xsd:complexType>
-   <xsd:complexType name="Luminaires">
-      <xsd:annotation>
-         <xsd:documentation>Library container of all Luminaires available.  Standards: 2013 Draft ACM Sec 5.4</xsd:documentation>
-      </xsd:annotation>
-      <xsd:sequence>
-         <xsd:element name="Luminaire" type="lit:Luminaire" maxOccurs="unbounded" ></xsd:element>
-      </xsd:sequence>
-   </xsd:complexType>
 </xsd:schema>

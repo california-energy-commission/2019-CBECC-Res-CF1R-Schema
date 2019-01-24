@@ -12,7 +12,7 @@
    xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
    xmlns:altova="http://www.altova.com/xml-schema-extensions"
-   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2016.1.010">
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.000">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="../base/ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/bld" schemaLocation="../base/ResBuilding.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/env" schemaLocation="../base/ResEnvelope.xsd"/>
@@ -20,7 +20,7 @@
    <xsd:import namespace="http://www.lmonte.com/besm/hvac" schemaLocation="../base/ResHvac.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/comp" schemaLocation="../base/ResCompliance.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="../base/DataTypes.xsd"/>
-   <xsd:element name="ComplianceDocumentPackage">
+   <xsd:element name="ComplianceDocumentPackage" id="Sign1">
       <xsd:complexType>
          <xsd:sequence>
             <xsd:element name="DocID" minOccurs="0">
@@ -42,7 +42,10 @@
                   </xsd:sequence>
                </xsd:complexType>
             </xsd:element>
-            <xsd:element name="Report" type="xsd:base64Binary"/>
+            <xsd:element name="Report" type="xsd:base64Binary" id="Sign2"/>
+            <xsd:element name="Report2" type="xsd:base64Binary" id="Sign3"/>
+            <xsd:element name="Input" type="xsd:base64Binary" id="Sign4"/>
+            <xsd:element name="ProposedModel" type="xsd:base64Binary" id="Sign5"/>
          </xsd:sequence>
          <xsd:attribute name="revision" use="required" type="xsd:string" fixed="rev 20181007"/>
          <xsd:attribute name="doc" use="required" type="comp:ComplianceDocumentTag" fixed="CF1RPRF01E"/>

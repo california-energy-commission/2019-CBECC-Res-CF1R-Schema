@@ -6,7 +6,8 @@
    xmlns:com="http://www.lmonte.com/besm/com"
    xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2016.1.010">
+   xmlns:d="http://www.lmonte.com/besm/d"
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2016.1.000">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/bld" schemaLocation="ResBuilding.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
@@ -416,19 +417,27 @@
    <xsd:simpleType name="BuildingFeatureHERS">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="CentralFanIAQVentilationHERS">Central Fan IAQ ventilation</dtyp:displayterm>
             <dtyp:displayterm value="EnvelopeAirLeakageHERS">Building Envelope Air Leakage</dtyp:displayterm>
             <dtyp:displayterm value="IAQ_MechanicalVentilationHERS">IAQ mechanical ventilation</dtyp:displayterm>
             <dtyp:displayterm value="InsulationSprayFoamHighRvalueHERS">High R-value Spray Foam Insulation</dtyp:displayterm>
             <dtyp:displayterm value="None">-- None --</dtyp:displayterm>
             <dtyp:displayterm value="QualityInsulationInstallationHERS">High Quality Insulation Installation (QII)</dtyp:displayterm>
+            <dtyp:displayterm value="VerifiedExistingConditionsHERS">Verified Existing Conditions</dtyp:displayterm>
+            <dtyp:displayterm value="WholeHouseFanHERS">Whole House Fan CFM</dtyp:displayterm>
+            <dtyp:displayterm value="ZonalSystemBypassDuctConditionsHERS">Bypass duct conditions in zonal system(s)</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="CentralFanIAQVentilationHERS"/>
          <xsd:enumeration value="EnvelopeAirLeakageHERS"/>
          <xsd:enumeration value="IAQ_MechanicalVentilationHERS"/>
          <xsd:enumeration value="InsulationSprayFoamHighRvalueHERS"/>
          <xsd:enumeration value="None"/>
          <xsd:enumeration value="QualityInsulationInstallationHERS"/>
+         <xsd:enumeration value="VerifiedExistingConditionsHERS"/>
+         <xsd:enumeration value="WholeHouseFanHERS"/>
+         <xsd:enumeration value="ZonalSystemBypassDuctConditionsHERS"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="BuildingFeatureHERS_Data">
@@ -909,6 +918,8 @@
             <dtyp:displayterm value="CF2R-PLB-21-H">CF2R-PLB-21-H</dtyp:displayterm>
             <dtyp:displayterm value="CF2R-PLB-22-H">CF2R-PLB-22-H</dtyp:displayterm>
             <dtyp:displayterm value="CF2R-SPV-01-E">CF2R-SPV-01-E</dtyp:displayterm>
+            <dtyp:displayterm value="CF2R-SRA-01-E">CF2R-SRA-01-E</dtyp:displayterm>
+            <dtyp:displayterm value="CF2R-SRA-02-E">CF2R-SRA-02-E</dtyp:displayterm>
             <dtyp:displayterm value="CF2R-STH-01-E">CF2R-STH-01-E</dtyp:displayterm>
             <dtyp:displayterm value="CF3R-ENV-20-H">CF3R-ENV-20-H</dtyp:displayterm>
             <dtyp:displayterm value="CF3R-ENV-21-H">CF3R-ENV-21-H</dtyp:displayterm>
@@ -985,6 +996,8 @@
          <xsd:enumeration value="CF2R-PLB-21-H"/>
          <xsd:enumeration value="CF2R-PLB-22-H"/>
          <xsd:enumeration value="CF2R-SPV-01-E"/>
+         <xsd:enumeration value="CF2R-SRA-01-E"/>
+         <xsd:enumeration value="CF2R-SRA-02-E"/>
          <xsd:enumeration value="CF2R-STH-01-E"/>
          <xsd:enumeration value="CF3R-ENV-20-H"/>
          <xsd:enumeration value="CF3R-ENV-21-H"/>
@@ -1214,6 +1227,8 @@
             <dtyp:displayterm value="CF2RSPV01aE">CF2RSPV01aE</dtyp:displayterm>
             <dtyp:displayterm value="CF2RSPV01bE">CF2RSPV01bE</dtyp:displayterm>
             <dtyp:displayterm value="CF2RSPV01cE">CF2RSPV01cE</dtyp:displayterm>
+            <dtyp:displayterm value="CF2R-SRA-01-E">CF2R-SRA-01-E</dtyp:displayterm>
+            <dtyp:displayterm value="CF2R-SRA-02-E">CF2R-SRA-02-E</dtyp:displayterm>
             <dtyp:displayterm value="CF2RSTH01E">CF2RSTH01E</dtyp:displayterm>
             <dtyp:displayterm value="CF3RENV20aH">CF3RENV20aH</dtyp:displayterm>
             <dtyp:displayterm value="CF3RENV20bH">CF3RENV20bH</dtyp:displayterm>
@@ -1356,6 +1371,8 @@
          <xsd:enumeration value="CF2RSPV01aE"/>
          <xsd:enumeration value="CF2RSPV01bE"/>
          <xsd:enumeration value="CF2RSPV01cE"/>
+         <xsd:enumeration value="CF2R-SRA-01-E"/>
+         <xsd:enumeration value="CF2R-SRA-02-E"/>
          <xsd:enumeration value="CF2RSTH01E"/>
          <xsd:enumeration value="CF3RENV20aH"/>
          <xsd:enumeration value="CF3RENV20bH"/>
@@ -1623,6 +1640,7 @@
             <dtyp:displayterm value="MCH27d Intermittent Ventilation Airflow - Total Ventilation Rate Method">MCH27d Intermittent Ventilation Airflow - Total Ventilation Rate Method</dtyp:displayterm>
             <dtyp:displayterm value="MCH27e Mechanical Ventilation - Non-dwelling Unit">MCH27e Mechanical Ventilation - Non-dwelling Unit</dtyp:displayterm>
             <dtyp:displayterm value="NotApplicable">N/A</dtyp:displayterm>
+            <dtyp:displayterm value="PLB22b HERS Verified Single Dwelling Unit Hot Water System Distribution Using NEEA Certified Water Heaters">PLB22b HERS Verified Single Dwelling Unit Hot Water System Distribution Using NEEA Certified Water Heaters</dtyp:displayterm>
             <dtyp:displayterm value="SPV01a PV System Compliance Credit">SPV01a PV System Compliance Credit</dtyp:displayterm>
             <dtyp:displayterm value="SPV01b Exceptions to Solar Ready Area requirements">SPV01b Exceptions to Solar Ready Area requirements</dtyp:displayterm>
             <dtyp:displayterm value="SPV01c PV Compliance Credits and Exceptions to SRA requirements">SPV01c PV Compliance Credits and Exceptions to SRA requirements</dtyp:displayterm>
@@ -1670,6 +1688,7 @@
          <xsd:enumeration value="MCH27d Intermittent Ventilation Airflow - Total Ventilation Rate Method"/>
          <xsd:enumeration value="MCH27e Mechanical Ventilation - Non-dwelling Unit"/>
          <xsd:enumeration value="NotApplicable"/>
+         <xsd:enumeration value="PLB22b HERS Verified Single Dwelling Unit Hot Water System Distribution Using NEEA Certified Water Heaters"/>
          <xsd:enumeration value="SPV01a PV System Compliance Credit"/>
          <xsd:enumeration value="SPV01b Exceptions to Solar Ready Area requirements"/>
          <xsd:enumeration value="SPV01c PV Compliance Credits and Exceptions to SRA requirements"/>
@@ -2053,6 +2072,7 @@
    <xsd:simpleType name="CoolingSystemFeatureHERS">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="AlteredRefrigerantCharge">Refrigerant Charge verification required if a refrigerant containing component is altered</dtyp:displayterm>
             <dtyp:displayterm value="FanEfficacy">Fan Efficacy Watts/CFM</dtyp:displayterm>
             <dtyp:displayterm value="MinimumAirflow">Minimum Airflow</dtyp:displayterm>
             <dtyp:displayterm value="None">-- None --</dtyp:displayterm>
@@ -2062,6 +2082,7 @@
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="AlteredRefrigerantCharge"/>
          <xsd:enumeration value="FanEfficacy"/>
          <xsd:enumeration value="MinimumAirflow"/>
          <xsd:enumeration value="None"/>
@@ -2594,13 +2615,27 @@
    <xsd:simpleType name="DomesticHotWaterFeatureHERS">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
-            <dtyp:displayterm value="MultifamilyRecirculationTemperatureModulation">Multi-Family Recirculation with Temperature Modulation</dtyp:displayterm>
+            <dtyp:displayterm value="AllPipesInsulation">Pipe Insulation, All Lines</dtyp:displayterm>
+            <dtyp:displayterm value="CentralWaterHeatingRecirculatingDualLoop">Central water heating recirculating dual loop design</dtyp:displayterm>
+            <dtyp:displayterm value="CompactDesign">Compact Design</dtyp:displayterm>
             <dtyp:displayterm value="None">-- None --</dtyp:displayterm>
+            <dtyp:displayterm value="ParallelPiping">Parallel Piping</dtyp:displayterm>
+            <dtyp:displayterm value="PointOfUse">Point of Use</dtyp:displayterm>
+            <dtyp:displayterm value="RecirculationDemandControlOccupancyMotion">Recirculation, Demand Control Occupancy/Motion</dtyp:displayterm>
+            <dtyp:displayterm value="RecirculationDemandControlPushButton">Recirculation, Demand Control Push Button</dtyp:displayterm>
+            <dtyp:displayterm value="ShowerDrainWaterHeatRecovery">Shower drain water heat recovery required</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
-         <xsd:enumeration value="MultifamilyRecirculationTemperatureModulation"/>
+         <xsd:enumeration value="AllPipesInsulation"/>
+         <xsd:enumeration value="CentralWaterHeatingRecirculatingDualLoop"/>
+         <xsd:enumeration value="CompactDesign"/>
          <xsd:enumeration value="None"/>
+         <xsd:enumeration value="ParallelPiping"/>
+         <xsd:enumeration value="PointOfUse"/>
+         <xsd:enumeration value="RecirculationDemandControlOccupancyMotion"/>
+         <xsd:enumeration value="RecirculationDemandControlPushButton"/>
+         <xsd:enumeration value="ShowerDrainWaterHeatRecovery"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="DomesticHotWaterFeatureHERS_Data">
@@ -3879,14 +3914,30 @@
    <xsd:simpleType name="HvacDistributionFeatureHERS">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="AlteredDuctSealing">Duct Sealing required if a duct system component, plenum, or air handling unit is altered</dtyp:displayterm>
+            <dtyp:displayterm value="BuriedDucts">Duct design specifies Buried Ducts</dtyp:displayterm>
+            <dtyp:displayterm value="DeeplyBuriedDucts">Duct design specifies Deeply Buried Ducts</dtyp:displayterm>
             <dtyp:displayterm value="DuctAllInConditionedSpace">Ducts located entirely in conditioned space</dtyp:displayterm>
+            <dtyp:displayterm value="DuctAllInConditionedSpaceExcept12">Ducts located within the conditioned space (except  [d:lt/] 12 lineal ft)</dtyp:displayterm>
+            <dtyp:displayterm value="DuctDesignReturn">Duct Design-Return</dtyp:displayterm>
+            <dtyp:displayterm value="DuctDesignSupply">Duct Design-Supply</dtyp:displayterm>
             <dtyp:displayterm value="DuctSealing">Duct Sealing</dtyp:displayterm>
+            <dtyp:displayterm value="LowLeakageAirHandlingUnit">Low-leakage Air Handling Unit</dtyp:displayterm>
+            <dtyp:displayterm value="LowLeakageDuctsInConditionedSpace">Verified low-leakage ducts in conditioned space must meet maximum 25 cfm leakage to outside (RA3.1.4.3.8)</dtyp:displayterm>
             <dtyp:displayterm value="None">-- None --</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="AlteredDuctSealing"/>
+         <xsd:enumeration value="BuriedDucts"/>
+         <xsd:enumeration value="DeeplyBuriedDucts"/>
          <xsd:enumeration value="DuctAllInConditionedSpace"/>
+         <xsd:enumeration value="DuctAllInConditionedSpaceExcept12"/>
+         <xsd:enumeration value="DuctDesignReturn"/>
+         <xsd:enumeration value="DuctDesignSupply"/>
          <xsd:enumeration value="DuctSealing"/>
+         <xsd:enumeration value="LowLeakageAirHandlingUnit"/>
+         <xsd:enumeration value="LowLeakageDuctsInConditionedSpace"/>
          <xsd:enumeration value="None"/>
       </xsd:restriction>
    </xsd:simpleType>
@@ -6630,52 +6681,90 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
       <xsd:annotation>
          <xsd:documentation>This is a list of special features used in a residential building that are non standard</xsd:documentation>
          <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="AdvancedWallFraming">Advanced wall framing included (see opaque surface constructions)</dtyp:displayterm>
+            <dtyp:displayterm value="AtticReliefVentFreeArea">Attic Relief Vent Free Area</dtyp:displayterm>
             <dtyp:displayterm value="BatterySystem">Battery System</dtyp:displayterm>
-            <dtyp:displayterm value="CathedralCeiling">Cathedral ceiling</dtyp:displayterm>
+            <dtyp:displayterm value="CentralParallelPiping">Central parallel piping</dtyp:displayterm>
             <dtyp:displayterm value="CoolRoofInstalled">Cool roof</dtyp:displayterm>
+            <dtyp:displayterm value="DuctHighInsulation">Ducts with high level of insulation</dtyp:displayterm>
             <dtyp:displayterm value="DuctsInCrawlSpace">Ducts in crawl space</dtyp:displayterm>
             <dtyp:displayterm value="DuctsLessThan40ft">New ductwork added is less than 40 ft. in length</dtyp:displayterm>
             <dtyp:displayterm value="DuctsNonstandardLocation">Non-standard duct location (any location other than attic)</dtyp:displayterm>
             <dtyp:displayterm value="ExposedSlabFloor">Exposed slab floor in conditioned zone</dtyp:displayterm>
+            <dtyp:displayterm value="ExteriorWindowShades">Exterior window shades</dtyp:displayterm>
+            <dtyp:displayterm value="FixedCFICoolVent">Has Fixed Central Fan Ventilation Cooling Systems (CFFCS)</dtyp:displayterm>
             <dtyp:displayterm value="HeatedSlab">Heated slab</dtyp:displayterm>
             <dtyp:displayterm value="HeatPumpWaterHeaterNEEA">NEEA rated heat pump water heater or equivalent must be installed</dtyp:displayterm>
+            <dtyp:displayterm value="InsulationAboveRoofDeck">Insulation above roof deck</dtyp:displayterm>
             <dtyp:displayterm value="InsulationBelowRoofDeck">Insulation below roof deck</dtyp:displayterm>
             <dtyp:displayterm value="InsulationCeiling">Ceiling has high level of insulation</dtyp:displayterm>
+            <dtyp:displayterm value="MetalFramedAssembly">Metal-framed assembly</dtyp:displayterm>
             <dtyp:displayterm value="NoCoolingSystem">No cooling system included</dtyp:displayterm>
-            <dtyp:displayterm value="NonDefaultValuesUsed">Non-default values used</dtyp:displayterm>
-            <dtyp:displayterm value="NonstandardExteriorWall">Non-standard exterior wall</dtyp:displayterm>
+            <dtyp:displayterm value="NoLoopsOrRecircPumpMF">Multi-family: No loops or recirc pump</dtyp:displayterm>
+            <dtyp:displayterm value="NonstandardFloor">Floor has high level of insulation</dtyp:displayterm>
+            <dtyp:displayterm value="NonstandardRoofReflect">Non-standard roof reflectance</dtyp:displayterm>
             <dtyp:displayterm value="NoSpecialFeatures">NO SPECIAL FEATURES REQUIRED</dtyp:displayterm>
+            <dtyp:displayterm value="PipeInsulationAllLines">Pipe insulation, all lines</dtyp:displayterm>
+            <dtyp:displayterm value="PointOfUseDHW">Point of use</dtyp:displayterm>
             <dtyp:displayterm value="PV2kWSystem">PV System: 2.0 kW</dtyp:displayterm>
-            <dtyp:displayterm value="RadiantBarriersInstalled">Radiant barriers installed</dtyp:displayterm>
+            <dtyp:displayterm value="RaisedHeelTruss">Raised heel truss</dtyp:displayterm>
             <dtyp:displayterm value="RecirculationDemandControlMF">Multi-family: Recirculation demand control</dtyp:displayterm>
+            <dtyp:displayterm value="RecirculationDemandControlOccup">Recirculation with demand control, occupancy/motion sensor</dtyp:displayterm>
+            <dtyp:displayterm value="RecirculationDemandControlPushBtn">Recirculation with demand control, push button</dtyp:displayterm>
+            <dtyp:displayterm value="RecirculationNoControlMF">Multi-family: Recirculating with no control (continuous pumping)</dtyp:displayterm>
+            <dtyp:displayterm value="RecirculationNonDemandControl">Recirculation with non-demand control</dtyp:displayterm>
+            <dtyp:displayterm value="RecirculationTempModMonitoringMF">Multi-family: Recirculating with temperature modulation and monitoring</dtyp:displayterm>
+            <dtyp:displayterm value="RecirculationTempModulationMF">Multi-family: Recirculating with temperature modulation</dtyp:displayterm>
+            <dtyp:displayterm value="SIPAssembly">Structurally insulated panel (SIP) assembly</dtyp:displayterm>
             <dtyp:displayterm value="SlabEdgeInsulation">Slab Edge Insulation</dtyp:displayterm>
             <dtyp:displayterm value="SolarWaterHeatingCreditMF">Solar water heating credit, Multi-family buildng special feature and additional documentation</dtyp:displayterm>
+            <dtyp:displayterm value="SolarWaterHeatingCreditSF">Solar water heating credit, single family building Special feature and additional documentation</dtyp:displayterm>
+            <dtyp:displayterm value="VariableCFICoolVent">Has Variable Central Fan Ventilation Cooling Systems (CFVCS)</dtyp:displayterm>
             <dtyp:displayterm value="WholeHouseFan">Whole house fan</dtyp:displayterm>
             <dtyp:displayterm value="WindowOverhangsFins">Window overhangs and/or fins</dtyp:displayterm>
             <dtyp:displayterm value="ZonalHeatingControls">Zonal heating controls</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="AdvancedWallFraming"/>
+         <xsd:enumeration value="AtticReliefVentFreeArea"/>
          <xsd:enumeration value="BatterySystem"/>
-         <xsd:enumeration value="CathedralCeiling"/>
+         <xsd:enumeration value="CentralParallelPiping"/>
          <xsd:enumeration value="CoolRoofInstalled"/>
+         <xsd:enumeration value="DuctHighInsulation"/>
          <xsd:enumeration value="DuctsInCrawlSpace"/>
          <xsd:enumeration value="DuctsLessThan40ft"/>
          <xsd:enumeration value="DuctsNonstandardLocation"/>
          <xsd:enumeration value="ExposedSlabFloor"/>
+         <xsd:enumeration value="ExteriorWindowShades"/>
+         <xsd:enumeration value="FixedCFICoolVent"/>
          <xsd:enumeration value="HeatedSlab"/>
          <xsd:enumeration value="HeatPumpWaterHeaterNEEA"/>
+         <xsd:enumeration value="InsulationAboveRoofDeck"/>
          <xsd:enumeration value="InsulationBelowRoofDeck"/>
          <xsd:enumeration value="InsulationCeiling"/>
+         <xsd:enumeration value="MetalFramedAssembly"/>
          <xsd:enumeration value="NoCoolingSystem"/>
-         <xsd:enumeration value="NonDefaultValuesUsed"/>
-         <xsd:enumeration value="NonstandardExteriorWall"/>
+         <xsd:enumeration value="NoLoopsOrRecircPumpMF"/>
+         <xsd:enumeration value="NonstandardFloor"/>
+         <xsd:enumeration value="NonstandardRoofReflect"/>
          <xsd:enumeration value="NoSpecialFeatures"/>
+         <xsd:enumeration value="PipeInsulationAllLines"/>
+         <xsd:enumeration value="PointOfUseDHW"/>
          <xsd:enumeration value="PV2kWSystem"/>
-         <xsd:enumeration value="RadiantBarriersInstalled"/>
+         <xsd:enumeration value="RaisedHeelTruss"/>
          <xsd:enumeration value="RecirculationDemandControlMF"/>
+         <xsd:enumeration value="RecirculationDemandControlOccup"/>
+         <xsd:enumeration value="RecirculationDemandControlPushBtn"/>
+         <xsd:enumeration value="RecirculationNoControlMF"/>
+         <xsd:enumeration value="RecirculationNonDemandControl"/>
+         <xsd:enumeration value="RecirculationTempModMonitoringMF"/>
+         <xsd:enumeration value="RecirculationTempModulationMF"/>
+         <xsd:enumeration value="SIPAssembly"/>
          <xsd:enumeration value="SlabEdgeInsulation"/>
          <xsd:enumeration value="SolarWaterHeatingCreditMF"/>
+         <xsd:enumeration value="SolarWaterHeatingCreditSF"/>
+         <xsd:enumeration value="VariableCFICoolVent"/>
          <xsd:enumeration value="WholeHouseFan"/>
          <xsd:enumeration value="WindowOverhangsFins"/>
          <xsd:enumeration value="ZonalHeatingControls"/>

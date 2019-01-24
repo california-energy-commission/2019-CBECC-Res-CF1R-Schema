@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.lmonte.com/besm/dtyp" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2016.1.005">
+<!-- edited with XMLSpy v2015 sp2 (http://www.altova.com) by Diane Pepetone (L'Monte Information Services) -->
+<xsd:schema xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.lmonte.com/besm/dtyp" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.000" xmlns:d="http://www.lmonte.com/besm/d">
 	<xsd:annotation>
 		<xsd:appinfo>
 			<copyright>Copyright 2014, L'Monte Information Services, Inc. This software is distributed under the terms of the GNU General Public License version 3 (the LICENSE).
@@ -78,6 +79,14 @@
 		</xsd:annotation>
 		<xsd:restriction base="xsd:decimal">
 			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Decimal10Places">
+		<xsd:annotation>
+			<xsd:documentation>Value of decimal type with 10 decimal places.  Units: see derived type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:decimal">
+			<xsd:fractionDigits value="10"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="Decimal10PlacesNonnegative">
