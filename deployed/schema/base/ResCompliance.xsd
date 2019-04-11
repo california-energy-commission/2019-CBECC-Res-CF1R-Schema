@@ -928,6 +928,15 @@
       </xsd:annotation>
       <xsd:restriction base="xsd:boolean"/>
    </xsd:simpleType>
+   <xsd:simpleType name="CentralDHW_DistributionVerificationRequired">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Required</dtyp:displayterm>
+            <dtyp:displayterm value="false">Not Required</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean"/>
+   </xsd:simpleType>
    <xsd:simpleType name="CentralFanVentilationCooling">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
@@ -981,6 +990,18 @@
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:Decimal4PlacesNonnegative"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="CompactDistributionHERS_VerificationName">
+      <xsd:restriction base="xsd:string"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="CompactDistributionVerificationRequired">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Required</dtyp:displayterm>
+            <dtyp:displayterm value="false">Not Required</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean"/>
    </xsd:simpleType>
    <xsd:simpleType name="Company">
       <xsd:annotation>
@@ -1834,17 +1855,17 @@ Document Data</dtyp:displayterm>
    <xsd:simpleType name="ComplianceDocumentVariant">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
-            <dtyp:displayterm value="A">a</dtyp:displayterm>
-            <dtyp:displayterm value="B">b</dtyp:displayterm>
-            <dtyp:displayterm value="C">c</dtyp:displayterm>
-            <dtyp:displayterm value="D">d</dtyp:displayterm>
-            <dtyp:displayterm value="E">e</dtyp:displayterm>
-            <dtyp:displayterm value="F">f</dtyp:displayterm>
-            <dtyp:displayterm value="G">g</dtyp:displayterm>
-            <dtyp:displayterm value="H">h</dtyp:displayterm>
-            <dtyp:displayterm value="I">i</dtyp:displayterm>
-            <dtyp:displayterm value="J">j</dtyp:displayterm>
-            <dtyp:displayterm value="K">k</dtyp:displayterm>
+            <dtyp:displayterm value="a">a</dtyp:displayterm>
+            <dtyp:displayterm value="b">b</dtyp:displayterm>
+            <dtyp:displayterm value="c">c</dtyp:displayterm>
+            <dtyp:displayterm value="d">d</dtyp:displayterm>
+            <dtyp:displayterm value="e">e</dtyp:displayterm>
+            <dtyp:displayterm value="f">f</dtyp:displayterm>
+            <dtyp:displayterm value="g">g</dtyp:displayterm>
+            <dtyp:displayterm value="h">h</dtyp:displayterm>
+            <dtyp:displayterm value="i">i</dtyp:displayterm>
+            <dtyp:displayterm value="j">j</dtyp:displayterm>
+            <dtyp:displayterm value="k">k</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstantLowerCaseLetter">
@@ -2455,6 +2476,15 @@ Document Data</dtyp:displayterm>
          <xsd:enumeration value="UnequalFlowWaterHeater"/>
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="DWHR_DrainCount">
+      <xsd:annotation>
+         <xsd:documentation>Units: none</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:IntegerNonnegative"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="DWHR_HERS_VerificationName">
+      <xsd:restriction base="xsd:string"/>
+   </xsd:simpleType>
    <xsd:simpleType name="DWHR_InstallAngle">
       <xsd:annotation>
          <xsd:documentation>Units: none</xsd:documentation>
@@ -2480,6 +2510,14 @@ Document Data</dtyp:displayterm>
       </xsd:annotation>
       <xsd:restriction base="dtyp:String50Char"/>
    </xsd:simpleType>
+   <xsd:simpleType name="DWHR_Name">
+      <xsd:annotation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>DWHR Name</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:String50Char"/>
+   </xsd:simpleType>
    <xsd:simpleType name="DWHR_PercentShowerServed">
       <xsd:annotation>
          <xsd:documentation>Units: none</xsd:documentation>
@@ -2497,6 +2535,15 @@ Document Data</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="DWHR_VerificationRequired">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Required</dtyp:displayterm>
+            <dtyp:displayterm value="false">Not Required</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean"/>
    </xsd:simpleType>
    <xsd:simpleType name="DataRegistryProvider">
       <xsd:annotation>
@@ -4336,7 +4383,7 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
    <xsd:simpleType name="HeatingSystemFeatureHERS">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
-            <dtyp:displayterm value="HeatPumpCapacity">Verified Heat Pump Capacity</dtyp:displayterm>
+            <dtyp:displayterm value="HeatPumpCapacity">Verified Heat Pump Rated Heating</dtyp:displayterm>
             <dtyp:displayterm value="HeatPumpHSPF">Verified Heat Pump HSPF</dtyp:displayterm>
             <dtyp:displayterm value="None">-- None --</dtyp:displayterm>
          </xsd:appinfo>
@@ -5973,6 +6020,15 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
    <xsd:simpleType name="PackageUnitSerialNumber">
       <xsd:restriction base="dtyp:String50Char"/>
    </xsd:simpleType>
+   <xsd:simpleType name="ParallelPipingVerificationRequired">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Required</dtyp:displayterm>
+            <dtyp:displayterm value="false">Not Required</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean"/>
+   </xsd:simpleType>
    <xsd:simpleType name="ParkingGarageLightingControlsInstalled">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
@@ -6241,6 +6297,15 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
    </xsd:simpleType>
+   <xsd:simpleType name="PipeInsulationVerificationRequired">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Required</dtyp:displayterm>
+            <dtyp:displayterm value="false">Not Required</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean"/>
+   </xsd:simpleType>
    <xsd:simpleType name="PipeLengthFromWaterHeaterToPointOfUse">
       <xsd:annotation>
          <xsd:documentation>Units: ft</xsd:documentation>
@@ -6497,6 +6562,15 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="true">Yes</dtyp:displayterm>
             <dtyp:displayterm value="false">No</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="RecirculationControlVerificationRequired">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Required</dtyp:displayterm>
+            <dtyp:displayterm value="false">Not Required</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="xsd:boolean"/>
@@ -7932,6 +8006,9 @@ Time Dependent Valuation (TDV) Gas Propane energy is calculated by multiplying t
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:Decimal4PlacesNonnegative"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="WaterHeatingSystemHERS_VerificationName">
+      <xsd:restriction base="xsd:string"/>
    </xsd:simpleType>
    <xsd:simpleType name="WaterHeatingSystemOption">
       <xsd:annotation>
