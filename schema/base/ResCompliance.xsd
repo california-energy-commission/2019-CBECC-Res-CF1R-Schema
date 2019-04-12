@@ -18,16 +18,6 @@
       <xsd:restriction base="xsd:string">
       </xsd:restriction>
    </xsd:simpleType>
-   <xsd:simpleType name="ACH50">
-      <xsd:annotation>
-         <xsd:documentation>ACH50 denotes the hourly air change rate at a pressure difference of 50 Pascals between inside and outside  Units: ACH</xsd:documentation>
-         <xsd:appinfo source="displaytermType">
-            <dtyp:displayterm>Air Changes per Hour (ACH) at 50 pascals of pressure</dtyp:displayterm>
-         </xsd:appinfo>
-      </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative">
-      </xsd:restriction>
-   </xsd:simpleType>
    <xsd:simpleType name="ACH50_Method">
       <xsd:annotation>
          <xsd:appinfo source="displaytermType">
@@ -41,6 +31,26 @@
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="DefaultACH50"/>
          <xsd:enumeration value="MeasuredACH50"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="ACH50Altered">
+      <xsd:annotation>
+         <xsd:documentation>  Units: ACH</xsd:documentation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Altered ACH 50</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="ACH50Existing">
+      <xsd:annotation>
+         <xsd:documentation>  Units: ACH</xsd:documentation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Verified Existing ACH 50</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ActualFanEfficacy">
@@ -3109,6 +3119,19 @@
    </xsd:simpleType>
    <xsd:simpleType name="DomesticHotWaterSystemName">
       <xsd:restriction base="xsd:string">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="DuctDesignType">
+      <xsd:annotation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Design Type</dtyp:displayterm>
+         </xsd:appinfo>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Verified Design</dtyp:displayterm>
+            <dtyp:displayterm value="false">Non-Verified</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="DuctDesignVerificationRequired">
