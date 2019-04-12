@@ -1,0 +1,2575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComplianceDocumentPackage xmlns="http://www.lmonte.com/besm/CF1RPRF01E" xmlns:lit="http://www.lmonte.com/besm/lit" xmlns:com="http://www.lmonte.com/besm/com" xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:bld="http://www.lmonte.com/besm/bld" xmlns:env="http://www.lmonte.com/besm/env" xmlns:hvac="http://www.lmonte.com/besm/hvac" xmlns:comp="http://www.lmonte.com/besm/comp" xmlns:d="http://www.lmonte.com/besm/d" xmlns:altova="http://www.altova.com/xml-schema-extensions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.lmonte.com/besm/CF1RPRF01E.xsd" revision="rev 20181007" doc="CF1RPRF01E">
+  <DocID doc="CF1RPRF01E" docType="CERTIFICATE OF COMPLIANCE -  RESIDENTIAL PERFORMANCE COMPLIANCE METHOD" docTitle="Residential Performance Compliance Method"/>
+  <Payload/>
+  <DocumentData>
+    <Header>
+      <comp:header01_ProjectName>1 Story Example Compact Distribution</comp:header01_ProjectName>
+      <comp:header07_DatePrepared>2019-04-12T11:11:04-07:00</comp:header07_DatePrepared>
+    </Header>
+    <cF1RPRF01E>
+      <Section_A>
+        <A01_ProjectName>1 Story Example Compact Distribution</A01_ProjectName>
+        <A02_RunDescription>2100 ft2 CEC Prototype with tile roof</A02_RunDescription>
+        <A03_ProjectStreetAddress>1516 Ninth St</A03_ProjectStreetAddress>
+        <A04_ProjectCity>Sacramento, CA</A04_ProjectCity>
+        <A05_T24StandardsCodeYear>2019</A05_T24StandardsCodeYear>
+        <A06_ProjectZipcode>95814</A06_ProjectZipcode>
+        <A07_ComplianceSoftwareVersion>CBECC-Res 2019.0.11 Alpha (1068)</A07_ComplianceSoftwareVersion>
+        <A08_ClimateZone>12</A08_ClimateZone>
+        <A09_CardinalOrientation>AllOrientations</A09_CardinalOrientation>
+        <A10_ResidentialLowriseBuildingType>SingleFamily</A10_ResidentialLowriseBuildingType>
+        <A11_DwellingUnitCount>1</A11_DwellingUnitCount>
+        <A12_ProjectScopePerformance>NewConstruction</A12_ProjectScopePerformance>
+        <A13_BedroomCount>3</A13_BedroomCount>
+        <A14_NewConditionedFloorArea>0</A14_NewConditionedFloorArea>
+        <A15_TotalStoryCount>1</A15_TotalStoryCount>
+        <A17_UFactorFenestrationAverage>0.3</A17_UFactorFenestrationAverage>
+        <A18_TotalConditionedFloorArea>2100</A18_TotalConditionedFloorArea>
+        <A19_WindowFloorRatio>0.1858</A19_WindowFloorRatio>
+      </Section_A>
+      <Section_C>
+        <C01_ResidentialPerformanceComplianceResult>true</C01_ResidentialPerformanceComplianceResult>
+        <C02_ResidentialPerformanceHERS_VerificationRequired>true</C02_ResidentialPerformanceHERS_VerificationRequired>
+      </Section_C>
+      <Section_EnergyUseSummary>
+        <MultipleOrientations>
+          <SpaceHeating>
+            <C05_EnergyUseStandardSpaceHeating>23.41</C05_EnergyUseStandardSpaceHeating>
+            <C06_EnergyUseProposedSpaceHeating>23.75</C06_EnergyUseProposedSpaceHeating>
+            <C07_EnergyUseMarginSpaceHeating>-0.34</C07_EnergyUseMarginSpaceHeating>
+            <C08_EnergyUseImprovementSpaceHeating>-1.5</C08_EnergyUseImprovementSpaceHeating>
+          </SpaceHeating>
+          <SpaceHeating>
+            <C05_EnergyUseStandardSpaceHeating>23.41</C05_EnergyUseStandardSpaceHeating>
+            <C06_EnergyUseProposedSpaceHeating>23.72</C06_EnergyUseProposedSpaceHeating>
+            <C07_EnergyUseMarginSpaceHeating>-0.31</C07_EnergyUseMarginSpaceHeating>
+            <C08_EnergyUseImprovementSpaceHeating>-1.3</C08_EnergyUseImprovementSpaceHeating>
+          </SpaceHeating>
+          <SpaceHeating>
+            <C05_EnergyUseStandardSpaceHeating>23.41</C05_EnergyUseStandardSpaceHeating>
+            <C06_EnergyUseProposedSpaceHeating>24.02</C06_EnergyUseProposedSpaceHeating>
+            <C07_EnergyUseMarginSpaceHeating>-0.61</C07_EnergyUseMarginSpaceHeating>
+            <C08_EnergyUseImprovementSpaceHeating>-2.6</C08_EnergyUseImprovementSpaceHeating>
+          </SpaceHeating>
+          <SpaceHeating>
+            <C05_EnergyUseStandardSpaceHeating>23.41</C05_EnergyUseStandardSpaceHeating>
+            <C06_EnergyUseProposedSpaceHeating>24.54</C06_EnergyUseProposedSpaceHeating>
+            <C07_EnergyUseMarginSpaceHeating>-1.13</C07_EnergyUseMarginSpaceHeating>
+            <C08_EnergyUseImprovementSpaceHeating>-4.8</C08_EnergyUseImprovementSpaceHeating>
+          </SpaceHeating>
+          <SpaceCooling>
+            <C05_EnergyUseStandardSpaceCooling>16.88</C05_EnergyUseStandardSpaceCooling>
+            <C06_EnergyUseProposedSpaceCooling>10.91</C06_EnergyUseProposedSpaceCooling>
+            <C07_EnergyUseMarginSpaceCooling>5.97</C07_EnergyUseMarginSpaceCooling>
+            <C08_EnergyUseImprovementSpaceCooling>35.4</C08_EnergyUseImprovementSpaceCooling>
+          </SpaceCooling>
+          <SpaceCooling>
+            <C05_EnergyUseStandardSpaceCooling>16.88</C05_EnergyUseStandardSpaceCooling>
+            <C06_EnergyUseProposedSpaceCooling>16.64</C06_EnergyUseProposedSpaceCooling>
+            <C07_EnergyUseMarginSpaceCooling>0.24</C07_EnergyUseMarginSpaceCooling>
+            <C08_EnergyUseImprovementSpaceCooling>1.4</C08_EnergyUseImprovementSpaceCooling>
+          </SpaceCooling>
+          <SpaceCooling>
+            <C05_EnergyUseStandardSpaceCooling>16.88</C05_EnergyUseStandardSpaceCooling>
+            <C06_EnergyUseProposedSpaceCooling>11.66</C06_EnergyUseProposedSpaceCooling>
+            <C07_EnergyUseMarginSpaceCooling>5.22</C07_EnergyUseMarginSpaceCooling>
+            <C08_EnergyUseImprovementSpaceCooling>30.9</C08_EnergyUseImprovementSpaceCooling>
+          </SpaceCooling>
+          <SpaceCooling>
+            <C05_EnergyUseStandardSpaceCooling>16.88</C05_EnergyUseStandardSpaceCooling>
+            <C06_EnergyUseProposedSpaceCooling>15.91</C06_EnergyUseProposedSpaceCooling>
+            <C07_EnergyUseMarginSpaceCooling>0.97</C07_EnergyUseMarginSpaceCooling>
+            <C08_EnergyUseImprovementSpaceCooling>5.7</C08_EnergyUseImprovementSpaceCooling>
+          </SpaceCooling>
+          <Ventilation>
+            <C05_EnergyUseStandardIAQ_Ventilation>2.61</C05_EnergyUseStandardIAQ_Ventilation>
+            <C06_EnergyUseProposedIAQ_Ventilation>2.61</C06_EnergyUseProposedIAQ_Ventilation>
+            <C07_EnergyUseMarginIAQ_Ventilation>0</C07_EnergyUseMarginIAQ_Ventilation>
+            <C08_EnergyUseImprovementIAQ_Ventilation>0.0</C08_EnergyUseImprovementIAQ_Ventilation>
+          </Ventilation>
+          <Ventilation>
+            <C05_EnergyUseStandardIAQ_Ventilation>2.61</C05_EnergyUseStandardIAQ_Ventilation>
+            <C06_EnergyUseProposedIAQ_Ventilation>2.61</C06_EnergyUseProposedIAQ_Ventilation>
+            <C07_EnergyUseMarginIAQ_Ventilation>0</C07_EnergyUseMarginIAQ_Ventilation>
+            <C08_EnergyUseImprovementIAQ_Ventilation>0.0</C08_EnergyUseImprovementIAQ_Ventilation>
+          </Ventilation>
+          <Ventilation>
+            <C05_EnergyUseStandardIAQ_Ventilation>2.61</C05_EnergyUseStandardIAQ_Ventilation>
+            <C06_EnergyUseProposedIAQ_Ventilation>2.61</C06_EnergyUseProposedIAQ_Ventilation>
+            <C07_EnergyUseMarginIAQ_Ventilation>0</C07_EnergyUseMarginIAQ_Ventilation>
+            <C08_EnergyUseImprovementIAQ_Ventilation>0.0</C08_EnergyUseImprovementIAQ_Ventilation>
+          </Ventilation>
+          <Ventilation>
+            <C05_EnergyUseStandardIAQ_Ventilation>2.61</C05_EnergyUseStandardIAQ_Ventilation>
+            <C06_EnergyUseProposedIAQ_Ventilation>2.61</C06_EnergyUseProposedIAQ_Ventilation>
+            <C07_EnergyUseMarginIAQ_Ventilation>0</C07_EnergyUseMarginIAQ_Ventilation>
+            <C08_EnergyUseImprovementIAQ_Ventilation>0.0</C08_EnergyUseImprovementIAQ_Ventilation>
+          </Ventilation>
+          <WaterHeating>
+            <C05_EnergyUseStandardWaterHeating>12.05</C05_EnergyUseStandardWaterHeating>
+            <C06_EnergyUseProposedWaterHeating>10.7</C06_EnergyUseProposedWaterHeating>
+            <C07_EnergyUseMarginWaterHeating>1.35</C07_EnergyUseMarginWaterHeating>
+            <C08_EnergyUseImprovementWaterHeating>11.2</C08_EnergyUseImprovementWaterHeating>
+          </WaterHeating>
+          <WaterHeating>
+            <C05_EnergyUseStandardWaterHeating>12.05</C05_EnergyUseStandardWaterHeating>
+            <C06_EnergyUseProposedWaterHeating>10.7</C06_EnergyUseProposedWaterHeating>
+            <C07_EnergyUseMarginWaterHeating>1.35</C07_EnergyUseMarginWaterHeating>
+            <C08_EnergyUseImprovementWaterHeating>11.2</C08_EnergyUseImprovementWaterHeating>
+          </WaterHeating>
+          <WaterHeating>
+            <C05_EnergyUseStandardWaterHeating>12.05</C05_EnergyUseStandardWaterHeating>
+            <C06_EnergyUseProposedWaterHeating>10.7</C06_EnergyUseProposedWaterHeating>
+            <C07_EnergyUseMarginWaterHeating>1.35</C07_EnergyUseMarginWaterHeating>
+            <C08_EnergyUseImprovementWaterHeating>11.2</C08_EnergyUseImprovementWaterHeating>
+          </WaterHeating>
+          <WaterHeating>
+            <C05_EnergyUseStandardWaterHeating>12.05</C05_EnergyUseStandardWaterHeating>
+            <C06_EnergyUseProposedWaterHeating>10.7</C06_EnergyUseProposedWaterHeating>
+            <C07_EnergyUseMarginWaterHeating>1.35</C07_EnergyUseMarginWaterHeating>
+            <C08_EnergyUseImprovementWaterHeating>11.2</C08_EnergyUseImprovementWaterHeating>
+          </WaterHeating>
+          <PV>
+            <C05_EnergyUsePhotovoltaicOffsetNA>NotApplicablePhotovoltaicOffset</C05_EnergyUsePhotovoltaicOffsetNA>
+            <C06_EnergyUseProposedPhotovoltaicOffset>-37.48</C06_EnergyUseProposedPhotovoltaicOffset>
+            <C07_EnergyUseMarginPhotovoltaicOffset>-9.71</C07_EnergyUseMarginPhotovoltaicOffset>
+            <C08_EnergyUsePhotovoltaicOffsetNA>NotApplicablePhotovoltaicOffset</C08_EnergyUsePhotovoltaicOffsetNA>
+          </PV>
+          <PV>
+            <C05_EnergyUsePhotovoltaicOffsetNA>NotApplicablePhotovoltaicOffset</C05_EnergyUsePhotovoltaicOffsetNA>
+            <C06_EnergyUseProposedPhotovoltaicOffset>-37.5</C06_EnergyUseProposedPhotovoltaicOffset>
+            <C07_EnergyUseMarginPhotovoltaicOffset>-9.69</C07_EnergyUseMarginPhotovoltaicOffset>
+            <C08_EnergyUsePhotovoltaicOffsetNA>NotApplicablePhotovoltaicOffset</C08_EnergyUsePhotovoltaicOffsetNA>
+          </PV>
+          <PV>
+            <C05_EnergyUsePhotovoltaicOffsetNA>NotApplicablePhotovoltaicOffset</C05_EnergyUsePhotovoltaicOffsetNA>
+            <C06_EnergyUseProposedPhotovoltaicOffset>-37.49</C06_EnergyUseProposedPhotovoltaicOffset>
+            <C07_EnergyUseMarginPhotovoltaicOffset>-9.7</C07_EnergyUseMarginPhotovoltaicOffset>
+            <C08_EnergyUsePhotovoltaicOffsetNA>NotApplicablePhotovoltaicOffset</C08_EnergyUsePhotovoltaicOffsetNA>
+          </PV>
+          <PV>
+            <C05_EnergyUsePhotovoltaicOffsetNA>NotApplicablePhotovoltaicOffset</C05_EnergyUsePhotovoltaicOffsetNA>
+            <C06_EnergyUseProposedPhotovoltaicOffset>-37.5</C06_EnergyUseProposedPhotovoltaicOffset>
+            <C07_EnergyUseMarginPhotovoltaicOffset>-9.69</C07_EnergyUseMarginPhotovoltaicOffset>
+            <C08_EnergyUsePhotovoltaicOffsetNA>NotApplicablePhotovoltaicOffset</C08_EnergyUsePhotovoltaicOffsetNA>
+          </PV>
+          <Totals>
+            <C05_EnergyUseStandardTotal>54.95</C05_EnergyUseStandardTotal>
+            <C06_EnergyUseProposedTotal>47.97</C06_EnergyUseProposedTotal>
+            <C07_EnergyUseMarginTotal>6.98</C07_EnergyUseMarginTotal>
+            <C08_EnergyUseImprovementTotal>12.7</C08_EnergyUseImprovementTotal>
+          </Totals>
+          <Totals>
+            <C05_EnergyUseStandardTotal>54.95</C05_EnergyUseStandardTotal>
+            <C06_EnergyUseProposedTotal>53.67</C06_EnergyUseProposedTotal>
+            <C07_EnergyUseMarginTotal>1.28</C07_EnergyUseMarginTotal>
+            <C08_EnergyUseImprovementTotal>2.3</C08_EnergyUseImprovementTotal>
+          </Totals>
+          <Totals>
+            <C05_EnergyUseStandardTotal>54.95</C05_EnergyUseStandardTotal>
+            <C06_EnergyUseProposedTotal>48.99</C06_EnergyUseProposedTotal>
+            <C07_EnergyUseMarginTotal>5.96</C07_EnergyUseMarginTotal>
+            <C08_EnergyUseImprovementTotal>10.8</C08_EnergyUseImprovementTotal>
+          </Totals>
+          <Totals>
+            <C05_EnergyUseStandardTotal>54.95</C05_EnergyUseStandardTotal>
+            <C06_EnergyUseProposedTotal>53.76</C06_EnergyUseProposedTotal>
+            <C07_EnergyUseMarginTotal>1.19</C07_EnergyUseMarginTotal>
+            <C08_EnergyUseImprovementTotal>2.2</C08_EnergyUseImprovementTotal>
+          </Totals>
+        </MultipleOrientations>
+      </Section_EnergyUseSummary>
+      <Section_E>
+        <SpecialFeature>
+          <E01_SpecialFeatureCategory>PV2kWSystem</E01_SpecialFeatureCategory>
+          <E01b_SpecialFeatureCategoryString>PV System: 2 kWdc</E01b_SpecialFeatureCategoryString>
+          <E01c_SpecialFeatureCategoryData>2</E01c_SpecialFeatureCategoryData>
+        </SpecialFeature>
+        <SpecialFeature>
+          <E01_SpecialFeatureCategory>BatterySystem</E01_SpecialFeatureCategory>
+          <E01b_SpecialFeatureCategoryString>Battery System: 5 kWh</E01b_SpecialFeatureCategoryString>
+          <E01c_SpecialFeatureCategoryData>5</E01c_SpecialFeatureCategoryData>
+        </SpecialFeature>
+        <SpecialFeature>
+          <E01_SpecialFeatureCategory>WholeHouseFan</E01_SpecialFeatureCategory>
+          <E01b_SpecialFeatureCategoryString>Whole house fan</E01b_SpecialFeatureCategoryString>
+        </SpecialFeature>
+        <SpecialFeature>
+          <E01_SpecialFeatureCategory>CoolRoofInstalled</E01_SpecialFeatureCategory>
+          <E01b_SpecialFeatureCategoryString>Cool roof</E01b_SpecialFeatureCategoryString>
+        </SpecialFeature>
+        <SpecialFeature>
+          <E01_SpecialFeatureCategory>InsulationBelowRoofDeck</E01_SpecialFeatureCategory>
+          <E01b_SpecialFeatureCategoryString>Insulation below roof deck</E01b_SpecialFeatureCategoryString>
+        </SpecialFeature>
+        <SpecialFeature>
+          <E01_SpecialFeatureCategory>WindowOverhangsFins</E01_SpecialFeatureCategory>
+          <E01b_SpecialFeatureCategoryString>Window overhangs and/or fins</E01b_SpecialFeatureCategoryString>
+        </SpecialFeature>
+      </Section_E>
+      <Section_Ea>
+        <BuildingHERS>
+          <Ea01_BuildingFeatureHERS>QualityInsulationInstallationHERS</Ea01_BuildingFeatureHERS>
+          <Ea01a_BuildingFeatureHERS_String>High quality insulation installation (QII)</Ea01a_BuildingFeatureHERS_String>
+        </BuildingHERS>
+        <BuildingHERS>
+          <Ea01_BuildingFeatureHERS>IAQ_MechanicalVentilationHERS</Ea01_BuildingFeatureHERS>
+          <Ea01a_BuildingFeatureHERS_String>IAQ mechanical ventilation</Ea01a_BuildingFeatureHERS_String>
+        </BuildingHERS>
+        <BuildingHERS>
+          <Ea01_BuildingFeatureHERS>KitchenRangeHoodHERS</Ea01_BuildingFeatureHERS>
+          <Ea01a_BuildingFeatureHERS_String>Kitchen range hood</Ea01a_BuildingFeatureHERS_String>
+        </BuildingHERS>
+        <BuildingHERS>
+          <Ea01_BuildingFeatureHERS>WholeHouseFanHERS</Ea01_BuildingFeatureHERS>
+          <Ea01a_BuildingFeatureHERS_String>Whole House Fan Airflow and Fan Efficacy</Ea01a_BuildingFeatureHERS_String>
+        </BuildingHERS>
+        <CoolingHERS>
+          <Ea02_CoolingSystemFeatureHERS>MinimumAirflow</Ea02_CoolingSystemFeatureHERS>
+          <Ea02a_CoolingSystemFeatureHERS_String>Minimum Airflow</Ea02a_CoolingSystemFeatureHERS_String>
+        </CoolingHERS>
+        <CoolingHERS>
+          <Ea02_CoolingSystemFeatureHERS>RefrigerantCharge</Ea02_CoolingSystemFeatureHERS>
+          <Ea02a_CoolingSystemFeatureHERS_String>Verified Refrigerant Charge</Ea02a_CoolingSystemFeatureHERS_String>
+        </CoolingHERS>
+        <CoolingHERS>
+          <Ea02_CoolingSystemFeatureHERS>FanEfficacy</Ea02_CoolingSystemFeatureHERS>
+          <Ea02a_CoolingSystemFeatureHERS_String>Fan Efficacy Watts/CFM</Ea02a_CoolingSystemFeatureHERS_String>
+        </CoolingHERS>
+        <HeatingHERS>
+          <Ea05_HeatingSystemFeatureHERS>None</Ea05_HeatingSystemFeatureHERS>
+          <Ea05a_HeatingSystemFeatureHERS_String>-- None --</Ea05a_HeatingSystemFeatureHERS_String>
+        </HeatingHERS>
+        <HvacHERS>
+          <Ea03_HvacDistributionFeatureHERS>DuctSealing</Ea03_HvacDistributionFeatureHERS>
+          <Ea03a_HvacDistributionFeatureHERS_String>DuctSealing</Ea03a_HvacDistributionFeatureHERS_String>
+        </HvacHERS>
+        <DHW_HERS>
+          <Ea04_DomesticHotWaterFeatureHERS>None</Ea04_DomesticHotWaterFeatureHERS>
+          <Ea04a_DomesticHotWaterFeatureHERS_String>-- None --</Ea04a_DomesticHotWaterFeatureHERS_String>
+        </DHW_HERS>
+      </Section_Ea>
+      <Section_F>
+        <F01_ProjectName>1 Story Example Compact Distribution</F01_ProjectName>
+        <F02_ProjectConditionedFloorArea>2100</F02_ProjectConditionedFloorArea>
+        <F03_DwellingUnitCount>1</F03_DwellingUnitCount>
+        <F04_BedroomCount>3</F04_BedroomCount>
+        <F05_ResidentialBuildingZoneCount>1</F05_ResidentialBuildingZoneCount>
+        <F06_ResidentialVentilationCoolingSystemCount>1</F06_ResidentialVentilationCoolingSystemCount>
+        <F07_ResidentialWaterHeatingSystemCount>1</F07_ResidentialWaterHeatingSystemCount>
+      </Section_F>
+      <Section_G>
+        <TableZoneSF>
+          <Row>
+            <G01_ThermalZoneName>Conditioned</G01_ThermalZoneName>
+            <G02_ZoneConditioningType>Conditioned</G02_ZoneConditioningType>
+            <G03_HvacSystemName>HVAC System 1</G03_HvacSystemName>
+            <G04_ThermalZoneFloorArea>2100</G04_ThermalZoneFloorArea>
+            <G05_FloorToCeilingHeight>9</G05_FloorToCeilingHeight>
+            <G06_WaterHeatingSystemName>DHW System</G06_WaterHeatingSystemName>
+            <G07_NotApplicableMessage>N/A</G07_NotApplicableMessage>
+          </Row>
+        </TableZoneSF>
+      </Section_G>
+      <Section_J>
+        <TableOpaqueSurfaces>
+          <Row>
+            <J01_PartitionName>Front</J01_PartitionName>
+            <J02_ThermalZoneName>Conditioned</J02_ThermalZoneName>
+            <J03_ConstructionAssemblyNamePerformanceRes>R21 R5 Stucco Wall</J03_ConstructionAssemblyNamePerformanceRes>
+            <J04_Azimuth>0</J04_Azimuth>
+            <J05_RelativePosition>Front</J05_RelativePosition>
+            <J06_PartitionGrossArea>270</J06_PartitionGrossArea>
+            <J07_PartitionWindowDoorArea>146.25</J07_PartitionWindowDoorArea>
+            <J08_Tilt>90</J08_Tilt>
+          </Row>
+          <Row>
+            <J01_PartitionName>Left</J01_PartitionName>
+            <J02_ThermalZoneName>Conditioned</J02_ThermalZoneName>
+            <J03_ConstructionAssemblyNamePerformanceRes>R21 R5 Stucco Wall</J03_ConstructionAssemblyNamePerformanceRes>
+            <J04_Azimuth>90</J04_Azimuth>
+            <J05_RelativePosition>Left</J05_RelativePosition>
+            <J06_PartitionGrossArea>324</J06_PartitionGrossArea>
+            <J07_PartitionWindowDoorArea>72</J07_PartitionWindowDoorArea>
+            <J08_Tilt>90</J08_Tilt>
+          </Row>
+          <Row>
+            <J01_PartitionName>Back</J01_PartitionName>
+            <J02_ThermalZoneName>Conditioned</J02_ThermalZoneName>
+            <J03_ConstructionAssemblyNamePerformanceRes>R21 R5 Stucco Wall</J03_ConstructionAssemblyNamePerformanceRes>
+            <J04_Azimuth>180</J04_Azimuth>
+            <J05_RelativePosition>Back</J05_RelativePosition>
+            <J06_PartitionGrossArea>450</J06_PartitionGrossArea>
+            <J07_PartitionWindowDoorArea>154.02</J07_PartitionWindowDoorArea>
+            <J08_Tilt>90</J08_Tilt>
+          </Row>
+          <Row>
+            <J01_PartitionName>Right</J01_PartitionName>
+            <J02_ThermalZoneName>Conditioned</J02_ThermalZoneName>
+            <J03_ConstructionAssemblyNamePerformanceRes>R21 R5 Stucco Wall</J03_ConstructionAssemblyNamePerformanceRes>
+            <J04_Azimuth>270</J04_Azimuth>
+            <J05_RelativePosition>Right</J05_RelativePosition>
+            <J06_PartitionGrossArea>414</J06_PartitionGrossArea>
+            <J07_PartitionWindowDoorArea>38</J07_PartitionWindowDoorArea>
+            <J08_Tilt>90</J08_Tilt>
+          </Row>
+          <Row>
+            <J01_PartitionName>GarToHouse Front</J01_PartitionName>
+            <J02_ThermalZoneName>Conditioned&gt;&gt;Garage</J02_ThermalZoneName>
+            <J03_ConstructionAssemblyNamePerformanceRes>Gar House R21</J03_ConstructionAssemblyNamePerformanceRes>
+            <J04_NotApplicableMessage>N/A</J04_NotApplicableMessage>
+            <J05_NotApplicableMessage>N/A</J05_NotApplicableMessage>
+            <J06_PartitionGrossArea>180</J06_PartitionGrossArea>
+            <J07_PartitionWindowDoorArea>20</J07_PartitionWindowDoorArea>
+            <J08_NotApplicableMessage>N/A</J08_NotApplicableMessage>
+          </Row>
+          <Row>
+            <J01_PartitionName>GarToHouse Left</J01_PartitionName>
+            <J02_ThermalZoneName>Conditioned&gt;&gt;Garage</J02_ThermalZoneName>
+            <J03_ConstructionAssemblyNamePerformanceRes>Gar House R21</J03_ConstructionAssemblyNamePerformanceRes>
+            <J04_NotApplicableMessage>N/A</J04_NotApplicableMessage>
+            <J05_NotApplicableMessage>N/A</J05_NotApplicableMessage>
+            <J06_PartitionGrossArea>90</J06_PartitionGrossArea>
+            <J07_PartitionWindowDoorArea>0</J07_PartitionWindowDoorArea>
+            <J08_NotApplicableMessage>N/A</J08_NotApplicableMessage>
+          </Row>
+          <Row>
+            <J01_PartitionName>Gar Ceiling</J01_PartitionName>
+            <J02_ThermalZoneName>Garage</J02_ThermalZoneName>
+            <J03_ConstructionAssemblyNamePerformanceRes>R0 ClgBlwAttic Cons</J03_ConstructionAssemblyNamePerformanceRes>
+            <J04_NotApplicableMessage>N/A</J04_NotApplicableMessage>
+            <J05_NotApplicableMessage>N/A</J05_NotApplicableMessage>
+            <J06_PartitionGrossArea>440</J06_PartitionGrossArea>
+            <J07_NotApplicableMessage>N/A</J07_NotApplicableMessage>
+            <J08_NotApplicableMessage>N/A</J08_NotApplicableMessage>
+          </Row>
+          <Row>
+            <J01_PartitionName>Ceiling (below attic) 1</J01_PartitionName>
+            <J02_ThermalZoneName>Conditioned</J02_ThermalZoneName>
+            <J03_ConstructionAssemblyNamePerformanceRes>R38 Ceiling below attic</J03_ConstructionAssemblyNamePerformanceRes>
+            <J04_NotApplicableMessage>N/A</J04_NotApplicableMessage>
+            <J05_NotApplicableMessage>N/A</J05_NotApplicableMessage>
+            <J06_PartitionGrossArea>2100</J06_PartitionGrossArea>
+            <J07_NotApplicableMessage>N/A</J07_NotApplicableMessage>
+            <J08_NotApplicableMessage>N/A</J08_NotApplicableMessage>
+          </Row>
+          <Row>
+            <J01_PartitionName>Gwall Front</J01_PartitionName>
+            <J02_ThermalZoneName>Garage</J02_ThermalZoneName>
+            <J03_ConstructionAssemblyNamePerformanceRes>Garage Wall R-0</J03_ConstructionAssemblyNamePerformanceRes>
+            <J04_Azimuth>0</J04_Azimuth>
+            <J05_RelativePosition>Front</J05_RelativePosition>
+            <J06_PartitionGrossArea>180</J06_PartitionGrossArea>
+            <J07_PartitionWindowDoorArea>108</J07_PartitionWindowDoorArea>
+            <J08_Tilt>90</J08_Tilt>
+          </Row>
+          <Row>
+            <J01_PartitionName>Gwall Left</J01_PartitionName>
+            <J02_ThermalZoneName>Garage</J02_ThermalZoneName>
+            <J03_ConstructionAssemblyNamePerformanceRes>Garage Wall R-0</J03_ConstructionAssemblyNamePerformanceRes>
+            <J04_Azimuth>90</J04_Azimuth>
+            <J05_RelativePosition>Left</J05_RelativePosition>
+            <J06_PartitionGrossArea>198</J06_PartitionGrossArea>
+            <J07_PartitionWindowDoorArea>0</J07_PartitionWindowDoorArea>
+            <J08_Tilt>90</J08_Tilt>
+          </Row>
+          <Row>
+            <J01_PartitionName>Gwall Right</J01_PartitionName>
+            <J02_ThermalZoneName>Garage</J02_ThermalZoneName>
+            <J03_ConstructionAssemblyNamePerformanceRes>Garage Wall R-0</J03_ConstructionAssemblyNamePerformanceRes>
+            <J04_Azimuth>270</J04_Azimuth>
+            <J05_RelativePosition>Right</J05_RelativePosition>
+            <J06_PartitionGrossArea>108</J06_PartitionGrossArea>
+            <J07_PartitionWindowDoorArea>0</J07_PartitionWindowDoorArea>
+            <J08_Tilt>90</J08_Tilt>
+          </Row>
+        </TableOpaqueSurfaces>
+      </Section_J>
+      <Section_L>
+        <TableAttic>
+          <Row>
+            <L01_AtticName>Gar Attic </L01_AtticName>
+            <L02_ConstructionAssemblyNamePerformanceRes>Tile Roof</L02_ConstructionAssemblyNamePerformanceRes>
+            <L03_IsAtticVented>true</L03_IsAtticVented>
+            <L04_RoofRise>5</L04_RoofRise>
+            <L05_RoofReflectance>0.2</L05_RoofReflectance>
+            <L06_RoofEmittance>0.85</L06_RoofEmittance>
+            <L07_RadiantBarrierToBeInstalled>false</L07_RadiantBarrierToBeInstalled>
+            <L08_CoolRoofToBeInstalled>false</L08_CoolRoofToBeInstalled>
+          </Row>
+          <Row>
+            <L01_AtticName>Attic </L01_AtticName>
+            <L02_ConstructionAssemblyNamePerformanceRes>Tile R-19 below deck</L02_ConstructionAssemblyNamePerformanceRes>
+            <L03_IsAtticVented>true</L03_IsAtticVented>
+            <L04_RoofRise>5</L04_RoofRise>
+            <L05_RoofReflectance>0.2</L05_RoofReflectance>
+            <L06_RoofEmittance>0.85</L06_RoofEmittance>
+            <L07_RadiantBarrierToBeInstalled>false</L07_RadiantBarrierToBeInstalled>
+            <L08_CoolRoofToBeInstalled>true</L08_CoolRoofToBeInstalled>
+          </Row>
+        </TableAttic>
+      </Section_L>
+      <Section_M>
+        <TableGlazing>
+          <Row>
+            <M01_FenestrationName>F-6060</M01_FenestrationName>
+            <M02_ResidentialFenestrationType>Window</M02_ResidentialFenestrationType>
+            <M03a_PartitionName>Front</M03a_PartitionName>
+            <M03b_RelativePosition>Front</M03b_RelativePosition>
+            <M03c_Azimuth>0</M03c_Azimuth>
+            <M04_Width>6</M04_Width>
+            <M05_Height>6</M05_Height>
+            <M06_FenestrationIdenticalCount>1</M06_FenestrationIdenticalCount>
+            <M07_WindowArea>36</M07_WindowArea>
+            <M08_UFactor>0.3</M08_UFactor>
+            <M08a_FenestrationCertificationMethod>NFRCRated</M08a_FenestrationCertificationMethod>
+            <M09_SHGC>0.23</M09_SHGC>
+            <M09a_FenestrationCertificationMethod>NFRCRated</M09a_FenestrationCertificationMethod>
+            <M10_ExternalShadingObjectType>StandardBugScreen</M10_ExternalShadingObjectType>
+          </Row>
+          <Row>
+            <M01_FenestrationName>F-4050 x3</M01_FenestrationName>
+            <M02_ResidentialFenestrationType>Window</M02_ResidentialFenestrationType>
+            <M03a_PartitionName>Front</M03a_PartitionName>
+            <M03b_RelativePosition>Front</M03b_RelativePosition>
+            <M03c_Azimuth>0</M03c_Azimuth>
+            <M04_Width>4</M04_Width>
+            <M05_Height>5</M05_Height>
+            <M06_FenestrationIdenticalCount>3</M06_FenestrationIdenticalCount>
+            <M07_WindowArea>60</M07_WindowArea>
+            <M08_UFactor>0.3</M08_UFactor>
+            <M08a_FenestrationCertificationMethod>NFRCRated</M08a_FenestrationCertificationMethod>
+            <M09_SHGC>0.23</M09_SHGC>
+            <M09a_FenestrationCertificationMethod>NFRCRated</M09a_FenestrationCertificationMethod>
+            <M10_ExternalShadingObjectType>StandardBugScreen</M10_ExternalShadingObjectType>
+          </Row>
+          <Row>
+            <M01_FenestrationName>F-1660 x2</M01_FenestrationName>
+            <M02_ResidentialFenestrationType>Window</M02_ResidentialFenestrationType>
+            <M03a_PartitionName>Front</M03a_PartitionName>
+            <M03b_RelativePosition>Front</M03b_RelativePosition>
+            <M03c_Azimuth>0</M03c_Azimuth>
+            <M04_Width>1.5</M04_Width>
+            <M05_Height>6</M05_Height>
+            <M06_FenestrationIdenticalCount>2</M06_FenestrationIdenticalCount>
+            <M07_WindowArea>18</M07_WindowArea>
+            <M08_UFactor>0.3</M08_UFactor>
+            <M08a_FenestrationCertificationMethod>NFRCRated</M08a_FenestrationCertificationMethod>
+            <M09_SHGC>0.23</M09_SHGC>
+            <M09a_FenestrationCertificationMethod>NFRCRated</M09a_FenestrationCertificationMethod>
+            <M10_ExternalShadingObjectType>StandardBugScreen</M10_ExternalShadingObjectType>
+          </Row>
+          <Row>
+            <M01_FenestrationName>F-3636</M01_FenestrationName>
+            <M02_ResidentialFenestrationType>Window</M02_ResidentialFenestrationType>
+            <M03a_PartitionName>Front</M03a_PartitionName>
+            <M03b_RelativePosition>Front</M03b_RelativePosition>
+            <M03c_Azimuth>0</M03c_Azimuth>
+            <M04_Width>3.5</M04_Width>
+            <M05_Height>3.5</M05_Height>
+            <M06_FenestrationIdenticalCount>1</M06_FenestrationIdenticalCount>
+            <M07_WindowArea>12.25</M07_WindowArea>
+            <M08_UFactor>0.3</M08_UFactor>
+            <M08a_FenestrationCertificationMethod>NFRCRated</M08a_FenestrationCertificationMethod>
+            <M09_SHGC>0.23</M09_SHGC>
+            <M09a_FenestrationCertificationMethod>NFRCRated</M09a_FenestrationCertificationMethod>
+            <M10_ExternalShadingObjectType>StandardBugScreen</M10_ExternalShadingObjectType>
+          </Row>
+          <Row>
+            <M01_FenestrationName>L-5040 x2</M01_FenestrationName>
+            <M02_ResidentialFenestrationType>Window</M02_ResidentialFenestrationType>
+            <M03a_PartitionName>Left</M03a_PartitionName>
+            <M03b_RelativePosition>Left</M03b_RelativePosition>
+            <M03c_Azimuth>90</M03c_Azimuth>
+            <M04_Width>5</M04_Width>
+            <M05_Height>4</M05_Height>
+            <M06_FenestrationIdenticalCount>2</M06_FenestrationIdenticalCount>
+            <M07_WindowArea>40</M07_WindowArea>
+            <M08_UFactor>0.3</M08_UFactor>
+            <M08a_FenestrationCertificationMethod>NFRCRated</M08a_FenestrationCertificationMethod>
+            <M09_SHGC>0.23</M09_SHGC>
+            <M09a_FenestrationCertificationMethod>NFRCRated</M09a_FenestrationCertificationMethod>
+            <M10_ExternalShadingObjectType>StandardBugScreen</M10_ExternalShadingObjectType>
+          </Row>
+          <Row>
+            <M01_FenestrationName>L-4040 x2</M01_FenestrationName>
+            <M02_ResidentialFenestrationType>Window</M02_ResidentialFenestrationType>
+            <M03a_PartitionName>Left</M03a_PartitionName>
+            <M03b_RelativePosition>Left</M03b_RelativePosition>
+            <M03c_Azimuth>90</M03c_Azimuth>
+            <M04_Width>4</M04_Width>
+            <M05_Height>4</M05_Height>
+            <M06_FenestrationIdenticalCount>2</M06_FenestrationIdenticalCount>
+            <M07_WindowArea>32</M07_WindowArea>
+            <M08_UFactor>0.3</M08_UFactor>
+            <M08a_FenestrationCertificationMethod>NFRCRated</M08a_FenestrationCertificationMethod>
+            <M09_SHGC>0.23</M09_SHGC>
+            <M09a_FenestrationCertificationMethod>NFRCRated</M09a_FenestrationCertificationMethod>
+            <M10_ExternalShadingObjectType>StandardBugScreen</M10_ExternalShadingObjectType>
+          </Row>
+          <Row>
+            <M01_FenestrationName>B1 SGD</M01_FenestrationName>
+            <M02_ResidentialFenestrationType>Window</M02_ResidentialFenestrationType>
+            <M03a_PartitionName>Back</M03a_PartitionName>
+            <M03b_RelativePosition>Back</M03b_RelativePosition>
+            <M03c_Azimuth>180</M03c_Azimuth>
+            <M04_Width>6</M04_Width>
+            <M05_Height>6.67</M05_Height>
+            <M06_FenestrationIdenticalCount>1</M06_FenestrationIdenticalCount>
+            <M07_WindowArea>40.02</M07_WindowArea>
+            <M08_UFactor>0.3</M08_UFactor>
+            <M08a_FenestrationCertificationMethod>NFRCRated</M08a_FenestrationCertificationMethod>
+            <M09_SHGC>0.23</M09_SHGC>
+            <M09a_FenestrationCertificationMethod>NFRCRated</M09a_FenestrationCertificationMethod>
+            <M10_ExternalShadingObjectType>StandardBugScreen</M10_ExternalShadingObjectType>
+          </Row>
+          <Row>
+            <M01_FenestrationName>B-6010</M01_FenestrationName>
+            <M02_ResidentialFenestrationType>Window</M02_ResidentialFenestrationType>
+            <M03a_PartitionName>Back</M03a_PartitionName>
+            <M03b_RelativePosition>Back</M03b_RelativePosition>
+            <M03c_Azimuth>180</M03c_Azimuth>
+            <M04_Width>6</M04_Width>
+            <M05_Height>1</M05_Height>
+            <M06_FenestrationIdenticalCount>1</M06_FenestrationIdenticalCount>
+            <M07_WindowArea>6</M07_WindowArea>
+            <M08_UFactor>0.3</M08_UFactor>
+            <M08a_FenestrationCertificationMethod>NFRCRated</M08a_FenestrationCertificationMethod>
+            <M09_SHGC>0.23</M09_SHGC>
+            <M09a_FenestrationCertificationMethod>NFRCRated</M09a_FenestrationCertificationMethod>
+            <M10_ExternalShadingObjectType>StandardBugScreen</M10_ExternalShadingObjectType>
+          </Row>
+          <Row>
+            <M01_FenestrationName>B-6040 x3</M01_FenestrationName>
+            <M02_ResidentialFenestrationType>Window</M02_ResidentialFenestrationType>
+            <M03a_PartitionName>Back</M03a_PartitionName>
+            <M03b_RelativePosition>Back</M03b_RelativePosition>
+            <M03c_Azimuth>180</M03c_Azimuth>
+            <M04_Width>6</M04_Width>
+            <M05_Height>4</M05_Height>
+            <M06_FenestrationIdenticalCount>3</M06_FenestrationIdenticalCount>
+            <M07_WindowArea>72</M07_WindowArea>
+            <M08_UFactor>0.3</M08_UFactor>
+            <M08a_FenestrationCertificationMethod>NFRCRated</M08a_FenestrationCertificationMethod>
+            <M09_SHGC>0.23</M09_SHGC>
+            <M09a_FenestrationCertificationMethod>NFRCRated</M09a_FenestrationCertificationMethod>
+            <M10_ExternalShadingObjectType>StandardBugScreen</M10_ExternalShadingObjectType>
+          </Row>
+          <Row>
+            <M01_FenestrationName>B-6050</M01_FenestrationName>
+            <M02_ResidentialFenestrationType>Window</M02_ResidentialFenestrationType>
+            <M03a_PartitionName>Back</M03a_PartitionName>
+            <M03b_RelativePosition>Back</M03b_RelativePosition>
+            <M03c_Azimuth>180</M03c_Azimuth>
+            <M04_Width>6</M04_Width>
+            <M05_Height>5</M05_Height>
+            <M06_FenestrationIdenticalCount>1</M06_FenestrationIdenticalCount>
+            <M07_WindowArea>30</M07_WindowArea>
+            <M08_UFactor>0.3</M08_UFactor>
+            <M08a_FenestrationCertificationMethod>NFRCRated</M08a_FenestrationCertificationMethod>
+            <M09_SHGC>0.23</M09_SHGC>
+            <M09a_FenestrationCertificationMethod>NFRCRated</M09a_FenestrationCertificationMethod>
+            <M10_ExternalShadingObjectType>StandardBugScreen</M10_ExternalShadingObjectType>
+          </Row>
+          <Row>
+            <M01_FenestrationName>B-3020</M01_FenestrationName>
+            <M02_ResidentialFenestrationType>Window</M02_ResidentialFenestrationType>
+            <M03a_PartitionName>Back</M03a_PartitionName>
+            <M03b_RelativePosition>Back</M03b_RelativePosition>
+            <M03c_Azimuth>180</M03c_Azimuth>
+            <M04_Width>3</M04_Width>
+            <M05_Height>2</M05_Height>
+            <M06_FenestrationIdenticalCount>1</M06_FenestrationIdenticalCount>
+            <M07_WindowArea>6</M07_WindowArea>
+            <M08_UFactor>0.3</M08_UFactor>
+            <M08a_FenestrationCertificationMethod>NFRCRated</M08a_FenestrationCertificationMethod>
+            <M09_SHGC>0.23</M09_SHGC>
+            <M09a_FenestrationCertificationMethod>NFRCRated</M09a_FenestrationCertificationMethod>
+            <M10_ExternalShadingObjectType>StandardBugScreen</M10_ExternalShadingObjectType>
+          </Row>
+          <Row>
+            <M01_FenestrationName>R-3030 x2</M01_FenestrationName>
+            <M02_ResidentialFenestrationType>Window</M02_ResidentialFenestrationType>
+            <M03a_PartitionName>Right</M03a_PartitionName>
+            <M03b_RelativePosition>Right</M03b_RelativePosition>
+            <M03c_Azimuth>270</M03c_Azimuth>
+            <M04_Width>3</M04_Width>
+            <M05_Height>3</M05_Height>
+            <M06_FenestrationIdenticalCount>2</M06_FenestrationIdenticalCount>
+            <M07_WindowArea>18</M07_WindowArea>
+            <M08_UFactor>0.3</M08_UFactor>
+            <M08a_FenestrationCertificationMethod>NFRCRated</M08a_FenestrationCertificationMethod>
+            <M09_SHGC>0.23</M09_SHGC>
+            <M09a_FenestrationCertificationMethod>NFRCRated</M09a_FenestrationCertificationMethod>
+            <M10_ExternalShadingObjectType>StandardBugScreen</M10_ExternalShadingObjectType>
+          </Row>
+          <Row>
+            <M01_FenestrationName>R-4050</M01_FenestrationName>
+            <M02_ResidentialFenestrationType>Window</M02_ResidentialFenestrationType>
+            <M03a_PartitionName>Right</M03a_PartitionName>
+            <M03b_RelativePosition>Right</M03b_RelativePosition>
+            <M03c_Azimuth>270</M03c_Azimuth>
+            <M04_Width>4</M04_Width>
+            <M05_Height>5</M05_Height>
+            <M06_FenestrationIdenticalCount>1</M06_FenestrationIdenticalCount>
+            <M07_WindowArea>20</M07_WindowArea>
+            <M08_UFactor>0.3</M08_UFactor>
+            <M08a_FenestrationCertificationMethod>NFRCRated</M08a_FenestrationCertificationMethod>
+            <M09_SHGC>0.23</M09_SHGC>
+            <M09a_FenestrationCertificationMethod>NFRCRated</M09a_FenestrationCertificationMethod>
+            <M10_ExternalShadingObjectType>StandardBugScreen</M10_ExternalShadingObjectType>
+          </Row>
+        </TableGlazing>
+      </Section_M>
+      <Section_N>
+        <TableOpaqueDoors>
+          <Row>
+            <N01_DoorName>Front Dr</N01_DoorName>
+            <N02_PartitionName>Front</N02_PartitionName>
+            <N03_DoorArea>20</N03_DoorArea>
+            <N04_UFactor>0.2</N04_UFactor>
+          </Row>
+          <Row>
+            <N01_DoorName>GarToHouse Dr</N01_DoorName>
+            <N02_PartitionName>GarToHouse Front</N02_PartitionName>
+            <N03_DoorArea>20</N03_DoorArea>
+            <N04_UFactor>0.2</N04_UFactor>
+          </Row>
+          <Row>
+            <N01_DoorName>GDoor</N01_DoorName>
+            <N02_PartitionName>Gwall Front</N02_PartitionName>
+            <N03_DoorArea>108</N03_DoorArea>
+            <N04_UFactor>1</N04_UFactor>
+          </Row>
+        </TableOpaqueDoors>
+      </Section_N>
+      <Section_O>
+        <TableOverhang>
+          <Row>
+            <O01_FenestrationVerticalName>F-6060</O01_FenestrationVerticalName>
+            <O02_OverhangDepth>1</O02_OverhangDepth>
+            <O03_OverhangDistanceUp>1.33</O03_OverhangDistanceUp>
+            <O04_OverhangLeftExtent>3</O04_OverhangLeftExtent>
+            <O05_OverhangRightExtent>10</O05_OverhangRightExtent>
+            <O06_OverhangFlapHeight>0</O06_OverhangFlapHeight>
+            <O07_FinDepth>0</O07_FinDepth>
+            <O08_FinTopUp>0</O08_FinTopUp>
+            <O09_FinDistanceLeft>0</O09_FinDistanceLeft>
+            <O10_FinBottomUp>0</O10_FinBottomUp>
+            <O11_FinDepth>0</O11_FinDepth>
+            <O12_FinTopUp>0</O12_FinTopUp>
+            <O13_FinDistanceRight>0</O13_FinDistanceRight>
+            <O14_FinBottomUp>0</O14_FinBottomUp>
+          </Row>
+          <Row>
+            <O01_FenestrationVerticalName>F-4050 x3</O01_FenestrationVerticalName>
+            <O02_OverhangDepth>1</O02_OverhangDepth>
+            <O03_OverhangDistanceUp>1.33</O03_OverhangDistanceUp>
+            <O04_OverhangLeftExtent>6</O04_OverhangLeftExtent>
+            <O05_OverhangRightExtent>6</O05_OverhangRightExtent>
+            <O06_OverhangFlapHeight>0</O06_OverhangFlapHeight>
+            <O07_FinDepth>0</O07_FinDepth>
+            <O08_FinTopUp>0</O08_FinTopUp>
+            <O09_FinDistanceLeft>0</O09_FinDistanceLeft>
+            <O10_FinBottomUp>0</O10_FinBottomUp>
+            <O11_FinDepth>0</O11_FinDepth>
+            <O12_FinTopUp>0</O12_FinTopUp>
+            <O13_FinDistanceRight>0</O13_FinDistanceRight>
+            <O14_FinBottomUp>0</O14_FinBottomUp>
+          </Row>
+          <Row>
+            <O01_FenestrationVerticalName>F-1660 x2</O01_FenestrationVerticalName>
+            <O02_OverhangDepth>4</O02_OverhangDepth>
+            <O03_OverhangDistanceUp>1.33</O03_OverhangDistanceUp>
+            <O04_OverhangLeftExtent>3</O04_OverhangLeftExtent>
+            <O05_OverhangRightExtent>3</O05_OverhangRightExtent>
+            <O06_OverhangFlapHeight>0</O06_OverhangFlapHeight>
+            <O07_FinDepth>0</O07_FinDepth>
+            <O08_FinTopUp>0</O08_FinTopUp>
+            <O09_FinDistanceLeft>0</O09_FinDistanceLeft>
+            <O10_FinBottomUp>0</O10_FinBottomUp>
+            <O11_FinDepth>0</O11_FinDepth>
+            <O12_FinTopUp>0</O12_FinTopUp>
+            <O13_FinDistanceRight>0</O13_FinDistanceRight>
+            <O14_FinBottomUp>0</O14_FinBottomUp>
+          </Row>
+          <Row>
+            <O01_FenestrationVerticalName>F-3636</O01_FenestrationVerticalName>
+            <O02_OverhangDepth>1</O02_OverhangDepth>
+            <O03_OverhangDistanceUp>1.33</O03_OverhangDistanceUp>
+            <O04_OverhangLeftExtent>10</O04_OverhangLeftExtent>
+            <O05_OverhangRightExtent>10</O05_OverhangRightExtent>
+            <O06_OverhangFlapHeight>0</O06_OverhangFlapHeight>
+            <O07_FinDepth>0</O07_FinDepth>
+            <O08_FinTopUp>0</O08_FinTopUp>
+            <O09_FinDistanceLeft>0</O09_FinDistanceLeft>
+            <O10_FinBottomUp>0</O10_FinBottomUp>
+            <O11_FinDepth>0</O11_FinDepth>
+            <O12_FinTopUp>0</O12_FinTopUp>
+            <O13_FinDistanceRight>0</O13_FinDistanceRight>
+            <O14_FinBottomUp>0</O14_FinBottomUp>
+          </Row>
+          <Row>
+            <O01_FenestrationVerticalName>B1 SGD</O01_FenestrationVerticalName>
+            <O02_OverhangDepth>6</O02_OverhangDepth>
+            <O03_OverhangDistanceUp>1.33</O03_OverhangDistanceUp>
+            <O04_OverhangLeftExtent>4</O04_OverhangLeftExtent>
+            <O05_OverhangRightExtent>4</O05_OverhangRightExtent>
+            <O06_OverhangFlapHeight>0</O06_OverhangFlapHeight>
+            <O07_FinDepth>0</O07_FinDepth>
+            <O08_FinTopUp>0</O08_FinTopUp>
+            <O09_FinDistanceLeft>0</O09_FinDistanceLeft>
+            <O10_FinBottomUp>0</O10_FinBottomUp>
+            <O11_FinDepth>0</O11_FinDepth>
+            <O12_FinTopUp>0</O12_FinTopUp>
+            <O13_FinDistanceRight>0</O13_FinDistanceRight>
+            <O14_FinBottomUp>0</O14_FinBottomUp>
+          </Row>
+          <Row>
+            <O01_FenestrationVerticalName>B-6010</O01_FenestrationVerticalName>
+            <O02_OverhangDepth>1</O02_OverhangDepth>
+            <O03_OverhangDistanceUp>0</O03_OverhangDistanceUp>
+            <O04_OverhangLeftExtent>4</O04_OverhangLeftExtent>
+            <O05_OverhangRightExtent>4</O05_OverhangRightExtent>
+            <O06_OverhangFlapHeight>0</O06_OverhangFlapHeight>
+            <O07_FinDepth>0</O07_FinDepth>
+            <O08_FinTopUp>0</O08_FinTopUp>
+            <O09_FinDistanceLeft>0</O09_FinDistanceLeft>
+            <O10_FinBottomUp>0</O10_FinBottomUp>
+            <O11_FinDepth>0</O11_FinDepth>
+            <O12_FinTopUp>0</O12_FinTopUp>
+            <O13_FinDistanceRight>0</O13_FinDistanceRight>
+            <O14_FinBottomUp>0</O14_FinBottomUp>
+          </Row>
+          <Row>
+            <O01_FenestrationVerticalName>B-6040 x3</O01_FenestrationVerticalName>
+            <O02_OverhangDepth>1</O02_OverhangDepth>
+            <O03_OverhangDistanceUp>1.33</O03_OverhangDistanceUp>
+            <O04_OverhangLeftExtent>23</O04_OverhangLeftExtent>
+            <O05_OverhangRightExtent>23</O05_OverhangRightExtent>
+            <O06_OverhangFlapHeight>0</O06_OverhangFlapHeight>
+            <O07_FinDepth>0</O07_FinDepth>
+            <O08_FinTopUp>0</O08_FinTopUp>
+            <O09_FinDistanceLeft>0</O09_FinDistanceLeft>
+            <O10_FinBottomUp>0</O10_FinBottomUp>
+            <O11_FinDepth>0</O11_FinDepth>
+            <O12_FinTopUp>0</O12_FinTopUp>
+            <O13_FinDistanceRight>0</O13_FinDistanceRight>
+            <O14_FinBottomUp>0</O14_FinBottomUp>
+          </Row>
+          <Row>
+            <O01_FenestrationVerticalName>B-6050</O01_FenestrationVerticalName>
+            <O02_OverhangDepth>1</O02_OverhangDepth>
+            <O03_OverhangDistanceUp>1.33</O03_OverhangDistanceUp>
+            <O04_OverhangLeftExtent>10</O04_OverhangLeftExtent>
+            <O05_OverhangRightExtent>10</O05_OverhangRightExtent>
+            <O06_OverhangFlapHeight>0</O06_OverhangFlapHeight>
+            <O07_FinDepth>0</O07_FinDepth>
+            <O08_FinTopUp>0</O08_FinTopUp>
+            <O09_FinDistanceLeft>0</O09_FinDistanceLeft>
+            <O10_FinBottomUp>0</O10_FinBottomUp>
+            <O11_FinDepth>0</O11_FinDepth>
+            <O12_FinTopUp>0</O12_FinTopUp>
+            <O13_FinDistanceRight>0</O13_FinDistanceRight>
+            <O14_FinBottomUp>0</O14_FinBottomUp>
+          </Row>
+          <Row>
+            <O01_FenestrationVerticalName>B-3020</O01_FenestrationVerticalName>
+            <O02_OverhangDepth>1</O02_OverhangDepth>
+            <O03_OverhangDistanceUp>1.33</O03_OverhangDistanceUp>
+            <O04_OverhangLeftExtent>10</O04_OverhangLeftExtent>
+            <O05_OverhangRightExtent>10</O05_OverhangRightExtent>
+            <O06_OverhangFlapHeight>0</O06_OverhangFlapHeight>
+            <O07_FinDepth>0</O07_FinDepth>
+            <O08_FinTopUp>0</O08_FinTopUp>
+            <O09_FinDistanceLeft>0</O09_FinDistanceLeft>
+            <O10_FinBottomUp>0</O10_FinBottomUp>
+            <O11_FinDepth>0</O11_FinDepth>
+            <O12_FinTopUp>0</O12_FinTopUp>
+            <O13_FinDistanceRight>0</O13_FinDistanceRight>
+            <O14_FinBottomUp>0</O14_FinBottomUp>
+          </Row>
+        </TableOverhang>
+      </Section_O>
+      <Section_P>
+        <TableOpaqueConstructions>
+          <Row>
+            <P01_ConstructionAssemblyNamePerformanceRes>Garage Wall R-0</P01_ConstructionAssemblyNamePerformanceRes>
+            <P02_OpaqueSurfaceType>ExteriorWall</P02_OpaqueSurfaceType>
+            <P02a_PartitionAboveGrade>true</P02a_PartitionAboveGrade>
+            <P03_ConstructionAssemblyType>WoodFramedWall</P03_ConstructionAssemblyType>
+            <P05_CavityInsulationRes>Other</P05_CavityInsulationRes>
+            <P05a_CavityInsulationOther>none</P05a_CavityInsulationOther>
+            <P05b_CavityInsulation>0</P05b_CavityInsulation>
+            <P07_UFactor>0.347</P07_UFactor>
+            <P08_AssemblyLayers>Inside Finish: Gypsum Board</P08_AssemblyLayers>
+            <P08_AssemblyLayers>Cavity / Frame: no insul. / 2x6</P08_AssemblyLayers>
+            <P08_AssemblyLayers>Exterior Finish: 3 Coat Stucco</P08_AssemblyLayers>
+          </Row>
+          <Row>
+            <P01_ConstructionAssemblyNamePerformanceRes>R21 R5 Stucco Wall</P01_ConstructionAssemblyNamePerformanceRes>
+            <P02_OpaqueSurfaceType>ExteriorWall</P02_OpaqueSurfaceType>
+            <P02a_PartitionAboveGrade>true</P02a_PartitionAboveGrade>
+            <P03_ConstructionAssemblyType>WoodFramedWall</P03_ConstructionAssemblyType>
+            <P05_CavityInsulationRes>R21</P05_CavityInsulationRes>
+            <P05a_CavityInsulationOther>R 21</P05a_CavityInsulationOther>
+            <P05b_CavityInsulation>21</P05b_CavityInsulation>
+            <P07_UFactor>0.048</P07_UFactor>
+            <P08_AssemblyLayers>Inside Finish: Gypsum Board</P08_AssemblyLayers>
+            <P08_AssemblyLayers>Cavity / Frame: R-21 / 2x6</P08_AssemblyLayers>
+            <P08_AssemblyLayers>Sheathing / Insulation: R5 Sheathing</P08_AssemblyLayers>
+            <P08_AssemblyLayers>Exterior Finish: Synthetic Stucco</P08_AssemblyLayers>
+          </Row>
+          <Row>
+            <P01_ConstructionAssemblyNamePerformanceRes>Gar House R21</P01_ConstructionAssemblyNamePerformanceRes>
+            <P02_OpaqueSurfaceType>InteriorWall</P02_OpaqueSurfaceType>
+            <P02a_PartitionAboveGrade>true</P02a_PartitionAboveGrade>
+            <P03_ConstructionAssemblyType>WoodFramedWall</P03_ConstructionAssemblyType>
+            <P05_CavityInsulationRes>R21</P05_CavityInsulationRes>
+            <P05a_CavityInsulationOther>R 21</P05a_CavityInsulationOther>
+            <P05b_CavityInsulation>21</P05b_CavityInsulation>
+            <P07_UFactor>0.075</P07_UFactor>
+            <P08_AssemblyLayers>Inside Finish: Gypsum Board</P08_AssemblyLayers>
+            <P08_AssemblyLayers>Cavity / Frame: R-21 / 2x4</P08_AssemblyLayers>
+            <P08_AssemblyLayers>Other Side Finish: Gypsum Board</P08_AssemblyLayers>
+          </Row>
+          <Row>
+            <P01_ConstructionAssemblyNamePerformanceRes>Tile R-19 below deck</P01_ConstructionAssemblyNamePerformanceRes>
+            <P02_OpaqueSurfaceType>AtticRoof</P02_OpaqueSurfaceType>
+            <P02a_PartitionAboveGrade>true</P02a_PartitionAboveGrade>
+            <P03_ConstructionAssemblyType>WoodFramedCeiling</P03_ConstructionAssemblyType>
+            <P05_CavityInsulationRes>R19</P05_CavityInsulationRes>
+            <P05a_CavityInsulationOther>R 19</P05a_CavityInsulationOther>
+            <P05b_CavityInsulation>19</P05b_CavityInsulation>
+            <P07_UFactor>0.049</P07_UFactor>
+            <P08_AssemblyLayers>Under Roof Joists: R-6.0 insul.</P08_AssemblyLayers>
+            <P08_AssemblyLayers>Cavity / Frame: R-13.0 / 2x4</P08_AssemblyLayers>
+            <P08_AssemblyLayers>Roof Deck: Wood Siding/sheathing/decking</P08_AssemblyLayers>
+            <P08_AssemblyLayers>Tile Gap: present</P08_AssemblyLayers>
+            <P08_AssemblyLayers>Roofing: 10 PSF (RoofTile)</P08_AssemblyLayers>
+          </Row>
+          <Row>
+            <P01_ConstructionAssemblyNamePerformanceRes>Tile Roof</P01_ConstructionAssemblyNamePerformanceRes>
+            <P02_OpaqueSurfaceType>AtticRoof</P02_OpaqueSurfaceType>
+            <P02a_PartitionAboveGrade>true</P02a_PartitionAboveGrade>
+            <P03_ConstructionAssemblyType>WoodFramedCeiling</P03_ConstructionAssemblyType>
+            <P05_CavityInsulationRes>Other</P05_CavityInsulationRes>
+            <P05a_CavityInsulationOther>none</P05a_CavityInsulationOther>
+            <P05b_CavityInsulation>0</P05b_CavityInsulation>
+            <P07_UFactor>0.4</P07_UFactor>
+            <P08_AssemblyLayers>Cavity / Frame: no insul. / 2x4</P08_AssemblyLayers>
+            <P08_AssemblyLayers>Roof Deck: Wood Siding/sheathing/decking</P08_AssemblyLayers>
+            <P08_AssemblyLayers>Tile Gap: present</P08_AssemblyLayers>
+            <P08_AssemblyLayers>Roofing: 10 PSF (RoofTile)</P08_AssemblyLayers>
+          </Row>
+          <Row>
+            <P01_ConstructionAssemblyNamePerformanceRes>R0 ClgBlwAttic Cons</P01_ConstructionAssemblyNamePerformanceRes>
+            <P02_OpaqueSurfaceType>CeilingBelowAttic</P02_OpaqueSurfaceType>
+            <P02a_PartitionAboveGrade>true</P02a_PartitionAboveGrade>
+            <P03_ConstructionAssemblyType>WoodFramedCeiling</P03_ConstructionAssemblyType>
+            <P05_CavityInsulationRes>Other</P05_CavityInsulationRes>
+            <P05a_CavityInsulationOther>none</P05a_CavityInsulationOther>
+            <P05b_CavityInsulation>0</P05b_CavityInsulation>
+            <P07_UFactor>0.481</P07_UFactor>
+            <P08_AssemblyLayers>Inside Finish: Gypsum Board</P08_AssemblyLayers>
+            <P08_AssemblyLayers>Cavity / Frame: no insul. / 2x4 Btm Chrd</P08_AssemblyLayers>
+          </Row>
+          <Row>
+            <P01_ConstructionAssemblyNamePerformanceRes>R38 Ceiling below attic</P01_ConstructionAssemblyNamePerformanceRes>
+            <P02_OpaqueSurfaceType>CeilingBelowAttic</P02_OpaqueSurfaceType>
+            <P02a_PartitionAboveGrade>true</P02a_PartitionAboveGrade>
+            <P03_ConstructionAssemblyType>WoodFramedCeiling</P03_ConstructionAssemblyType>
+            <P05_CavityInsulationRes>R38</P05_CavityInsulationRes>
+            <P05a_CavityInsulationOther>R 38</P05a_CavityInsulationOther>
+            <P05b_CavityInsulation>38</P05b_CavityInsulation>
+            <P07_UFactor>0.025</P07_UFactor>
+            <P08_AssemblyLayers>Inside Finish: Gypsum Board</P08_AssemblyLayers>
+            <P08_AssemblyLayers>Cavity / Frame: R-9.1 / 2x4 Btm Chrd</P08_AssemblyLayers>
+            <P08_AssemblyLayers>Over Ceiling Joists: R-28.9 insul.</P08_AssemblyLayers>
+          </Row>
+        </TableOpaqueConstructions>
+      </Section_P>
+      <Section_Q>
+        <TableSlabFloor>
+          <Row>
+            <Q01_PartitionName>Gslab</Q01_PartitionName>
+            <Q02_ThermalZoneName>Garage</Q02_ThermalZoneName>
+            <Q03_FloorSlabArea>440</Q03_FloorSlabArea>
+            <Q04_SlabPerimeter>44</Q04_SlabPerimeter>
+            <Q05a_SlabInsulationThermalResistance>R0</Q05a_SlabInsulationThermalResistance>
+            <Q05b_SlabInsulationOther>0.00</Q05b_SlabInsulationOther>
+            <Q05c_SlabInsulationVerticalILength>0</Q05c_SlabInsulationVerticalILength>
+            <Q06_SlabCarpetedFraction>0</Q06_SlabCarpetedFraction>
+            <Q07_FloorSlabHeated>false</Q07_FloorSlabHeated>
+          </Row>
+          <Row>
+            <Q01_PartitionName>Slab On Grade</Q01_PartitionName>
+            <Q02_ThermalZoneName>Conditioned</Q02_ThermalZoneName>
+            <Q03_FloorSlabArea>2100</Q03_FloorSlabArea>
+            <Q04_SlabPerimeter>162</Q04_SlabPerimeter>
+            <Q05a_SlabInsulationThermalResistance>R0</Q05a_SlabInsulationThermalResistance>
+            <Q05b_SlabInsulationOther>0.00</Q05b_SlabInsulationOther>
+            <Q05c_SlabInsulationVerticalILength>0</Q05c_SlabInsulationVerticalILength>
+            <Q06_SlabCarpetedFraction>0.8</Q06_SlabCarpetedFraction>
+            <Q07_FloorSlabHeated>false</Q07_FloorSlabHeated>
+          </Row>
+        </TableSlabFloor>
+      </Section_Q>
+      <Section_R>
+        <R01_IsQII_HERSVerificationRequired>true</R01_IsQII_HERSVerificationRequired>
+        <R02_IsSprayFoamInsulationHERSVerificationRequired>false</R02_IsSprayFoamInsulationHERSVerificationRequired>
+        <R03_IsEnvelopeAirLeakageHERSVerificationRequired>false</R03_IsEnvelopeAirLeakageHERSVerificationRequired>
+      </Section_R>
+      <Section_S>
+        <TableWaterHeatingSF>
+          <Row>
+            <S01_WaterHeatingSystemName>DHW System</S01_WaterHeatingSystemName>
+            <S02_ResidentialWaterHeatingSystemType>Standard</S02_ResidentialWaterHeatingSystemType>
+            <S03_ResidentialDHWDwellingUnitDistributionType>Multi-family: No loops or recirc pump</S03_ResidentialDHWDwellingUnitDistributionType>
+            <S03_ResidentialDHWDwellingUnitDistributionTypeOther>Multi-family: No loops or recirc pump</S03_ResidentialDHWDwellingUnitDistributionTypeOther>
+            <S04_WaterHeaterName>Small Instantaneous</S04_WaterHeaterName>
+            <S05_WaterHeaterCount>1</S05_WaterHeaterCount>
+            <S07_CompactDistributionType>BasicType</S07_CompactDistributionType>
+            <S08_StatusEAA>New</S08_StatusEAA>
+          </Row>
+        </TableWaterHeatingSF>
+      </Section_S>
+      <Section_T>
+        <TableWaterHeaters>
+          <Row>
+            <T01_WaterHeaterName>Small Instantaneous</T01_WaterHeaterName>
+            <T02_WaterHeaterFuelSource>NaturalGas</T02_WaterHeaterFuelSource>
+            <T03_ResidentialWaterHeaterType>InstantaneousSmall</T03_ResidentialWaterHeaterType>
+            <T04_WaterHeaterCount>1</T04_WaterHeaterCount>
+            <T05_StorageCapacity>0</T05_StorageCapacity>
+            <T06a_EfficiencyType>EnergyFactor</T06a_EfficiencyType>
+            <T06_EnergyFactor>0.82</T06_EnergyFactor>
+            <T07_WaterHeaterGasFiredRatedInput>200000</T07_WaterHeaterGasFiredRatedInput>
+            <T08_ExteriorTankInsulation>0</T08_ExteriorTankInsulation>
+          </Row>
+        </TableWaterHeaters>
+      </Section_T>
+      <Section_U>
+        <TableWaterHeatingHERS>
+          <Row>
+            <U01_WaterHeatingSystemName>DHW System - 1/1</U01_WaterHeatingSystemName>
+          </Row>
+        </TableWaterHeatingHERS>
+      </Section_U>
+      <Section_V>
+        <TableSpaceConditioning>
+          <Row>
+            <V01_ResidentialSpaceConditioningSystemName>HVAC System 1</V01_ResidentialSpaceConditioningSystemName>
+            <V02_ResidentialSpaceConditioningSystemType>HeatingCoolingSystemOther</V02_ResidentialSpaceConditioningSystemType>
+            <V03_ResidentialHeatingSystemName>Furn 80</V03_ResidentialHeatingSystemName>
+            <V04_ResidentialCoolingSystemName>Split 14 11.7</V04_ResidentialCoolingSystemName>
+            <V05_FanName>HVAC Fan 1</V05_FanName>
+            <V06_SpaceConditioningDistributionSystemName>Attic Default</V06_SpaceConditioningDistributionSystemName>
+          </Row>
+        </TableSpaceConditioning>
+      </Section_V>
+      <Section_W>
+        <TableHeatingUnits>
+          <Row>
+            <W01_ResidentialHeatingSystemName>Furn 80</W01_ResidentialHeatingSystemName>
+            <W02_ResidentialHeatingSystemType>CentralGasFurnace</W02_ResidentialHeatingSystemType>
+            <W03_HeatingUnitCount>1</W03_HeatingUnitCount>
+            <W04_EfficiencyAFUE>80</W04_EfficiencyAFUE>
+          </Row>
+        </TableHeatingUnits>
+      </Section_W>
+      <Section_X>
+        <TableCoolingUnits>
+          <Row>
+            <X01_ResidentialCoolingSystemName>Split 14 11.7</X01_ResidentialCoolingSystemName>
+            <X02_ResidentialCoolingSystemType>CentralSplitAC</X02_ResidentialCoolingSystemType>
+            <X03_CoolingUnitCount>1</X03_CoolingUnitCount>
+            <X04_EfficiencyEER>11.7</X04_EfficiencyEER>
+            <X05_EfficiencySEER>14</X05_EfficiencySEER>
+            <X06_ResidentialCoolingZoneType>NotZoneControlled</X06_ResidentialCoolingZoneType>
+            <X07_CondenserSpeedType>SingleSpeed</X07_CondenserSpeedType>
+            <X08_CoolingSystemHERS_VerificationName>Split 14 11.7-hers-cool</X08_CoolingSystemHERS_VerificationName>
+          </Row>
+        </TableCoolingUnits>
+      </Section_X>
+      <Section_Z>
+        <TableCoolingHERS>
+          <Row>
+            <Z01_CoolingSystemHERS_VerificationName>Split 14 11.7-hers-cool</Z01_CoolingSystemHERS_VerificationName>
+            <Z02_IsAirflowVerificationRequired>true</Z02_IsAirflowVerificationRequired>
+            <Z03_AirflowRequiredMinimumTarget>350</Z03_AirflowRequiredMinimumTarget>
+            <Z04_EER_VerificationRequired>false</Z04_EER_VerificationRequired>
+            <Z05_SEER_VerificationRequired>false</Z05_SEER_VerificationRequired>
+            <Z06_RefrigerantChargeVerificationRequired>true</Z06_RefrigerantChargeVerificationRequired>
+          </Row>
+        </TableCoolingHERS>
+      </Section_Z>
+      <Section_Aa>
+        <TableDistribution>
+          <Row>
+            <Aa01_SpaceConditioningDistributionSystemName>Attic Default</Aa01_SpaceConditioningDistributionSystemName>
+            <Aa02_DuctLocation>DuctsAttic</Aa02_DuctLocation>
+            <Aa03_DuctDesignType>false</Aa03_DuctDesignType>
+            <Aa04_DuctRValue>8</Aa04_DuctRValue>
+            <Aa05_DuctRValue>8</Aa05_DuctRValue>
+            <Aa06_DuctSpaceType>Attic </Aa06_DuctSpaceType>
+            <Aa07_DuctSpaceType>Attic </Aa07_DuctSpaceType>
+            <Aa08_DuctSurfaceArea>902.17</Aa08_DuctSurfaceArea>
+            <Aa09_DuctSurfaceArea>136.03</Aa09_DuctSurfaceArea>
+            <Aa10_HasBypassDuct>false</Aa10_HasBypassDuct>
+            <Aa11_DuctLeakageDiagnosticCategory>DuctsSealedTested</Aa11_DuctLeakageDiagnosticCategory>
+            <Aa12_DistributionHERS_VerificationName>Attic Default-hers-dist</Aa12_DistributionHERS_VerificationName>
+            <Aa13_StatusEAA>New</Aa13_StatusEAA>
+          </Row>
+        </TableDistribution>
+      </Section_Aa>
+      <Section_Bb>
+        <TableDistributionHERS>
+          <Row>
+            <Bb01_DistributionHERS_VerificationName>Attic Default-hers-dist</Bb01_DistributionHERS_VerificationName>
+            <Bb02_DuctLeakageTestRequired>true</Bb02_DuctLeakageTestRequired>
+            <Bb03_DuctSystemLeakageTarget>5</Bb03_DuctSystemLeakageTarget>
+            <Bb04_IsDuctLocationVerificationRequired>false</Bb04_IsDuctLocationVerificationRequired>
+            <Bb05_DuctDesignVerificationRequired>false</Bb05_DuctDesignVerificationRequired>
+            <Bb06_DuctsBuriedVerificationRequired>false</Bb06_DuctsBuriedVerificationRequired>
+            <Bb07_DuctsDeeplyBuriedComplianceCreditTaken>false</Bb07_DuctsDeeplyBuriedComplianceCreditTaken>
+            <Bb08_LowLeakageAirHandlingUnitVerificationRequired>true</Bb08_LowLeakageAirHandlingUnitVerificationRequired>
+          </Row>
+        </TableDistributionHERS>
+      </Section_Bb>
+      <Section_Cc>
+        <TableFanSystems>
+          <Row>
+            <Cc01_FanName>HVAC Fan 1</Cc01_FanName>
+            <Cc02_ResidentialFanType>SingleSpeedPSC</Cc02_ResidentialFanType>
+            <Cc03_FanPowerPerFlow>0.45</Cc03_FanPowerPerFlow>
+            <Cc04_FanSystemHERS_VerificationName>HVAC Fan 1-hers-fan</Cc04_FanSystemHERS_VerificationName>
+          </Row>
+        </TableFanSystems>
+      </Section_Cc>
+      <Section_Dd>
+        <TableFanSystemsHERS>
+          <Row>
+            <Dd01_FanSystemHERS_VerificationName>HVAC Fan 1-hers-fan</Dd01_FanSystemHERS_VerificationName>
+            <Dd02_FanVerifiedWattDrawRequired>true</Dd02_FanVerifiedWattDrawRequired>
+            <Dd03_FanEfficacyRequired>0.45</Dd03_FanEfficacyRequired>
+          </Row>
+        </TableFanSystemsHERS>
+      </Section_Dd>
+      <Section_Ee>
+        <TableFanIAQ>
+          <Row>
+            <Ee01_ResidentialDwellingUnitName>SFam IAQVentRpt</Ee01_ResidentialDwellingUnitName>
+            <Ee02_FanFlowCapacity>90</Ee02_FanFlowCapacity>
+            <Ee03_FanPowerPerFlow>0.25</Ee03_FanPowerPerFlow>
+            <Ee04_VentilationSystemType>Default</Ee04_VentilationSystemType>
+            <Ee05_RecoveryEfficiency>0</Ee05_RecoveryEfficiency>
+            <Ee06_IAQ_VentilationVerificationRequired>true</Ee06_IAQ_VentilationVerificationRequired>
+            <Ee07_VentilationOperationSchedule>Continuous</Ee07_VentilationOperationSchedule>
+          </Row>
+        </TableFanIAQ>
+      </Section_Ee>
+      <Section_Ff>
+        <TableVentilation>
+          <Row>
+            <Ff01_VentilationSystemCoolingName>Whole House Fan</Ff01_VentilationSystemCoolingName>
+            <Ff02_AirFlowPerSquareFoot>1.5</Ff02_AirFlowPerSquareFoot>
+            <Ff03_ContinuousVentilationAirflow>3150</Ff03_ContinuousVentilationAirflow>
+            <Ff04_MaximumCoolingWperCFM>0.14</Ff04_MaximumCoolingWperCFM>
+            <Ff05_CoolingVentilationPower>441</Ff05_CoolingVentilationPower>
+            <Ff06_FanCount>1</Ff06_FanCount>
+          </Row>
+        </TableVentilation>
+      </Section_Ff>
+      <Section_D>
+        <D01_EDR_Standard>25.7</D01_EDR_Standard>
+        <D02_EDR_Proposed>44.9</D02_EDR_Proposed>
+        <D03_EDR_ProposedPvBattery>20.8</D03_EDR_ProposedPvBattery>
+        <D04_EDR_Final>24.1</D04_EDR_Final>
+        <D05_EDR_MeetsTier1>false</D05_EDR_MeetsTier1>
+        <D06_EDR_MeetsTier2>false</D06_EDR_MeetsTier2>
+        <D07_EDR_MeetsTierZNE>false</D07_EDR_MeetsTierZNE>
+      </Section_D>
+      <Section_Da>
+        <TableEDR_PV>
+          <Row>
+            <Da01_PV_SystemTotalRatedPowerDC>2</Da01_PV_SystemTotalRatedPowerDC>
+            <Da02_PhotoVoltaicExceptionRes>NoExceptionsNA</Da02_PhotoVoltaicExceptionRes>
+            <Da03_ArrayModuleType>Standard</Da03_ArrayModuleType>
+            <Da04_CFI_PV>true</Da04_CFI_PV>
+            <Da05_Azimuth>170</Da05_Azimuth>
+            <Da06_TiltMeasurementType>TiltDegrees</Da06_TiltMeasurementType>
+            <Da07_Tilt>22.62</Da07_Tilt>
+            <Da08_RoofRise>5</Da08_RoofRise>
+            <Da09_InverterEfficiencyPercent>96</Da09_InverterEfficiencyPercent>
+          </Row>
+        </TableEDR_PV>
+      </Section_Da>
+      <Section_Db>
+        <TableEDR_Bat>
+          <Row>
+            <Db01_BatteryControl>Basic</Db01_BatteryControl>
+            <Db02_BatteryCapacity>5</Db02_BatteryCapacity>
+            <Db03_ChargingEfficiency>0.95</Db03_ChargingEfficiency>
+            <Db04_ChargingRate>1.79</Db04_ChargingRate>
+            <Db05_DischargingEfficiency>0.95</Db05_DischargingEfficiency>
+            <Db06_DischargingRate>1.79</Db06_DischargingRate>
+          </Row>
+        </TableEDR_Bat>
+      </Section_Db>
+    </cF1RPRF01E>
+  </DocumentData>
+  <Report> </Report>
+  <Report2> </Report2>
+  <InputData>UnVsZXNldEZpbGVuYW1lICAgIkNBIFJlcyAyMDE5LmJpbiIgIA0KDQpQcm9qICAg
+IjEgU3RvcnkgRXhhbXBsZSBDb21wYWN0IERpc3RyaWJ1dGlvbiIgIA0KICAgU29m
+dHdhcmVWZXJzaW9uID0gIkNCRUNDLVJlcyAyMDE5LjAuMTEgQWxwaGEgKDEwNjgp
+Ig0KICAgQkVNVmVyc2lvbiA9IDcNCiAgIENyZWF0ZURhdGUgPSAxNTU1MDkyNjYx
+DQogICBNb2REYXRlID0gMTU1NTA5MjY2MQ0KICAgUnVuRGF0ZSA9IDE0NzI4Mzgx
+MDcNCiAgIFByb2pGaWxlTmFtZSA9ICIxc3RvcnlFeGFtcGxlMkNvbXBhY3REaXN0
+LnJpYmQxOSINCiAgIFJ1blRpdGxlID0gIjEgU3RvcnkgRXhhbXBsZSBSZXYgMiIN
+CiAgIEFuYWx5c2lzVHlwZSA9ICJQcm9wb3NlZCBhbmQgU3RhbmRhcmQiDQogICBD
+QUxHcmVlbiA9IDANCiAgIFREVlR5cGUgPSAiVERWIg0KICAgU3RhbmRhcmRzVmVy
+c2lvbiA9ICJDb21wbGlhbmNlIDIwMjAiDQogICBBbmFseXNpc1JlcG9ydCA9ICJC
+dWlsZGluZyBTdW1tYXJ5IChjc3YpIg0KICAgQ29tcGxpYW5jZVJlcG9ydFBERiA9
+IDENCiAgIENvbXBsaWFuY2VSZXBvcnRYTUwgPSAxDQogICBQVkNvbXBDcmVkaXQg
+PSAwDQogICBQVldJbnB1dHMgPSAiU2ltcGxpZmllZCINCiAgIFBWU2l6ZU9wdGlv
+biA9ICItIHVzZSBzcGVjaWZpZWQgc2l6ZXMgLSINCiAgIFBWV0RDU3lzU2l6ZSA9
+ICggMiwgMCwgMCwgMCwgMCApDQogICBQVldNb2R1bGVUeXBlID0gKCAiU3RhbmRh
+cmQiLCAiU3RhbmRhcmQiLCAiU3RhbmRhcmQiLCAiU3RhbmRhcmQiLCANCiAgICAg
+ICAgICAgICAgICAgICAgICJTdGFuZGFyZCIgKQ0KICAgUFZXQ2FsRmxleEluc3Rh
+bGwgPSAoIDEsIDEsIDEsIDEsIDEgKQ0KICAgUFZXR2VvbVNwZWNNZXRob2QgPSAo
+ICJhemltdXRoIGFuZCB0aWx0IiwgImF6aW11dGggYW5kIHRpbHQiLCANCiAgICAg
+ICAgICAgICAgICAgICAgICAgICAiYXppbXV0aCBhbmQgdGlsdCIsICJhemltdXRo
+IGFuZCB0aWx0IiwgDQogICAgICAgICAgICAgICAgICAgICAgICAgImF6aW11dGgg
+YW5kIHRpbHQiICkNCiAgIFBWV0xvY1NwZWNNZXRob2QgPSAoICItIG5vdCBzcGVj
+aWZpZWQgLSIsICItIG5vdCBzcGVjaWZpZWQgLSIsIA0KICAgICAgICAgICAgICAg
+ICAgICAgICAgIi0gbm90IHNwZWNpZmllZCAtIiwgIi0gbm90IHNwZWNpZmllZCAt
+IiwgDQogICAgICAgICAgICAgICAgICAgICAgICAiLSBub3Qgc3BlY2lmaWVkIC0i
+ICkNCiAgIFBWV1JlbExvY1NwZWNNZXRoID0gKCAiLSBzcGVjaWZ5IHJlbGF0aXZl
+IHBvc2l0aW9uIC0iLCANCiAgICAgICAgICAgICAgICAgICAgICAgICAiLSBzcGVj
+aWZ5IHJlbGF0aXZlIHBvc2l0aW9uIC0iLCANCiAgICAgICAgICAgICAgICAgICAg
+ICAgICAiLSBzcGVjaWZ5IHJlbGF0aXZlIHBvc2l0aW9uIC0iLCANCiAgICAgICAg
+ICAgICAgICAgICAgICAgICAiLSBzcGVjaWZ5IHJlbGF0aXZlIHBvc2l0aW9uIC0i
+LCANCiAgICAgICAgICAgICAgICAgICAgICAgICAiLSBzcGVjaWZ5IHJlbGF0aXZl
+IHBvc2l0aW9uIC0iICkNCiAgIFBWV0F6bVsxXSA9IDE3MA0KICAgUFZXQXJyYXlU
+aWx0SW5wdXQgPSAoICJkZWciLCAiZGVnIiwgImRlZyIsICJkZWciLCAiZGVnIiAp
+DQogICBQVldBcnJheVRpbHRQaXRjaFsxXSA9IDUNCiAgIFBWV0FycmF5VGlsdERl
+Z1sxXSA9IDIyLjYxOTkNCiAgIFBWV0FycmF5VHlwZSA9ICggIkZpeGVkIChvcGVu
+IHJhY2spIiwgIkZpeGVkIChvcGVuIHJhY2spIiwgDQogICAgICAgICAgICAgICAg
+ICAgICJGaXhlZCAob3BlbiByYWNrKSIsICJGaXhlZCAob3BlbiByYWNrKSIsIA0K
+ICAgICAgICAgICAgICAgICAgICAiRml4ZWQgKG9wZW4gcmFjaykiICkNCiAgIFBW
+V1B3ckVsZWMgPSAoICItIG5vbmUgLSIsICItIG5vbmUgLSIsICItIG5vbmUgLSIs
+ICItIG5vbmUgLSIsIA0KICAgICAgICAgICAgICAgICAgIi0gbm9uZSAtIiApDQog
+ICBQVldJbnZlcnRlckVmZlsxXSA9IDk2DQogICBBbGxvd0V4Y2Vzc1BWRURSID0g
+MA0KICAgUmVkdWNlZFBWUmVxID0gMA0KICAgUmVkdWNlZFBWUmVxRXhjZXB0ID0g
+Ii0gc2VsZWN0IGFwcGxpY2FibGUgcmVxdWlyZWQgUFYgZXhjZXB0aW9uIC0iDQog
+ICBCYXR0TWF4Q2FwID0gNQ0KICAgQmF0dGVyeUNvbnRyb2wgPSAiQmFzaWMiDQog
+ICBCYXR0R3JpZEhhcm1DcmVkaXQgPSAwDQogICBURFZTdW1tZXJQa0ZpcnN0SHIg
+PSAxOQ0KICAgU2ltU3BlZWRPcHRpb24gPSAiUXVpY2siDQogICBEUnRnTHRnQ3Jl
+ZGl0ID0gMA0KICAgRFJ0Z0x0Z1JlZHVjdGlvbiA9IDANCiAgIFNwZWNpZnlUYXJn
+ZXREUnRnID0gMA0KICAgU0ZhbUNvbXBhY3REaXN0cmliID0gIm5vdCBjb21wYWN0
+Ig0KICAgQ0FIUFByb2dyYW0gPSAiLSBub25lIC0iDQogICBJc0NBSFBFbGVjVXRp
+bCA9IDENCiAgIElzQ0FIUE5HYXNVdGlsID0gMQ0KICAgSXNDQUhQRE9FQ2hhbEhv
+bWUgPSAwDQogICBJc0NBSFBGdXR1cmVDb2RlID0gMA0KICAgQ0FIUFNvbGFyT3B0
+aW9uID0gIi0gc2VsZWN0IC0iDQogICBDbGltYXRlWm9uZSA9ICJDWjEyICAoU2Fj
+cmFtZW50bykiDQogICBBZGRyZXNzID0gIjE1MTYgTmludGggU3QiDQogICBaaXBD
+b2RlID0gOTU4MTQNCiAgIFJ1blNjb3BlID0gIk5ld2x5IENvbnN0cnVjdGVkIg0K
+ICAgQ2l0eSA9ICJTYWNyYW1lbnRvLCBDQSINCiAgIElzTXVsdGlGYW1pbHkgPSAw
+DQogICBDZW50cmFsTUZhbUxhdW5kcnkgPSAwDQogICBEZmx0TUZhbUxhdW5kcnla
+biA9ICJDb25kaXRpb25lZCINCiAgIFpvbmFsQ29udHJvbCA9IDANCiAgIERlc2Ny
+aXB0aW9uID0gIjIxMDAgZnQyIENFQyBQcm90b3R5cGUgd2l0aCB0aWxlIHJvb2Yi
+DQogICBBQ0g1MCA9IDUNCiAgIFN0YXR1cyA9ICJOZXciDQogICBJc1ZlcmlmaWVk
+ID0gMA0KICAgSXNBZGRBbG9uZSA9IDANCiAgIEFkZGl0aW9uQ0ZBRnJhYyA9IDEN
+CiAgIEFsdGVySW5jbDJDYXRlZ3MgPSAwDQogICBJbnN1bENvbnNRdWFsaXR5ID0g
+IlllcyINCiAgIE51bUJlZHJvb21zID0gMw0KICAgTnVtQWRkQmVkcm9vbXMgPSAw
+DQogICBBbGxPcmllbnRhdGlvbnMgPSAxDQogICBGcm9udE9yaWVudGF0aW9uID0g
+MA0KICAgR2FzVHlwZSA9ICJOYXR1cmFsIEdhcyINCiAgIEhhc0dhcmFnZSA9IDEN
+CiAgIFVuaXRJQVFPcHRpb25bMV0gPSAiRGVmYXVsdCBNaW5pbXVtIElBUSBGYW4i
+DQogICBVbml0SUFRRmFuQ250MVsxXSA9IDENCiAgIFVuaXRJQVFGYW5DbnQyWzFd
+ID0gMQ0KICAgVW5pdElBUUZhbkNudDNbMV0gPSAxDQogICBVbml0SUFRRmFuQ250
+NFsxXSA9IDENCiAgIFVuaXRJQVFab25lMVsxXSA9ICJDb25kaXRpb25lZCINCiAg
+IFVuaXRJQVFab25lMlsxXSA9ICJDb25kaXRpb25lZCINCiAgIFVuaXRJQVFab25l
+M1sxXSA9ICJDb25kaXRpb25lZCINCiAgIFVuaXRJQVFab25lNFsxXSA9ICJDb25k
+aXRpb25lZCINCiAgIFVuaXRDbFZlbnRPcHRpb24gPSAiRGVmYXVsdCBQcmVzY3Jp
+cHRpdmUgV2hvbGUgSG91c2UgRmFuIg0KICAgQ2xWZW50VmVyaWZpZWQgPSAxDQog
+ICBVbml0Q2xWZW50Wm9uZSA9ICggIkNvbmRpdGlvbmVkIiwgIkNvbmRpdGlvbmVk
+IiwgIkNvbmRpdGlvbmVkIiwgDQogICAgICAgICAgICAgICAgICAgICAgIkNvbmRp
+dGlvbmVkIiwgIkNvbmRpdGlvbmVkIiwgIkNvbmRpdGlvbmVkIiApDQogICBBcHBs
+UmVmcmlnWm9uZVsxXSA9ICJDb25kaXRpb25lZCINCiAgIEFwcGxXYXNoZXJab25l
+WzFdID0gIkNvbmRpdGlvbmVkIg0KICAgQXBwbERyeWVyWm9uZVsxXSA9ICJDb25k
+aXRpb25lZCINCiAgIEFwcGxDb29rWm9uZVsxXSA9ICJDb25kaXRpb25lZCINCiAg
+IEFwcGxEaXNoWm9uZVsxXSA9ICJDb25kaXRpb25lZCINCiAgIEFwcGxfSGF2ZVJl
+ZnJpZ1sxXSA9IDENCiAgIEFwcGxfSGF2ZURpc2hbMV0gPSAxDQogICBBcHBsX0hh
+dmVDb29rWzFdID0gMQ0KICAgQXBwbF9IYXZlV2FzaGVyWzFdID0gMQ0KICAgQXBw
+bF9IYXZlRHJ5ZXJbMV0gPSAxDQogICBBcHBsQ29va0Z1ZWxbMV0gPSAiR2FzIg0K
+ICAgQXBwbERyeWVyRnVlbFsxXSA9ICJHYXMiDQogICBBcHBsX1JlZnJpZ1VzYWdl
+WzFdID0gNTY1DQogICBBcHBsUmVmcmlnRWZmTWV0aG9kWzFdID0gImZyb20gIyBi
+ZWRyb29tcy91bml0Ig0KICAgQXBwbERpc2hVc2FnZU1ldGhvZFsxXSA9ICJmcm9t
+ICMgYmVkcm9vbXMvdW5pdCINCiAgIFJlc3VsdHNDdXJyZW50TXNnID0gIihub3Qg
+Y3VycmVudCkiDQogICBDU0VScHRfWm5EYXRhRHVtcCA9IDANCiAgIENTRVJwdF9I
+VkFDRGVzY3JpcCA9IDANCiAgIENTRVJwdF9abkVuZXJneSA9IDANCiAgIENTRVJw
+dF9NdHJfQWxsID0gMA0KICAgQ1NFUnB0X010cl9FbGVjID0gMA0KICAgQ1NFUnB0
+X010cl9OR2FzID0gMA0KICAgQ1NFUnB0X010cl9PdGhyID0gMA0KICAgQ1NFUnB0
+X1puRW5lcmd5X0REID0gMA0KICAgQ1NFUnB0X010cl9BbGxfREQgPSAwDQogICBD
+U0VScHRfTXRyX0VsZWNfREQgPSAwDQogICBDU0VScHRfTXRyX05HYXNfREQgPSAw
+DQogICBDU0VScHRfTXRyX090aHJfREQgPSAwDQogICBDU0VScHRfWm5FbmVyZ3lf
+Q0QgPSAwDQogICBDU0VScHRfTXRyX0FsbF9DRCA9IDANCiAgIENTRVJwdF9NdHJf
+RWxlY19DRCA9IDANCiAgIENTRVJwdF9NdHJfTkdhc19DRCA9IDANCiAgIENTRVJw
+dF9NdHJfT3Rocl9DRCA9IDANCiAgIENTRVJwdF9abkVuZXJneV9IRCA9IDANCiAg
+IENTRVJwdF9NdHJfQWxsX0hEID0gMA0KICAgQ1NFUnB0X010cl9FbGVjX0hEID0g
+MA0KICAgQ1NFUnB0X010cl9OR2FzX0hEID0gMA0KICAgQ1NFUnB0X010cl9PdGhy
+X0hEID0gMA0KICAgLi4NCg0KR2FyYWdlICAgIkdhcmFnZSIgIA0KICAgQXJlYSA9
+IDQ0MA0KICAgVm9sdW1lID0gMzk2MA0KICAgQm90dG9tID0gMC42Nw0KICAgLi4N
+Cg0KQ2VpbGluZ0JlbG93QXR0aWMgICAiR2FyIENlaWxpbmciICANCiAgIFN0YXR1
+cyA9ICJOZXciDQogICBJc1ZlcmlmaWVkID0gMA0KICAgQXJlYSA9IDQ0MA0KICAg
+Q29uc3RydWN0aW9uID0gIlIwIENsZ0Jsd0F0dGljIENvbnMiDQogICBBdHRpY1pv
+bmUgPSAiR2FyIEF0dGljICINCiAgIC4uDQoNCkV4dFdhbGwgICAiR3dhbGwgRnJv
+bnQiICANCiAgIFN0YXR1cyA9ICJOZXciDQogICBJc1ZlcmlmaWVkID0gMA0KICAg
+T3JpZW50YXRpb24gPSAiRnJvbnQiDQogICBPcmllbnRhdGlvblZhbHVlID0gMA0K
+ICAgQXJlYSA9IDE4MA0KICAgQ29uc3RydWN0aW9uID0gIkdhcmFnZSBXYWxsIFIt
+MCINCiAgIEV4Y2VwdGlvbiA9ICItIG5vbmUgLSINCiAgIFRpbHQgPSA5MA0KICAg
+Li4NCg0KRG9vciAgICJHRG9vciIgIA0KICAgU3RhdHVzID0gIk5ldyINCiAgIElz
+VmVyaWZpZWQgPSAwDQogICBBcmVhID0gMTA4DQogICBVZmFjdG9yID0gMQ0KICAg
+ZXhVZmFjdG9yID0gMQ0KICAgLi4NCg0KRXh0V2FsbCAgICJHd2FsbCBMZWZ0IiAg
+DQogICBTdGF0dXMgPSAiTmV3Ig0KICAgSXNWZXJpZmllZCA9IDANCiAgIE9yaWVu
+dGF0aW9uID0gIkxlZnQiDQogICBPcmllbnRhdGlvblZhbHVlID0gOTANCiAgIEFy
+ZWEgPSAxOTgNCiAgIENvbnN0cnVjdGlvbiA9ICJHYXJhZ2UgV2FsbCBSLTAiDQog
+ICBFeGNlcHRpb24gPSAiLSBub25lIC0iDQogICBUaWx0ID0gOTANCiAgIC4uDQoN
+CkV4dFdhbGwgICAiR3dhbGwgUmlnaHQiICANCiAgIFN0YXR1cyA9ICJOZXciDQog
+ICBJc1ZlcmlmaWVkID0gMA0KICAgT3JpZW50YXRpb24gPSAiUmlnaHQiDQogICBP
+cmllbnRhdGlvblZhbHVlID0gMjcwDQogICBBcmVhID0gMTA4DQogICBDb25zdHJ1
+Y3Rpb24gPSAiR2FyYWdlIFdhbGwgUi0wIg0KICAgRXhjZXB0aW9uID0gIi0gbm9u
+ZSAtIg0KICAgVGlsdCA9IDkwDQogICAuLg0KDQpTbGFiRmxvb3IgICAiR3NsYWIi
+ICANCiAgIFN0YXR1cyA9ICJOZXciDQogICBJc1ZlcmlmaWVkID0gMA0KICAgQXJl
+YSA9IDQ0MA0KICAgRmxvb3JaID0gMA0KICAgU3VyZmFjZSA9ICJFeHBvc2VkIg0K
+ICAgUGVyaW1ldGVyID0gNDQNCiAgIEhlYXRlZFNsYWIgPSAwDQogICBFZGdlSW5z
+dWxhdGlvbiA9IDANCiAgIEVkZ2VJbnN1bE9wdGlvbiA9ICJSLTUsIDggaW5jaGVz
+Ig0KICAgZXhTdXJmYWNlID0gIkRlZmF1bHQgKDgwJSBjYXJwZXRlZC9jb3ZlcmVk
+LCAyMCUgZXhwb3NlZCkiDQogICBleEVkZ2VJbnN1bE9wdGlvbiA9ICJSLTUsIDgg
+aW5jaGVzIg0KICAgLi4NCg0KWm9uZSAgICJDb25kaXRpb25lZCIgIA0KICAgVHlw
+ZSA9ICJDb25kaXRpb25lZCINCiAgIFN0YXR1cyA9ICJOZXciDQogICBIVkFDU3lz
+U3RhdHVzID0gIk5ldyINCiAgIEhWQUNTeXNWZXJpZmllZCA9IDANCiAgIEhWQUNT
+eXN0ZW0gPSAiSFZBQyBTeXN0ZW0gMSINCiAgIERIV1N5czFTdGF0dXMgPSAiTmV3
+Ig0KICAgREhXU3lzMVZlcmlmaWVkID0gMA0KICAgREhXU3lzMSA9ICJESFcgU3lz
+dGVtIg0KICAgREhXU3lzMlN0YXR1cyA9ICJOZXciDQogICBESFdTeXMyVmVyaWZp
+ZWQgPSAwDQogICBGbG9vckFyZWEgPSAyMTAwDQogICBDZWlsaW5nSGVpZ2h0ID0g
+OQ0KICAgRmxvb3JIZWlnaHQgPSAxMA0KICAgV2luSGVhZEhlaWdodCA9IDcuNjcN
+CiAgIEJvdHRvbSA9IDAuNw0KICAgTnVtU3RvcmllcyA9IDENCiAgIC4uDQoNCkNl
+aWxpbmdCZWxvd0F0dGljICAgIkNlaWxpbmcgKGJlbG93IGF0dGljKSAxIiAgDQog
+ICBTdGF0dXMgPSAiTmV3Ig0KICAgSXNWZXJpZmllZCA9IDANCiAgIEFyZWEgPSAy
+MTAwDQogICBDb25zdHJ1Y3Rpb24gPSAiUjM4IENlaWxpbmcgYmVsb3cgYXR0aWMi
+DQogICBBdHRpY1pvbmUgPSAiQXR0aWMgIg0KICAgLi4NCg0KRXh0V2FsbCAgICJG
+cm9udCIgIA0KICAgU3RhdHVzID0gIk5ldyINCiAgIElzVmVyaWZpZWQgPSAwDQog
+ICBPcmllbnRhdGlvbiA9ICJGcm9udCINCiAgIE9yaWVudGF0aW9uVmFsdWUgPSAw
+DQogICBBcmVhID0gMjcwDQogICBDb25zdHJ1Y3Rpb24gPSAiUjIxIFI1IFN0dWNj
+byBXYWxsIg0KICAgRXhjZXB0aW9uID0gIi0gbm9uZSAtIg0KICAgVGlsdCA9IDkw
+DQogICAuLg0KDQpXaW4gICAiRi02MDYwIiAgDQogICBTdGF0dXMgPSAiTmV3Ig0K
+ICAgSXNWZXJpZmllZCA9IDANCiAgIFdpblR5cGUgPSAiMzAgLyAyMyBXaW5kb3ci
+DQogICBTcGVjTWV0aG9kID0gIldpbmRvdyBEaW1lbnNpb25zIChyZXF1aXJlZCBm
+b3IgZmlucy9vdmVyaGFuZ3MpIg0KICAgQXJlYSA9IDM2DQogICBIZWlnaHQgPSA2
+DQogICBXaWR0aCA9IDYNCiAgIE11bHRpcGxpZXIgPSAxDQogICBVZmFjdG9yU0hH
+Q1NvdXJjZSA9ICJORlJDIg0KICAgRXh0ZXJpb3JTaGFkZSA9ICJJbnNlY3QgU2Ny
+ZWVuIChkZWZhdWx0KSINCiAgIGV4QXJlYSA9IDUwDQogICBleEhlaWdodCA9IDUN
+CiAgIGV4V2lkdGggPSAxMA0KICAgZXhNdWx0aXBsaWVyID0gMQ0KICAgZXhVZmFj
+dG9yU0hHQ1NvdXJjZSA9ICJORlJDIg0KICAgZXhFeHRlcmlvclNoYWRlID0gIklu
+c2VjdCBTY3JlZW4gKGRlZmF1bHQpIg0KICAgTW9kZWxGaW5zT3ZlcmhhbmcgPSAx
+DQogICBPdmVyaGFuZ0RlcHRoID0gMQ0KICAgT3ZlcmhhbmdEaXN0VXAgPSAxLjMz
+DQogICBPdmVyaGFuZ0V4TCA9IDMNCiAgIE92ZXJoYW5nRXhSID0gMTANCiAgIE92
+ZXJoYW5nRmxhcCA9IDANCiAgIGV4T3ZlcmhhbmdEZXB0aCA9IDANCiAgIGV4T3Zl
+cmhhbmdEaXN0VXAgPSAwDQogICBleE92ZXJoYW5nRXhMID0gMA0KICAgZXhPdmVy
+aGFuZ0V4UiA9IDANCiAgIGV4T3ZlcmhhbmdGbGFwID0gMA0KICAgTGVmdEZpbkRl
+cHRoID0gMA0KICAgTGVmdEZpblRvcFVwID0gMA0KICAgTGVmdEZpbkRpc3RMID0g
+MA0KICAgTGVmdEZpbkJvdFVwID0gMA0KICAgZXhMZWZ0RmluRGVwdGggPSAwDQog
+ICBleExlZnRGaW5Ub3BVcCA9IDANCiAgIGV4TGVmdEZpbkRpc3RMID0gMA0KICAg
+ZXhMZWZ0RmluQm90VXAgPSAwDQogICBSaWdodEZpbkRlcHRoID0gMA0KICAgUmln
+aHRGaW5Ub3BVcCA9IDANCiAgIFJpZ2h0RmluRGlzdFIgPSAwDQogICBSaWdodEZp
+bkJvdFVwID0gMA0KICAgZXhSaWdodEZpbkRlcHRoID0gMA0KICAgZXhSaWdodEZp
+blRvcFVwID0gMA0KICAgZXhSaWdodEZpbkRpc3RSID0gMA0KICAgZXhSaWdodEZp
+bkJvdFVwID0gMA0KICAgLi4NCg0KV2luICAgIkYtNDA1MCB4MyIgIA0KICAgU3Rh
+dHVzID0gIk5ldyINCiAgIElzVmVyaWZpZWQgPSAwDQogICBXaW5UeXBlID0gIjMw
+IC8gMjMgV2luZG93Ig0KICAgU3BlY01ldGhvZCA9ICJXaW5kb3cgRGltZW5zaW9u
+cyAocmVxdWlyZWQgZm9yIGZpbnMvb3ZlcmhhbmdzKSINCiAgIEFyZWEgPSAyMA0K
+ICAgSGVpZ2h0ID0gNQ0KICAgV2lkdGggPSA0DQogICBNdWx0aXBsaWVyID0gMw0K
+ICAgVWZhY3RvclNIR0NTb3VyY2UgPSAiTkZSQyINCiAgIEV4dGVyaW9yU2hhZGUg
+PSAiSW5zZWN0IFNjcmVlbiAoZGVmYXVsdCkiDQogICBleEFyZWEgPSA1MA0KICAg
+ZXhIZWlnaHQgPSA1DQogICBleFdpZHRoID0gMTANCiAgIGV4TXVsdGlwbGllciA9
+IDENCiAgIGV4VWZhY3RvclNIR0NTb3VyY2UgPSAiTkZSQyINCiAgIGV4RXh0ZXJp
+b3JTaGFkZSA9ICJJbnNlY3QgU2NyZWVuIChkZWZhdWx0KSINCiAgIE1vZGVsRmlu
+c092ZXJoYW5nID0gMQ0KICAgT3ZlcmhhbmdEZXB0aCA9IDENCiAgIE92ZXJoYW5n
+RGlzdFVwID0gMS4zMw0KICAgT3ZlcmhhbmdFeEwgPSA2DQogICBPdmVyaGFuZ0V4
+UiA9IDYNCiAgIE92ZXJoYW5nRmxhcCA9IDANCiAgIGV4T3ZlcmhhbmdEZXB0aCA9
+IDANCiAgIGV4T3ZlcmhhbmdEaXN0VXAgPSAwDQogICBleE92ZXJoYW5nRXhMID0g
+MA0KICAgZXhPdmVyaGFuZ0V4UiA9IDANCiAgIGV4T3ZlcmhhbmdGbGFwID0gMA0K
+ICAgTGVmdEZpbkRlcHRoID0gMA0KICAgTGVmdEZpblRvcFVwID0gMA0KICAgTGVm
+dEZpbkRpc3RMID0gMA0KICAgTGVmdEZpbkJvdFVwID0gMA0KICAgZXhMZWZ0Rmlu
+RGVwdGggPSAwDQogICBleExlZnRGaW5Ub3BVcCA9IDANCiAgIGV4TGVmdEZpbkRp
+c3RMID0gMA0KICAgZXhMZWZ0RmluQm90VXAgPSAwDQogICBSaWdodEZpbkRlcHRo
+ID0gMA0KICAgUmlnaHRGaW5Ub3BVcCA9IDANCiAgIFJpZ2h0RmluRGlzdFIgPSAw
+DQogICBSaWdodEZpbkJvdFVwID0gMA0KICAgZXhSaWdodEZpbkRlcHRoID0gMA0K
+ICAgZXhSaWdodEZpblRvcFVwID0gMA0KICAgZXhSaWdodEZpbkRpc3RSID0gMA0K
+ICAgZXhSaWdodEZpbkJvdFVwID0gMA0KICAgLi4NCg0KRG9vciAgICJGcm9udCBE
+ciIgIA0KICAgU3RhdHVzID0gIk5ldyINCiAgIElzVmVyaWZpZWQgPSAwDQogICBB
+cmVhID0gMjANCiAgIFVmYWN0b3IgPSAwLjINCiAgIGV4VWZhY3RvciA9IDAuNQ0K
+ICAgLi4NCg0KV2luICAgIkYtMTY2MCB4MiIgIA0KICAgU3RhdHVzID0gIk5ldyIN
+CiAgIElzVmVyaWZpZWQgPSAwDQogICBXaW5UeXBlID0gIjMwIC8gMjMgV2luZG93
+Ig0KICAgU3BlY01ldGhvZCA9ICJXaW5kb3cgRGltZW5zaW9ucyAocmVxdWlyZWQg
+Zm9yIGZpbnMvb3ZlcmhhbmdzKSINCiAgIEFyZWEgPSA5DQogICBIZWlnaHQgPSA2
+DQogICBXaWR0aCA9IDEuNQ0KICAgTXVsdGlwbGllciA9IDINCiAgIFVmYWN0b3JT
+SEdDU291cmNlID0gIk5GUkMiDQogICBFeHRlcmlvclNoYWRlID0gIkluc2VjdCBT
+Y3JlZW4gKGRlZmF1bHQpIg0KICAgZXhBcmVhID0gNTANCiAgIGV4SGVpZ2h0ID0g
+NQ0KICAgZXhXaWR0aCA9IDEwDQogICBleE11bHRpcGxpZXIgPSAxDQogICBleFVm
+YWN0b3JTSEdDU291cmNlID0gIk5GUkMiDQogICBleEV4dGVyaW9yU2hhZGUgPSAi
+SW5zZWN0IFNjcmVlbiAoZGVmYXVsdCkiDQogICBNb2RlbEZpbnNPdmVyaGFuZyA9
+IDENCiAgIE92ZXJoYW5nRGVwdGggPSA0DQogICBPdmVyaGFuZ0Rpc3RVcCA9IDEu
+MzMNCiAgIE92ZXJoYW5nRXhMID0gMw0KICAgT3ZlcmhhbmdFeFIgPSAzDQogICBP
+dmVyaGFuZ0ZsYXAgPSAwDQogICBleE92ZXJoYW5nRGVwdGggPSAwDQogICBleE92
+ZXJoYW5nRGlzdFVwID0gMA0KICAgZXhPdmVyaGFuZ0V4TCA9IDANCiAgIGV4T3Zl
+cmhhbmdFeFIgPSAwDQogICBleE92ZXJoYW5nRmxhcCA9IDANCiAgIExlZnRGaW5E
+ZXB0aCA9IDANCiAgIExlZnRGaW5Ub3BVcCA9IDANCiAgIExlZnRGaW5EaXN0TCA9
+IDANCiAgIExlZnRGaW5Cb3RVcCA9IDANCiAgIGV4TGVmdEZpbkRlcHRoID0gMA0K
+ICAgZXhMZWZ0RmluVG9wVXAgPSAwDQogICBleExlZnRGaW5EaXN0TCA9IDANCiAg
+IGV4TGVmdEZpbkJvdFVwID0gMA0KICAgUmlnaHRGaW5EZXB0aCA9IDANCiAgIFJp
+Z2h0RmluVG9wVXAgPSAwDQogICBSaWdodEZpbkRpc3RSID0gMA0KICAgUmlnaHRG
+aW5Cb3RVcCA9IDANCiAgIGV4UmlnaHRGaW5EZXB0aCA9IDANCiAgIGV4UmlnaHRG
+aW5Ub3BVcCA9IDANCiAgIGV4UmlnaHRGaW5EaXN0UiA9IDANCiAgIGV4UmlnaHRG
+aW5Cb3RVcCA9IDANCiAgIC4uDQoNCldpbiAgICJGLTM2MzYiICANCiAgIFN0YXR1
+cyA9ICJOZXciDQogICBJc1ZlcmlmaWVkID0gMA0KICAgV2luVHlwZSA9ICJEb29y
+IDMwIC8gMjMiDQogICBTcGVjTWV0aG9kID0gIldpbmRvdyBEaW1lbnNpb25zIChy
+ZXF1aXJlZCBmb3IgZmlucy9vdmVyaGFuZ3MpIg0KICAgQXJlYSA9IDEyLjI1DQog
+ICBIZWlnaHQgPSAzLjUNCiAgIFdpZHRoID0gMy41DQogICBNdWx0aXBsaWVyID0g
+MQ0KICAgVWZhY3RvclNIR0NTb3VyY2UgPSAiTkZSQyINCiAgIEV4dGVyaW9yU2hh
+ZGUgPSAiSW5zZWN0IFNjcmVlbiAoZGVmYXVsdCkiDQogICBleEFyZWEgPSAxMi4y
+NQ0KICAgZXhIZWlnaHQgPSAzLjUNCiAgIGV4V2lkdGggPSAzLjUNCiAgIGV4TXVs
+dGlwbGllciA9IDENCiAgIGV4VWZhY3RvclNIR0NTb3VyY2UgPSAiTkZSQyINCiAg
+IGV4RXh0ZXJpb3JTaGFkZSA9ICJJbnNlY3QgU2NyZWVuIChkZWZhdWx0KSINCiAg
+IE1vZGVsRmluc092ZXJoYW5nID0gMQ0KICAgT3ZlcmhhbmdEZXB0aCA9IDENCiAg
+IE92ZXJoYW5nRGlzdFVwID0gMS4zMw0KICAgT3ZlcmhhbmdFeEwgPSAxMA0KICAg
+T3ZlcmhhbmdFeFIgPSAxMA0KICAgT3ZlcmhhbmdGbGFwID0gMA0KICAgZXhPdmVy
+aGFuZ0RlcHRoID0gMQ0KICAgZXhPdmVyaGFuZ0Rpc3RVcCA9IDEuMzMNCiAgIGV4
+T3ZlcmhhbmdFeEwgPSAxMA0KICAgZXhPdmVyaGFuZ0V4UiA9IDEwDQogICBleE92
+ZXJoYW5nRmxhcCA9IDANCiAgIExlZnRGaW5EZXB0aCA9IDANCiAgIExlZnRGaW5U
+b3BVcCA9IDANCiAgIExlZnRGaW5EaXN0TCA9IDANCiAgIExlZnRGaW5Cb3RVcCA9
+IDANCiAgIGV4TGVmdEZpbkRlcHRoID0gMA0KICAgZXhMZWZ0RmluVG9wVXAgPSAw
+DQogICBleExlZnRGaW5EaXN0TCA9IDANCiAgIGV4TGVmdEZpbkJvdFVwID0gMA0K
+ICAgUmlnaHRGaW5EZXB0aCA9IDANCiAgIFJpZ2h0RmluVG9wVXAgPSAwDQogICBS
+aWdodEZpbkRpc3RSID0gMA0KICAgUmlnaHRGaW5Cb3RVcCA9IDANCiAgIGV4Umln
+aHRGaW5EZXB0aCA9IDANCiAgIGV4UmlnaHRGaW5Ub3BVcCA9IDANCiAgIGV4Umln
+aHRGaW5EaXN0UiA9IDANCiAgIGV4UmlnaHRGaW5Cb3RVcCA9IDANCiAgIC4uDQoN
+CkV4dFdhbGwgICAiTGVmdCIgIA0KICAgU3RhdHVzID0gIk5ldyINCiAgIElzVmVy
+aWZpZWQgPSAwDQogICBPcmllbnRhdGlvbiA9ICJMZWZ0Ig0KICAgT3JpZW50YXRp
+b25WYWx1ZSA9IDkwDQogICBBcmVhID0gMzI0DQogICBDb25zdHJ1Y3Rpb24gPSAi
+UjIxIFI1IFN0dWNjbyBXYWxsIg0KICAgRXhjZXB0aW9uID0gIi0gbm9uZSAtIg0K
+ICAgVGlsdCA9IDkwDQogICAuLg0KDQpXaW4gICAiTC01MDQwIHgyIiAgDQogICBT
+dGF0dXMgPSAiTmV3Ig0KICAgSXNWZXJpZmllZCA9IDANCiAgIFdpblR5cGUgPSAi
+MzAgLyAyMyBXaW5kb3ciDQogICBTcGVjTWV0aG9kID0gIldpbmRvdyBEaW1lbnNp
+b25zIChyZXF1aXJlZCBmb3IgZmlucy9vdmVyaGFuZ3MpIg0KICAgQXJlYSA9IDIw
+DQogICBIZWlnaHQgPSA0DQogICBXaWR0aCA9IDUNCiAgIE11bHRpcGxpZXIgPSAy
+DQogICBVZmFjdG9yU0hHQ1NvdXJjZSA9ICJORlJDIg0KICAgRXh0ZXJpb3JTaGFk
+ZSA9ICJJbnNlY3QgU2NyZWVuIChkZWZhdWx0KSINCiAgIGV4QXJlYSA9IDI4LjAy
+DQogICBleEhlaWdodCA9IDQuNjcNCiAgIGV4V2lkdGggPSA2DQogICBleE11bHRp
+cGxpZXIgPSAyDQogICBleFVmYWN0b3JTSEdDU291cmNlID0gIk5GUkMiDQogICBl
+eEV4dGVyaW9yU2hhZGUgPSAiSW5zZWN0IFNjcmVlbiAoZGVmYXVsdCkiDQogICBN
+b2RlbEZpbnNPdmVyaGFuZyA9IDANCiAgIE92ZXJoYW5nRGVwdGggPSAxDQogICBP
+dmVyaGFuZ0Rpc3RVcCA9IDEuMzMNCiAgIE92ZXJoYW5nRXhMID0gNg0KICAgT3Zl
+cmhhbmdFeFIgPSA4DQogICBPdmVyaGFuZ0ZsYXAgPSAwDQogICBleE92ZXJoYW5n
+RGVwdGggPSAwDQogICBleE92ZXJoYW5nRGlzdFVwID0gMA0KICAgZXhPdmVyaGFu
+Z0V4TCA9IDANCiAgIGV4T3ZlcmhhbmdFeFIgPSAwDQogICBleE92ZXJoYW5nRmxh
+cCA9IDANCiAgIExlZnRGaW5EZXB0aCA9IDANCiAgIExlZnRGaW5Ub3BVcCA9IDAN
+CiAgIExlZnRGaW5EaXN0TCA9IDANCiAgIExlZnRGaW5Cb3RVcCA9IDANCiAgIGV4
+TGVmdEZpbkRlcHRoID0gMA0KICAgZXhMZWZ0RmluVG9wVXAgPSAwDQogICBleExl
+ZnRGaW5EaXN0TCA9IDANCiAgIGV4TGVmdEZpbkJvdFVwID0gMA0KICAgUmlnaHRG
+aW5EZXB0aCA9IDANCiAgIFJpZ2h0RmluVG9wVXAgPSAwDQogICBSaWdodEZpbkRp
+c3RSID0gMA0KICAgUmlnaHRGaW5Cb3RVcCA9IDANCiAgIGV4UmlnaHRGaW5EZXB0
+aCA9IDANCiAgIGV4UmlnaHRGaW5Ub3BVcCA9IDANCiAgIGV4UmlnaHRGaW5EaXN0
+UiA9IDANCiAgIGV4UmlnaHRGaW5Cb3RVcCA9IDANCiAgIC4uDQoNCldpbiAgICJM
+LTQwNDAgeDIiICANCiAgIFN0YXR1cyA9ICJOZXciDQogICBJc1ZlcmlmaWVkID0g
+MA0KICAgV2luVHlwZSA9ICIzMCAvIDIzIFdpbmRvdyINCiAgIFNwZWNNZXRob2Qg
+PSAiV2luZG93IERpbWVuc2lvbnMgKHJlcXVpcmVkIGZvciBmaW5zL292ZXJoYW5n
+cykiDQogICBBcmVhID0gMTYNCiAgIEhlaWdodCA9IDQNCiAgIFdpZHRoID0gNA0K
+ICAgTXVsdGlwbGllciA9IDINCiAgIFVmYWN0b3JTSEdDU291cmNlID0gIk5GUkMi
+DQogICBFeHRlcmlvclNoYWRlID0gIkluc2VjdCBTY3JlZW4gKGRlZmF1bHQpIg0K
+ICAgZXhBcmVhID0gNTANCiAgIGV4SGVpZ2h0ID0gNQ0KICAgZXhXaWR0aCA9IDEw
+DQogICBleE11bHRpcGxpZXIgPSAxDQogICBleFVmYWN0b3JTSEdDU291cmNlID0g
+Ik5GUkMiDQogICBleEV4dGVyaW9yU2hhZGUgPSAiSW5zZWN0IFNjcmVlbiAoZGVm
+YXVsdCkiDQogICBNb2RlbEZpbnNPdmVyaGFuZyA9IDANCiAgIE92ZXJoYW5nRGVw
+dGggPSAxDQogICBPdmVyaGFuZ0Rpc3RVcCA9IDEuMzMNCiAgIE92ZXJoYW5nRXhM
+ID0gMTANCiAgIE92ZXJoYW5nRXhSID0gMTANCiAgIE92ZXJoYW5nRmxhcCA9IDAN
+CiAgIGV4T3ZlcmhhbmdEZXB0aCA9IDANCiAgIGV4T3ZlcmhhbmdEaXN0VXAgPSAw
+DQogICBleE92ZXJoYW5nRXhMID0gMA0KICAgZXhPdmVyaGFuZ0V4UiA9IDANCiAg
+IGV4T3ZlcmhhbmdGbGFwID0gMA0KICAgTGVmdEZpbkRlcHRoID0gMA0KICAgTGVm
+dEZpblRvcFVwID0gMA0KICAgTGVmdEZpbkRpc3RMID0gMA0KICAgTGVmdEZpbkJv
+dFVwID0gMA0KICAgZXhMZWZ0RmluRGVwdGggPSAwDQogICBleExlZnRGaW5Ub3BV
+cCA9IDANCiAgIGV4TGVmdEZpbkRpc3RMID0gMA0KICAgZXhMZWZ0RmluQm90VXAg
+PSAwDQogICBSaWdodEZpbkRlcHRoID0gMA0KICAgUmlnaHRGaW5Ub3BVcCA9IDAN
+CiAgIFJpZ2h0RmluRGlzdFIgPSAwDQogICBSaWdodEZpbkJvdFVwID0gMA0KICAg
+ZXhSaWdodEZpbkRlcHRoID0gMA0KICAgZXhSaWdodEZpblRvcFVwID0gMA0KICAg
+ZXhSaWdodEZpbkRpc3RSID0gMA0KICAgZXhSaWdodEZpbkJvdFVwID0gMA0KICAg
+Li4NCg0KRXh0V2FsbCAgICJCYWNrIiAgDQogICBTdGF0dXMgPSAiTmV3Ig0KICAg
+SXNWZXJpZmllZCA9IDANCiAgIE9yaWVudGF0aW9uID0gIkJhY2siDQogICBPcmll
+bnRhdGlvblZhbHVlID0gMTgwDQogICBBcmVhID0gNDUwDQogICBDb25zdHJ1Y3Rp
+b24gPSAiUjIxIFI1IFN0dWNjbyBXYWxsIg0KICAgRXhjZXB0aW9uID0gIi0gbm9u
+ZSAtIg0KICAgVGlsdCA9IDkwDQogICAuLg0KDQpXaW4gICAiQjEgU0dEIiAgDQog
+ICBTdGF0dXMgPSAiTmV3Ig0KICAgSXNWZXJpZmllZCA9IDANCiAgIFdpblR5cGUg
+PSAiRG9vciAzMCAvIDIzIg0KICAgU3BlY01ldGhvZCA9ICJXaW5kb3cgRGltZW5z
+aW9ucyAocmVxdWlyZWQgZm9yIGZpbnMvb3ZlcmhhbmdzKSINCiAgIEFyZWEgPSA0
+MC4wMg0KICAgSGVpZ2h0ID0gNi42Nw0KICAgV2lkdGggPSA2DQogICBNdWx0aXBs
+aWVyID0gMQ0KICAgVWZhY3RvclNIR0NTb3VyY2UgPSAiTkZSQyINCiAgIEV4dGVy
+aW9yU2hhZGUgPSAiSW5zZWN0IFNjcmVlbiAoZGVmYXVsdCkiDQogICBleEFyZWEg
+PSA2MS4zNg0KICAgZXhIZWlnaHQgPSA3LjY3DQogICBleFdpZHRoID0gOA0KICAg
+ZXhNdWx0aXBsaWVyID0gMQ0KICAgZXhVZmFjdG9yU0hHQ1NvdXJjZSA9ICJORlJD
+Ig0KICAgZXhFeHRlcmlvclNoYWRlID0gIkluc2VjdCBTY3JlZW4gKGRlZmF1bHQp
+Ig0KICAgTW9kZWxGaW5zT3ZlcmhhbmcgPSAxDQogICBPdmVyaGFuZ0RlcHRoID0g
+Ng0KICAgT3ZlcmhhbmdEaXN0VXAgPSAxLjMzDQogICBPdmVyaGFuZ0V4TCA9IDQN
+CiAgIE92ZXJoYW5nRXhSID0gNA0KICAgT3ZlcmhhbmdGbGFwID0gMA0KICAgZXhP
+dmVyaGFuZ0RlcHRoID0gMA0KICAgZXhPdmVyaGFuZ0Rpc3RVcCA9IDANCiAgIGV4
+T3ZlcmhhbmdFeEwgPSAwDQogICBleE92ZXJoYW5nRXhSID0gMA0KICAgZXhPdmVy
+aGFuZ0ZsYXAgPSAwDQogICBMZWZ0RmluRGVwdGggPSAwDQogICBMZWZ0RmluVG9w
+VXAgPSAwDQogICBMZWZ0RmluRGlzdEwgPSAwDQogICBMZWZ0RmluQm90VXAgPSAw
+DQogICBleExlZnRGaW5EZXB0aCA9IDANCiAgIGV4TGVmdEZpblRvcFVwID0gMA0K
+ICAgZXhMZWZ0RmluRGlzdEwgPSAwDQogICBleExlZnRGaW5Cb3RVcCA9IDANCiAg
+IFJpZ2h0RmluRGVwdGggPSAwDQogICBSaWdodEZpblRvcFVwID0gMA0KICAgUmln
+aHRGaW5EaXN0UiA9IDANCiAgIFJpZ2h0RmluQm90VXAgPSAwDQogICBleFJpZ2h0
+RmluRGVwdGggPSAwDQogICBleFJpZ2h0RmluVG9wVXAgPSAwDQogICBleFJpZ2h0
+RmluRGlzdFIgPSAwDQogICBleFJpZ2h0RmluQm90VXAgPSAwDQogICAuLg0KDQpX
+aW4gICAiQi02MDEwIiAgDQogICBTdGF0dXMgPSAiTmV3Ig0KICAgSXNWZXJpZmll
+ZCA9IDANCiAgIFdpblR5cGUgPSAiRG9vciAzMCAvIDIzIg0KICAgU3BlY01ldGhv
+ZCA9ICJXaW5kb3cgRGltZW5zaW9ucyAocmVxdWlyZWQgZm9yIGZpbnMvb3Zlcmhh
+bmdzKSINCiAgIEFyZWEgPSA2DQogICBIZWlnaHQgPSAxDQogICBXaWR0aCA9IDYN
+CiAgIE11bHRpcGxpZXIgPSAxDQogICBVZmFjdG9yU0hHQ1NvdXJjZSA9ICJORlJD
+Ig0KICAgRXh0ZXJpb3JTaGFkZSA9ICJJbnNlY3QgU2NyZWVuIChkZWZhdWx0KSIN
+CiAgIGV4QXJlYSA9IDYNCiAgIGV4SGVpZ2h0ID0gMQ0KICAgZXhXaWR0aCA9IDYN
+CiAgIGV4TXVsdGlwbGllciA9IDENCiAgIGV4VWZhY3RvclNIR0NTb3VyY2UgPSAi
+TkZSQyINCiAgIGV4RXh0ZXJpb3JTaGFkZSA9ICJJbnNlY3QgU2NyZWVuIChkZWZh
+dWx0KSINCiAgIE1vZGVsRmluc092ZXJoYW5nID0gMQ0KICAgT3ZlcmhhbmdEZXB0
+aCA9IDENCiAgIE92ZXJoYW5nRGlzdFVwID0gMA0KICAgT3ZlcmhhbmdFeEwgPSA0
+DQogICBPdmVyaGFuZ0V4UiA9IDQNCiAgIE92ZXJoYW5nRmxhcCA9IDANCiAgIGV4
+T3ZlcmhhbmdEZXB0aCA9IDENCiAgIGV4T3ZlcmhhbmdEaXN0VXAgPSAwDQogICBl
+eE92ZXJoYW5nRXhMID0gNA0KICAgZXhPdmVyaGFuZ0V4UiA9IDQNCiAgIGV4T3Zl
+cmhhbmdGbGFwID0gMA0KICAgTGVmdEZpbkRlcHRoID0gMA0KICAgTGVmdEZpblRv
+cFVwID0gMA0KICAgTGVmdEZpbkRpc3RMID0gMA0KICAgTGVmdEZpbkJvdFVwID0g
+MA0KICAgZXhMZWZ0RmluRGVwdGggPSAwDQogICBleExlZnRGaW5Ub3BVcCA9IDAN
+CiAgIGV4TGVmdEZpbkRpc3RMID0gMA0KICAgZXhMZWZ0RmluQm90VXAgPSAwDQog
+ICBSaWdodEZpbkRlcHRoID0gMA0KICAgUmlnaHRGaW5Ub3BVcCA9IDANCiAgIFJp
+Z2h0RmluRGlzdFIgPSAwDQogICBSaWdodEZpbkJvdFVwID0gMA0KICAgZXhSaWdo
+dEZpbkRlcHRoID0gMA0KICAgZXhSaWdodEZpblRvcFVwID0gMA0KICAgZXhSaWdo
+dEZpbkRpc3RSID0gMA0KICAgZXhSaWdodEZpbkJvdFVwID0gMA0KICAgLi4NCg0K
+V2luICAgIkItNjA0MCB4MyIgIA0KICAgU3RhdHVzID0gIk5ldyINCiAgIElzVmVy
+aWZpZWQgPSAwDQogICBXaW5UeXBlID0gIjMwIC8gMjMgV2luZG93Ig0KICAgU3Bl
+Y01ldGhvZCA9ICJXaW5kb3cgRGltZW5zaW9ucyAocmVxdWlyZWQgZm9yIGZpbnMv
+b3ZlcmhhbmdzKSINCiAgIEFyZWEgPSAyNA0KICAgSGVpZ2h0ID0gNA0KICAgV2lk
+dGggPSA2DQogICBNdWx0aXBsaWVyID0gMw0KICAgVWZhY3RvclNIR0NTb3VyY2Ug
+PSAiTkZSQyINCiAgIEV4dGVyaW9yU2hhZGUgPSAiSW5zZWN0IFNjcmVlbiAoZGVm
+YXVsdCkiDQogICBleEFyZWEgPSAyOC4yDQogICBleEhlaWdodCA9IDQuNw0KICAg
+ZXhXaWR0aCA9IDYNCiAgIGV4TXVsdGlwbGllciA9IDMNCiAgIGV4VWZhY3RvclNI
+R0NTb3VyY2UgPSAiTkZSQyINCiAgIGV4RXh0ZXJpb3JTaGFkZSA9ICJJbnNlY3Qg
+U2NyZWVuIChkZWZhdWx0KSINCiAgIE1vZGVsRmluc092ZXJoYW5nID0gMQ0KICAg
+T3ZlcmhhbmdEZXB0aCA9IDENCiAgIE92ZXJoYW5nRGlzdFVwID0gMS4zMw0KICAg
+T3ZlcmhhbmdFeEwgPSAyMw0KICAgT3ZlcmhhbmdFeFIgPSAyMw0KICAgT3Zlcmhh
+bmdGbGFwID0gMA0KICAgZXhPdmVyaGFuZ0RlcHRoID0gMA0KICAgZXhPdmVyaGFu
+Z0Rpc3RVcCA9IDANCiAgIGV4T3ZlcmhhbmdFeEwgPSAwDQogICBleE92ZXJoYW5n
+RXhSID0gMA0KICAgZXhPdmVyaGFuZ0ZsYXAgPSAwDQogICBMZWZ0RmluRGVwdGgg
+PSAwDQogICBMZWZ0RmluVG9wVXAgPSAwDQogICBMZWZ0RmluRGlzdEwgPSAwDQog
+ICBMZWZ0RmluQm90VXAgPSAwDQogICBleExlZnRGaW5EZXB0aCA9IDANCiAgIGV4
+TGVmdEZpblRvcFVwID0gMA0KICAgZXhMZWZ0RmluRGlzdEwgPSAwDQogICBleExl
+ZnRGaW5Cb3RVcCA9IDANCiAgIFJpZ2h0RmluRGVwdGggPSAwDQogICBSaWdodEZp
+blRvcFVwID0gMA0KICAgUmlnaHRGaW5EaXN0UiA9IDANCiAgIFJpZ2h0RmluQm90
+VXAgPSAwDQogICBleFJpZ2h0RmluRGVwdGggPSAwDQogICBleFJpZ2h0RmluVG9w
+VXAgPSAwDQogICBleFJpZ2h0RmluRGlzdFIgPSAwDQogICBleFJpZ2h0RmluQm90
+VXAgPSAwDQogICAuLg0KDQpXaW4gICAiQi02MDUwIiAgDQogICBTdGF0dXMgPSAi
+TmV3Ig0KICAgSXNWZXJpZmllZCA9IDANCiAgIFdpblR5cGUgPSAiMzAgLyAyMyBX
+aW5kb3ciDQogICBTcGVjTWV0aG9kID0gIldpbmRvdyBEaW1lbnNpb25zIChyZXF1
+aXJlZCBmb3IgZmlucy9vdmVyaGFuZ3MpIg0KICAgQXJlYSA9IDMwDQogICBIZWln
+aHQgPSA1DQogICBXaWR0aCA9IDYNCiAgIE11bHRpcGxpZXIgPSAxDQogICBVZmFj
+dG9yU0hHQ1NvdXJjZSA9ICJORlJDIg0KICAgRXh0ZXJpb3JTaGFkZSA9ICJJbnNl
+Y3QgU2NyZWVuIChkZWZhdWx0KSINCiAgIGV4QXJlYSA9IDMwDQogICBleEhlaWdo
+dCA9IDUNCiAgIGV4V2lkdGggPSA2DQogICBleE11bHRpcGxpZXIgPSAxDQogICBl
+eFVmYWN0b3JTSEdDU291cmNlID0gIk5GUkMiDQogICBleEV4dGVyaW9yU2hhZGUg
+PSAiSW5zZWN0IFNjcmVlbiAoZGVmYXVsdCkiDQogICBNb2RlbEZpbnNPdmVyaGFu
+ZyA9IDENCiAgIE92ZXJoYW5nRGVwdGggPSAxDQogICBPdmVyaGFuZ0Rpc3RVcCA9
+IDEuMzMNCiAgIE92ZXJoYW5nRXhMID0gMTANCiAgIE92ZXJoYW5nRXhSID0gMTAN
+CiAgIE92ZXJoYW5nRmxhcCA9IDANCiAgIGV4T3ZlcmhhbmdEZXB0aCA9IDANCiAg
+IGV4T3ZlcmhhbmdEaXN0VXAgPSAwDQogICBleE92ZXJoYW5nRXhMID0gMA0KICAg
+ZXhPdmVyaGFuZ0V4UiA9IDANCiAgIGV4T3ZlcmhhbmdGbGFwID0gMA0KICAgTGVm
+dEZpbkRlcHRoID0gMA0KICAgTGVmdEZpblRvcFVwID0gMA0KICAgTGVmdEZpbkRp
+c3RMID0gMA0KICAgTGVmdEZpbkJvdFVwID0gMA0KICAgZXhMZWZ0RmluRGVwdGgg
+PSAwDQogICBleExlZnRGaW5Ub3BVcCA9IDANCiAgIGV4TGVmdEZpbkRpc3RMID0g
+MA0KICAgZXhMZWZ0RmluQm90VXAgPSAwDQogICBSaWdodEZpbkRlcHRoID0gMA0K
+ICAgUmlnaHRGaW5Ub3BVcCA9IDANCiAgIFJpZ2h0RmluRGlzdFIgPSAwDQogICBS
+aWdodEZpbkJvdFVwID0gMA0KICAgZXhSaWdodEZpbkRlcHRoID0gMA0KICAgZXhS
+aWdodEZpblRvcFVwID0gMA0KICAgZXhSaWdodEZpbkRpc3RSID0gMA0KICAgZXhS
+aWdodEZpbkJvdFVwID0gMA0KICAgLi4NCg0KV2luICAgIkItMzAyMCIgIA0KICAg
+U3RhdHVzID0gIk5ldyINCiAgIElzVmVyaWZpZWQgPSAwDQogICBXaW5UeXBlID0g
+IjMwIC8gMjMgV2luZG93Ig0KICAgU3BlY01ldGhvZCA9ICJXaW5kb3cgRGltZW5z
+aW9ucyAocmVxdWlyZWQgZm9yIGZpbnMvb3ZlcmhhbmdzKSINCiAgIEFyZWEgPSA2
+DQogICBIZWlnaHQgPSAyDQogICBXaWR0aCA9IDMNCiAgIE11bHRpcGxpZXIgPSAx
+DQogICBVZmFjdG9yU0hHQ1NvdXJjZSA9ICJORlJDIg0KICAgRXh0ZXJpb3JTaGFk
+ZSA9ICJJbnNlY3QgU2NyZWVuIChkZWZhdWx0KSINCiAgIGV4QXJlYSA9IDYNCiAg
+IGV4SGVpZ2h0ID0gMg0KICAgZXhXaWR0aCA9IDMNCiAgIGV4TXVsdGlwbGllciA9
+IDENCiAgIGV4VWZhY3RvclNIR0NTb3VyY2UgPSAiTkZSQyINCiAgIGV4RXh0ZXJp
+b3JTaGFkZSA9ICJJbnNlY3QgU2NyZWVuIChkZWZhdWx0KSINCiAgIE1vZGVsRmlu
+c092ZXJoYW5nID0gMQ0KICAgT3ZlcmhhbmdEZXB0aCA9IDENCiAgIE92ZXJoYW5n
+RGlzdFVwID0gMS4zMw0KICAgT3ZlcmhhbmdFeEwgPSAxMA0KICAgT3ZlcmhhbmdF
+eFIgPSAxMA0KICAgT3ZlcmhhbmdGbGFwID0gMA0KICAgZXhPdmVyaGFuZ0RlcHRo
+ID0gMA0KICAgZXhPdmVyaGFuZ0Rpc3RVcCA9IDANCiAgIGV4T3ZlcmhhbmdFeEwg
+PSAwDQogICBleE92ZXJoYW5nRXhSID0gMA0KICAgZXhPdmVyaGFuZ0ZsYXAgPSAw
+DQogICBMZWZ0RmluRGVwdGggPSAwDQogICBMZWZ0RmluVG9wVXAgPSAwDQogICBM
+ZWZ0RmluRGlzdEwgPSAwDQogICBMZWZ0RmluQm90VXAgPSAwDQogICBleExlZnRG
+aW5EZXB0aCA9IDANCiAgIGV4TGVmdEZpblRvcFVwID0gMA0KICAgZXhMZWZ0Rmlu
+RGlzdEwgPSAwDQogICBleExlZnRGaW5Cb3RVcCA9IDANCiAgIFJpZ2h0RmluRGVw
+dGggPSAwDQogICBSaWdodEZpblRvcFVwID0gMA0KICAgUmlnaHRGaW5EaXN0UiA9
+IDANCiAgIFJpZ2h0RmluQm90VXAgPSAwDQogICBleFJpZ2h0RmluRGVwdGggPSAw
+DQogICBleFJpZ2h0RmluVG9wVXAgPSAwDQogICBleFJpZ2h0RmluRGlzdFIgPSAw
+DQogICBleFJpZ2h0RmluQm90VXAgPSAwDQogICAuLg0KDQpFeHRXYWxsICAgIlJp
+Z2h0IiAgDQogICBTdGF0dXMgPSAiTmV3Ig0KICAgSXNWZXJpZmllZCA9IDANCiAg
+IE9yaWVudGF0aW9uID0gIlJpZ2h0Ig0KICAgT3JpZW50YXRpb25WYWx1ZSA9IDI3
+MA0KICAgQXJlYSA9IDQxNA0KICAgQ29uc3RydWN0aW9uID0gIlIyMSBSNSBTdHVj
+Y28gV2FsbCINCiAgIEV4Y2VwdGlvbiA9ICItIG5vbmUgLSINCiAgIFRpbHQgPSA5
+MA0KICAgLi4NCg0KV2luICAgIlItMzAzMCB4MiIgIA0KICAgU3RhdHVzID0gIk5l
+dyINCiAgIElzVmVyaWZpZWQgPSAwDQogICBXaW5UeXBlID0gIjMwIC8gMjMgV2lu
+ZG93Ig0KICAgU3BlY01ldGhvZCA9ICJXaW5kb3cgRGltZW5zaW9ucyAocmVxdWly
+ZWQgZm9yIGZpbnMvb3ZlcmhhbmdzKSINCiAgIEFyZWEgPSA5DQogICBIZWlnaHQg
+PSAzDQogICBXaWR0aCA9IDMNCiAgIE11bHRpcGxpZXIgPSAyDQogICBVZmFjdG9y
+U0hHQ1NvdXJjZSA9ICJORlJDIg0KICAgRXh0ZXJpb3JTaGFkZSA9ICJJbnNlY3Qg
+U2NyZWVuIChkZWZhdWx0KSINCiAgIGV4QXJlYSA9IDI4LjAyDQogICBleEhlaWdo
+dCA9IDQuNjcNCiAgIGV4V2lkdGggPSA2DQogICBleE11bHRpcGxpZXIgPSAyDQog
+ICBleFVmYWN0b3JTSEdDU291cmNlID0gIk5GUkMiDQogICBleEV4dGVyaW9yU2hh
+ZGUgPSAiSW5zZWN0IFNjcmVlbiAoZGVmYXVsdCkiDQogICBNb2RlbEZpbnNPdmVy
+aGFuZyA9IDANCiAgIE92ZXJoYW5nRGVwdGggPSAxDQogICBPdmVyaGFuZ0Rpc3RV
+cCA9IDEuMzMNCiAgIE92ZXJoYW5nRXhMID0gOA0KICAgT3ZlcmhhbmdFeFIgPSA4
+DQogICBPdmVyaGFuZ0ZsYXAgPSAwLjQNCiAgIGV4T3ZlcmhhbmdEZXB0aCA9IDAN
+CiAgIGV4T3ZlcmhhbmdEaXN0VXAgPSAwDQogICBleE92ZXJoYW5nRXhMID0gMA0K
+ICAgZXhPdmVyaGFuZ0V4UiA9IDANCiAgIGV4T3ZlcmhhbmdGbGFwID0gMA0KICAg
+TGVmdEZpbkRlcHRoID0gMA0KICAgTGVmdEZpblRvcFVwID0gMA0KICAgTGVmdEZp
+bkRpc3RMID0gMA0KICAgTGVmdEZpbkJvdFVwID0gMA0KICAgZXhMZWZ0RmluRGVw
+dGggPSAwDQogICBleExlZnRGaW5Ub3BVcCA9IDANCiAgIGV4TGVmdEZpbkRpc3RM
+ID0gMA0KICAgZXhMZWZ0RmluQm90VXAgPSAwDQogICBSaWdodEZpbkRlcHRoID0g
+MA0KICAgUmlnaHRGaW5Ub3BVcCA9IDANCiAgIFJpZ2h0RmluRGlzdFIgPSAwDQog
+ICBSaWdodEZpbkJvdFVwID0gMA0KICAgZXhSaWdodEZpbkRlcHRoID0gMA0KICAg
+ZXhSaWdodEZpblRvcFVwID0gMA0KICAgZXhSaWdodEZpbkRpc3RSID0gMA0KICAg
+ZXhSaWdodEZpbkJvdFVwID0gMA0KICAgLi4NCg0KV2luICAgIlItNDA1MCIgIA0K
+ICAgU3RhdHVzID0gIk5ldyINCiAgIElzVmVyaWZpZWQgPSAwDQogICBXaW5UeXBl
+ID0gIjMwIC8gMjMgV2luZG93Ig0KICAgU3BlY01ldGhvZCA9ICJXaW5kb3cgRGlt
+ZW5zaW9ucyAocmVxdWlyZWQgZm9yIGZpbnMvb3ZlcmhhbmdzKSINCiAgIEFyZWEg
+PSAyMA0KICAgSGVpZ2h0ID0gNQ0KICAgV2lkdGggPSA0DQogICBNdWx0aXBsaWVy
+ID0gMQ0KICAgVWZhY3RvclNIR0NTb3VyY2UgPSAiTkZSQyINCiAgIEV4dGVyaW9y
+U2hhZGUgPSAiSW5zZWN0IFNjcmVlbiAoZGVmYXVsdCkiDQogICBleEFyZWEgPSA1
+MA0KICAgZXhIZWlnaHQgPSA1DQogICBleFdpZHRoID0gMTANCiAgIGV4TXVsdGlw
+bGllciA9IDENCiAgIGV4VWZhY3RvclNIR0NTb3VyY2UgPSAiTkZSQyINCiAgIGV4
+RXh0ZXJpb3JTaGFkZSA9ICJJbnNlY3QgU2NyZWVuIChkZWZhdWx0KSINCiAgIE1v
+ZGVsRmluc092ZXJoYW5nID0gMA0KICAgT3ZlcmhhbmdEZXB0aCA9IDENCiAgIE92
+ZXJoYW5nRGlzdFVwID0gMS4zMw0KICAgT3ZlcmhhbmdFeEwgPSAyOA0KICAgT3Zl
+cmhhbmdFeFIgPSAzDQogICBPdmVyaGFuZ0ZsYXAgPSAwLjQNCiAgIGV4T3Zlcmhh
+bmdEZXB0aCA9IDANCiAgIGV4T3ZlcmhhbmdEaXN0VXAgPSAwDQogICBleE92ZXJo
+YW5nRXhMID0gMA0KICAgZXhPdmVyaGFuZ0V4UiA9IDANCiAgIGV4T3ZlcmhhbmdG
+bGFwID0gMA0KICAgTGVmdEZpbkRlcHRoID0gMA0KICAgTGVmdEZpblRvcFVwID0g
+MA0KICAgTGVmdEZpbkRpc3RMID0gMA0KICAgTGVmdEZpbkJvdFVwID0gMA0KICAg
+ZXhMZWZ0RmluRGVwdGggPSAwDQogICBleExlZnRGaW5Ub3BVcCA9IDANCiAgIGV4
+TGVmdEZpbkRpc3RMID0gMA0KICAgZXhMZWZ0RmluQm90VXAgPSAwDQogICBSaWdo
+dEZpbkRlcHRoID0gMA0KICAgUmlnaHRGaW5Ub3BVcCA9IDANCiAgIFJpZ2h0Rmlu
+RGlzdFIgPSAwDQogICBSaWdodEZpbkJvdFVwID0gMA0KICAgZXhSaWdodEZpbkRl
+cHRoID0gMA0KICAgZXhSaWdodEZpblRvcFVwID0gMA0KICAgZXhSaWdodEZpbkRp
+c3RSID0gMA0KICAgZXhSaWdodEZpbkJvdFVwID0gMA0KICAgLi4NCg0KSW50V2Fs
+bCAgICJHYXJUb0hvdXNlIEZyb250IiAgDQogICBTdGF0dXMgPSAiTmV3Ig0KICAg
+SXNWZXJpZmllZCA9IDANCiAgIEFyZWEgPSAxODANCiAgIENvbnN0cnVjdGlvbiA9
+ICJHYXIgSG91c2UgUjIxIg0KICAgSXNQYXJ0eVN1cmZhY2UgPSAwDQogICBPdGhl
+clNpZGVNb2RlbGVkID0gMA0KICAgT3V0c2lkZSA9ICJHYXJhZ2UiDQogICAuLg0K
+DQpEb29yICAgIkdhclRvSG91c2UgRHIiICANCiAgIFN0YXR1cyA9ICJOZXciDQog
+ICBJc1ZlcmlmaWVkID0gMA0KICAgQXJlYSA9IDIwDQogICBVZmFjdG9yID0gMC4y
+DQogICBleFVmYWN0b3IgPSAwLjUNCiAgIC4uDQoNCkludFdhbGwgICAiR2FyVG9I
+b3VzZSBMZWZ0IiAgDQogICBTdGF0dXMgPSAiTmV3Ig0KICAgSXNWZXJpZmllZCA9
+IDANCiAgIEFyZWEgPSA5MA0KICAgQ29uc3RydWN0aW9uID0gIkdhciBIb3VzZSBS
+MjEiDQogICBJc1BhcnR5U3VyZmFjZSA9IDANCiAgIE90aGVyU2lkZU1vZGVsZWQg
+PSAwDQogICBPdXRzaWRlID0gIkdhcmFnZSINCiAgIC4uDQoNClNsYWJGbG9vciAg
+ICJTbGFiIE9uIEdyYWRlIiAgDQogICBTdGF0dXMgPSAiTmV3Ig0KICAgSXNWZXJp
+ZmllZCA9IDANCiAgIEFyZWEgPSAyMTAwDQogICBGbG9vclogPSAwDQogICBTdXJm
+YWNlID0gIkRlZmF1bHQgKDgwJSBjYXJwZXRlZC9jb3ZlcmVkLCAyMCUgZXhwb3Nl
+ZCkiDQogICBQZXJpbWV0ZXIgPSAxNjINCiAgIEhlYXRlZFNsYWIgPSAwDQogICBF
+ZGdlSW5zdWxhdGlvbiA9IDANCiAgIEVkZ2VJbnN1bE9wdGlvbiA9ICJSLTUsIDgg
+aW5jaGVzIg0KICAgZXhTdXJmYWNlID0gIkRlZmF1bHQgKDgwJSBjYXJwZXRlZC9j
+b3ZlcmVkLCAyMCUgZXhwb3NlZCkiDQogICBleEVkZ2VJbnN1bE9wdGlvbiA9ICJS
+LTUsIDggaW5jaGVzIg0KICAgLi4NCg0KRVVzZVN1bW1hcnkgICAiRVVTdW1tYXJ5
+IiAgDQogICBUaXRsZTFbMl0gPSAiUHJvcG9zZWQiDQogICBUaXRsZTFbM10gPSAi
+UHJvcG9zZWQiDQogICBUaXRsZTFbNF0gPSAiUHJvcG9zZWQiDQogICBUaXRsZTFb
+NV0gPSAiU3RhbmRhcmQiDQogICBUaXRsZTFbNl0gPSAiU3RhbmRhcmQiDQogICBU
+aXRsZTFbN10gPSAiU3RhbmRhcmQiDQogICBUaXRsZTFbOF0gPSAiQ29tcGxpYW5j
+ZSINCiAgIFRpdGxlMVsxMF0gPSAiUHJvcG9zZWQiDQogICBUaXRsZTFbMTFdID0g
+IlN0YW5kYXJkIg0KICAgVGl0bGUxWzEyXSA9ICJSZWZlcmVuY2UiDQogICBUaXRs
+ZTFbMTNdID0gIlJlZmVyZW5jZSINCiAgIFRpdGxlMVsxNF0gPSAiUmVmZXJlbmNl
+Ig0KICAgVGl0bGUxWzE1XSA9ICJEZXNpZ24gUmF0aW5nIg0KICAgVGl0bGUxWzE2
+XSA9ICJSZWZlcmVuY2UiDQogICBUaXRsZTFbMTddID0gIlByb3Bvc2VkIg0KICAg
+VGl0bGUxWzE4XSA9ICJQcm9wb3NlZCINCiAgIFRpdGxlMVsxOV0gPSAiUHJvcG9z
+ZWQiDQogICBUaXRsZTFbMjNdID0gIlByb3AgRGVzaWduIg0KICAgVGl0bGUxWzI0
+XSA9ICJQcm9wIERlc2lnbiINCiAgIFRpdGxlMVsyNV0gPSAiUHJvcCBEZXNpZ24i
+DQogICBUaXRsZTFbMjddID0gIlN0ZCBEZXNpZ24iDQogICBUaXRsZTFbMjhdID0g
+IlN0ZCBEZXNpZ24iDQogICBUaXRsZTFbMjldID0gIlN0ZCBEZXNpZ24iDQogICBU
+aXRsZTFbMzBdID0gIkNPMiINCiAgIFRpdGxlMlsyXSA9ICJEZXNpZ24iDQogICBU
+aXRsZTJbM10gPSAiRGVzaWduIg0KICAgVGl0bGUyWzRdID0gIkRlc2lnbiINCiAg
+IFRpdGxlMls1XSA9ICJEZXNpZ24iDQogICBUaXRsZTJbNl0gPSAiRGVzaWduIg0K
+ICAgVGl0bGUyWzddID0gIkRlc2lnbiINCiAgIFRpdGxlMls4XSA9ICJNYXJnaW4i
+DQogICBUaXRsZTJbMTBdID0gIkRlc2lnbiINCiAgIFRpdGxlMlsxMV0gPSAiRGVz
+aWduIg0KICAgVGl0bGUyWzEyXSA9ICJEZXNpZ24iDQogICBUaXRsZTJbMTNdID0g
+IkRlc2lnbiINCiAgIFRpdGxlMlsxNF0gPSAiRGVzaWduIg0KICAgVGl0bGUyWzE1
+XSA9ICJNYXJnaW4iDQogICBUaXRsZTJbMTZdID0gIkRlc2lnbiINCiAgIFRpdGxl
+MlsxN10gPSAiRGVzaWduIg0KICAgVGl0bGUyWzE4XSA9ICJEZXNpZ24iDQogICBU
+aXRsZTJbMTldID0gIkRlc2lnbiINCiAgIFRpdGxlMlsyM10gPSAiRWxlY3RyaWMg
+Q08yIg0KICAgVGl0bGUyWzI0XSA9ICJGdWVsIENPMiINCiAgIFRpdGxlMlsyNV0g
+PSAiVG90YWwgQ08yIg0KICAgVGl0bGUyWzI3XSA9ICJFbGVjdHJpYyBDTzIiDQog
+ICBUaXRsZTJbMjhdID0gIkZ1ZWwgQ08yIg0KICAgVGl0bGUyWzI5XSA9ICJUb3Rh
+bCBDTzIiDQogICBUaXRsZTJbMzBdID0gIkVtaXNzaW9ucyINCiAgIFRpdGxlM1sx
+XSA9ICJFbmQgVXNlIg0KICAgVGl0bGUzWzJdID0gIlNpdGUgKGtXaCkiDQogICBU
+aXRsZTNbM10gPSAiU2l0ZSAodGhlcm1zKSINCiAgIFRpdGxlM1s0XSA9ICIoa1RE
+Vi9mdLIteXIpIg0KICAgVGl0bGUzWzVdID0gIlNpdGUgKGtXaCkiDQogICBUaXRs
+ZTNbNl0gPSAiU2l0ZSAodGhlcm1zKSINCiAgIFRpdGxlM1s3XSA9ICIoa1REVi9m
+dLIteXIpIg0KICAgVGl0bGUzWzhdID0gIihrVERWL2Z0si15cikiDQogICBUaXRs
+ZTNbMTBdID0gIihrVykiDQogICBUaXRsZTNbMTFdID0gIihrVykiDQogICBUaXRs
+ZTNbMTJdID0gIlNpdGUgKGtXaCkiDQogICBUaXRsZTNbMTNdID0gIlNpdGUgKHRo
+ZXJtcykiDQogICBUaXRsZTNbMTRdID0gIihrVERWL2Z0si15cikiDQogICBUaXRs
+ZTNbMTVdID0gIihrVERWL2Z0si15cikiDQogICBUaXRsZTNbMTZdID0gIihrVyki
+DQogICBUaXRsZTNbMTddID0gIlNpdGUgKGtXaCkiDQogICBUaXRsZTNbMThdID0g
+IlNpdGUgKHRoZXJtcykiDQogICBUaXRsZTNbMTldID0gIihrVERWL2Z0si15ciki
+DQogICBUaXRsZTNbMjNdID0gIkVtaXMuIChrZykiDQogICBUaXRsZTNbMjRdID0g
+IkVtaXMuIChrZykiDQogICBUaXRsZTNbMjVdID0gIkVtaXMuIChrZykiDQogICBU
+aXRsZTNbMjddID0gIkVtaXMuIChrZykiDQogICBUaXRsZTNbMjhdID0gIkVtaXMu
+IChrZykiDQogICBUaXRsZTNbMjldID0gIkVtaXMuIChrZykiDQogICBUaXRsZTNb
+MzBdID0gIk1hcmdpbiAoa2cpIg0KICAgRW5kdXNlMVsxXSA9ICJTcGFjZSBIZWF0
+aW5nIg0KICAgRW5kdXNlMVsyXSA9ICIxNDMiDQogICBFbmR1c2UxWzNdID0gIjIx
+MC43Ig0KICAgRW5kdXNlMVs0XSA9ICIyMy43NSINCiAgIEVuZHVzZTFbNV0gPSAi
+MTQwIg0KICAgRW5kdXNlMVs2XSA9ICIyMDcuMiINCiAgIEVuZHVzZTFbN10gPSAi
+MjMuNDEiDQogICBFbmR1c2UxWzhdID0gIi0wLjM0Ig0KICAgRW5kdXNlMVsxMF0g
+PSAiMC4wMCINCiAgIEVuZHVzZTFbMTFdID0gIjAuMDAiDQogICBFbmR1c2UxWzEy
+XSA9ICI0NjEiDQogICBFbmR1c2UxWzEzXSA9ICIzODQuMCINCiAgIEVuZHVzZTFb
+MTRdID0gIjQ4LjQwIg0KICAgRW5kdXNlMVsxNV0gPSAiMjQuNjUiDQogICBFbmR1
+c2UxWzE2XSA9ICIwLjAwIg0KICAgRW5kdXNlMVsxN10gPSAiMTQzIg0KICAgRW5k
+dXNlMVsxOF0gPSAiMjEwLjciDQogICBFbmR1c2UxWzE5XSA9ICIyMy43NSINCiAg
+IEVuZHVzZTFbMjNdID0gIjI5Ig0KICAgRW5kdXNlMVsyNF0gPSAiMSwxMTgiDQog
+ICBFbmR1c2UxWzI1XSA9ICIxLDE0NyINCiAgIEVuZHVzZTFbMjddID0gIjI4Ig0K
+ICAgRW5kdXNlMVsyOF0gPSAiMSwwOTkiDQogICBFbmR1c2UxWzI5XSA9ICIxLDEy
+OCINCiAgIEVuZHVzZTFbMzBdID0gIi0xOSINCiAgIEVuZHVzZTJbMV0gPSAiU3Bh
+Y2UgQ29vbGluZyINCiAgIEVuZHVzZTJbMl0gPSAiMTYyIg0KICAgRW5kdXNlMls0
+XSA9ICIxMC45MSINCiAgIEVuZHVzZTJbNV0gPSAiMjE0Ig0KICAgRW5kdXNlMls3
+XSA9ICIxNi44OCINCiAgIEVuZHVzZTJbOF0gPSAiNS45NyINCiAgIEVuZHVzZTJb
+MTBdID0gIjAuMjYiDQogICBFbmR1c2UyWzExXSA9ICIwLjcwIg0KICAgRW5kdXNl
+MlsxMl0gPSAiMSwxMzMiDQogICBFbmR1c2UyWzE0XSA9ICI1My4xMSINCiAgIEVu
+ZHVzZTJbMTVdID0gIjQyLjIwIg0KICAgRW5kdXNlMlsxNl0gPSAiMi40NCINCiAg
+IEVuZHVzZTJbMTddID0gIjE2MiINCiAgIEVuZHVzZTJbMTldID0gIjEwLjkxIg0K
+ICAgRW5kdXNlMlsyM10gPSAiMzUiDQogICBFbmR1c2UyWzI1XSA9ICIzNSINCiAg
+IEVuZHVzZTJbMjddID0gIjUwIg0KICAgRW5kdXNlMlsyOV0gPSAiNTAiDQogICBF
+bmR1c2UyWzMwXSA9ICIxNSINCiAgIEVuZHVzZTNbMV0gPSAiSUFRIFZlbnRpbGF0
+aW9uIg0KICAgRW5kdXNlM1syXSA9ICIxOTgiDQogICBFbmR1c2UzWzRdID0gIjIu
+NjEiDQogICBFbmR1c2UzWzVdID0gIjE5OCINCiAgIEVuZHVzZTNbN10gPSAiMi42
+MSINCiAgIEVuZHVzZTNbOF0gPSAiMC4wMCINCiAgIEVuZHVzZTNbMTBdID0gIjAu
+MDIiDQogICBFbmR1c2UzWzExXSA9ICIwLjAyIg0KICAgRW5kdXNlM1sxMl0gPSAi
+MTk4Ig0KICAgRW5kdXNlM1sxNF0gPSAiMi42MSINCiAgIEVuZHVzZTNbMTVdID0g
+IjAuMDAiDQogICBFbmR1c2UzWzE2XSA9ICIwLjAyIg0KICAgRW5kdXNlM1sxN10g
+PSAiMTk4Ig0KICAgRW5kdXNlM1sxOV0gPSAiMi42MSINCiAgIEVuZHVzZTNbMjNd
+ID0gIjM5Ig0KICAgRW5kdXNlM1syNV0gPSAiMzkiDQogICBFbmR1c2UzWzI3XSA9
+ICIzOSINCiAgIEVuZHVzZTNbMjldID0gIjM5Ig0KICAgRW5kdXNlM1szMF0gPSAi
+MCINCiAgIEVuZHVzZTRbMV0gPSAiT3RoZXIgSFZBQyINCiAgIEVuZHVzZTRbNF0g
+PSAiMC4wMCINCiAgIEVuZHVzZTRbN10gPSAiMC4wMCINCiAgIEVuZHVzZTRbOF0g
+PSAiMC4wMCINCiAgIEVuZHVzZTRbMTBdID0gIjAuMDAiDQogICBFbmR1c2U0WzEx
+XSA9ICIwLjAwIg0KICAgRW5kdXNlNFsxNF0gPSAiMC4wMCINCiAgIEVuZHVzZTRb
+MTVdID0gIjAuMDAiDQogICBFbmR1c2U0WzE2XSA9ICIwLjAwIg0KICAgRW5kdXNl
+NFsxOV0gPSAiMC4wMCINCiAgIEVuZHVzZTRbMjVdID0gIjAiDQogICBFbmR1c2U0
+WzI5XSA9ICIwIg0KICAgRW5kdXNlNVsxXSA9ICJXYXRlciBIZWF0aW5nIg0KICAg
+RW5kdXNlNVszXSA9ICIxMTIuNSINCiAgIEVuZHVzZTVbNF0gPSAiMTAuNzAiDQog
+ICBFbmR1c2U1WzVdID0gIjg1Ig0KICAgRW5kdXNlNVs2XSA9ICIxMTQuNCINCiAg
+IEVuZHVzZTVbN10gPSAiMTIuMDUiDQogICBFbmR1c2U1WzhdID0gIjEuMzUiDQog
+ICBFbmR1c2U1WzEwXSA9ICIwLjAwIg0KICAgRW5kdXNlNVsxMV0gPSAiMC4wMSIN
+CiAgIEVuZHVzZTVbMTNdID0gIjE2Ny44Ig0KICAgRW5kdXNlNVsxNF0gPSAiMzgu
+OTMiDQogICBFbmR1c2U1WzE1XSA9ICIyOC4yMyINCiAgIEVuZHVzZTVbMTZdID0g
+IjAuMDAiDQogICBFbmR1c2U1WzE4XSA9ICIxMTIuNSINCiAgIEVuZHVzZTVbMTld
+ID0gIjEwLjcwIg0KICAgRW5kdXNlNVsyNF0gPSAiNTk3Ig0KICAgRW5kdXNlNVsy
+NV0gPSAiNTk3Ig0KICAgRW5kdXNlNVsyN10gPSAiMTciDQogICBFbmR1c2U1WzI4
+XSA9ICI2MDciDQogICBFbmR1c2U1WzI5XSA9ICI2MjQiDQogICBFbmR1c2U1WzMw
+XSA9ICIyNyINCiAgIEVuZHVzZTZbMV0gPSAiSW5zaWRlIExpZ2h0aW5nIg0KICAg
+RW5kdXNlNlsyXSA9ICI1MDYiDQogICBFbmR1c2U2WzRdID0gIjcuMzciDQogICBF
+bmR1c2U2WzVdID0gIjUwNiINCiAgIEVuZHVzZTZbN10gPSAiNy4zNyINCiAgIEVu
+ZHVzZTZbOF0gPSAiMC4wMCINCiAgIEVuZHVzZTZbMTBdID0gIjAuMTMiDQogICBF
+bmR1c2U2WzExXSA9ICIwLjEzIg0KICAgRW5kdXNlNlsxMl0gPSAiMiwxMzUiDQog
+ICBFbmR1c2U2WzE0XSA9ICIzMS45MyINCiAgIEVuZHVzZTZbMTVdID0gIjI0LjU2
+Ig0KICAgRW5kdXNlNlsxNl0gPSAiMC42MiINCiAgIEVuZHVzZTZbMTddID0gIjUw
+NiINCiAgIEVuZHVzZTZbMTldID0gIjcuMzciDQogICBFbmR1c2U2WzIzXSA9ICIx
+MTAiDQogICBFbmR1c2U2WzI1XSA9ICIxMTAiDQogICBFbmR1c2U2WzI3XSA9ICIx
+MTAiDQogICBFbmR1c2U2WzI5XSA9ICIxMTAiDQogICBFbmR1c2U2WzMwXSA9ICIw
+Ig0KICAgRW5kdXNlN1sxXSA9ICJBcHBsLiAmIENvb2tpbmciDQogICBFbmR1c2U3
+WzJdID0gIjkzMCINCiAgIEVuZHVzZTdbM10gPSAiNDIuOCINCiAgIEVuZHVzZTdb
+NF0gPSAiMTYuODciDQogICBFbmR1c2U3WzVdID0gIjkzNyINCiAgIEVuZHVzZTdb
+Nl0gPSAiNDIuOCINCiAgIEVuZHVzZTdbN10gPSAiMTYuOTciDQogICBFbmR1c2U3
+WzhdID0gIjAuMTAiDQogICBFbmR1c2U3WzEwXSA9ICIwLjE0Ig0KICAgRW5kdXNl
+N1sxMV0gPSAiMC4xNCINCiAgIEVuZHVzZTdbMTJdID0gIjkzMCINCiAgIEVuZHVz
+ZTdbMTNdID0gIjY1LjQiDQogICBFbmR1c2U3WzE0XSA9ICIyMy4yMSINCiAgIEVu
+ZHVzZTdbMTVdID0gIjYuMzQiDQogICBFbmR1c2U3WzE2XSA9ICIwLjEyIg0KICAg
+RW5kdXNlN1sxN10gPSAiOTMwIg0KICAgRW5kdXNlN1sxOF0gPSAiNDIuOCINCiAg
+IEVuZHVzZTdbMTldID0gIjE2Ljg3Ig0KICAgRW5kdXNlN1syM10gPSAiMTgzIg0K
+ICAgRW5kdXNlN1syNF0gPSAiMjI3Ig0KICAgRW5kdXNlN1syNV0gPSAiNDEwIg0K
+ICAgRW5kdXNlN1syN10gPSAiMTg1Ig0KICAgRW5kdXNlN1syOF0gPSAiMjI3Ig0K
+ICAgRW5kdXNlN1syOV0gPSAiNDEyIg0KICAgRW5kdXNlN1szMF0gPSAiMiINCiAg
+IEVuZHVzZThbMV0gPSAiUGx1ZyBMb2FkcyINCiAgIEVuZHVzZThbMl0gPSAiMiww
+MjYiDQogICBFbmR1c2U4WzRdID0gIjI3LjUxIg0KICAgRW5kdXNlOFs1XSA9ICIy
+LDAyNiINCiAgIEVuZHVzZThbN10gPSAiMjcuNTEiDQogICBFbmR1c2U4WzhdID0g
+IjAuMDAiDQogICBFbmR1c2U4WzEwXSA9ICIwLjMwIg0KICAgRW5kdXNlOFsxMV0g
+PSAiMC4zMCINCiAgIEVuZHVzZThbMTJdID0gIjIsNjM4Ig0KICAgRW5kdXNlOFsx
+NF0gPSAiMzYuMzkiDQogICBFbmR1c2U4WzE1XSA9ICI4Ljg4Ig0KICAgRW5kdXNl
+OFsxNl0gPSAiMC40MyINCiAgIEVuZHVzZThbMTddID0gIjIsMDI2Ig0KICAgRW5k
+dXNlOFsxOV0gPSAiMjcuNTEiDQogICBFbmR1c2U4WzIzXSA9ICI0MTQiDQogICBF
+bmR1c2U4WzI1XSA9ICI0MTQiDQogICBFbmR1c2U4WzI3XSA9ICI0MTQiDQogICBF
+bmR1c2U4WzI5XSA9ICI0MTQiDQogICBFbmR1c2U4WzMwXSA9ICIwIg0KICAgRW5k
+dXNlOVsxXSA9ICJFeHRlcmlvciINCiAgIEVuZHVzZTlbMl0gPSAiMTIwIg0KICAg
+RW5kdXNlOVs0XSA9ICIxLjY0Ig0KICAgRW5kdXNlOVs1XSA9ICIxMjAiDQogICBF
+bmR1c2U5WzddID0gIjEuNjQiDQogICBFbmR1c2U5WzhdID0gIjAuMDAiDQogICBF
+bmR1c2U5WzEwXSA9ICIwLjAyIg0KICAgRW5kdXNlOVsxMV0gPSAiMC4wMiINCiAg
+IEVuZHVzZTlbMTJdID0gIjI5OCINCiAgIEVuZHVzZTlbMTRdID0gIjQuMTMiDQog
+ICBFbmR1c2U5WzE1XSA9ICIyLjQ5Ig0KICAgRW5kdXNlOVsxNl0gPSAiMC4wNiIN
+CiAgIEVuZHVzZTlbMTddID0gIjEyMCINCiAgIEVuZHVzZTlbMTldID0gIjEuNjQi
+DQogICBFbmR1c2U5WzIzXSA9ICIyNiINCiAgIEVuZHVzZTlbMjVdID0gIjI2Ig0K
+ICAgRW5kdXNlOVsyN10gPSAiMjYiDQogICBFbmR1c2U5WzI5XSA9ICIyNiINCiAg
+IEVuZHVzZTlbMzBdID0gIjAiDQogICBFbmR1c2UxMFsxXSA9ICJUT1RBTCINCiAg
+IEVuZHVzZTEwWzJdID0gIjEsMDcwIg0KICAgRW5kdXNlMTBbM10gPSAiMzY2LjAi
+DQogICBFbmR1c2UxMFs0XSA9ICI1My41MiINCiAgIEVuZHVzZTEwWzVdID0gIjAi
+DQogICBFbmR1c2UxMFs2XSA9ICIzNjQuNCINCiAgIEVuZHVzZTEwWzddID0gIjYx
+LjI1Ig0KICAgRW5kdXNlMTBbOF0gPSAiNy43MyINCiAgIEVuZHVzZTEwWzEwXSA9
+ICIwLjE1Ig0KICAgRW5kdXNlMTBbMTFdID0gIjEuMjciDQogICBFbmR1c2UxMFsx
+Ml0gPSAiNyw3OTMiDQogICBFbmR1c2UxMFsxM10gPSAiNjE3LjMiDQogICBFbmR1
+c2UxMFsxNF0gPSAiMjM4LjcxIg0KICAgRW5kdXNlMTBbMTVdID0gIjE4NS4xOSIN
+CiAgIEVuZHVzZTEwWzE2XSA9ICIzLjcwIg0KICAgRW5kdXNlMTBbMTddID0gIjEs
+MDcwIg0KICAgRW5kdXNlMTBbMThdID0gIjM2Ni4wIg0KICAgRW5kdXNlMTBbMTld
+ID0gIjUzLjUyIg0KICAgRW5kdXNlMTBbMjNdID0gIjI1OSINCiAgIEVuZHVzZTEw
+WzI0XSA9ICIxLDk0MiINCiAgIEVuZHVzZTEwWzI1XSA9ICIyLDIwMSINCiAgIEVu
+ZHVzZTEwWzI3XSA9ICIyMjUiDQogICBFbmR1c2UxMFsyOF0gPSAiMSw5MzMiDQog
+ICBFbmR1c2UxMFsyOV0gPSAiMiwxNTkiDQogICBFbmR1c2UxMFszMF0gPSAiLTQy
+Ig0KICAgRW5kdXNlMTFbMV0gPSAiQ29tcGxpYW5jZSBUb3RhbCINCiAgIEVuZHVz
+ZTExWzJdID0gIjUwMyINCiAgIEVuZHVzZTExWzNdID0gIjMyMy4zIg0KICAgRW5k
+dXNlMTFbNF0gPSAiNDcuOTciDQogICBFbmR1c2UxMVs1XSA9ICI2MzgiDQogICBF
+bmR1c2UxMVs2XSA9ICIzMjEuNiINCiAgIEVuZHVzZTExWzddID0gIjU0Ljk1Ig0K
+ICAgRW5kdXNlMTFbOF0gPSAiNi45OCINCiAgIEVuZHVzZTExWzEwXSA9ICIwLjI5
+Ig0KICAgRW5kdXNlMTFbMTFdID0gIjAuNzQiDQogICBFbmR1c2UxMVsxMl0gPSAi
+MSw3OTMiDQogICBFbmR1c2UxMVsxM10gPSAiNTUxLjkiDQogICBFbmR1c2UxMVsx
+NF0gPSAiMTQzLjA1Ig0KICAgRW5kdXNlMTFbMTVdID0gIjk1LjA4Ig0KICAgRW5k
+dXNlMTFbMTZdID0gIjIuNDYiDQogICBFbmR1c2UxMVsxN10gPSAiNTAzIg0KICAg
+RW5kdXNlMTFbMThdID0gIjM2Ni4wIg0KICAgRW5kdXNlMTFbMTldID0gIjQ3Ljk3
+Ig0KICAgRW5kdXNlMTFbMjNdID0gIjEwMyINCiAgIEVuZHVzZTExWzI0XSA9ICIx
+LDcxNSINCiAgIEVuZHVzZTExWzI1XSA9ICIxLDgxOCINCiAgIEVuZHVzZTExWzI3
+XSA9ICIxMzQiDQogICBFbmR1c2UxMVsyOF0gPSAiMSw3MDYiDQogICBFbmR1c2Ux
+MVsyOV0gPSAiMSw4NDEiDQogICBFbmR1c2UxMVszMF0gPSAiMjMiDQogICBFbmR1
+c2UxM1sxXSA9ICJQaG90b3ZvbHRhaWNzIg0KICAgRW5kdXNlMTNbMl0gPSAiLTMs
+MTM5Ig0KICAgRW5kdXNlMTNbNF0gPSAiLTM3LjQ4Ig0KICAgRW5kdXNlMTNbNV0g
+PSAiLTQsMjI2Ig0KICAgRW5kdXNlMTNbN10gPSAiLTQ3LjE5Ig0KICAgRW5kdXNl
+MTNbOF0gPSAiLTkuNzEiDQogICBFbmR1c2UxM1sxMF0gPSAiLTAuMDUiDQogICBF
+bmR1c2UxM1sxNF0gPSAiICINCiAgIEVuZHVzZTEzWzE1XSA9ICIzNy40OCINCiAg
+IEVuZHVzZTEzWzE3XSA9ICItMywxMzkiDQogICBFbmR1c2UxM1sxOV0gPSAiLTM3
+LjQ4Ig0KICAgRW5kdXNlMTNbMjNdID0gIi00NzgiDQogICBFbmR1c2UxM1syNV0g
+PSAiLTQ3OCINCiAgIEVuZHVzZTEzWzI3XSA9ICItNjQ0Ig0KICAgRW5kdXNlMTNb
+MjldID0gIi02NDQiDQogICBFbmR1c2UxM1szMF0gPSAiLTE2NiINCiAgIEVuZHVz
+ZTE0WzFdID0gIkJhdHRlcnkiDQogICBFbmR1c2UxNFsyXSA9ICIxMjUiDQogICBF
+bmR1c2UxNFs0XSA9ICItMTAuMzYiDQogICBFbmR1c2UxNFs3XSA9ICIgIg0KICAg
+RW5kdXNlMTRbOF0gPSAiMTAuMzYiDQogICBFbmR1c2UxNFsxMF0gPSAiLTAuNjgi
+DQogICBFbmR1c2UxNFsxMV0gPSAiMC4wMCINCiAgIEVuZHVzZTE0WzE0XSA9ICIg
+Ig0KICAgRW5kdXNlMTRbMTVdID0gIjEwLjM2Ig0KICAgRW5kdXNlMTRbMTZdID0g
+IjAuMDAiDQogICBFbmR1c2UxNFsxN10gPSAiMTI1Ig0KICAgRW5kdXNlMTRbMTld
+ID0gIi0xMC4zNiINCiAgIEVuZHVzZTE0WzIzXSA9ICItOTkiDQogICBFbmR1c2Ux
+NFsyNV0gPSAiLTk5Ig0KICAgRW5kdXNlMTRbMjldID0gIjAiDQogICBFbmR1c2Ux
+NFszMF0gPSAiOTkiDQogICBFbmR1c2U5OFsxXSA9ICJGbGV4aWJpbGl0eSINCiAg
+IEVuZHVzZTk4WzE1XSA9ICIwLjAwIg0KICAgRW5kdXNlOTlbMV0gPSAiU2VsZiBV
+dGlsaXphdGlvbiBDcmVkaXQiDQogICBFbmR1c2U5OVs0XSA9ICIwLjAwIg0KICAg
+RW5kdXNlOTlbOF0gPSAiMC4wMCINCiAgIEVuZHVzZTk5WzE1XSA9ICIwLjAwIg0K
+ICAgRW5kdXNlOTlbMTldID0gIjAuMDAiDQogICBFbmR1c2U5OVsyNV0gPSAiMCIN
+CiAgIEVuZHVzZTk5WzI5XSA9ICIwIg0KICAgRW5kdXNlOTlbMzBdID0gIjAiDQog
+ICBQYXNzRmFpbCA9ICJQQVNTIg0KICAgQ29tcGx5TWVzc2FnZSA9ICJDT01QTElF
+UyINCiAgIFN1bW1hcnlDb2wxWzRdID0gIlN0YW5kYXJkIERlc2lnbiINCiAgIFN1
+bW1hcnlDb2wxWzVdID0gIlByb3Bvc2VkIERlc2lnbiINCiAgIFN1bW1hcnlDb2wy
+WzFdID0gIkNvbXBsaWFuY2UiDQogICBTdW1tYXJ5Q29sMlsyXSA9ICJFbmVyZ3kg
+VXNlIg0KICAgU3VtbWFyeUNvbDJbM10gPSAiKGtURFYvZnSyLXlyKSINCiAgIFN1
+bW1hcnlDb2wyWzRdID0gIjU0Ljk1Ig0KICAgU3VtbWFyeUNvbDJbNV0gPSAiNDcu
+OTciDQogICBTdW1tYXJ5Q29sTlBWTWFyZ1syXSA9ICJFZmZpY2llbmN5uSINCiAg
+IFN1bW1hcnlDb2xOUFZNYXJnWzNdID0gIihFRFIpIg0KICAgU3VtbWFyeUNvbE5Q
+Vk1hcmdbNV0gPSAiMi45Ig0KICAgU3VtbWFyeUNvbEZpbk1hcmdbMl0gPSAiVG90
+YWyyIg0KICAgU3VtbWFyeUNvbEZpbk1hcmdbM10gPSAiKEVEUikiDQogICBTdW1t
+YXJ5Q29sRmluTWFyZ1s1XSA9ICIzLjMiDQogICBTdW1tYXJ5Q29sTm9QVkRSWzJd
+ID0gIkVmZmljaWVuY3m5Ig0KICAgU3VtbWFyeUNvbE5vUFZEUlszXSA9ICIoRURS
+KSINCiAgIFN1bW1hcnlDb2xOb1BWRFJbNF0gPSAiNDUuNCINCiAgIFN1bW1hcnlD
+b2xOb1BWRFJbNV0gPSAiNDIuNSINCiAgIFN1bW1hcnlDb2xQVk9ubHlEUlsyXSA9
+ICJGbGV4aWJpbGl0eSINCiAgIFN1bW1hcnlDb2xQVk9ubHlEUlszXSA9ICIoRURS
+KSINCiAgIFN1bW1hcnlDb2xQVk9ubHlEUls0XSA9ICIxOS43Ig0KICAgU3VtbWFy
+eUNvbFBWT25seURSWzVdID0gIjIwLjEiDQogICBTdW1tYXJ5Q29sRmluRFJbMl0g
+PSAiVG90YWyyIg0KICAgU3VtbWFyeUNvbEZpbkRSWzNdID0gIihFRFIpIg0KICAg
+U3VtbWFyeUNvbEZpbkRSWzRdID0gIjI1LjciDQogICBTdW1tYXJ5Q29sRmluRFJb
+NV0gPSAiMjIuNCINCiAgIE1hcmdpbmtXID0gKCAxLjEyLCAzLjU1ICkNCiAgIE1h
+cmdpbmtXaCA9IC0xMDcwLjINCiAgIE1hcmdpblRoZXJtcyA9IC0xLjY5DQogICBQ
+Y3RTYXZpbmdza1cgPSA4OC4xDQogICBQY3RTYXZpbmdzVGhlcm1zID0gLTAuNQ0K
+ICAgUGN0U2F2aW5nc1REViA9IDEyLjYNCiAgIFBjdFNhdmluZ3NDbXBURFYgPSAx
+Mi43DQogICBQY3RTYXZrV0xibCA9ICI4OC4xIg0KICAgUGN0U2F2a1doTGJsID0g
+Ii0iDQogICBQY3RTYXZUaGVybXNMYmwgPSAiLTAuNSINCiAgIFBjdFNhdlREVkxi
+bCA9ICIxMi42Ig0KICAgUGN0U2F2Q21wVERWTGJsID0gIjEyLjciDQogICBQcm9w
+RWxlY0RlbWFuZCA9ICggMC4xNTE1MzQsIDAuMTUxNTM0ICkNCiAgIFN0ZEVsZWNE
+ZW1hbmQgPSAxLjI2ODU4DQogICBEUnRnRWxlY0RlbWFuZCA9IDMuNjk2OTQNCiAg
+IFN0ZE1peGVkRnVlbGtXaCA9IDQyMjcuMzINCiAgIFN0ZE1peGVkRnVlbFBWID0g
+LTE1NjkuODENCiAgIFByb3BEZXNpZ25QVklucFsxXSA9IDINCiAgIFByb3BEZXNp
+Z25QVklucFs2XSA9IDINCiAgIFByb3BEZXNpZ25QVlNpemVbMV0gPSAyDQogICBT
+dGREZXNpZ25QVlNpemUgPSAyLjY5Mjg5DQogICBTdGRNaXhlZEZ1ZWxQVlREViA9
+IC00Ny4xOQ0KICAgU3RkTWl4ZWRGdWVsUFZNbHQgPSAyLjY5Mjg5DQogICBQcmVs
+aW1Qcm9wa1doID0gNDIxMC4xOA0KICAgUHJlbGltUHJvcENvbXBURFYgPSA0Ny45
+Njc4DQogICBQcmVsaW1Qcm9wUFYgPSAtMzEzOS42MQ0KICAgUHJvcElucHV0UFZN
+dWx0ID0gMi4xNDU1OA0KICAgVW5zY2FsZWRQcm9wUFZSYXRpbyA9IDAuNzQ1NzIN
+CiAgIFJlc3VsdHNOb3Rlc1s1XSA9ICJTdGFuZGFyZCBEZXNpZ24gUFYgQ2FwYWNp
+dHk6IDIuNjkga1ciDQogICBIYXZlUmVzdWx0c05vdGVzUFZbNV0gPSAxDQogICBE
+ZXNpZ25SYXRpbmcgPSAyMi40DQogICBEZXNpZ25SYXRpbmdOb1BWID0gNDIuNQ0K
+ICAgU2hvd0Rlc2lnblJ0Z05vUFYgPSAxDQogICBEZXNpZ25SYXRpbmdQVk9ubHkg
+PSAyMC4xDQogICBEZXNpZ25SYXRpbmdTdGQgPSAyNS43DQogICBEZXNpZ25SYXRp
+bmdTdGROb1BWID0gNDUuNA0KICAgRGVzaWduUmF0aW5nU3RkUFZPbmx5ID0gMTku
+Nw0KICAgTWFyZ2luRWZmaWNFRFIgPSAyLjkNCiAgIE1hcmdpbkZpbmFsRURSID0g
+My4zDQogICBDTzJGdWVsVW5pdExhYmVsID0gImtnIg0KICAgQ08yVG90YWxVbml0
+TGFiZWwgPSAia2ciDQogICBHSENFbmVyZ3lFZmZDYXAgPSAwDQogICBHSENFbmVy
+Z3lFZmZCYXR0RnJhYyA9IDANCiAgIEdIQ0VuZXJneUVmZlREViA9IDANCiAgIEdI
+Q0VuZXJneUVmZkVsZWMgPSAwDQogICBHSENFbmVyZ3lFZmZDTzIgPSAwDQogICBN
+ZWV0c1RpZXIxID0gMA0KICAgTWVldHNUaWVyMiA9IDANCiAgIE1lZXRzWk5FVGll
+ciA9IDANCiAgIFByb3BFbGVjQ2FyYm9uWzFdID0gMC4yNTgyODMNCiAgIFByb3BG
+dWVsQ2FyYm9uWzFdID0gMS45NDI2Mg0KICAgUHJvcEZpbmFsQ2FyYm9uWzFdID0g
+Mi4yDQogICBQcm9wRXhjbEV4cENhcmJvblsxXSA9IDIuMjcNCiAgIFByb3BFeHBv
+cnRDYXJib25bMV0gPSAwLjA3DQogICBQcm9wU2VsZkNvbnNDYXJib25bMV0gPSAw
+LjUxDQogICBQcm9wTm9Tb2xGbHhDYXJib25bMV0gPSAyLjc4DQogICBTdGRGaW5h
+bENhcmJvbiA9IDIuMTYNCiAgIFN0ZEV4Y2xFeHBDYXJib24gPSAyLjU1DQogICBT
+dGRFeHBvcnRDYXJib24gPSAwLjQNCiAgIFN0ZFNlbGZDb25zQ2FyYm9uID0gMC4y
+NQ0KICAgU3RkTm9Tb2xGbHhDYXJib24gPSAyLjgNCiAgIERSdGdGaW5hbENhcmJv
+biA9IDQuOTUyNzcNCiAgIERSdGdFeGNsRXhwQ2FyYm9uID0gNC45NTI3Nw0KICAg
+RFJ0Z0V4cG9ydENhcmJvbiA9IDANCiAgIERSdGdTZWxmQ29uc0NhcmJvbiA9IDAN
+CiAgIERSdGdOb1NvbEZseENhcmJvbiA9IDQuOTUyNzcNCiAgIC4uDQoNCkF0dGlj
+ICAgIkdhciBBdHRpYyAiICANCiAgIFR5cGUgPSAiVmVudGlsYXRlZCINCiAgIFN0
+YXR1cyA9ICJOZXciDQogICBJc1ZlcmlmaWVkID0gMA0KICAgUm9vZlJpc2UgPSA1
+DQogICBDb25zdHJ1Y3Rpb24gPSAiVGlsZSBSb29mIg0KICAgUm9vZlNvbFJlZmxl
+Y3QgPSAwLjINCiAgIFJvb2ZFbWlzcyA9IDAuODUNCiAgIC4uDQoNCkF0dGljICAg
+IkF0dGljICIgIA0KICAgVHlwZSA9ICJWZW50aWxhdGVkIg0KICAgU3RhdHVzID0g
+Ik5ldyINCiAgIElzVmVyaWZpZWQgPSAwDQogICBSb29mUmlzZSA9IDUNCiAgIENv
+bnN0cnVjdGlvbiA9ICJUaWxlIFItMTkgYmVsb3cgZGVjayINCiAgIFJvb2ZTb2xS
+ZWZsZWN0ID0gMC4yDQogICBSb29mRW1pc3MgPSAwLjg1DQogICAuLg0KDQpTY2hE
+YXkgICAiQ0FSZXMyMDEzIEluc0xpZ2h0aW5nIEhybHkiICANCiAgIFR5cGUgPSAi
+RnJhY3Rpb24iDQogICBIciA9ICggMC4wMjMsIDAuMDE5LCAwLjAxNSwgMC4wMTcs
+IDAuMDIxLCAwLjAzMSwgMC4wNDIsIDAuMDQxLCAwLjAzNCwgDQogICAgICAgICAg
+MC4wMjksIDAuMDI3LCAwLjAyNSwgMC4wMjEsIDAuMDIxLCAwLjAyMSwgMC4wMjYs
+IDAuMDMxLCAwLjA0NCwgDQogICAgICAgICAgMC4wODQsIDAuMTE4LCAwLjExMywg
+MC4wOTYsIDAuMDYzLCAwLjAzOCApDQogICAuLg0KDQpTY2hEYXkgICAiQ0FSZXMy
+MDEzIE9jY3VwYW5jeSBIcmx5IiAgDQogICBUeXBlID0gIkZyYWN0aW9uIg0KICAg
+SHIgPSAoIDAuMDM1LCAwLjAzNSwgMC4wMzUsIDAuMDM1LCAwLjAzNSwgMC4wNTks
+IDAuMDgyLCAwLjA1NSwgMC4wMjcsIA0KICAgICAgICAgIDAuMDE0LCAwLjAxNCwg
+MC4wMTQsIDAuMDE0LCAwLjAxNCwgMC4wMTksIDAuMDI3LCAwLjA0MSwgMC4wNTUs
+IA0KICAgICAgICAgIDAuMDY4LCAwLjA4MiwgMC4wODIsIDAuMDcsIDAuMDUzLCAw
+LjAzNSApDQogICAuLg0KDQpTY2hEYXkgICAiQ0FSZXMyMDEzIEVxdWlwbWVudCBI
+cmx5IiAgDQogICBUeXBlID0gIkZyYWN0aW9uIg0KICAgSHIgPSAoIDAuMDM3LCAw
+LjAzNSwgMC4wMzQsIDAuMDM0LCAwLjAzMiwgMC4wMzYsIDAuMDQyLCAwLjA0NCwg
+MC4wMzcsIA0KICAgICAgICAgIDAuMDMyLCAwLjAzMywgMC4wMzMsIDAuMDMyLCAw
+LjAzMywgMC4wMzUsIDAuMDM3LCAwLjA0NCwgMC4wNTMsIA0KICAgICAgICAgIDAu
+MDU4LCAwLjA2LCAwLjA2MiwgMC4wNiwgMC4wNTIsIDAuMDQ1ICkNCiAgIC4uDQoN
+ClNjaERheSAgICJDQVJlczIwMTMgRXh0TGlnaHRpbmcgSHJseSIgIA0KICAgVHlw
+ZSA9ICJGcmFjdGlvbiINCiAgIEhyID0gKCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAw
+LCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCAwLCANCiAgICAgICAg
+ICAwLjI1LCAwLjI1LCAwLjI1LCAwLjI1ICkNCiAgIC4uDQoNClNjaERheSAgICJD
+QVJlczIwMTMgU1ogSGVhdCBIcmx5IiAgDQogICBUeXBlID0gIlRlbXBlcmF0dXJl
+Ig0KICAgSHIgPSAoIDY1LCA2NSwgNjUsIDY1LCA2NSwgNjUsIDY2LjUsIDY4LCA2
+OCwgNjgsIDY4LCA2OCwgNjgsIDY4LCA2OCwgDQogICAgICAgICAgNjgsIDY4LCA2
+OCwgNjgsIDY4LCA2OCwgNjgsIDY4LCA2NSApDQogICAuLg0KDQpTY2hEYXkgICAi
+Q0FSZXMyMDEzIExpdiBIZWF0IEhybHkiICANCiAgIFR5cGUgPSAiVGVtcGVyYXR1
+cmUiDQogICBIciA9ICggNjUsIDY1LCA2NSwgNjUsIDY1LCA2NSwgNjYuNSwgNjgs
+IDY4LCA2OCwgNjgsIDY4LCA2OCwgNjgsIDY4LCANCiAgICAgICAgICA2OCwgNjgs
+IDY4LCA2OCwgNjgsIDY4LCA2OCwgNjgsIDY1ICkNCiAgIC4uDQoNClNjaERheSAg
+ICJDQVJlczIwMTMgU2xwIEhlYXQgSHJseSIgIA0KICAgVHlwZSA9ICJUZW1wZXJh
+dHVyZSINCiAgIEhyID0gKCA2NSwgNjUsIDY1LCA2NSwgNjUsIDY1LCA2Ni41LCA2
+OCwgNjgsIDY1LCA2NSwgNjUsIDY1LCA2NSwgNjUsIA0KICAgICAgICAgIDY1LCA2
+OCwgNjgsIDY4LCA2OCwgNjgsIDY4LCA2OCwgNjUgKQ0KICAgLi4NCg0KU2NoRGF5
+ICAgIkNBUmVzMjAxMyBTWiBDb29sIEhybHkiICANCiAgIFR5cGUgPSAiVGVtcGVy
+YXR1cmUiDQogICBIciA9ICggNzgsIDc4LCA3OCwgNzgsIDc4LCA3OCwgNzgsIDgz
+LCA4MywgODMsIDgzLCA4MywgODMsIDgyLCA4MSwgODAsIA0KICAgICAgICAgIDc5
+LCA3OCwgNzgsIDc4LCA3OCwgNzgsIDc4LCA3OCApDQogICAuLg0KDQpTY2hEYXkg
+ICAiQ0FSZXMyMDEzIExpdiBDb29sIEhybHkiICANCiAgIFR5cGUgPSAiVGVtcGVy
+YXR1cmUiDQogICBIciA9ICggNzgsIDc4LCA3OCwgNzgsIDc4LCA3OCwgNzgsIDgz
+LCA4MywgODMsIDgzLCA4MywgODMsIDgyLCA4MSwgODAsIA0KICAgICAgICAgIDc5
+LCA3OCwgNzgsIDc4LCA3OCwgNzgsIDc4LCA3OCApDQogICAuLg0KDQpTY2hEYXkg
+ICAiQ0FSZXMyMDEzIFNscCBDb29sIEhybHkiICANCiAgIFR5cGUgPSAiVGVtcGVy
+YXR1cmUiDQogICBIciA9ICggNzgsIDc4LCA3OCwgNzgsIDc4LCA3OCwgNzgsIDgz
+LCA4MywgODMsIDgzLCA4MywgODMsIDgyLCA4MSwgODAsIA0KICAgICAgICAgIDc5
+LCA3OCwgNzgsIDc4LCA3OCwgNzgsIDc4LCA3OCApDQogICAuLg0KDQpDb25zICAg
+IkludGVyaW9yIFIwIEZsb29yIiAgDQogICBDYW5Bc3NpZ25UbyA9ICJJbnRlcmlv
+ciBGbG9vcnMiDQogICBUeXBlID0gIldvb2QgRnJhbWVkIEZsb29yIg0KICAgUm9v
+ZmluZ0xheWVyID0gIkxpZ2h0IFJvb2YgKEFzcGhhbHQgU2hpbmdsZSkiDQogICBB
+YnZEZWNrSW5zdWxMYXllciA9ICItIG5vIGluc3VsYXRpb24gLSINCiAgIFJvb2ZE
+ZWNrTGF5ZXIgPSAiV29vZCBTaWRpbmcvc2hlYXRoaW5nL2RlY2tpbmciDQogICBJ
+bnNpZGVGaW5pc2hMYXllciA9ICJHeXBzdW0gQm9hcmQiDQogICBBdHRpY0Zsb29y
+TGF5ZXIgPSAiLSBubyBhdHRpYyBmbG9vciAtIg0KICAgRmxvb3JTdXJmYWNlTGF5
+ZXIgPSAiQ2FycGV0ZWQiDQogICBGbHJDb25jcmV0ZUZpbGxMYXllciA9ICItIG5v
+IGNvbmNyZXRlIGZpbGwgLSINCiAgIEZsb29yRGVja0xheWVyID0gIldvb2QgU2lk
+aW5nL3NoZWF0aGluZy9kZWNraW5nIg0KICAgU2hlYXRoSW5zdWwyTGF5ZXIgPSAi
+LSBubyBzaGVhdGhpbmcvaW5zdWwuIC0iDQogICBNYXNzTGF5ZXIgPSAiLSBub25l
+IC0iDQogICBNYXNzVGhpY2tuZXNzID0gIi0gbm9uZSAtIg0KICAgRnVycmluZ0lu
+c3VsMkxheWVyID0gIi0gbm8gaW5zdWxhdGlvbiAtIg0KICAgRnVycmluZ0luc3Vs
+TGF5ZXIgPSAiLSBubyBpbnN1bGF0aW9uIC0iDQogICBGdXJyaW5nMkxheWVyID0g
+Ii0gbm9uZSAtIg0KICAgRnVycmluZ0xheWVyID0gIi0gbm9uZSAtIg0KICAgQ2F2
+aXR5TGF5ZXIgPSAiLSBubyBpbnN1bGF0aW9uIC0iDQogICBGcmFtZUxheWVyID0g
+IjJ4NiBAIDE2IGluLiBPLkMuIg0KICAgU2hlYXRoSW5zdWxMYXllciA9ICItIG5v
+IHNoZWF0aGluZy9pbnN1bC4gLSINCiAgIFdhbGxFeHRGaW5pc2hMYXllciA9ICIt
+IHNlbGVjdCBmaW5pc2ggLSINCiAgIE90aGVyU2lkZUZpbmlzaExheWVyID0gIkd5
+cHN1bSBCb2FyZCINCiAgIEZsckV4dEZpbmlzaExheWVyID0gIi0gc2VsZWN0IGZp
+bmlzaCAtIg0KICAgUmFkaWFudEJhcnJpZXIgPSAwDQogICBSYWlzZWRIZWVsVHJ1
+c3MgPSAwDQogICBSYWlzZWRIZWVsVHJ1c3NIZWlnaHQgPSAzLjUNCiAgIFJvb2Zp
+bmdUeXBlID0gImFsbCBvdGhlcnMiDQogICAuLg0KDQpDb25zICAgIkludGVyaW9y
+IFIwIFdhbGwiICANCiAgIENhbkFzc2lnblRvID0gIkludGVyaW9yIFdhbGxzIg0K
+ICAgVHlwZSA9ICJXb29kIEZyYW1lZCBXYWxsIg0KICAgUm9vZmluZ0xheWVyID0g
+IkxpZ2h0IFJvb2YgKEFzcGhhbHQgU2hpbmdsZSkiDQogICBBYnZEZWNrSW5zdWxM
+YXllciA9ICItIG5vIGluc3VsYXRpb24gLSINCiAgIFJvb2ZEZWNrTGF5ZXIgPSAi
+V29vZCBTaWRpbmcvc2hlYXRoaW5nL2RlY2tpbmciDQogICBJbnNpZGVGaW5pc2hM
+YXllciA9ICJHeXBzdW0gQm9hcmQiDQogICBBdHRpY0Zsb29yTGF5ZXIgPSAiLSBu
+byBhdHRpYyBmbG9vciAtIg0KICAgRmxvb3JTdXJmYWNlTGF5ZXIgPSAiQ2FycGV0
+ZWQiDQogICBGbHJDb25jcmV0ZUZpbGxMYXllciA9ICItIG5vIGNvbmNyZXRlIGZp
+bGwgLSINCiAgIEZsb29yRGVja0xheWVyID0gIldvb2QgU2lkaW5nL3NoZWF0aGlu
+Zy9kZWNraW5nIg0KICAgU2hlYXRoSW5zdWwyTGF5ZXIgPSAiLSBubyBzaGVhdGhp
+bmcvaW5zdWwuIC0iDQogICBNYXNzTGF5ZXIgPSAiLSBub25lIC0iDQogICBNYXNz
+VGhpY2tuZXNzID0gIi0gbm9uZSAtIg0KICAgRnVycmluZ0luc3VsMkxheWVyID0g
+Ii0gbm8gaW5zdWxhdGlvbiAtIg0KICAgRnVycmluZ0luc3VsTGF5ZXIgPSAiLSBu
+byBpbnN1bGF0aW9uIC0iDQogICBGdXJyaW5nMkxheWVyID0gIi0gbm9uZSAtIg0K
+ICAgRnVycmluZ0xheWVyID0gIi0gbm9uZSAtIg0KICAgQ2F2aXR5TGF5ZXIgPSAi
+LSBubyBpbnN1bGF0aW9uICh2ZXJ0aWNhbCkgLSINCiAgIEZyYW1lTGF5ZXIgPSAi
+Mng0IEAgMTYgaW4uIE8uQy4iDQogICBTaGVhdGhJbnN1bExheWVyID0gIi0gbm8g
+c2hlYXRoaW5nL2luc3VsLiAtIg0KICAgV2FsbEV4dEZpbmlzaExheWVyID0gIi0g
+c2VsZWN0IGZpbmlzaCAtIg0KICAgT3RoZXJTaWRlRmluaXNoTGF5ZXIgPSAiR3lw
+c3VtIEJvYXJkIg0KICAgRmxyRXh0RmluaXNoTGF5ZXIgPSAiLSBzZWxlY3QgZmlu
+aXNoIC0iDQogICBSYWRpYW50QmFycmllciA9IDANCiAgIFJhaXNlZEhlZWxUcnVz
+cyA9IDANCiAgIFJhaXNlZEhlZWxUcnVzc0hlaWdodCA9IDMuNQ0KICAgUm9vZmlu
+Z1R5cGUgPSAiYWxsIG90aGVycyINCiAgIC4uDQoNCkNvbnMgICAiRXh0IFIxOSBG
+bG9vciIgIA0KICAgQ2FuQXNzaWduVG8gPSAiRXh0ZXJpb3IgRmxvb3JzIg0KICAg
+VHlwZSA9ICJXb29kIEZyYW1lZCBGbG9vciINCiAgIFJvb2ZpbmdMYXllciA9ICJM
+aWdodCBSb29mIChBc3BoYWx0IFNoaW5nbGUpIg0KICAgQWJ2RGVja0luc3VsTGF5
+ZXIgPSAiLSBubyBpbnN1bGF0aW9uIC0iDQogICBSb29mRGVja0xheWVyID0gIldv
+b2QgU2lkaW5nL3NoZWF0aGluZy9kZWNraW5nIg0KICAgSW5zaWRlRmluaXNoTGF5
+ZXIgPSAiR3lwc3VtIEJvYXJkIg0KICAgQXR0aWNGbG9vckxheWVyID0gIi0gbm8g
+YXR0aWMgZmxvb3IgLSINCiAgIEZsb29yU3VyZmFjZUxheWVyID0gIkNhcnBldGVk
+Ig0KICAgRmxyQ29uY3JldGVGaWxsTGF5ZXIgPSAiLSBubyBjb25jcmV0ZSBmaWxs
+IC0iDQogICBGbG9vckRlY2tMYXllciA9ICJXb29kIFNpZGluZy9zaGVhdGhpbmcv
+ZGVja2luZyINCiAgIFNoZWF0aEluc3VsMkxheWVyID0gIi0gbm8gc2hlYXRoaW5n
+L2luc3VsLiAtIg0KICAgTWFzc0xheWVyID0gIi0gbm9uZSAtIg0KICAgTWFzc1Ro
+aWNrbmVzcyA9ICItIG5vbmUgLSINCiAgIEZ1cnJpbmdJbnN1bDJMYXllciA9ICIt
+IG5vIGluc3VsYXRpb24gLSINCiAgIEZ1cnJpbmdJbnN1bExheWVyID0gIi0gbm8g
+aW5zdWxhdGlvbiAtIg0KICAgRnVycmluZzJMYXllciA9ICItIG5vbmUgLSINCiAg
+IEZ1cnJpbmdMYXllciA9ICItIG5vbmUgLSINCiAgIENhdml0eUxheWVyID0gIlIg
+MTkgaW4gNS0xLzIgaW4uIGNhdml0eSAoUi0xOCkiDQogICBGcmFtZUxheWVyID0g
+IjJ4NiBAIDE2IGluLiBPLkMuIg0KICAgU2hlYXRoSW5zdWxMYXllciA9ICItIG5v
+IHNoZWF0aGluZy9pbnN1bC4gLSINCiAgIFdhbGxFeHRGaW5pc2hMYXllciA9ICIt
+IHNlbGVjdCBmaW5pc2ggLSINCiAgIE90aGVyU2lkZUZpbmlzaExheWVyID0gIkd5
+cHN1bSBCb2FyZCINCiAgIEZsckV4dEZpbmlzaExheWVyID0gIi0gc2VsZWN0IGZp
+bmlzaCAtIg0KICAgRmxyRXh0Q29uZGl0aW9ucyA9ICJFeHRlcmlvciINCiAgIFJh
+ZGlhbnRCYXJyaWVyID0gMA0KICAgUmFpc2VkSGVlbFRydXNzID0gMA0KICAgUmFp
+c2VkSGVlbFRydXNzSGVpZ2h0ID0gMy41DQogICBSb29maW5nVHlwZSA9ICJhbGwg
+b3RoZXJzIg0KICAgLi4NCg0KQ29ucyAgICJHYXJhZ2UgV2FsbCBSLTAiICANCiAg
+IENhbkFzc2lnblRvID0gIkV4dGVyaW9yIFdhbGxzIg0KICAgVHlwZSA9ICJXb29k
+IEZyYW1lZCBXYWxsIg0KICAgUm9vZmluZ0xheWVyID0gIkxpZ2h0IFJvb2YgKEFz
+cGhhbHQgU2hpbmdsZSkiDQogICBBYnZEZWNrSW5zdWxMYXllciA9ICItIG5vIGlu
+c3VsYXRpb24gLSINCiAgIFJvb2ZEZWNrTGF5ZXIgPSAiV29vZCBTaWRpbmcvc2hl
+YXRoaW5nL2RlY2tpbmciDQogICBJbnNpZGVGaW5pc2hMYXllciA9ICJHeXBzdW0g
+Qm9hcmQiDQogICBBdHRpY0Zsb29yTGF5ZXIgPSAiLSBubyBhdHRpYyBmbG9vciAt
+Ig0KICAgRmxvb3JTdXJmYWNlTGF5ZXIgPSAiQ2FycGV0ZWQiDQogICBGbHJDb25j
+cmV0ZUZpbGxMYXllciA9ICItIG5vIGNvbmNyZXRlIGZpbGwgLSINCiAgIEZsb29y
+RGVja0xheWVyID0gIldvb2QgU2lkaW5nL3NoZWF0aGluZy9kZWNraW5nIg0KICAg
+U2hlYXRoSW5zdWwyTGF5ZXIgPSAiLSBubyBzaGVhdGhpbmcvaW5zdWwuIC0iDQog
+ICBNYXNzTGF5ZXIgPSAiLSBub25lIC0iDQogICBNYXNzVGhpY2tuZXNzID0gIi0g
+bm9uZSAtIg0KICAgRnVycmluZ0luc3VsMkxheWVyID0gIi0gbm8gaW5zdWxhdGlv
+biAtIg0KICAgRnVycmluZ0luc3VsTGF5ZXIgPSAiLSBubyBpbnN1bGF0aW9uIC0i
+DQogICBGdXJyaW5nMkxheWVyID0gIi0gbm9uZSAtIg0KICAgRnVycmluZ0xheWVy
+ID0gIi0gbm9uZSAtIg0KICAgQ2F2aXR5TGF5ZXIgPSAiLSBubyBpbnN1bGF0aW9u
+ICh2ZXJ0aWNhbCkgLSINCiAgIEZyYW1lTGF5ZXIgPSAiMng2IEAgMTYgaW4uIE8u
+Qy4iDQogICBTaGVhdGhJbnN1bExheWVyID0gIi0gbm8gc2hlYXRoaW5nL2luc3Vs
+LiAtIg0KICAgV2FsbEV4dEZpbmlzaExheWVyID0gIjMgQ29hdCBTdHVjY28iDQog
+ICBPdGhlclNpZGVGaW5pc2hMYXllciA9ICJHeXBzdW0gQm9hcmQiDQogICBGbHJF
+eHRGaW5pc2hMYXllciA9ICItIHNlbGVjdCBmaW5pc2ggLSINCiAgIFJhZGlhbnRC
+YXJyaWVyID0gMA0KICAgUmFpc2VkSGVlbFRydXNzID0gMA0KICAgUmFpc2VkSGVl
+bFRydXNzSGVpZ2h0ID0gMy41DQogICBSb29maW5nVHlwZSA9ICJhbGwgb3RoZXJz
+Ig0KICAgLi4NCg0KQ29ucyAgICJSMCBDbGdCbHdBdHRpYyBDb25zIiAgDQogICBD
+YW5Bc3NpZ25UbyA9ICJDZWlsaW5ncyAoYmVsb3cgYXR0aWMpIg0KICAgVHlwZSA9
+ICJXb29kIEZyYW1lZCBDZWlsaW5nIg0KICAgUm9vZmluZ0xheWVyID0gIkxpZ2h0
+IFJvb2YgKEFzcGhhbHQgU2hpbmdsZSkiDQogICBBYnZEZWNrSW5zdWxMYXllciA9
+ICItIG5vIGluc3VsYXRpb24gLSINCiAgIFJvb2ZEZWNrTGF5ZXIgPSAiV29vZCBT
+aWRpbmcvc2hlYXRoaW5nL2RlY2tpbmciDQogICBJbnNpZGVGaW5pc2hMYXllciA9
+ICJHeXBzdW0gQm9hcmQiDQogICBBdHRpY0Zsb29yTGF5ZXIgPSAiLSBubyBhdHRp
+YyBmbG9vciAtIg0KICAgRmxvb3JTdXJmYWNlTGF5ZXIgPSAiQ2FycGV0ZWQiDQog
+ICBGbHJDb25jcmV0ZUZpbGxMYXllciA9ICItIG5vIGNvbmNyZXRlIGZpbGwgLSIN
+CiAgIEZsb29yRGVja0xheWVyID0gIldvb2QgU2lkaW5nL3NoZWF0aGluZy9kZWNr
+aW5nIg0KICAgU2hlYXRoSW5zdWwyTGF5ZXIgPSAiLSBubyBzaGVhdGhpbmcvaW5z
+dWwuIC0iDQogICBNYXNzTGF5ZXIgPSAiLSBub25lIC0iDQogICBNYXNzVGhpY2tu
+ZXNzID0gIi0gbm9uZSAtIg0KICAgRnVycmluZ0luc3VsMkxheWVyID0gIi0gbm8g
+aW5zdWxhdGlvbiAtIg0KICAgRnVycmluZ0luc3VsTGF5ZXIgPSAiLSBubyBpbnN1
+bGF0aW9uIC0iDQogICBGdXJyaW5nMkxheWVyID0gIi0gbm9uZSAtIg0KICAgRnVy
+cmluZ0xheWVyID0gIi0gbm9uZSAtIg0KICAgQ2F2aXR5TGF5ZXIgPSAiLSBubyBp
+bnN1bGF0aW9uIC0iDQogICBGcmFtZUxheWVyID0gIjJ4NCBCb3R0b20gQ2hvcmQg
+b2YgVHJ1c3MgQCAyNCBpbi4gTy5DLiINCiAgIFNoZWF0aEluc3VsTGF5ZXIgPSAi
+LSBubyBzaGVhdGhpbmcvaW5zdWwuIC0iDQogICBXYWxsRXh0RmluaXNoTGF5ZXIg
+PSAiLSBzZWxlY3QgZmluaXNoIC0iDQogICBPdGhlclNpZGVGaW5pc2hMYXllciA9
+ICJHeXBzdW0gQm9hcmQiDQogICBGbHJFeHRGaW5pc2hMYXllciA9ICItIHNlbGVj
+dCBmaW5pc2ggLSINCiAgIFJhZGlhbnRCYXJyaWVyID0gMA0KICAgUmFpc2VkSGVl
+bFRydXNzID0gMA0KICAgUmFpc2VkSGVlbFRydXNzSGVpZ2h0ID0gMy41DQogICBS
+b29maW5nVHlwZSA9ICJhbGwgb3RoZXJzIg0KICAgLi4NCg0KQ29ucyAgICJHYXIg
+SG91c2UgUjIxIiAgDQogICBDYW5Bc3NpZ25UbyA9ICJJbnRlcmlvciBXYWxscyIN
+CiAgIFR5cGUgPSAiV29vZCBGcmFtZWQgV2FsbCINCiAgIFJvb2ZpbmdMYXllciA9
+ICJMaWdodCBSb29mIChBc3BoYWx0IFNoaW5nbGUpIg0KICAgQWJ2RGVja0luc3Vs
+TGF5ZXIgPSAiLSBubyBpbnN1bGF0aW9uIC0iDQogICBSb29mRGVja0xheWVyID0g
+Ildvb2QgU2lkaW5nL3NoZWF0aGluZy9kZWNraW5nIg0KICAgSW5zaWRlRmluaXNo
+TGF5ZXIgPSAiR3lwc3VtIEJvYXJkIg0KICAgQXR0aWNGbG9vckxheWVyID0gIi0g
+bm8gYXR0aWMgZmxvb3IgLSINCiAgIEZsb29yU3VyZmFjZUxheWVyID0gIkNhcnBl
+dGVkIg0KICAgRmxyQ29uY3JldGVGaWxsTGF5ZXIgPSAiLSBubyBjb25jcmV0ZSBm
+aWxsIC0iDQogICBGbG9vckRlY2tMYXllciA9ICJXb29kIFNpZGluZy9zaGVhdGhp
+bmcvZGVja2luZyINCiAgIFNoZWF0aEluc3VsMkxheWVyID0gIi0gbm8gc2hlYXRo
+aW5nL2luc3VsLiAtIg0KICAgTWFzc0xheWVyID0gIi0gbm9uZSAtIg0KICAgTWFz
+c1RoaWNrbmVzcyA9ICItIG5vbmUgLSINCiAgIEZ1cnJpbmdJbnN1bDJMYXllciA9
+ICItIG5vIGluc3VsYXRpb24gLSINCiAgIEZ1cnJpbmdJbnN1bExheWVyID0gIi0g
+bm8gaW5zdWxhdGlvbiAtIg0KICAgRnVycmluZzJMYXllciA9ICItIG5vbmUgLSIN
+CiAgIEZ1cnJpbmdMYXllciA9ICItIG5vbmUgLSINCiAgIENhdml0eUxheWVyID0g
+IlIgMjEiDQogICBGcmFtZUxheWVyID0gIjJ4NCBAIDE2IGluLiBPLkMuIg0KICAg
+U2hlYXRoSW5zdWxMYXllciA9ICItIG5vIHNoZWF0aGluZy9pbnN1bC4gLSINCiAg
+IFdhbGxFeHRGaW5pc2hMYXllciA9ICItIHNlbGVjdCBmaW5pc2ggLSINCiAgIE90
+aGVyU2lkZUZpbmlzaExheWVyID0gIkd5cHN1bSBCb2FyZCINCiAgIEZsckV4dEZp
+bmlzaExheWVyID0gIi0gc2VsZWN0IGZpbmlzaCAtIg0KICAgUmFkaWFudEJhcnJp
+ZXIgPSAwDQogICBSYWlzZWRIZWVsVHJ1c3MgPSAwDQogICBSYWlzZWRIZWVsVHJ1
+c3NIZWlnaHQgPSAzLjUNCiAgIFJvb2ZpbmdUeXBlID0gImFsbCBvdGhlcnMiDQog
+ICAuLg0KDQpDb25zICAgIkFzcGhhbHQgUjE5IGJlbG93IGRlY2siICANCiAgIENh
+bkFzc2lnblRvID0gIkF0dGljIFJvb2ZzIg0KICAgVHlwZSA9ICJXb29kIEZyYW1l
+ZCBDZWlsaW5nIg0KICAgUm9vZmluZ0xheWVyID0gIkxpZ2h0IFJvb2YgKEFzcGhh
+bHQgU2hpbmdsZSkiDQogICBBYnZEZWNrSW5zdWxMYXllciA9ICItIG5vIGluc3Vs
+YXRpb24gLSINCiAgIFJvb2ZEZWNrTGF5ZXIgPSAiV29vZCBTaWRpbmcvc2hlYXRo
+aW5nL2RlY2tpbmciDQogICBJbnNpZGVGaW5pc2hMYXllciA9ICItIHNlbGVjdCBp
+bnNpZGUgZmluaXNoIC0iDQogICBBdHRpY0Zsb29yTGF5ZXIgPSAiLSBubyBhdHRp
+YyBmbG9vciAtIg0KICAgRmxvb3JTdXJmYWNlTGF5ZXIgPSAiQ2FycGV0ZWQiDQog
+ICBGbHJDb25jcmV0ZUZpbGxMYXllciA9ICItIG5vIGNvbmNyZXRlIGZpbGwgLSIN
+CiAgIEZsb29yRGVja0xheWVyID0gIldvb2QgU2lkaW5nL3NoZWF0aGluZy9kZWNr
+aW5nIg0KICAgU2hlYXRoSW5zdWwyTGF5ZXIgPSAiLSBubyBzaGVhdGhpbmcvaW5z
+dWwuIC0iDQogICBNYXNzTGF5ZXIgPSAiLSBub25lIC0iDQogICBNYXNzVGhpY2tu
+ZXNzID0gIi0gbm9uZSAtIg0KICAgRnVycmluZ0luc3VsMkxheWVyID0gIi0gbm8g
+aW5zdWxhdGlvbiAtIg0KICAgRnVycmluZ0luc3VsTGF5ZXIgPSAiLSBubyBpbnN1
+bGF0aW9uIC0iDQogICBGdXJyaW5nMkxheWVyID0gIi0gbm9uZSAtIg0KICAgRnVy
+cmluZ0xheWVyID0gIi0gbm9uZSAtIg0KICAgQ2F2aXR5TGF5ZXIgPSAiUiAxOSIN
+CiAgIEZyYW1lTGF5ZXIgPSAiMng0IEAgMjQgaW4uIE8uQy4iDQogICBTaGVhdGhJ
+bnN1bExheWVyID0gIi0gbm8gc2hlYXRoaW5nL2luc3VsLiAtIg0KICAgV2FsbEV4
+dEZpbmlzaExheWVyID0gIi0gc2VsZWN0IGZpbmlzaCAtIg0KICAgT3RoZXJTaWRl
+RmluaXNoTGF5ZXIgPSAiR3lwc3VtIEJvYXJkIg0KICAgRmxyRXh0RmluaXNoTGF5
+ZXIgPSAiLSBzZWxlY3QgZmluaXNoIC0iDQogICBSYWRpYW50QmFycmllciA9IDAN
+CiAgIFJhaXNlZEhlZWxUcnVzcyA9IDANCiAgIFJhaXNlZEhlZWxUcnVzc0hlaWdo
+dCA9IDMuNQ0KICAgUm9vZmluZ1R5cGUgPSAiYWxsIG90aGVycyINCiAgIENhdklu
+c3VsT3ZlckZyYW1lID0gMQ0KICAgLi4NCg0KQ29ucyAgICJBc3BoYWx0IFJCIFJv
+b2YiICANCiAgIENhbkFzc2lnblRvID0gIkF0dGljIFJvb2ZzIg0KICAgVHlwZSA9
+ICJXb29kIEZyYW1lZCBDZWlsaW5nIg0KICAgUm9vZmluZ0xheWVyID0gIkxpZ2h0
+IFJvb2YgKEFzcGhhbHQgU2hpbmdsZSkiDQogICBBYnZEZWNrSW5zdWxMYXllciA9
+ICItIG5vIGluc3VsYXRpb24gLSINCiAgIFJvb2ZEZWNrTGF5ZXIgPSAiV29vZCBT
+aWRpbmcvc2hlYXRoaW5nL2RlY2tpbmciDQogICBJbnNpZGVGaW5pc2hMYXllciA9
+ICItIHNlbGVjdCBpbnNpZGUgZmluaXNoIC0iDQogICBBdHRpY0Zsb29yTGF5ZXIg
+PSAiLSBubyBhdHRpYyBmbG9vciAtIg0KICAgRmxvb3JTdXJmYWNlTGF5ZXIgPSAi
+Q2FycGV0ZWQiDQogICBGbHJDb25jcmV0ZUZpbGxMYXllciA9ICItIG5vIGNvbmNy
+ZXRlIGZpbGwgLSINCiAgIEZsb29yRGVja0xheWVyID0gIldvb2QgU2lkaW5nL3No
+ZWF0aGluZy9kZWNraW5nIg0KICAgU2hlYXRoSW5zdWwyTGF5ZXIgPSAiLSBubyBz
+aGVhdGhpbmcvaW5zdWwuIC0iDQogICBNYXNzTGF5ZXIgPSAiLSBub25lIC0iDQog
+ICBNYXNzVGhpY2tuZXNzID0gIi0gbm9uZSAtIg0KICAgRnVycmluZ0luc3VsMkxh
+eWVyID0gIi0gbm8gaW5zdWxhdGlvbiAtIg0KICAgRnVycmluZ0luc3VsTGF5ZXIg
+PSAiLSBubyBpbnN1bGF0aW9uIC0iDQogICBGdXJyaW5nMkxheWVyID0gIi0gbm9u
+ZSAtIg0KICAgRnVycmluZ0xheWVyID0gIi0gbm9uZSAtIg0KICAgQ2F2aXR5TGF5
+ZXIgPSAiLSBubyBpbnN1bGF0aW9uIC0iDQogICBGcmFtZUxheWVyID0gIjJ4NCBA
+IDI0IGluLiBPLkMuIg0KICAgU2hlYXRoSW5zdWxMYXllciA9ICItIG5vIHNoZWF0
+aGluZy9pbnN1bC4gLSINCiAgIFdhbGxFeHRGaW5pc2hMYXllciA9ICItIHNlbGVj
+dCBmaW5pc2ggLSINCiAgIE90aGVyU2lkZUZpbmlzaExheWVyID0gIkd5cHN1bSBC
+b2FyZCINCiAgIEZsckV4dEZpbmlzaExheWVyID0gIi0gc2VsZWN0IGZpbmlzaCAt
+Ig0KICAgUmFkaWFudEJhcnJpZXIgPSAxDQogICBSYWlzZWRIZWVsVHJ1c3MgPSAw
+DQogICBSYWlzZWRIZWVsVHJ1c3NIZWlnaHQgPSAzLjUNCiAgIFJvb2ZpbmdUeXBl
+ID0gImFsbCBvdGhlcnMiDQogICBDYXZJbnN1bE92ZXJGcmFtZSA9IDENCiAgIC4u
+DQoNCkNvbnMgICAiVGlsZSBSLTE5IGJlbG93IGRlY2siICANCiAgIENhbkFzc2ln
+blRvID0gIkF0dGljIFJvb2ZzIg0KICAgVHlwZSA9ICJXb29kIEZyYW1lZCBDZWls
+aW5nIg0KICAgUm9vZmluZ0xheWVyID0gIjEwIFBTRiAoUm9vZlRpbGUpIg0KICAg
+QWJ2RGVja0luc3VsTGF5ZXIgPSAiLSBubyBpbnN1bGF0aW9uIC0iDQogICBSb29m
+RGVja0xheWVyID0gIldvb2QgU2lkaW5nL3NoZWF0aGluZy9kZWNraW5nIg0KICAg
+SW5zaWRlRmluaXNoTGF5ZXIgPSAiLSBzZWxlY3QgaW5zaWRlIGZpbmlzaCAtIg0K
+ICAgQXR0aWNGbG9vckxheWVyID0gIi0gbm8gYXR0aWMgZmxvb3IgLSINCiAgIEZs
+b29yU3VyZmFjZUxheWVyID0gIkNhcnBldGVkIg0KICAgRmxyQ29uY3JldGVGaWxs
+TGF5ZXIgPSAiLSBubyBjb25jcmV0ZSBmaWxsIC0iDQogICBGbG9vckRlY2tMYXll
+ciA9ICJXb29kIFNpZGluZy9zaGVhdGhpbmcvZGVja2luZyINCiAgIFNoZWF0aElu
+c3VsMkxheWVyID0gIi0gbm8gc2hlYXRoaW5nL2luc3VsLiAtIg0KICAgTWFzc0xh
+eWVyID0gIi0gbm9uZSAtIg0KICAgTWFzc1RoaWNrbmVzcyA9ICItIG5vbmUgLSIN
+CiAgIEZ1cnJpbmdJbnN1bDJMYXllciA9ICItIG5vIGluc3VsYXRpb24gLSINCiAg
+IEZ1cnJpbmdJbnN1bExheWVyID0gIi0gbm8gaW5zdWxhdGlvbiAtIg0KICAgRnVy
+cmluZzJMYXllciA9ICItIG5vbmUgLSINCiAgIEZ1cnJpbmdMYXllciA9ICItIG5v
+bmUgLSINCiAgIENhdml0eUxheWVyID0gIlIgMTkiDQogICBGcmFtZUxheWVyID0g
+IjJ4NCBAIDI0IGluLiBPLkMuIg0KICAgU2hlYXRoSW5zdWxMYXllciA9ICItIG5v
+IHNoZWF0aGluZy9pbnN1bC4gLSINCiAgIFdhbGxFeHRGaW5pc2hMYXllciA9ICIt
+IHNlbGVjdCBmaW5pc2ggLSINCiAgIE90aGVyU2lkZUZpbmlzaExheWVyID0gIkd5
+cHN1bSBCb2FyZCINCiAgIEZsckV4dEZpbmlzaExheWVyID0gIi0gc2VsZWN0IGZp
+bmlzaCAtIg0KICAgUmFkaWFudEJhcnJpZXIgPSAwDQogICBSYWlzZWRIZWVsVHJ1
+c3MgPSAwDQogICBSYWlzZWRIZWVsVHJ1c3NIZWlnaHQgPSAzLjUNCiAgIFJvb2Zp
+bmdUeXBlID0gIlN0ZWVwIFNsb3BlIFJvb2YgdGlsZSwgbWV0YWwgdGlsZSwgb3Ig
+d29vZCBzaGFrZXMiDQogICBDYXZJbnN1bE92ZXJGcmFtZSA9IDENCiAgIC4uDQoN
+CkNvbnMgICAiVGlsZSBSb29mIiAgDQogICBDYW5Bc3NpZ25UbyA9ICJBdHRpYyBS
+b29mcyINCiAgIFR5cGUgPSAiV29vZCBGcmFtZWQgQ2VpbGluZyINCiAgIFJvb2Zp
+bmdMYXllciA9ICIxMCBQU0YgKFJvb2ZUaWxlKSINCiAgIEFidkRlY2tJbnN1bExh
+eWVyID0gIi0gbm8gaW5zdWxhdGlvbiAtIg0KICAgUm9vZkRlY2tMYXllciA9ICJX
+b29kIFNpZGluZy9zaGVhdGhpbmcvZGVja2luZyINCiAgIEluc2lkZUZpbmlzaExh
+eWVyID0gIi0gc2VsZWN0IGluc2lkZSBmaW5pc2ggLSINCiAgIEF0dGljRmxvb3JM
+YXllciA9ICItIG5vIGF0dGljIGZsb29yIC0iDQogICBGbG9vclN1cmZhY2VMYXll
+ciA9ICJDYXJwZXRlZCINCiAgIEZsckNvbmNyZXRlRmlsbExheWVyID0gIi0gbm8g
+Y29uY3JldGUgZmlsbCAtIg0KICAgRmxvb3JEZWNrTGF5ZXIgPSAiV29vZCBTaWRp
+bmcvc2hlYXRoaW5nL2RlY2tpbmciDQogICBTaGVhdGhJbnN1bDJMYXllciA9ICIt
+IG5vIHNoZWF0aGluZy9pbnN1bC4gLSINCiAgIE1hc3NMYXllciA9ICItIG5vbmUg
+LSINCiAgIE1hc3NUaGlja25lc3MgPSAiLSBub25lIC0iDQogICBGdXJyaW5nSW5z
+dWwyTGF5ZXIgPSAiLSBubyBpbnN1bGF0aW9uIC0iDQogICBGdXJyaW5nSW5zdWxM
+YXllciA9ICItIG5vIGluc3VsYXRpb24gLSINCiAgIEZ1cnJpbmcyTGF5ZXIgPSAi
+LSBub25lIC0iDQogICBGdXJyaW5nTGF5ZXIgPSAiLSBub25lIC0iDQogICBDYXZp
+dHlMYXllciA9ICItIG5vIGluc3VsYXRpb24gLSINCiAgIEZyYW1lTGF5ZXIgPSAi
+Mng0IEAgMjQgaW4uIE8uQy4iDQogICBTaGVhdGhJbnN1bExheWVyID0gIi0gbm8g
+c2hlYXRoaW5nL2luc3VsLiAtIg0KICAgV2FsbEV4dEZpbmlzaExheWVyID0gIi0g
+c2VsZWN0IGZpbmlzaCAtIg0KICAgT3RoZXJTaWRlRmluaXNoTGF5ZXIgPSAiR3lw
+c3VtIEJvYXJkIg0KICAgRmxyRXh0RmluaXNoTGF5ZXIgPSAiLSBzZWxlY3QgZmlu
+aXNoIC0iDQogICBSYWRpYW50QmFycmllciA9IDANCiAgIFJhaXNlZEhlZWxUcnVz
+cyA9IDANCiAgIFJhaXNlZEhlZWxUcnVzc0hlaWdodCA9IDMuNQ0KICAgUm9vZmlu
+Z1R5cGUgPSAiU3RlZXAgU2xvcGUgUm9vZiB0aWxlLCBtZXRhbCB0aWxlLCBvciB3
+b29kIHNoYWtlcyINCiAgIENhdkluc3VsT3ZlckZyYW1lID0gMA0KICAgLi4NCg0K
+Q29ucyAgICJSMzggQ2VpbGluZyBiZWxvdyBhdHRpYyIgIA0KICAgQ2FuQXNzaWdu
+VG8gPSAiQ2VpbGluZ3MgKGJlbG93IGF0dGljKSINCiAgIFR5cGUgPSAiV29vZCBG
+cmFtZWQgQ2VpbGluZyINCiAgIFJvb2ZpbmdMYXllciA9ICJMaWdodCBSb29mIChB
+c3BoYWx0IFNoaW5nbGUpIg0KICAgQWJ2RGVja0luc3VsTGF5ZXIgPSAiLSBubyBp
+bnN1bGF0aW9uIC0iDQogICBSb29mRGVja0xheWVyID0gIldvb2QgU2lkaW5nL3No
+ZWF0aGluZy9kZWNraW5nIg0KICAgSW5zaWRlRmluaXNoTGF5ZXIgPSAiR3lwc3Vt
+IEJvYXJkIg0KICAgQXR0aWNGbG9vckxheWVyID0gIi0gbm8gYXR0aWMgZmxvb3Ig
+LSINCiAgIEZsb29yU3VyZmFjZUxheWVyID0gIkNhcnBldGVkIg0KICAgRmxyQ29u
+Y3JldGVGaWxsTGF5ZXIgPSAiLSBubyBjb25jcmV0ZSBmaWxsIC0iDQogICBGbG9v
+ckRlY2tMYXllciA9ICJXb29kIFNpZGluZy9zaGVhdGhpbmcvZGVja2luZyINCiAg
+IFNoZWF0aEluc3VsMkxheWVyID0gIi0gbm8gc2hlYXRoaW5nL2luc3VsLiAtIg0K
+ICAgTWFzc0xheWVyID0gIi0gbm9uZSAtIg0KICAgTWFzc1RoaWNrbmVzcyA9ICIt
+IG5vbmUgLSINCiAgIEZ1cnJpbmdJbnN1bDJMYXllciA9ICItIG5vIGluc3VsYXRp
+b24gLSINCiAgIEZ1cnJpbmdJbnN1bExheWVyID0gIi0gbm8gaW5zdWxhdGlvbiAt
+Ig0KICAgRnVycmluZzJMYXllciA9ICItIG5vbmUgLSINCiAgIEZ1cnJpbmdMYXll
+ciA9ICItIG5vbmUgLSINCiAgIENhdml0eUxheWVyID0gIlIgMzgiDQogICBGcmFt
+ZUxheWVyID0gIjJ4NCBCb3R0b20gQ2hvcmQgb2YgVHJ1c3MgQCAyNCBpbi4gTy5D
+LiINCiAgIFNoZWF0aEluc3VsTGF5ZXIgPSAiLSBubyBzaGVhdGhpbmcvaW5zdWwu
+IC0iDQogICBXYWxsRXh0RmluaXNoTGF5ZXIgPSAiLSBzZWxlY3QgZmluaXNoIC0i
+DQogICBPdGhlclNpZGVGaW5pc2hMYXllciA9ICJHeXBzdW0gQm9hcmQiDQogICBG
+bHJFeHRGaW5pc2hMYXllciA9ICItIHNlbGVjdCBmaW5pc2ggLSINCiAgIFJhZGlh
+bnRCYXJyaWVyID0gMA0KICAgUmFpc2VkSGVlbFRydXNzID0gMA0KICAgUmFpc2Vk
+SGVlbFRydXNzSGVpZ2h0ID0gMy41DQogICBSb29maW5nVHlwZSA9ICJhbGwgb3Ro
+ZXJzIg0KICAgLi4NCg0KQ29ucyAgICJSMzAgQ2VpbGluZyBiZWxvdyBhdHRpYyIg
+IA0KICAgQ2FuQXNzaWduVG8gPSAiQ2VpbGluZ3MgKGJlbG93IGF0dGljKSINCiAg
+IFR5cGUgPSAiV29vZCBGcmFtZWQgQ2VpbGluZyINCiAgIFJvb2ZpbmdMYXllciA9
+ICJMaWdodCBSb29mIChBc3BoYWx0IFNoaW5nbGUpIg0KICAgQWJ2RGVja0luc3Vs
+TGF5ZXIgPSAiLSBubyBpbnN1bGF0aW9uIC0iDQogICBSb29mRGVja0xheWVyID0g
+Ildvb2QgU2lkaW5nL3NoZWF0aGluZy9kZWNraW5nIg0KICAgSW5zaWRlRmluaXNo
+TGF5ZXIgPSAiR3lwc3VtIEJvYXJkIg0KICAgQXR0aWNGbG9vckxheWVyID0gIi0g
+bm8gYXR0aWMgZmxvb3IgLSINCiAgIEZsb29yU3VyZmFjZUxheWVyID0gIkNhcnBl
+dGVkIg0KICAgRmxyQ29uY3JldGVGaWxsTGF5ZXIgPSAiLSBubyBjb25jcmV0ZSBm
+aWxsIC0iDQogICBGbG9vckRlY2tMYXllciA9ICJXb29kIFNpZGluZy9zaGVhdGhp
+bmcvZGVja2luZyINCiAgIFNoZWF0aEluc3VsMkxheWVyID0gIi0gbm8gc2hlYXRo
+aW5nL2luc3VsLiAtIg0KICAgTWFzc0xheWVyID0gIi0gbm9uZSAtIg0KICAgTWFz
+c1RoaWNrbmVzcyA9ICItIG5vbmUgLSINCiAgIEZ1cnJpbmdJbnN1bDJMYXllciA9
+ICItIG5vIGluc3VsYXRpb24gLSINCiAgIEZ1cnJpbmdJbnN1bExheWVyID0gIi0g
+bm8gaW5zdWxhdGlvbiAtIg0KICAgRnVycmluZzJMYXllciA9ICItIG5vbmUgLSIN
+CiAgIEZ1cnJpbmdMYXllciA9ICItIG5vbmUgLSINCiAgIENhdml0eUxheWVyID0g
+IlIgMzAiDQogICBGcmFtZUxheWVyID0gIjJ4NCBCb3R0b20gQ2hvcmQgb2YgVHJ1
+c3MgQCAyNCBpbi4gTy5DLiINCiAgIFNoZWF0aEluc3VsTGF5ZXIgPSAiLSBubyBz
+aGVhdGhpbmcvaW5zdWwuIC0iDQogICBXYWxsRXh0RmluaXNoTGF5ZXIgPSAiLSBz
+ZWxlY3QgZmluaXNoIC0iDQogICBPdGhlclNpZGVGaW5pc2hMYXllciA9ICJHeXBz
+dW0gQm9hcmQiDQogICBGbHJFeHRGaW5pc2hMYXllciA9ICItIHNlbGVjdCBmaW5p
+c2ggLSINCiAgIFJhZGlhbnRCYXJyaWVyID0gMA0KICAgUmFpc2VkSGVlbFRydXNz
+ID0gMA0KICAgUmFpc2VkSGVlbFRydXNzSGVpZ2h0ID0gMy41DQogICBSb29maW5n
+VHlwZSA9ICJhbGwgb3RoZXJzIg0KICAgLi4NCg0KQ29ucyAgICJSMzAgQ2F0aGVk
+cmFsIENlaWxpbmciICANCiAgIENhbkFzc2lnblRvID0gIkNhdGhlZHJhbCBDZWls
+aW5ncyINCiAgIFR5cGUgPSAiV29vZCBGcmFtZWQgQ2VpbGluZyINCiAgIFJvb2Zp
+bmdMYXllciA9ICJMaWdodCBSb29mIChBc3BoYWx0IFNoaW5nbGUpIg0KICAgQWJ2
+RGVja0luc3VsTGF5ZXIgPSAiLSBubyBpbnN1bGF0aW9uIC0iDQogICBSb29mRGVj
+a0xheWVyID0gIldvb2QgU2lkaW5nL3NoZWF0aGluZy9kZWNraW5nIg0KICAgSW5z
+aWRlRmluaXNoTGF5ZXIgPSAiR3lwc3VtIEJvYXJkIg0KICAgQXR0aWNGbG9vckxh
+eWVyID0gIi0gbm8gYXR0aWMgZmxvb3IgLSINCiAgIEZsb29yU3VyZmFjZUxheWVy
+ID0gIkNhcnBldGVkIg0KICAgRmxyQ29uY3JldGVGaWxsTGF5ZXIgPSAiLSBubyBj
+b25jcmV0ZSBmaWxsIC0iDQogICBGbG9vckRlY2tMYXllciA9ICJXb29kIFNpZGlu
+Zy9zaGVhdGhpbmcvZGVja2luZyINCiAgIFNoZWF0aEluc3VsMkxheWVyID0gIi0g
+bm8gc2hlYXRoaW5nL2luc3VsLiAtIg0KICAgTWFzc0xheWVyID0gIi0gbm9uZSAt
+Ig0KICAgTWFzc1RoaWNrbmVzcyA9ICItIG5vbmUgLSINCiAgIEZ1cnJpbmdJbnN1
+bDJMYXllciA9ICItIG5vIGluc3VsYXRpb24gLSINCiAgIEZ1cnJpbmdJbnN1bExh
+eWVyID0gIi0gbm8gaW5zdWxhdGlvbiAtIg0KICAgRnVycmluZzJMYXllciA9ICIt
+IG5vbmUgLSINCiAgIEZ1cnJpbmdMYXllciA9ICItIG5vbmUgLSINCiAgIENhdml0
+eUxheWVyID0gIlIgMzAiDQogICBGcmFtZUxheWVyID0gIjJ4MTAgQCAyNCBpbi4g
+Ty5DLiINCiAgIFNoZWF0aEluc3VsTGF5ZXIgPSAiLSBubyBzaGVhdGhpbmcvaW5z
+dWwuIC0iDQogICBXYWxsRXh0RmluaXNoTGF5ZXIgPSAiLSBzZWxlY3QgZmluaXNo
+IC0iDQogICBPdGhlclNpZGVGaW5pc2hMYXllciA9ICJHeXBzdW0gQm9hcmQiDQog
+ICBGbHJFeHRGaW5pc2hMYXllciA9ICItIHNlbGVjdCBmaW5pc2ggLSINCiAgIFJh
+ZGlhbnRCYXJyaWVyID0gMA0KICAgUmFpc2VkSGVlbFRydXNzID0gMA0KICAgUmFp
+c2VkSGVlbFRydXNzSGVpZ2h0ID0gMy41DQogICBSb29maW5nVHlwZSA9ICJhbGwg
+b3RoZXJzIg0KICAgLi4NCg0KQ29ucyAgICJSMzggQ2F0aGVkcmFsIENlaWxpbmci
+ICANCiAgIENhbkFzc2lnblRvID0gIkNhdGhlZHJhbCBDZWlsaW5ncyINCiAgIFR5
+cGUgPSAiV29vZCBGcmFtZWQgQ2VpbGluZyINCiAgIFJvb2ZpbmdMYXllciA9ICJM
+aWdodCBSb29mIChBc3BoYWx0IFNoaW5nbGUpIg0KICAgQWJ2RGVja0luc3VsTGF5
+ZXIgPSAiLSBubyBpbnN1bGF0aW9uIC0iDQogICBSb29mRGVja0xheWVyID0gIldv
+b2QgU2lkaW5nL3NoZWF0aGluZy9kZWNraW5nIg0KICAgSW5zaWRlRmluaXNoTGF5
+ZXIgPSAiR3lwc3VtIEJvYXJkIg0KICAgQXR0aWNGbG9vckxheWVyID0gIi0gbm8g
+YXR0aWMgZmxvb3IgLSINCiAgIEZsb29yU3VyZmFjZUxheWVyID0gIkNhcnBldGVk
+Ig0KICAgRmxyQ29uY3JldGVGaWxsTGF5ZXIgPSAiLSBubyBjb25jcmV0ZSBmaWxs
+IC0iDQogICBGbG9vckRlY2tMYXllciA9ICJXb29kIFNpZGluZy9zaGVhdGhpbmcv
+ZGVja2luZyINCiAgIFNoZWF0aEluc3VsMkxheWVyID0gIi0gbm8gc2hlYXRoaW5n
+L2luc3VsLiAtIg0KICAgTWFzc0xheWVyID0gIi0gbm9uZSAtIg0KICAgTWFzc1Ro
+aWNrbmVzcyA9ICItIG5vbmUgLSINCiAgIEZ1cnJpbmdJbnN1bDJMYXllciA9ICIt
+IG5vIGluc3VsYXRpb24gLSINCiAgIEZ1cnJpbmdJbnN1bExheWVyID0gIi0gbm8g
+aW5zdWxhdGlvbiAtIg0KICAgRnVycmluZzJMYXllciA9ICItIG5vbmUgLSINCiAg
+IEZ1cnJpbmdMYXllciA9ICItIG5vbmUgLSINCiAgIENhdml0eUxheWVyID0gIlIg
+MzgiDQogICBGcmFtZUxheWVyID0gIjJ4MTIgQCAyNCBpbi4gTy5DLiINCiAgIFNo
+ZWF0aEluc3VsTGF5ZXIgPSAiLSBubyBzaGVhdGhpbmcvaW5zdWwuIC0iDQogICBX
+YWxsRXh0RmluaXNoTGF5ZXIgPSAiLSBzZWxlY3QgZmluaXNoIC0iDQogICBPdGhl
+clNpZGVGaW5pc2hMYXllciA9ICJHeXBzdW0gQm9hcmQiDQogICBGbHJFeHRGaW5p
+c2hMYXllciA9ICItIHNlbGVjdCBmaW5pc2ggLSINCiAgIFJhZGlhbnRCYXJyaWVy
+ID0gMA0KICAgUmFpc2VkSGVlbFRydXNzID0gMA0KICAgUmFpc2VkSGVlbFRydXNz
+SGVpZ2h0ID0gMy41DQogICBSb29maW5nVHlwZSA9ICJhbGwgb3RoZXJzIg0KICAg
+Li4NCg0KQ29ucyAgICJSMTUgV2FsbCIgIA0KICAgQ2FuQXNzaWduVG8gPSAiRXh0
+ZXJpb3IgV2FsbHMiDQogICBUeXBlID0gIldvb2QgRnJhbWVkIFdhbGwiDQogICBS
+b29maW5nTGF5ZXIgPSAiTGlnaHQgUm9vZiAoQXNwaGFsdCBTaGluZ2xlKSINCiAg
+IEFidkRlY2tJbnN1bExheWVyID0gIi0gbm8gaW5zdWxhdGlvbiAtIg0KICAgUm9v
+ZkRlY2tMYXllciA9ICJXb29kIFNpZGluZy9zaGVhdGhpbmcvZGVja2luZyINCiAg
+IEluc2lkZUZpbmlzaExheWVyID0gIkd5cHN1bSBCb2FyZCINCiAgIEF0dGljRmxv
+b3JMYXllciA9ICItIG5vIGF0dGljIGZsb29yIC0iDQogICBGbG9vclN1cmZhY2VM
+YXllciA9ICJDYXJwZXRlZCINCiAgIEZsckNvbmNyZXRlRmlsbExheWVyID0gIi0g
+bm8gY29uY3JldGUgZmlsbCAtIg0KICAgRmxvb3JEZWNrTGF5ZXIgPSAiV29vZCBT
+aWRpbmcvc2hlYXRoaW5nL2RlY2tpbmciDQogICBTaGVhdGhJbnN1bDJMYXllciA9
+ICItIG5vIHNoZWF0aGluZy9pbnN1bC4gLSINCiAgIE1hc3NMYXllciA9ICItIG5v
+bmUgLSINCiAgIE1hc3NUaGlja25lc3MgPSAiLSBub25lIC0iDQogICBGdXJyaW5n
+SW5zdWwyTGF5ZXIgPSAiLSBubyBpbnN1bGF0aW9uIC0iDQogICBGdXJyaW5nSW5z
+dWxMYXllciA9ICItIG5vIGluc3VsYXRpb24gLSINCiAgIEZ1cnJpbmcyTGF5ZXIg
+PSAiLSBub25lIC0iDQogICBGdXJyaW5nTGF5ZXIgPSAiLSBub25lIC0iDQogICBD
+YXZpdHlMYXllciA9ICJSIDE1Ig0KICAgRnJhbWVMYXllciA9ICIyeDQgQCAxNiBp
+bi4gTy5DLiINCiAgIFNoZWF0aEluc3VsTGF5ZXIgPSAiLSBubyBzaGVhdGhpbmcv
+aW5zdWwuIC0iDQogICBXYWxsRXh0RmluaXNoTGF5ZXIgPSAiMyBDb2F0IFN0dWNj
+byINCiAgIE90aGVyU2lkZUZpbmlzaExheWVyID0gIkd5cHN1bSBCb2FyZCINCiAg
+IEZsckV4dEZpbmlzaExheWVyID0gIi0gc2VsZWN0IGZpbmlzaCAtIg0KICAgUmFk
+aWFudEJhcnJpZXIgPSAwDQogICBSYWlzZWRIZWVsVHJ1c3MgPSAwDQogICBSYWlz
+ZWRIZWVsVHJ1c3NIZWlnaHQgPSAzLjUNCiAgIFJvb2ZpbmdUeXBlID0gImFsbCBv
+dGhlcnMiDQogICAuLg0KDQpDb25zICAgIlIyMSBSNSBTdHVjY28gV2FsbCIgIA0K
+ICAgQ2FuQXNzaWduVG8gPSAiRXh0ZXJpb3IgV2FsbHMiDQogICBUeXBlID0gIldv
+b2QgRnJhbWVkIFdhbGwiDQogICBSb29maW5nTGF5ZXIgPSAiTGlnaHQgUm9vZiAo
+QXNwaGFsdCBTaGluZ2xlKSINCiAgIEFidkRlY2tJbnN1bExheWVyID0gIi0gbm8g
+aW5zdWxhdGlvbiAtIg0KICAgUm9vZkRlY2tMYXllciA9ICJXb29kIFNpZGluZy9z
+aGVhdGhpbmcvZGVja2luZyINCiAgIEluc2lkZUZpbmlzaExheWVyID0gIkd5cHN1
+bSBCb2FyZCINCiAgIEF0dGljRmxvb3JMYXllciA9ICItIG5vIGF0dGljIGZsb29y
+IC0iDQogICBGbG9vclN1cmZhY2VMYXllciA9ICJDYXJwZXRlZCINCiAgIEZsckNv
+bmNyZXRlRmlsbExheWVyID0gIi0gbm8gY29uY3JldGUgZmlsbCAtIg0KICAgRmxv
+b3JEZWNrTGF5ZXIgPSAiV29vZCBTaWRpbmcvc2hlYXRoaW5nL2RlY2tpbmciDQog
+ICBTaGVhdGhJbnN1bDJMYXllciA9ICItIG5vIHNoZWF0aGluZy9pbnN1bC4gLSIN
+CiAgIE1hc3NMYXllciA9ICItIG5vbmUgLSINCiAgIE1hc3NUaGlja25lc3MgPSAi
+LSBub25lIC0iDQogICBGdXJyaW5nSW5zdWwyTGF5ZXIgPSAiLSBubyBpbnN1bGF0
+aW9uIC0iDQogICBGdXJyaW5nSW5zdWxMYXllciA9ICItIG5vIGluc3VsYXRpb24g
+LSINCiAgIEZ1cnJpbmcyTGF5ZXIgPSAiLSBub25lIC0iDQogICBGdXJyaW5nTGF5
+ZXIgPSAiLSBub25lIC0iDQogICBDYXZpdHlMYXllciA9ICJSIDIxIg0KICAgRnJh
+bWVMYXllciA9ICIyeDYgQCAxNiBpbi4gTy5DLiINCiAgIFNoZWF0aEluc3VsTGF5
+ZXIgPSAiUjUgU2hlYXRoaW5nIg0KICAgV2FsbEV4dEZpbmlzaExheWVyID0gIlN5
+bnRoZXRpYyBTdHVjY28iDQogICBPdGhlclNpZGVGaW5pc2hMYXllciA9ICJHeXBz
+dW0gQm9hcmQiDQogICBGbHJFeHRGaW5pc2hMYXllciA9ICItIHNlbGVjdCBmaW5p
+c2ggLSINCiAgIFJhZGlhbnRCYXJyaWVyID0gMA0KICAgUmFpc2VkSGVlbFRydXNz
+ID0gMA0KICAgUmFpc2VkSGVlbFRydXNzSGVpZ2h0ID0gMy41DQogICBSb29maW5n
+VHlwZSA9ICJhbGwgb3RoZXJzIg0KICAgLi4NCg0KQ29ucyAgICJSMTkgUjQgU3R1
+Y2NvIFdhbGwiICANCiAgIENhbkFzc2lnblRvID0gIkV4dGVyaW9yIFdhbGxzIg0K
+ICAgVHlwZSA9ICJXb29kIEZyYW1lZCBXYWxsIg0KICAgUm9vZmluZ0xheWVyID0g
+IkxpZ2h0IFJvb2YgKEFzcGhhbHQgU2hpbmdsZSkiDQogICBBYnZEZWNrSW5zdWxM
+YXllciA9ICItIG5vIGluc3VsYXRpb24gLSINCiAgIFJvb2ZEZWNrTGF5ZXIgPSAi
+V29vZCBTaWRpbmcvc2hlYXRoaW5nL2RlY2tpbmciDQogICBJbnNpZGVGaW5pc2hM
+YXllciA9ICJHeXBzdW0gQm9hcmQiDQogICBBdHRpY0Zsb29yTGF5ZXIgPSAiLSBu
+byBhdHRpYyBmbG9vciAtIg0KICAgRmxvb3JTdXJmYWNlTGF5ZXIgPSAiQ2FycGV0
+ZWQiDQogICBGbHJDb25jcmV0ZUZpbGxMYXllciA9ICItIG5vIGNvbmNyZXRlIGZp
+bGwgLSINCiAgIEZsb29yRGVja0xheWVyID0gIldvb2QgU2lkaW5nL3NoZWF0aGlu
+Zy9kZWNraW5nIg0KICAgU2hlYXRoSW5zdWwyTGF5ZXIgPSAiLSBubyBzaGVhdGhp
+bmcvaW5zdWwuIC0iDQogICBNYXNzTGF5ZXIgPSAiLSBub25lIC0iDQogICBNYXNz
+VGhpY2tuZXNzID0gIi0gbm9uZSAtIg0KICAgRnVycmluZ0luc3VsMkxheWVyID0g
+Ii0gbm8gaW5zdWxhdGlvbiAtIg0KICAgRnVycmluZ0luc3VsTGF5ZXIgPSAiLSBu
+byBpbnN1bGF0aW9uIC0iDQogICBGdXJyaW5nMkxheWVyID0gIi0gbm9uZSAtIg0K
+ICAgRnVycmluZ0xheWVyID0gIi0gbm9uZSAtIg0KICAgQ2F2aXR5TGF5ZXIgPSAi
+UiAxOSBpbiA1LTEvMiBpbi4gY2F2aXR5IChSLTE4KSINCiAgIEZyYW1lTGF5ZXIg
+PSAiMng2IEAgMTYgaW4uIE8uQy4iDQogICBTaGVhdGhJbnN1bExheWVyID0gIlI0
+IFNoZWF0aGluZyINCiAgIFdhbGxFeHRGaW5pc2hMYXllciA9ICJTeW50aGV0aWMg
+U3R1Y2NvIg0KICAgT3RoZXJTaWRlRmluaXNoTGF5ZXIgPSAiR3lwc3VtIEJvYXJk
+Ig0KICAgRmxyRXh0RmluaXNoTGF5ZXIgPSAiLSBzZWxlY3QgZmluaXNoIC0iDQog
+ICBSYWRpYW50QmFycmllciA9IDANCiAgIFJhaXNlZEhlZWxUcnVzcyA9IDANCiAg
+IFJhaXNlZEhlZWxUcnVzc0hlaWdodCA9IDMuNQ0KICAgUm9vZmluZ1R5cGUgPSAi
+YWxsIG90aGVycyINCiAgIC4uDQoNCkNvbnMgICAiUjE5IDJ4NiBGbHJPdnJDcmF3
+bCIgIA0KICAgQ2FuQXNzaWduVG8gPSAiRmxvb3JzIE92ZXIgQ3Jhd2xzcGFjZSIN
+CiAgIFR5cGUgPSAiV29vZCBGcmFtZWQgRmxvb3IiDQogICBSb29maW5nTGF5ZXIg
+PSAiTGlnaHQgUm9vZiAoQXNwaGFsdCBTaGluZ2xlKSINCiAgIEFidkRlY2tJbnN1
+bExheWVyID0gIi0gbm8gaW5zdWxhdGlvbiAtIg0KICAgUm9vZkRlY2tMYXllciA9
+ICJXb29kIFNpZGluZy9zaGVhdGhpbmcvZGVja2luZyINCiAgIEluc2lkZUZpbmlz
+aExheWVyID0gIkd5cHN1bSBCb2FyZCINCiAgIEF0dGljRmxvb3JMYXllciA9ICIt
+IG5vIGF0dGljIGZsb29yIC0iDQogICBGbG9vclN1cmZhY2VMYXllciA9ICJDYXJw
+ZXRlZCINCiAgIEZsckNvbmNyZXRlRmlsbExheWVyID0gIi0gbm8gY29uY3JldGUg
+ZmlsbCAtIg0KICAgRmxvb3JEZWNrTGF5ZXIgPSAiV29vZCBTaWRpbmcvc2hlYXRo
+aW5nL2RlY2tpbmciDQogICBTaGVhdGhJbnN1bDJMYXllciA9ICItIG5vIHNoZWF0
+aGluZy9pbnN1bC4gLSINCiAgIE1hc3NMYXllciA9ICItIG5vbmUgLSINCiAgIE1h
+c3NUaGlja25lc3MgPSAiLSBub25lIC0iDQogICBGdXJyaW5nSW5zdWwyTGF5ZXIg
+PSAiLSBubyBpbnN1bGF0aW9uIC0iDQogICBGdXJyaW5nSW5zdWxMYXllciA9ICIt
+IG5vIGluc3VsYXRpb24gLSINCiAgIEZ1cnJpbmcyTGF5ZXIgPSAiLSBub25lIC0i
+DQogICBGdXJyaW5nTGF5ZXIgPSAiLSBub25lIC0iDQogICBDYXZpdHlMYXllciA9
+ICJSIDE5Ig0KICAgRnJhbWVMYXllciA9ICIyeDYgQCAxNiBpbi4gTy5DLiINCiAg
+IFNoZWF0aEluc3VsTGF5ZXIgPSAiLSBubyBzaGVhdGhpbmcvaW5zdWwuIC0iDQog
+ICBXYWxsRXh0RmluaXNoTGF5ZXIgPSAiLSBzZWxlY3QgZmluaXNoIC0iDQogICBP
+dGhlclNpZGVGaW5pc2hMYXllciA9ICJHeXBzdW0gQm9hcmQiDQogICBGbHJFeHRG
+aW5pc2hMYXllciA9ICItIHNlbGVjdCBmaW5pc2ggLSINCiAgIFJhZGlhbnRCYXJy
+aWVyID0gMA0KICAgUmFpc2VkSGVlbFRydXNzID0gMA0KICAgUmFpc2VkSGVlbFRy
+dXNzSGVpZ2h0ID0gMy41DQogICBSb29maW5nVHlwZSA9ICJhbGwgb3RoZXJzIg0K
+ICAgLi4NCg0KQ29ucyAgICJDYXRoZWRyYWwgUjAiICANCiAgIENhbkFzc2lnblRv
+ID0gIkNhdGhlZHJhbCBDZWlsaW5ncyINCiAgIFR5cGUgPSAiV29vZCBGcmFtZWQg
+Q2VpbGluZyINCiAgIFJvb2ZpbmdMYXllciA9ICJMaWdodCBSb29mIChBc3BoYWx0
+IFNoaW5nbGUpIg0KICAgQWJ2RGVja0luc3VsTGF5ZXIgPSAiLSBubyBpbnN1bGF0
+aW9uIC0iDQogICBSb29mRGVja0xheWVyID0gIldvb2QgU2lkaW5nL3NoZWF0aGlu
+Zy9kZWNraW5nIg0KICAgSW5zaWRlRmluaXNoTGF5ZXIgPSAiR3lwc3VtIEJvYXJk
+Ig0KICAgQXR0aWNGbG9vckxheWVyID0gIi0gbm8gYXR0aWMgZmxvb3IgLSINCiAg
+IEZsb29yU3VyZmFjZUxheWVyID0gIkNhcnBldGVkIg0KICAgRmxyQ29uY3JldGVG
+aWxsTGF5ZXIgPSAiLSBubyBjb25jcmV0ZSBmaWxsIC0iDQogICBGbG9vckRlY2tM
+YXllciA9ICJXb29kIFNpZGluZy9zaGVhdGhpbmcvZGVja2luZyINCiAgIFNoZWF0
+aEluc3VsMkxheWVyID0gIi0gbm8gc2hlYXRoaW5nL2luc3VsLiAtIg0KICAgTWFz
+c0xheWVyID0gIi0gbm9uZSAtIg0KICAgTWFzc1RoaWNrbmVzcyA9ICItIG5vbmUg
+LSINCiAgIEZ1cnJpbmdJbnN1bDJMYXllciA9ICItIG5vIGluc3VsYXRpb24gLSIN
+CiAgIEZ1cnJpbmdJbnN1bExheWVyID0gIi0gbm8gaW5zdWxhdGlvbiAtIg0KICAg
+RnVycmluZzJMYXllciA9ICItIG5vbmUgLSINCiAgIEZ1cnJpbmdMYXllciA9ICIt
+IG5vbmUgLSINCiAgIENhdml0eUxheWVyID0gIi0gbm8gaW5zdWxhdGlvbiAtIg0K
+ICAgRnJhbWVMYXllciA9ICIyeDQgQCAxNiBpbi4gTy5DLiINCiAgIFNoZWF0aElu
+c3VsTGF5ZXIgPSAiLSBubyBzaGVhdGhpbmcvaW5zdWwuIC0iDQogICBXYWxsRXh0
+RmluaXNoTGF5ZXIgPSAiLSBzZWxlY3QgZmluaXNoIC0iDQogICBPdGhlclNpZGVG
+aW5pc2hMYXllciA9ICJHeXBzdW0gQm9hcmQiDQogICBGbHJFeHRGaW5pc2hMYXll
+ciA9ICItIHNlbGVjdCBmaW5pc2ggLSINCiAgIFJhZGlhbnRCYXJyaWVyID0gMA0K
+ICAgUmFpc2VkSGVlbFRydXNzID0gMA0KICAgUmFpc2VkSGVlbFRydXNzSGVpZ2h0
+ID0gMy41DQogICBSb29maW5nVHlwZSA9ICJhbGwgb3RoZXJzIg0KICAgLi4NCg0K
+TWF0ICAgIkd5cHN1bSBCb2FyZCIgIA0KICAgVGhpY2tuZXNzID0gMC41DQogICBE
+ZW5zaXR5ID0gNDANCiAgIFNwZWNIZWF0ID0gMC4yNw0KICAgQ29uZHVjdGl2aXR5
+ID0gMC4wOTE2Nw0KICAgUlZhbFBlckluY2ggPSAwLjkwOTENCiAgIC4uDQoNCk1h
+dCAgICIzIENvYXQgU3R1Y2NvLXVzZXIiICANCiAgIFRoaWNrbmVzcyA9IDAuODc1
+DQogICBEZW5zaXR5ID0gMTE2DQogICBTcGVjSGVhdCA9IDAuMg0KICAgQ29uZHVj
+dGl2aXR5ID0gMC40MTY3DQogICBSVmFsUGVySW5jaCA9IDAuMg0KICAgLi4NCg0K
+TWF0ICAgIlNvZnRXb29kIiAgDQogICBEZW5zaXR5ID0gMzUNCiAgIFNwZWNIZWF0
+ID0gMC4zOQ0KICAgQ29uZHVjdGl2aXR5ID0gMC4wODE2Nw0KICAgUlZhbFBlcklu
+Y2ggPSAxLjAyMDQNCiAgIC4uDQoNCk1hdCAgICJXb29kIGxheWVyIiAgDQogICBU
+aGlja25lc3MgPSAwLjUNCiAgIERlbnNpdHkgPSA0MQ0KICAgU3BlY0hlYXQgPSAw
+LjQ1DQogICBDb25kdWN0aXZpdHkgPSAwLjA2MTI3DQogICBSVmFsUGVySW5jaCA9
+IDEuMzYNCiAgIC4uDQoNCk1hdCAgICJMaWdodCBSb29mIiAgDQogICBUaGlja25l
+c3MgPSAwLjINCiAgIERlbnNpdHkgPSAxMjANCiAgIFNwZWNIZWF0ID0gMC4yDQog
+ICBDb25kdWN0aXZpdHkgPSAxDQogICBSVmFsUGVySW5jaCA9IDAuMDgzMw0KICAg
+Li4NCg0KTWF0ICAgIkNhcnBldCIgIA0KICAgVGhpY2tuZXNzID0gMC41DQogICBE
+ZW5zaXR5ID0gMTIuMw0KICAgU3BlY0hlYXQgPSAwLjM0DQogICBDb25kdWN0aXZp
+dHkgPSAwLjAyDQogICBSVmFsUGVySW5jaCA9IDQuMTY2Nw0KICAgLi4NCg0KTWF0
+ICAgIlI0IFNoZWF0aGluZyIgIA0KICAgVGhpY2tuZXNzID0gMQ0KICAgRGVuc2l0
+eSA9IDEuNQ0KICAgU3BlY0hlYXQgPSAwLjM1DQogICBDb25kdWN0aXZpdHkgPSAw
+LjAyMDgzDQogICBSVmFsUGVySW5jaCA9IDQNCiAgIC4uDQoNCk1hdCAgICJWZXJ0
+V2FsbENhdml0eSIgIA0KICAgVGhpY2tuZXNzID0gMy41DQogICBEZW5zaXR5ID0g
+MC4wNzUNCiAgIFNwZWNIZWF0ID0gMC4yNA0KICAgQ29uZHVjdGl2aXR5ID0gMC4z
+MTQNCiAgIENvbmR1Y3Rpdml0eUNUID0gMC4wMDM5Nw0KICAgUlZhbFBlckluY2gg
+PSAxLjEzMzMNCiAgIC4uDQoNCk1hdCAgICJSNCBTeW50aCBTdHVjY28iICANCiAg
+IFRoaWNrbmVzcyA9IDENCiAgIERlbnNpdHkgPSAxLjUNCiAgIFNwZWNIZWF0ID0g
+MC4zNQ0KICAgQ29uZHVjdGl2aXR5ID0gMC4wMjA4Mw0KICAgQ29uZHVjdGl2aXR5
+Q1QgPSAwLjAwNDE4DQogICBSVmFsUGVySW5jaCA9IDQNCiAgIC4uDQoNCk1hdCAg
+ICJSMSBTaGVhdGhpbmciICANCiAgIFRoaWNrbmVzcyA9IDENCiAgIERlbnNpdHkg
+PSAxLjUNCiAgIFNwZWNIZWF0ID0gMC4zNQ0KICAgQ29uZHVjdGl2aXR5ID0gMC4w
+ODMzMw0KICAgQ29uZHVjdGl2aXR5Q1QgPSAwLjAwNDE4DQogICBSVmFsUGVySW5j
+aCA9IDENCiAgIC4uDQoNCk1hdCAgICJSNCBTaGVhdGhpbmcgKENvcHkpIiAgDQog
+ICBUaGlja25lc3MgPSAxDQogICBEZW5zaXR5ID0gMS41DQogICBTcGVjSGVhdCA9
+IDAuMzUNCiAgIENvbmR1Y3Rpdml0eSA9IDAuMDIwODMNCiAgIENvbmR1Y3Rpdml0
+eUNUID0gMC4wMDQxOA0KICAgUlZhbFBlckluY2ggPSA0DQogICAuLg0KDQpNYXQg
+ICAiVGlsZUdhcCIgIA0KICAgVGhpY2tuZXNzID0gMC43NQ0KICAgRGVuc2l0eSA9
+IDAuMDc1DQogICBTcGVjSGVhdCA9IDAuMjQNCiAgIENvbmR1Y3Rpdml0eSA9IDAu
+MDczNTMNCiAgIFJWYWxQZXJJbmNoID0gMS4xMzMzDQogICAuLg0KDQpNYXQgICAi
+MTAgUFNGIFJvb2YiICANCiAgIFRoaWNrbmVzcyA9IDENCiAgIERlbnNpdHkgPSAx
+MjANCiAgIFNwZWNIZWF0ID0gMC4yDQogICBDb25kdWN0aXZpdHkgPSAxDQogICBS
+VmFsUGVySW5jaCA9IDAuMDgzMw0KICAgLi4NCg0KTWF0ICAgIlNvZnRXb29kLTIi
+ICANCiAgIERlbnNpdHkgPSAzNQ0KICAgU3BlY0hlYXQgPSAwLjM5DQogICBDb25k
+dWN0aXZpdHkgPSAwLjA4MTY3DQogICBDb25kdWN0aXZpdHlDVCA9IDAuMDAxMg0K
+ICAgUlZhbFBlckluY2ggPSAxLjAyMDQNCiAgIC4uDQoNCk1hdCAgICJTdGVlbCIg
+IA0KICAgRGVuc2l0eSA9IDQ4OQ0KICAgU3BlY0hlYXQgPSAwLjEyDQogICBDb25k
+dWN0aXZpdHkgPSAyNi4yDQogICBSVmFsUGVySW5jaCA9IDAuMDAzMTgNCiAgIC4u
+DQoNCk1hdCAgICJTSVBTc2tpbiIgIA0KICAgVGhpY2tuZXNzID0gMC40Mzc1DQog
+ICBEZW5zaXR5ID0gNDENCiAgIFNwZWNIZWF0ID0gMC40NQ0KICAgQ29uZHVjdGl2
+aXR5ID0gMC4wNjEyNw0KICAgQ29uZHVjdGl2aXR5Q1QgPSAwLjAwMTINCiAgIFJW
+YWxQZXJJbmNoID0gMS4zNg0KICAgLi4NCg0KTWF0ICAgIkNlaWxpbmcgSW5zdWwi
+ICANCiAgIERlbnNpdHkgPSAxLjUNCiAgIFNwZWNIZWF0ID0gMC4yDQogICBDb25k
+dWN0aXZpdHlDVCA9IDAuMDA0MTgNCiAgIC4uDQoNCk1hdCAgICJPdGhlciBJbnN1
+bCIgIA0KICAgRGVuc2l0eSA9IDEuNQ0KICAgU3BlY0hlYXQgPSAwLjINCiAgIENv
+bmR1Y3Rpdml0eUNUID0gMC4wMDMyNTM3DQogICAuLg0KDQpNYXQgICAiV29vZCBs
+YXllci0yIiAgDQogICBUaGlja25lc3MgPSAwLjUNCiAgIERlbnNpdHkgPSA0MQ0K
+ICAgU3BlY0hlYXQgPSAwLjQ1DQogICBDb25kdWN0aXZpdHkgPSAwLjA2MTI3DQog
+ICBDb25kdWN0aXZpdHlDVCA9IDAuMDAxMg0KICAgUlZhbFBlckluY2ggPSAxLjM2
+DQogICAuLg0KDQpNYXQgICAiR3lwc3VtIEJvYXJkLTIiICANCiAgIFRoaWNrbmVz
+cyA9IDAuNQ0KICAgRGVuc2l0eSA9IDQwDQogICBTcGVjSGVhdCA9IDAuMjcNCiAg
+IENvbmR1Y3Rpdml0eSA9IDAuMDkxNjcNCiAgIENvbmR1Y3Rpdml0eUNUID0gMC4w
+MDAxMjE3DQogICBSVmFsUGVySW5jaCA9IDAuOTA5MQ0KICAgLi4NCg0KTWF0ICAg
+IlI0IFN5bnRoIFN0dWNjby0yIiAgDQogICBUaGlja25lc3MgPSAxDQogICBEZW5z
+aXR5ID0gMS41DQogICBTcGVjSGVhdCA9IDAuMzUNCiAgIENvbmR1Y3Rpdml0eSA9
+IDAuMDIwODMNCiAgIENvbmR1Y3Rpdml0eUNUID0gMC4wMDE3NQ0KICAgUlZhbFBl
+ckluY2ggPSA0DQogICAuLg0KDQpNYXQgICAiSW5zLVIxOS1EMS41LVNIMC4yLUMw
+LjAyNDEyIiAgDQogICBEZW5zaXR5ID0gMS41DQogICBTcGVjSGVhdCA9IDAuMg0K
+ICAgQ29uZHVjdGl2aXR5ID0gMC4wMjQxMjI4DQogICBDb25kdWN0aXZpdHlRSUkg
+PSAwLjAzNDQ2MTINCiAgIENvbmR1Y3Rpdml0eUNUID0gMC4wMDMyNTM3DQogICAu
+Lg0KDQpNYXQgICAiSW5zLVIxNS1EMS41LVNIMC4yLUMwLjAxOTQ0IiAgDQogICBE
+ZW5zaXR5ID0gMS41DQogICBTcGVjSGVhdCA9IDAuMg0KICAgQ29uZHVjdGl2aXR5
+ID0gMC4wMTk0NDQ0DQogICBDb25kdWN0aXZpdHlRSUkgPSAwLjAyNzc3NzgNCiAg
+IENvbmR1Y3Rpdml0eUNUID0gMC4wMDMyNTM3DQogICAuLg0KDQpNYXQgICAiSW5z
+LVI5LjEtRDEuNS1TSDAuMi1DMC4wMzIwNSIgIA0KICAgRGVuc2l0eSA9IDEuNQ0K
+ICAgU3BlY0hlYXQgPSAwLjINCiAgIENvbmR1Y3Rpdml0eSA9IDAuMDMyMDUxMw0K
+ICAgQ29uZHVjdGl2aXR5UUlJID0gMC4wMzg3MDI3DQogICBDb25kdWN0aXZpdHlD
+VCA9IDAuMDA0MTgNCiAgIC4uDQoNCk1hdCAgICJJbnMtUjkuMS1EMS41LVNIMC4y
+LUMwLjAzMjA1IDI1IiAgDQogICBEZW5zaXR5ID0gMS41DQogICBTcGVjSGVhdCA9
+IDAuMg0KICAgQ29uZHVjdGl2aXR5ID0gMC4wMzIwNTEzDQogICBDb25kdWN0aXZp
+dHlRSUkgPSAwLjAzNzQ0NzUNCiAgIENvbmR1Y3Rpdml0eUNUID0gMC4wMDQxOA0K
+ICAgLi4NCg0KTWF0ICAgIklucy1SMzAtRDEuNS1TSDAuMi1DMC4wMjU2OSIgIA0K
+ICAgRGVuc2l0eSA9IDEuNQ0KICAgU3BlY0hlYXQgPSAwLjINCiAgIENvbmR1Y3Rp
+dml0eSA9IDAuMDI1Njk0NA0KICAgQ29uZHVjdGl2aXR5UUlJID0gMC4wMzY3MDY0
+DQogICBDb25kdWN0aXZpdHlDVCA9IDAuMDA0MTgNCiAgIC4uDQoNCk1hdCAgICJJ
+bnMtUjM4LUQxLjUtU0gwLjItQzAuMDI0NjciICANCiAgIERlbnNpdHkgPSAxLjUN
+CiAgIFNwZWNIZWF0ID0gMC4yDQogICBDb25kdWN0aXZpdHkgPSAwLjAyNDY3MTEN
+CiAgIENvbmR1Y3Rpdml0eVFJSSA9IDAuMDM1MjQ0NA0KICAgQ29uZHVjdGl2aXR5
+Q1QgPSAwLjAwNDE4DQogICAuLg0KDQpNYXQgICAiSW5zLVIxMy1EMS41LVNIMC4y
+LUMwLjAyMjQ0IiAgDQogICBEZW5zaXR5ID0gMS41DQogICBTcGVjSGVhdCA9IDAu
+Mg0KICAgQ29uZHVjdGl2aXR5ID0gMC4wMjI0Mzc2DQogICBDb25kdWN0aXZpdHlR
+SUkgPSAwLjAzMjA1MzgNCiAgIENvbmR1Y3Rpdml0eUNUID0gMC4wMDMyNTM3DQog
+ICAuLg0KDQpNYXQgICAiSW5zLVIxOS1EMS41LVNIMC4yLUMwLjAxNTM1IiAgDQog
+ICBEZW5zaXR5ID0gMS41DQogICBTcGVjSGVhdCA9IDAuMg0KICAgQ29uZHVjdGl2
+aXR5ID0gMC4wMTUzNTA5DQogICBDb25kdWN0aXZpdHlRSUkgPSAwLjAyMTkyOTgN
+CiAgIENvbmR1Y3Rpdml0eUNUID0gMC4wMDMyNTM3DQogICAuLg0KDQpNYXQgICAi
+U2h0aGctUjEtRDEuNS1TSDAuMzUtQzAuMDgzMzMiICANCiAgIFRoaWNrbmVzcyA9
+IDENCiAgIERlbnNpdHkgPSAxLjUNCiAgIFNwZWNIZWF0ID0gMC4zNQ0KICAgQ29u
+ZHVjdGl2aXR5ID0gMC4wODMzMw0KICAgQ29uZHVjdGl2aXR5UUlJID0gMC4wODMz
+Mw0KICAgQ29uZHVjdGl2aXR5Q1QgPSAwLjAwMTc1DQogICAuLg0KDQpNYXQgICAi
+MyBDb2F0IFN0dWNjbyIgIA0KICAgVGhpY2tuZXNzID0gMC44NzUNCiAgIERlbnNp
+dHkgPSAxMTYNCiAgIFNwZWNIZWF0ID0gMC4yDQogICBDb25kdWN0aXZpdHkgPSAw
+LjQxNjcNCiAgIFJWYWxQZXJJbmNoID0gMC4yNjg2DQogICAuLg0KDQpNYXQgICAi
+SW5zdWwtUjUtRDEuNS1TSDAuMzUtQzAuMDE2NjciICANCiAgIFRoaWNrbmVzcyA9
+IDENCiAgIERlbnNpdHkgPSAxLjUNCiAgIFNwZWNIZWF0ID0gMC4zNQ0KICAgQ29u
+ZHVjdGl2aXR5ID0gMC4wMTY2NjYNCiAgIENvbmR1Y3Rpdml0eVFJSSA9IDAuMDE2
+NjY2DQogICBDb25kdWN0aXZpdHlDVCA9IDAuMDAxNzUNCiAgIC4uDQoNCk1hdCAg
+ICJTeW50aGV0aWMgU3R1Y2NvIiAgDQogICBUaGlja25lc3MgPSAwLjM3NQ0KICAg
+RGVuc2l0eSA9IDU4DQogICBTcGVjSGVhdCA9IDAuMg0KICAgQ29uZHVjdGl2aXR5
+ID0gMC4yDQogICBSVmFsUGVySW5jaCA9IDAuNTMzMw0KICAgLi4NCg0KTWF0ICAg
+Ikluc3VsLVI0LUQxLjUtU0gwLjM1LUMwLjAyMDgzIiAgDQogICBUaGlja25lc3Mg
+PSAxDQogICBEZW5zaXR5ID0gMS41DQogICBTcGVjSGVhdCA9IDAuMzUNCiAgIENv
+bmR1Y3Rpdml0eSA9IDAuMDIwODMyNQ0KICAgQ29uZHVjdGl2aXR5UUlJID0gMC4w
+MjA4MzI1DQogICBDb25kdWN0aXZpdHlDVCA9IDAuMDAxNzUNCiAgIC4uDQoNCk1h
+dCAgICJJbnMtUjE4LUQxLjUtU0gwLjItQzAuMDI1NDYiICANCiAgIERlbnNpdHkg
+PSAxLjUNCiAgIFNwZWNIZWF0ID0gMC4yDQogICBDb25kdWN0aXZpdHkgPSAwLjAy
+NTQ2Mw0KICAgQ29uZHVjdGl2aXR5UUlJID0gMC4wMzYzNzU3DQogICBDb25kdWN0
+aXZpdHlDVCA9IDAuMDAzMjUzNw0KICAgLi4NCg0KTWF0ICAgIklucy1SMTgtRDEu
+NS1TSDAuMi1DMC4wMjU0NiAzNiIgIA0KICAgRGVuc2l0eSA9IDEuNQ0KICAgU3Bl
+Y0hlYXQgPSAwLjINCiAgIENvbmR1Y3Rpdml0eSA9IDAuMDI1NDYzDQogICBDb25k
+dWN0aXZpdHlRSUkgPSAwLjAyNTQ2Mw0KICAgQ29uZHVjdGl2aXR5Q1QgPSAwLjAw
+MzI1MzcNCiAgIC4uDQoNCk1hdCAgICJJbnMtUjE1LUQxLjUtU0gwLjItQzAuMDE5
+NDQgMzciICANCiAgIERlbnNpdHkgPSAxLjUNCiAgIFNwZWNIZWF0ID0gMC4yDQog
+ICBDb25kdWN0aXZpdHkgPSAwLjAxOTQ0NDQNCiAgIENvbmR1Y3Rpdml0eVFJSSA9
+IDAuMDE5NDQ0NA0KICAgQ29uZHVjdGl2aXR5Q1QgPSAwLjAwMzI1MzcNCiAgIC4u
+DQoNCk1hdCAgICJJbnMtUjEzLUQxLjUtU0gwLjItQzAuMDIyNDQgMzgiICANCiAg
+IERlbnNpdHkgPSAxLjUNCiAgIFNwZWNIZWF0ID0gMC4yDQogICBDb25kdWN0aXZp
+dHkgPSAwLjAyMjQzNzYNCiAgIENvbmR1Y3Rpdml0eVFJSSA9IDAuMDIyNDM3Ng0K
+ICAgQ29uZHVjdGl2aXR5Q1QgPSAwLjAwMzI1MzcNCiAgIC4uDQoNCk1hdCAgICJJ
+bnMtUjkuMS1EMS41LVNIMC4yLUMwLjAzMjA1IDM5IiAgDQogICBEZW5zaXR5ID0g
+MS41DQogICBTcGVjSGVhdCA9IDAuMg0KICAgQ29uZHVjdGl2aXR5ID0gMC4wMzIw
+NTEzDQogICBDb25kdWN0aXZpdHlRSUkgPSAwLjAzMjA1MTMNCiAgIENvbmR1Y3Rp
+dml0eUNUID0gMC4wMDQxOA0KICAgLi4NCg0KTWF0ICAgIklucy1SMzAtRDEuNS1T
+SDAuMi1DMC4wMjU2OSA0MCIgIA0KICAgRGVuc2l0eSA9IDEuNQ0KICAgU3BlY0hl
+YXQgPSAwLjINCiAgIENvbmR1Y3Rpdml0eSA9IDAuMDI1Njk0NA0KICAgQ29uZHVj
+dGl2aXR5UUlJID0gMC4wMjU2OTQ0DQogICBDb25kdWN0aXZpdHlDVCA9IDAuMDA0
+MTgNCiAgIC4uDQoNCk1hdCAgICJJbnMtUjM4LUQxLjUtU0gwLjItQzAuMDI0Njcg
+NDEiICANCiAgIERlbnNpdHkgPSAxLjUNCiAgIFNwZWNIZWF0ID0gMC4yDQogICBD
+b25kdWN0aXZpdHkgPSAwLjAyNDY3MTENCiAgIENvbmR1Y3Rpdml0eVFJSSA9IDAu
+MDI0NjcxMQ0KICAgQ29uZHVjdGl2aXR5Q1QgPSAwLjAwNDE4DQogICAuLg0KDQpN
+YXQgICAiSW5zLVIxOS1EMS41LVNIMC4yLUMwLjAyNDEyIDQyIiAgDQogICBEZW5z
+aXR5ID0gMS41DQogICBTcGVjSGVhdCA9IDAuMg0KICAgQ29uZHVjdGl2aXR5ID0g
+MC4wMjQxMjI4DQogICBDb25kdWN0aXZpdHlRSUkgPSAwLjAyNDEyMjgNCiAgIENv
+bmR1Y3Rpdml0eUNUID0gMC4wMDMyNTM3DQogICAuLg0KDQpNYXQgICAiSW5zLVIy
+MS1EMS41LVNIMC4yLUMwLjAyMTgzIiAgDQogICBEZW5zaXR5ID0gMS41DQogICBT
+cGVjSGVhdCA9IDAuMg0KICAgQ29uZHVjdGl2aXR5ID0gMC4wMjE4MjU0DQogICBD
+b25kdWN0aXZpdHlRSUkgPSAwLjAyMTgyNTQNCiAgIENvbmR1Y3Rpdml0eUNUID0g
+MC4wMDMyNTM3DQogICAuLg0KDQpNYXQgICAiSW5zLVIyMS1EMS41LVNIMC4yLUMw
+LjAxMzg5IiAgDQogICBEZW5zaXR5ID0gMS41DQogICBTcGVjSGVhdCA9IDAuMg0K
+ICAgQ29uZHVjdGl2aXR5ID0gMC4wMTM4ODg5DQogICBDb25kdWN0aXZpdHlRSUkg
+PSAwLjAxMzg4ODkNCiAgIENvbmR1Y3Rpdml0eUNUID0gMC4wMDMyNTM3DQogICAu
+Lg0KDQpXaW5kb3dUeXBlICAgIkRvb3IgMzAgLyAyMyIgIA0KICAgU3BlY01ldGhv
+ZCA9ICJXaW5kb3cgRGltZW5zaW9ucyAocmVxdWlyZWQgZm9yIGZpbnMvb3Zlcmhh
+bmdzKSINCiAgIE5GUkNVZmFjdG9yID0gMC4zDQogICBORlJDU0hHQyA9IDAuMjMN
+CiAgIEV4dGVyaW9yU2hhZGUgPSAiSW5zZWN0IFNjcmVlbiAoZGVmYXVsdCkiDQog
+ICBNb2RlbEZpbnNPdmVyaGFuZyA9IDENCiAgIE92ZXJoYW5nRGVwdGggPSAwDQog
+ICBPdmVyaGFuZ0Rpc3RVcCA9IDANCiAgIE92ZXJoYW5nRXhMID0gMA0KICAgT3Zl
+cmhhbmdFeFIgPSAwDQogICBPdmVyaGFuZ0ZsYXAgPSAwDQogICBMZWZ0RmluRGVw
+dGggPSAwDQogICBMZWZ0RmluVG9wVXAgPSAwDQogICBMZWZ0RmluRGlzdEwgPSAw
+DQogICBMZWZ0RmluQm90VXAgPSAwDQogICBSaWdodEZpbkRlcHRoID0gMA0KICAg
+UmlnaHRGaW5Ub3BVcCA9IDANCiAgIFJpZ2h0RmluRGlzdFIgPSAwDQogICBSaWdo
+dEZpbkJvdFVwID0gMA0KICAgLi4NCg0KV2luZG93VHlwZSAgICIzMCAvIDIzIFdp
+bmRvdyIgIA0KICAgU3BlY01ldGhvZCA9ICJXaW5kb3cgRGltZW5zaW9ucyAocmVx
+dWlyZWQgZm9yIGZpbnMvb3ZlcmhhbmdzKSINCiAgIE5GUkNVZmFjdG9yID0gMC4z
+DQogICBORlJDU0hHQyA9IDAuMjMNCiAgIEV4dGVyaW9yU2hhZGUgPSAiSW5zZWN0
+IFNjcmVlbiAoZGVmYXVsdCkiDQogICBNb2RlbEZpbnNPdmVyaGFuZyA9IDENCiAg
+IE92ZXJoYW5nRGVwdGggPSAwDQogICBPdmVyaGFuZ0Rpc3RVcCA9IDANCiAgIE92
+ZXJoYW5nRXhMID0gMA0KICAgT3ZlcmhhbmdFeFIgPSAwDQogICBPdmVyaGFuZ0Zs
+YXAgPSAwDQogICBMZWZ0RmluRGVwdGggPSAwDQogICBMZWZ0RmluVG9wVXAgPSAw
+DQogICBMZWZ0RmluRGlzdEwgPSAwDQogICBMZWZ0RmluQm90VXAgPSAwDQogICBS
+aWdodEZpbkRlcHRoID0gMA0KICAgUmlnaHRGaW5Ub3BVcCA9IDANCiAgIFJpZ2h0
+RmluRGlzdFIgPSAwDQogICBSaWdodEZpbkJvdFVwID0gMA0KICAgLi4NCg0KV2lu
+ZG93VHlwZSAgICJHbGFzcyBCbG9jayIgIA0KICAgU3BlY01ldGhvZCA9ICJXaW5k
+b3cgRGltZW5zaW9ucyAocmVxdWlyZWQgZm9yIGZpbnMvb3ZlcmhhbmdzKSINCiAg
+IE5GUkNVZmFjdG9yID0gMC41Nw0KICAgTkZSQ1NIR0MgPSAwLjY3DQogICBFeHRl
+cmlvclNoYWRlID0gIkluc2VjdCBTY3JlZW4gKGRlZmF1bHQpIg0KICAgTW9kZWxG
+aW5zT3ZlcmhhbmcgPSAxDQogICBPdmVyaGFuZ0RlcHRoID0gMA0KICAgT3Zlcmhh
+bmdEaXN0VXAgPSAwDQogICBPdmVyaGFuZ0V4TCA9IDANCiAgIE92ZXJoYW5nRXhS
+ID0gMA0KICAgT3ZlcmhhbmdGbGFwID0gMA0KICAgTGVmdEZpbkRlcHRoID0gMA0K
+ICAgTGVmdEZpblRvcFVwID0gMA0KICAgTGVmdEZpbkRpc3RMID0gMA0KICAgTGVm
+dEZpbkJvdFVwID0gMA0KICAgUmlnaHRGaW5EZXB0aCA9IDANCiAgIFJpZ2h0Rmlu
+VG9wVXAgPSAwDQogICBSaWdodEZpbkRpc3RSID0gMA0KICAgUmlnaHRGaW5Cb3RV
+cCA9IDANCiAgIC4uDQoNCkhWQUNTeXMgICAiSFZBQyBTeXN0ZW0gMSIgIA0KICAg
+VHlwZSA9ICJPdGhlciBIZWF0aW5nIGFuZCBDb29saW5nIFN5c3RlbSINCiAgIFN0
+YXR1cyA9ICJOZXciDQogICBDRklDbFZlbnRPcHRpb24gPSAiLSBub25lIC0iDQog
+ICBDRklDbFZlbnRGbG93ID0gMA0KICAgQ0ZJQ2xWZW50UHdyID0gMA0KICAgQ0ZJ
+Q2xWZW50QXR0aWMgPSAiQXR0aWMgIg0KICAgTnVtSGVhdFN5c3RlbVR5cGVzID0g
+MQ0KICAgSGVhdFN5c3RlbUNvdW50ID0gKCAxLCAwLCAwLCAwLCAwLCAwLCAwLCAw
+LCAwLCAwICkNCiAgIEhlYXRTeXN0ZW1bMV0gPSAiRnVybiA4MCINCiAgIEF1dG9T
+aXplSGVhdElucCA9IDENCiAgIEhlYXREdWN0ZWQgPSAxDQogICBOdW1Db29sU3lz
+dGVtVHlwZXMgPSAxDQogICBDb29sU3lzdGVtQ291bnQgPSAoIDEsIDAsIDAsIDAs
+IDAsIDAsIDAsIDAsIDAsIDAgKQ0KICAgQ29vbFN5c3RlbVsxXSA9ICJTcGxpdCAx
+NCAxMS43Ig0KICAgQXV0b1NpemVDb29sSW5wID0gMQ0KICAgQ29vbER1Y3RlZCA9
+IDENCiAgIE51bUh0UHVtcFN5c3RlbVR5cGVzID0gMA0KICAgSHRQdW1wRHVjdGVk
+ID0gMA0KICAgU2VydmVzQXNESFdIdHIgPSAwDQogICBESFdUYW5rVm9sdW1lID0g
+NTANCiAgIERIV0ludEluc3VsUlZhbCA9IDANCiAgIERIV0V4dEluc3VsUlZhbCA9
+IDANCiAgIERIV0FtYmllbnRDb25kID0gIlVuY29uZGl0aW9uZWQiDQogICBEaXN0
+cmliU3lzdGVtID0gIkF0dGljIERlZmF1bHQiDQogICBGYW4gPSAiSFZBQyBGYW4g
+MSINCiAgIC4uDQoNCkhWQUNIZWF0ICAgIkZ1cm4gODAiICANCiAgIFR5cGUgPSAi
+Q250cmxGdXJuYWNlIC0gRnVlbC1maXJlZCBjZW50cmFsIGZ1cm5hY2UiDQogICBB
+RlVFID0gODANCiAgIC4uDQoNCkhWQUNDb29sICAgIlNwbGl0IDE0IDExLjciICAN
+CiAgIFR5cGUgPSAiU3BsaXRBaXJDb25kIC0gU3BsaXQgYWlyIGNvbmRpdGlvbmlu
+ZyBzeXN0ZW0iDQogICBTRUVSID0gMTQNCiAgIEVFUiA9IDExLjcNCiAgIENGTXBl
+clRvbiA9IDM1MA0KICAgQUNDaGFyZ2UgPSAiVmVyaWZpZWQiDQogICBSZWZyaWdl
+cmFudFR5cGUgPSAiUjQxMEEiDQogICBVc2VFRVJpbkFuYWx5c2lzID0gMQ0KICAg
+SXNNdWx0aVNwZWVkID0gMA0KICAgSXNab25hbCA9IDANCiAgIC4uDQoNCkhWQUNE
+aXN0ICAgIkF0dGljIERlZmF1bHQiICANCiAgIFR5cGUgPSAiRHVjdHMgbG9jYXRl
+ZCBpbiBhdHRpYyAoVmVudGlsYXRlZCBhbmQgVW52ZW50aWxhdGVkKSINCiAgIFN0
+YXR1cyA9ICJOZXciDQogICBJc1ZlcmlmaWVkID0gMA0KICAgRGVmYXVsdFN5c3Rl
+bSA9IDENCiAgIER1Y3RMZWFrYWdlID0gIlNlYWxlZCBhbmQgdGVzdGVkIg0KICAg
+RHVjdExlYWthZ2VWYWwgPSA1DQogICBIYXNCeXBhc3NEdWN0ID0gMA0KICAgRHVj
+dEluc1J2YWxPcHQgPSAiOC4wIg0KICAgZXhEdWN0SW5zUnZhbE9wdCA9ICIyLjEi
+DQogICBTdXBwbHlEdWN0QXJlYSA9IDU2Nw0KICAgUmV0dXJuRHVjdEFyZWEgPSAx
+MDUNCiAgIFN1cHBseUR1Y3RMb2MgPSAiQXR0aWMgIg0KICAgUmV0dXJuRHVjdExv
+YyA9ICJBdHRpYyAiDQogICBTdXBwbHlEdWN0QXR0aWMgPSAiQXR0aWMgIg0KICAg
+UmV0dXJuRHVjdEF0dGljID0gIkF0dGljICINCiAgIFJldER1Y3RJbnNSdmFsT3B0
+ID0gIjQuMiINCiAgIER1Y3REZXNpZ24gPSAwDQogICBEdWN0RGVzaWduSW5zUnZh
+bHVlID0gOA0KICAgUmV0RHVjdERlc2lnbkluc1J2YWx1ZSA9IDgNCiAgIExvd0xr
+Z0FIID0gMA0KICAgSXNMZXNzVGhhbkZvcnR5RnQgPSAwDQogICAuLg0KDQpIVkFD
+RmFuICAgIkhWQUMgRmFuIDEiICANCiAgIFR5cGUgPSAiU2luZ2xlIFNwZWVkIFBT
+QyBGdXJuYWNlIEZhbiINCiAgIERlZmF1bHRTeXN0ZW0gPSAwDQogICBXcGVyQ0ZN
+Q29vbCA9IDAuNDUNCiAgIC4uDQoNCkRIV1N5cyAgICJESFcgU3lzdGVtIiAgDQog
+ICBTeXN0ZW1UeXBlID0gIlN0YW5kYXJkIg0KICAgTUZhbURpc3RUeXBlID0gIk11
+bHRpLWZhbWlseTogTm8gbG9vcHMgb3IgcmVjaXJjIHB1bXAiDQogICBDZW50cmFs
+REhXID0gMA0KICAgQ29tcGFjdERpc3RyaWIgPSAiQmFzaWMgQ3JlZGl0Ig0KICAg
+Q0RTZXJ2ZXNNQmF0aEZpeCA9IDENCiAgIENETUJhdGhGaXhEaXN0ID0gMTINCiAg
+IENEU2VydmVzS2l0Rml4ID0gMQ0KICAgQ0RLaXRGaXhEaXN0ID0gOA0KICAgQ0RT
+ZXJ2ZXNUaGlyZEZpeCA9IDENCiAgIENEVGhpcmRGaXhEaXN0ID0gMTANCiAgIERI
+V0hlYXRlclsxXSA9ICJTbWFsbCBJbnN0YW50YW5lb3VzIg0KICAgSGVhdGVyTXVs
+dFsxXSA9IDENCiAgIFVzZURlZmF1bHRMb29wcyA9IDENCiAgIExvb3BQaXBlSW5z
+dWxUaGtbMV0gPSAxLjUNCiAgIFJlY2lyY1BpcGVMb2NbMV0gPSAiQ29uZGl0aW9u
+ZWQiDQogICBUb3RTaG93ZXJzU2VydmVkID0gMQ0KICAgVG90QmF0aHNTZXJ2ZWQg
+PSAxDQogICBEV0hSU3lzUmVmWzFdID0gIi0gbm9uZSAtIg0KICAgRFdIUlN5c0Nv
+bmZpZyA9ICggIkVxdWFsIEZsb3ciLCAiLSBzcGVjaWZ5IC0iLCAiLSBzcGVjaWZ5
+IC0iLCANCiAgICAgICAgICAgICAgICAgICAgICItIHNwZWNpZnkgLSIsICItIHNw
+ZWNpZnkgLSIsICItIHNwZWNpZnkgLSIgKQ0KICAgRFdIUlN5c1Nob3dlcnNbMV0g
+PSAyDQogICBTb2xGcmFjVHlwZSA9ICItIG5vbmUgLSINCiAgIC4uDQoNCkRXSFJT
+eXMgICAiRHJhaW4gV2F0ZXIgSGVhdCBSZWNvdmVyeSBTeXN0ZW0gMSIgIA0KICAg
+VHlwZSA9ICJWZXJ0aWNhbCINCiAgIENTQVJhdGVkRWZmID0gNDMNCiAgIC4uDQoN
+CkRIV0hlYXRlciAgICJTbWFsbCBJbnN0YW50YW5lb3VzIiAgDQogICBIZWF0ZXJF
+bGVtZW50VHlwZSA9ICJHYXMiDQogICBUYW5rVHlwZSA9ICJTbWFsbCBJbnN0YW50
+YW5lb3VzIg0KICAgSFBXSF9ORUVBUmF0ZWQgPSAwDQogICBIUFdIQnJhbmQgPSAi
+bi9hIg0KICAgSFBXSE1vZGVsID0gIm4vYSINCiAgIEFTSFBUeXBlID0gIi0gc2Vs
+ZWN0IEhQV0ggdHlwZSAtIg0KICAgRW5lcmd5RmFjdG9yID0gMC44Mg0KICAgSXNV
+RUZIdFB1bXAgPSAxDQogICBUYW5rVm9sdW1lID0gMA0KICAgRXh0SW5zdWxSVmFs
+ID0gMA0KICAgQW1iaWVudENvbmQgPSAiVW5jb25kaXRpb25lZCINCiAgIFN0YW5k
+YnlMb3NzRnJhYyA9IDANCiAgIFJlY292RWZmID0gNzANCiAgIEhhc0VsZWNNaW5p
+VGFuayA9IDANCiAgIEVsZWNNaW5pVGFua1Bvd2VyID0gMA0KICAgLi4NCg0KDQpF
+TkRfT0ZfRklMRQ0K</InputData>
+</ComplianceDocumentPackage>
