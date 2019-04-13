@@ -233,6 +233,25 @@
          <xsd:enumeration value="Yuba"/>
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="CardinalDirection">
+      <xsd:annotation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Cardinal Direction</dtyp:displayterm>
+         </xsd:appinfo>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="EastFacing">East Facing</dtyp:displayterm>
+            <dtyp:displayterm value="NorthFacing">North Facing</dtyp:displayterm>
+            <dtyp:displayterm value="SouthFacing">South Facing</dtyp:displayterm>
+            <dtyp:displayterm value="WestFacing">West Facing</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="EastFacing"/>
+         <xsd:enumeration value="NorthFacing"/>
+         <xsd:enumeration value="SouthFacing"/>
+         <xsd:enumeration value="WestFacing"/>
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="CardinalOrientation">
       <xsd:annotation>
          <xsd:appinfo source="displaytermType">
