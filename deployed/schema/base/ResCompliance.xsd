@@ -6839,6 +6839,15 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
       </xsd:annotation>
       <xsd:restriction base="xsd:boolean"/>
    </xsd:simpleType>
+   <xsd:simpleType name="ResidentialPerformanceEDRResult">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">RESULT: COMPLIES</dtyp:displayterm>
+            <dtyp:displayterm value="false">RESULT: DOES NOT COMPLY</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean"/>
+   </xsd:simpleType>
    <xsd:simpleType name="ResidentialPerformanceHERS_VerificationRequired">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
@@ -6998,6 +7007,12 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
          <xsd:element name="responsiblePerson9_HERS_RaterCertification" type="comp:CertificationNumber" minOccurs="0"/>
       </xsd:sequence>
    </xsd:complexType>
+   <xsd:simpleType name="EDRResultNote">
+      <xsd:annotation>
+         <xsd:documentation>This is a description of Messages regarding PV for an EDR Result</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string"/>
+   </xsd:simpleType>
    <xsd:simpleType name="ReturnDuctDesignVerificationRequired">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
