@@ -1096,102 +1096,206 @@
 					</xsd:choice>
 				</xsd:complexType>
 			</xsd:element>
-			<xsd:element name="Section_D" minOccurs="0">
+			<xsd:element name="Section_D">
 				<xsd:annotation>
-					<xsd:documentation source="FieldText">ENERGY DESIGN RATING</xsd:documentation>
+					<xsd:documentation source="FieldText"/>
 					<xsd:appinfo source="CBECCresXML">
 						<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
 					</xsd:appinfo>
-					<xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
 				</xsd:annotation>
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="D_BeginNote1" minOccurs="0">
+						<xsd:element name="EDR_SingleOrientation">
 							<xsd:annotation>
-								<xsd:documentation source="FieldText"/>
-								<xsd:documentation source="AdditionalRequirements">Energy Design Rating (EDR) is an alternate way to express the energy performance of a building using a scoring system where 100 represents the energy performance of the Residential Energy Services (RESNET) reference home characterization of the 2006 International Energy Conservation Code (IECC) with California modeling assumptions. A score of zero represents the energy performance of a building that combines high levels of energy efficiency with renewable generation to "zero out" its TDV energy. Because EDR includes consideration of components not regulated by Title 24, Part 6 (such as domestic appliances and consumer electronics), it is not used to show compliance with Part 6 but may instead be used by local jurisdictions pursuing local ordinances under Title 24, Part 11 (CALGreen).[d:line1/]  As a Standard Design building under the 2016 Building Energy Efficiency Standards is significantly more efficient than the baseline EDR building, the EDR of the Standard Design building is provided for  Information. Similarly, the EDR score of the Proposed Design is provided separately from the EDR value of installed PV so that the effects of efficiency and renewable energy can both be seen</xsd:documentation>
+								<xsd:documentation source="FieldText">ENERGY DESIGN
+									RATING</xsd:documentation>
+								<xsd:documentation source="CalculationsAndRules">This section is for single
+									orientation projects</xsd:documentation>
 								<xsd:appinfo source="CBECCresXML">
 									<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
 								</xsd:appinfo>
 							</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="D01_EDR_Standard" type="comp:EDR_Standard">
-							<xsd:annotation>
-								<xsd:documentation source="FieldText">EDR of Standard Efficiency</xsd:documentation>
-								<xsd:appinfo source="CBECCresXML">
-									<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-								</xsd:appinfo>
-							</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="D02_EDR_Proposed" type="comp:EDR_Proposed">
-							<xsd:annotation>
-								<xsd:documentation source="FieldText">EDR of Proposed Efficiency</xsd:documentation>
-								<xsd:appinfo source="CBECCresXML">
-									<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-								</xsd:appinfo>
-							</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="D03_EDR_ProposedPvBattery" type="comp:EDR_ProposedPvBattery">
-							<xsd:annotation>
-								<xsd:documentation source="FieldText">EDR Value of Proposed PV + Battery</xsd:documentation>
-								<xsd:appinfo source="CBECCresXML">
-									<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-								</xsd:appinfo>
-							</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="D04_EDR_Final" type="comp:EDR_Final">
-							<xsd:annotation>
-								<xsd:documentation source="FieldText">Final Proposed EDR</xsd:documentation>
-								<xsd:appinfo source="CBECCresXML">
-									<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-								</xsd:appinfo>
-							</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="D05_EDR_MeetsTier1" type="comp:EDR_MeetsTier1">
-							<xsd:annotation>
-								<xsd:documentation source="FieldText">Tier1</xsd:documentation>
-								<xsd:documentation source="AdditionalRequirements">Design meets Tier 1 requirement of 15% or greater code compliance margin (CALGreen A4.203.1.2.1) and QII verification prerequisite.</xsd:documentation>
-								<xsd:appinfo source="CBECCresXML">
-									<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-								</xsd:appinfo>
-							</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="D06_EDR_MeetsTier2" type="comp:EDR_MeetsTier2">
-							<xsd:annotation>
-								<xsd:documentation source="FieldText">Tier2</xsd:documentation>
-								<xsd:documentation source="AdditionalRequirements">Design meets Tier 2 requirement of 30% or greater code compliance margin (CALGreen A4.203.1.2.1) and QII verification prerequisite.</xsd:documentation>
-								<xsd:appinfo source="CBECCresXML">
-									<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-								</xsd:appinfo>
-							</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="D07_EDR_MeetsTierZNE" type="comp:EDR_MeetsTierZNE">
-							<xsd:annotation>
-								<xsd:documentation source="FieldText">TierZNE</xsd:documentation>
-								<xsd:documentation source="AdditionalRequirements">Design meets Zero Net Energy (ZNE) Design Designation requirement for Single Family in climate zone CZ12 (Sacramento) (CALGreen A4.203.1.2.3) including on-site photovoltaic (PV) renewable energy generation sufficient to achieve a Final Energy Design Rating (EDR) of zero or less. The PV System must be verified.</xsd:documentation>
-								<xsd:appinfo source="CBECCresXML">
-									<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-								</xsd:appinfo>
-							</xsd:annotation>
-						</xsd:element>
-						<xsd:sequence minOccurs="0" maxOccurs="unbounded">
-							<xsd:annotation>
-								<xsd:documentation source="FieldText">User Defined Fields</xsd:documentation>
-								<xsd:appinfo source="CBECCresXML">
-									<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-								</xsd:appinfo>
-							</xsd:annotation>
-							<xsd:element name="DUserDefined_FieldName" type="com:FieldName"/>
-							<xsd:element name="DUserDefined_FieldValue" type="com:FieldValue"/>
-							<xsd:element name="DUserDefined_FieldValueType" type="com:FieldValueType"/>
-						</xsd:sequence>
-						<xsd:element name="DEndNote1_ExceptionalConditionNote" type="comp:ExceptionalConditionNote">
-							<xsd:annotation>
-								<xsd:documentation source="FieldText"/>
-								<xsd:appinfo source="CBECCresXML">
-									<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-								</xsd:appinfo>
-							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="D_ColumnLabel02To03" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation source="FieldText">Energy Design
+												Ratings</xsd:documentation>
+											<xsd:documentation source="CalculationsAndRules">This multicolumn
+												heading is for D02-D03</xsd:documentation>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="D_ColumnLabel03To04" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation source="FieldText">Compliance
+												Margins</xsd:documentation>
+											<xsd:documentation source="CalculationsAndRules">This multicolumn
+												heading is for D04-D05</xsd:documentation>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="D02a_EDR_Efficiency_Label" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation source="FieldText">Efficiency
+												(EDR)</xsd:documentation>
+											<xsd:appinfo source="CBECCresXML">
+												<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+											</xsd:appinfo>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="D02b_EDR_Standard_Label" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation source="FieldText">Standard
+												Design</xsd:documentation>
+											<xsd:appinfo source="CBECCresXML">
+												<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+											</xsd:appinfo>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="D02c_EDR_Proposed_Label" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation source="FieldText">Proposed
+												Design</xsd:documentation>
+											<xsd:appinfo source="CBECCresXML">
+												<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+											</xsd:appinfo>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="D02d_EDR_Standard_Efficiency" type="comp:EDR_Standard">
+										<xsd:annotation>
+											<xsd:documentation source="FieldText">Standard
+												Design</xsd:documentation>
+											<xsd:appinfo source="CBECCresXML">
+												<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+											</xsd:appinfo>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="D02e_EDR_Proposed_Efficiency" type="comp:EDR_Proposed">
+										<xsd:annotation>
+											<xsd:documentation source="FieldText">Proposed
+												Design</xsd:documentation>
+											<xsd:appinfo source="CBECCresXML">
+												<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+											</xsd:appinfo>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="D03a_EDR_Total_Label" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation source="FieldText">Total
+												(EDR)</xsd:documentation>
+											<xsd:appinfo source="CBECCresXML">
+												<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+											</xsd:appinfo>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="D03b_EDR_Standard_Total" type="comp:EDR_Standard">
+										<xsd:annotation>
+											<xsd:documentation source="FieldText">Standard
+												Design</xsd:documentation>
+											<xsd:appinfo source="CBECCresXML">
+												<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+											</xsd:appinfo>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="D03c_EDR_Proposed_Total" type="comp:EDR_Proposed">
+										<xsd:annotation>
+											<xsd:documentation source="FieldText">Proposed
+												Design</xsd:documentation>
+											<xsd:appinfo source="CBECCresXML">
+												<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+											</xsd:appinfo>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="D04a_EDR_Efficiency_Label" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation source="FieldText">Efficiency
+												(EDR)</xsd:documentation>
+											<xsd:appinfo source="CBECCresXML">
+												<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+											</xsd:appinfo>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="D04b_EDR_Proposed_Efficiency" type="comp:EDR_Proposed">
+										<xsd:annotation>
+											<xsd:documentation source="FieldText">Proposed
+												Design</xsd:documentation>
+											<xsd:appinfo source="CBECCresXML">
+												<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+											</xsd:appinfo>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="D05a_EDR_Total_Label" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation source="FieldText">Total
+												(EDR)</xsd:documentation>
+											<xsd:appinfo source="CBECCresXML">
+												<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+											</xsd:appinfo>
+										</xsd:annotation>
+									</xsd:element>
+									
+									
+									<xsd:element name="D05b_EDR_Proposed_Total" type="comp:EDR_Proposed">
+										<xsd:annotation>
+											<xsd:documentation source="FieldText">Proposed
+												Design</xsd:documentation>
+											<xsd:appinfo source="CBECCresXML">
+												<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+											</xsd:appinfo>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="D06_EDR_Result"
+										type="comp:ResidentialPerformanceEDRResult"/>
+									<xsd:element name="D07_EDR_Note1" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation source="FieldText">Efficiency measures include
+												improvements like a better building envelope and more efficient
+												equipment</xsd:documentation>
+											<xsd:appinfo source="CBECCresXML">
+												<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+											</xsd:appinfo>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="D07_EDR_Note2" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation source="FieldText">Total EDR includes
+												efficiency, photovoltaics and batteries</xsd:documentation>
+											<xsd:appinfo source="CBECCresXML">
+												<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+											</xsd:appinfo>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="D07_EDR_Note3" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation source="FieldText">Building complies when all
+												efficiency and total margins are greater than or equal to zero </xsd:documentation>
+											<xsd:appinfo source="CBECCresXML">
+												<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+											</xsd:appinfo>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="D08_ResultNotes" minOccurs="0" maxOccurs="unbounded">
+										<xsd:annotation>
+											<xsd:documentation source="FieldText"/>
+											<xsd:appinfo source="CBECCresXML">
+												<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+											</xsd:appinfo>
+										</xsd:annotation>
+										<xsd:complexType>
+											<xsd:sequence>
+												<xsd:element name="DO8a_ResultNote" type="comp:EDRResultNote"
+													minOccurs="0">
+													<xsd:annotation>
+														<xsd:documentation source="FieldText"/>
+														<xsd:appinfo source="CBECCresXML">
+															<dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+														</xsd:appinfo>
+													</xsd:annotation>
+												</xsd:element>
+											</xsd:sequence>
+										</xsd:complexType>
+									</xsd:element>
+								</xsd:sequence>
+							</xsd:complexType>
 						</xsd:element>
 					</xsd:sequence>
 				</xsd:complexType>
