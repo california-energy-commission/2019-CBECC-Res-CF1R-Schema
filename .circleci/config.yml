@@ -694,21 +694,16 @@ workflows:
   build:
     jobs:
       - well-formedness
-      - shellcheck
       - ruby-lint
       - missing-base-types
       - built-in-datatypes
       - missing-namespace
       - missing-enumeration
       - document-mismatch
-      - missing-sections
       - yaml-lint
       - markdown-lint
-      - empty-sections
       - list-markup
       - end-notes
-      - duplicate-elements
-      - first-three
       - flake8
       - pylint
       - compliance-document-tag
@@ -721,3 +716,8 @@ workflows:
       - py-empty-sections
       - d-built-in-datatypes
       - d-compliance-document-type
+#     - shellcheck
+#     - duplicate-elements
+#     - empty-sections
+#     - first-three
+#     - missing-sections
