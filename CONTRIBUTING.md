@@ -12,18 +12,16 @@ To contribute a patch, the workflow is as follows:
 - Push changes to your fork
 - Create pull request
 
-If a commit references an issue, please add the reference. 
+If a commit references an issue, please add the reference.
 For example: `refs #321` or `fixes #12`. Using the `fixes` or `closes` keywords will cause the applicable issue to be closed when the pull request is merged.
 
 Refer to the [Git manual](https://git-scm.com/doc) for more information about Git and download
 [GitHub Desktop](https://desktop.github.com/) to assist in using GitHub.
 
-
 ## "Decision Making" Process
 
 The project merge maintainers and ultimately the project lead are responsible for deciding whether
 a pull request is merged.
-
 
 ## Helpful Information
 
@@ -42,7 +40,6 @@ a pull request is merged.
 ![Schema Deployer](assets/images/sd-3.png)
 
 ![Schema Deployer](assets/images/sd-4.png)
-
 
 #### GitHub Desktop
 
