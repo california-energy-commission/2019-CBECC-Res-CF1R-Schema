@@ -2788,6 +2788,15 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="xsd:boolean"/>
    </xsd:simpleType>
+   <xsd:simpleType name="DoesEnergyDesignRatingComply">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">COMPLIES</dtyp:displayterm>
+            <dtyp:displayterm value="false">DOES NOT COMPLY</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean"/>
+   </xsd:simpleType>
    <xsd:simpleType name="DoesFID_MeetJA6Requirements">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
@@ -3188,6 +3197,12 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
          <xsd:enumeration value="Pass"/>
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="DuctLeakageExisting">
+      <xsd:annotation>
+         <xsd:documentation>Units: percent</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+   </xsd:simpleType>
    <xsd:simpleType name="DuctLeakageTestActual">
       <xsd:annotation>
          <xsd:documentation>Units: ft3 per min</xsd:documentation>
@@ -3473,34 +3488,40 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
          <xsd:enumeration value="New"/>
       </xsd:restriction>
    </xsd:simpleType>
-   <xsd:simpleType name="EDR_Final">
+   <xsd:simpleType name="EDR_ComplianceNotes">
+      <xsd:restriction base="xsd:token"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="EDR_MarginProposedEfficiency">
       <xsd:annotation>
          <xsd:documentation>Units: none</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="dtyp:Decimal1Place"/>
    </xsd:simpleType>
-   <xsd:simpleType name="EDR_MeetsTier1">
-      <xsd:restriction base="xsd:boolean"/>
-   </xsd:simpleType>
-   <xsd:simpleType name="EDR_MeetsTier2">
-      <xsd:restriction base="xsd:boolean"/>
-   </xsd:simpleType>
-   <xsd:simpleType name="EDR_MeetsTierZNE">
-      <xsd:restriction base="xsd:boolean"/>
-   </xsd:simpleType>
-   <xsd:simpleType name="EDR_Proposed">
+   <xsd:simpleType name="EDR_MarginProposedTotal">
       <xsd:annotation>
          <xsd:documentation>Units: none</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="dtyp:Decimal1Place"/>
    </xsd:simpleType>
-   <xsd:simpleType name="EDR_ProposedPvBattery">
+   <xsd:simpleType name="EDR_ProposedEfficiency">
       <xsd:annotation>
          <xsd:documentation>Units: none</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="dtyp:Decimal1Place"/>
    </xsd:simpleType>
-   <xsd:simpleType name="EDR_Standard">
+   <xsd:simpleType name="EDR_ProposedTotal">
+      <xsd:annotation>
+         <xsd:documentation>Units: none</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:Decimal1Place"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="EDR_StandardEfficiency">
+      <xsd:annotation>
+         <xsd:documentation>Units: none</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:Decimal1Place"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="EDR_StandardTotal">
       <xsd:annotation>
          <xsd:documentation>Units: none</xsd:documentation>
       </xsd:annotation>
@@ -3590,6 +3611,36 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
       <xsd:restriction base="dtyp:Decimal"/>
    </xsd:simpleType>
    <xsd:simpleType name="EnergyUseMarginPhotovoltaicOffset">
+      <xsd:annotation>
+         <xsd:documentation>Units: kTDV per ft2 per yr</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:Decimal"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="EnergyUseMarginSelfUtilizCredit">
+      <xsd:annotation>
+         <xsd:documentation>Units: kTDV per ft2 per yr</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:Decimal"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="EnergyUseMarginSelfUtilizCreditEast">
+      <xsd:annotation>
+         <xsd:documentation>Units: kTDV per ft2 per yr</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:Decimal"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="EnergyUseMarginSelfUtilizCreditNorth">
+      <xsd:annotation>
+         <xsd:documentation>Units: kTDV per ft2 per yr</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:Decimal"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="EnergyUseMarginSelfUtilizCreditSouth">
+      <xsd:annotation>
+         <xsd:documentation>Units: kTDV per ft2 per yr</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:Decimal"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="EnergyUseMarginSelfUtilizCreditWest">
       <xsd:annotation>
          <xsd:documentation>Units: kTDV per ft2 per yr</xsd:documentation>
       </xsd:annotation>
@@ -3702,6 +3753,36 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
    </xsd:simpleType>
    <xsd:simpleType name="EnergyUseProposedPhotovoltaicOffset">
+      <xsd:annotation>
+         <xsd:documentation>Units: kTDV per ft2 per yr</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:Decimal"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="EnergyUseProposedSelfUtilizCredit">
+      <xsd:annotation>
+         <xsd:documentation>Units: kTDV per ft2 per yr</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:Decimal"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="EnergyUseProposedSelfUtilizCreditEast">
+      <xsd:annotation>
+         <xsd:documentation>Units: kTDV per ft2 per yr</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:Decimal"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="EnergyUseProposedSelfUtilizCreditNorth">
+      <xsd:annotation>
+         <xsd:documentation>Units: kTDV per ft2 per yr</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:Decimal"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="EnergyUseProposedSelfUtilizCreditSouth">
+      <xsd:annotation>
+         <xsd:documentation>Units: kTDV per ft2 per yr</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:Decimal"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="EnergyUseProposedSelfUtilizCreditWest">
       <xsd:annotation>
          <xsd:documentation>Units: kTDV per ft2 per yr</xsd:documentation>
       </xsd:annotation>
@@ -6839,15 +6920,6 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
       </xsd:annotation>
       <xsd:restriction base="xsd:boolean"/>
    </xsd:simpleType>
-   <xsd:simpleType name="ResidentialPerformanceEDRResult">
-      <xsd:annotation>
-         <xsd:appinfo source="displayterm">
-            <dtyp:displayterm value="true">RESULT: COMPLIES</dtyp:displayterm>
-            <dtyp:displayterm value="false">RESULT: DOES NOT COMPLY</dtyp:displayterm>
-         </xsd:appinfo>
-      </xsd:annotation>
-      <xsd:restriction base="xsd:boolean"/>
-   </xsd:simpleType>
    <xsd:simpleType name="ResidentialPerformanceHERS_VerificationRequired">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
@@ -7007,12 +7079,6 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
          <xsd:element name="responsiblePerson9_HERS_RaterCertification" type="comp:CertificationNumber" minOccurs="0"/>
       </xsd:sequence>
    </xsd:complexType>
-   <xsd:simpleType name="EDRResultNote">
-      <xsd:annotation>
-         <xsd:documentation>This is a description of Messages regarding PV for an EDR Result</xsd:documentation>
-      </xsd:annotation>
-      <xsd:restriction base="xsd:string"/>
-   </xsd:simpleType>
    <xsd:simpleType name="ReturnDuctDesignVerificationRequired">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
@@ -7186,6 +7252,9 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
          <xsd:enumeration value="NotTested"/>
          <xsd:enumeration value="Tested"/>
       </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="SectionAttribute">
+      <xsd:restriction base="xsd:token"/>
    </xsd:simpleType>
    <xsd:simpleType name="SectionComments">
       <xsd:annotation>
@@ -7998,11 +8067,20 @@ Time Dependent Valuation (TDV) Gas Propane energy is calculated by multiplying t
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
    </xsd:simpleType>
+   <xsd:simpleType name="WaterHeaterQualificationDistance">
+      <xsd:annotation>
+         <xsd:documentation>Units: ft</xsd:documentation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Qualification Distance</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:Decimal4PlacesNonnegative"/>
+   </xsd:simpleType>
    <xsd:simpleType name="WaterHeaterQuantificationDistance">
       <xsd:annotation>
          <xsd:documentation>Units: ft</xsd:documentation>
          <xsd:appinfo source="displaytermType">
-            <dtyp:displayterm>Quantification Distance</dtyp:displayterm>
+            <dtyp:displayterm>Qualification Distance</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:Decimal4PlacesNonnegative"/>
