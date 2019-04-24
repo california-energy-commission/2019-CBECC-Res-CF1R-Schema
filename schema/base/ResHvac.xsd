@@ -507,6 +507,20 @@
       <xsd:restriction base="dtyp:DecimalNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="ArrayType">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="FixedArray">Fixed (open rack)</dtyp:displayterm>
+            <dtyp:displayterm value="Tracking1Axis">Tracking (one axis)</dtyp:displayterm>
+            <dtyp:displayterm value="Tracking2Axis">Tracking (two axis)</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="FixedArray"/>
+         <xsd:enumeration value="Tracking1Axis"/>
+         <xsd:enumeration value="Tracking2Axis"/>
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="AveragePipeHeatLoss">
       <xsd:annotation>
          <xsd:documentation>Heat loss factor for pipes in hydronic heating systems  Units: Btu per h</xsd:documentation>
@@ -1942,7 +1956,7 @@
    </xsd:simpleType>
    <xsd:simpleType name="FanPowerPerFlow">
       <xsd:annotation>
-         <xsd:documentation>Measures the full load power of the Fan per unit of air flow.  Units: W per ft3 per min</xsd:documentation>
+         <xsd:documentation>  Units: W per ft3 per min</xsd:documentation>
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Fan Power Per Flow</dtyp:displayterm>
          </xsd:appinfo>
@@ -3141,6 +3155,20 @@
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:IntegerNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="PowerElectronics">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="Microinverters">Microinverters</dtyp:displayterm>
+            <dtyp:displayterm value="NoPowerElectronics">none</dtyp:displayterm>
+            <dtyp:displayterm value="PowerOptimizer">DC Power Optimizers</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="Microinverters"/>
+         <xsd:enumeration value="NoPowerElectronics"/>
+         <xsd:enumeration value="PowerOptimizer"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="PumpCount">
@@ -4787,6 +4815,13 @@
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:IntegerNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="WaterHeatingBrakeHorsepower">
+      <xsd:annotation>
+         <xsd:documentation>  Units: hp</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="WaterHeatingSolarFraction">
