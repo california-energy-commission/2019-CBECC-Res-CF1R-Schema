@@ -208,6 +208,7 @@
             <dtyp:displayterm>Cavity Insulation</dtyp:displayterm>
          </xsd:appinfo>
          <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="NoInsulation">No insulation</dtyp:displayterm>
             <dtyp:displayterm value="Other">Other</dtyp:displayterm>
             <dtyp:displayterm value="R0">R 0</dtyp:displayterm>
             <dtyp:displayterm value="R11">R 11</dtyp:displayterm>
@@ -224,6 +225,7 @@
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="NoInsulation"/>
          <xsd:enumeration value="Other"/>
          <xsd:enumeration value="R0"/>
          <xsd:enumeration value="R11"/>
@@ -2310,6 +2312,20 @@ For selection of NA-6 properties</xsd:documentation>
          <xsd:documentation>Units: ft</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="dtyp:IntegerNonnegative"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="SlabSurface">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="Carpeted">Carpeted</dtyp:displayterm>
+            <dtyp:displayterm value="DefaultCoverage">Default (80% carpeted/covered, 20% exposed)</dtyp:displayterm>
+            <dtyp:displayterm value="Exposed">Exposed</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="Carpeted"/>
+         <xsd:enumeration value="DefaultCoverage"/>
+         <xsd:enumeration value="Exposed"/>
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SlabType">
       <xsd:annotation>
