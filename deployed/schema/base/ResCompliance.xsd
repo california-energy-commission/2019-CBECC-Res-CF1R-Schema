@@ -4252,19 +4252,15 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
    <xsd:simpleType name="FenestrationDescription">
       <xsd:restriction base="dtyp:String50Char"/>
    </xsd:simpleType>
-   <xsd:simpleType name="FenestrationManufacturerBrand">
-      <xsd:restriction base="dtyp:String50Char"/>
-   </xsd:simpleType>
-   <xsd:simpleType name="FenestrationName">
-      <xsd:restriction base="dtyp:String50Char"/>
-   </xsd:simpleType>
-   <xsd:simpleType name="FenestrationUfactorSHGC150_1c3A_Exception">
+   <xsd:simpleType name="FenestrationExceptionForUfactorSHGC">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="FenestrationGlazingDoorLTE3Ft2">Installing less than or equal to 3 ft2 glass in door</dtyp:displayterm>
             <dtyp:displayterm value="FenestrationGlazingNoExceptions">NA (do not allow other entries)</dtyp:displayterm>
             <dtyp:displayterm value="FenestrationGlazingSkylightLTE16Ft2">Installing less than or equal to 16 ft2 skylight</dtyp:displayterm>
             <dtyp:displayterm value="FenestrationGlazingSkylightTubularLTE3Ft2">Installing less than or equal to 3 ft2 tubular skylight</dtyp:displayterm>
+            <dtyp:displayterm value="InstallingWaterHeaterLTE55Gal">Installing storage water heater 
+               <d:lte/> 55 gal</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstantPermissive">
@@ -4272,7 +4268,14 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
          <xsd:enumeration value="FenestrationGlazingNoExceptions"/>
          <xsd:enumeration value="FenestrationGlazingSkylightLTE16Ft2"/>
          <xsd:enumeration value="FenestrationGlazingSkylightTubularLTE3Ft2"/>
+         <xsd:enumeration value="InstallingWaterHeaterLTE55Gal"/>
       </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="FenestrationManufacturerBrand">
+      <xsd:restriction base="dtyp:String50Char"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="FenestrationName">
+      <xsd:restriction base="dtyp:String50Char"/>
    </xsd:simpleType>
    <xsd:simpleType name="FieldText">
       <xsd:restriction base="xsd:token"/>
@@ -4526,12 +4529,11 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
             <dtyp:displayterm value="DuctAllInConditionedSpace">Ducts located entirely in conditioned space</dtyp:displayterm>
             <dtyp:displayterm value="DuctAllInConditionedSpaceExcept12">Ducts located within the conditioned space (except 
                <d:lt/> 12 lineal ft)</dtyp:displayterm>
-            <dtyp:displayterm value="DuctDesignReturn">Duct Design-Return</dtyp:displayterm>
-            <dtyp:displayterm value="DuctDesignSupply">Duct Design-Supply</dtyp:displayterm>
             <dtyp:displayterm value="DuctSealing">Duct Sealing</dtyp:displayterm>
             <dtyp:displayterm value="LowLeakageAirHandlingUnit">Low-leakage Air Handling Unit</dtyp:displayterm>
             <dtyp:displayterm value="LowLeakageDuctsInConditionedSpace">Verified low-leakage ducts in conditioned space must meet maximum 25 cfm leakage to outside (RA3.1.4.3.8)</dtyp:displayterm>
             <dtyp:displayterm value="None">-- None --</dtyp:displayterm>
+            <dtyp:displayterm value="VerifiedDuctDesign">Verified duct design (RA3.1.4.1.1)</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
@@ -4540,12 +4542,11 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
          <xsd:enumeration value="DeeplyBuriedDucts"/>
          <xsd:enumeration value="DuctAllInConditionedSpace"/>
          <xsd:enumeration value="DuctAllInConditionedSpaceExcept12"/>
-         <xsd:enumeration value="DuctDesignReturn"/>
-         <xsd:enumeration value="DuctDesignSupply"/>
          <xsd:enumeration value="DuctSealing"/>
          <xsd:enumeration value="LowLeakageAirHandlingUnit"/>
          <xsd:enumeration value="LowLeakageDuctsInConditionedSpace"/>
          <xsd:enumeration value="None"/>
+         <xsd:enumeration value="VerifiedDuctDesign"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="HvacDistributionFeatureHERS_Data">
@@ -5677,6 +5678,15 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
          <xsd:documentation>This value is a string and should be populated with the  professional license number of the responsible person on a project.</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="xsd:token"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="LowLeakDuctsConditionedVerificationRequired">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Yes</dtyp:displayterm>
+            <dtyp:displayterm value="false">No</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean"/>
    </xsd:simpleType>
    <xsd:simpleType name="LowLeakageAirHandlingUnitVerificationRequired">
       <xsd:annotation>
@@ -7909,6 +7919,12 @@ Time Dependent Valuation (TDV) Gas Propane energy is calculated by multiplying t
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="xsd:boolean"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="VentilationCoolingFanEfficacy">
+      <xsd:annotation>
+         <xsd:documentation>Units: W per ft3</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative"/>
    </xsd:simpleType>
    <xsd:simpleType name="VerificationRequiredEER">
       <xsd:annotation>
