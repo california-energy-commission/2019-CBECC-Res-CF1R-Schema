@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.lmonte.com/besm/com" version="2019.1.000" xmlns:com="http://www.lmonte.com/besm/com" xmlns:d="http://www.lmonte.com/besm/d" xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:hvac="http://www.lmonte.com/besm/hvac" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
+<xsd:schema
+   targetNamespace="http://www.lmonte.com/besm/com"
+   xmlns:com="http://www.lmonte.com/besm/com"
+   xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
+   xmlns:hvac="http://www.lmonte.com/besm/hvac"
+   xmlns:d="http://www.lmonte.com/besm/d"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.000">
    <xsd:import namespace="http://www.lmonte.com/besm/hvac" schemaLocation="ResHvac.xsd"/>
+   <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
+   <xsd:simpleType name="AccessoryDwellingUnitIncluded">
+      <xsd:annotation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Accessory Dwelling Unit Attached</dtyp:displayterm>
+         </xsd:appinfo>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="Attached">Attached</dtyp:displayterm>
+            <dtyp:displayterm value="Detached">Detached</dtyp:displayterm>
+            <dtyp:displayterm value="None">None</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="Attached"/>
+         <xsd:enumeration value="Detached"/>
+         <xsd:enumeration value="None"/>
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="AdditionTotalConditionedFloorArea">
       <xsd:annotation>
          <xsd:documentation>All conditioned floor area in an addition project.  It can be derived from all conditioned area in the Zones  Units: ft2</xsd:documentation>
@@ -9,10 +33,12 @@
             <dtyp:displayterm>Addition Total Conditioned Floor Area</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="AddressFull">
-      <xsd:restriction base="xsd:string"/>
+      <xsd:restriction base="xsd:string">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="AdjacentSpaceName">
       <xsd:annotation>
@@ -21,7 +47,28 @@
             <dtyp:displayterm>Adjacent Space Name</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:ObjectNamePermissive"/>
+      <xsd:restriction base="dtyp:ObjectNamePermissive">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="ADUBedroomCount">
+      <xsd:annotation>
+         <xsd:documentation>  Units: none</xsd:documentation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>ADU Bedroom Count</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:IntegerNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="ADUConditionedFloorArea">
+      <xsd:annotation>
+         <xsd:documentation>  Units: ft2</xsd:documentation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>ADU Conditioned Floor Area</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="AnnualWeatherFile">
       <xsd:annotation>
@@ -30,7 +77,8 @@
             <dtyp:displayterm>Annual Weather File</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="xsd:token"/>
+      <xsd:restriction base="xsd:token">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="AssemblyContext">
       <xsd:annotation>
@@ -52,24 +100,28 @@
    </xsd:simpleType>
    <xsd:simpleType name="BedroomCount">
       <xsd:annotation>
-         <xsd:documentation>Units: none</xsd:documentation>
+         <xsd:documentation>  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:ItemCount"/>
+      <xsd:restriction base="dtyp:ItemCount">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="BedroomsAdditionCount">
       <xsd:annotation>
-         <xsd:documentation>Units: none</xsd:documentation>
+         <xsd:documentation>  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:ItemCount"/>
+      <xsd:restriction base="dtyp:ItemCount">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="BedroomsExistingCount">
       <xsd:annotation>
-         <xsd:documentation>Units: none</xsd:documentation>
+         <xsd:documentation>  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:ItemCount"/>
+      <xsd:restriction base="dtyp:ItemCount">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="BuildingName">
-      <xsd:restriction base="dtyp:ObjectNamePermissive"/>
+      <xsd:restriction base="dtyp:ObjectNamePermissive">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="BuildingTerrain">
       <xsd:annotation>
@@ -97,16 +149,8 @@
       <xsd:annotation>
          <xsd:documentation>This token uniquely identifies a whole building, developed by the  California Energy Commission.</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="xsd:string"/>
-   </xsd:simpleType>
-   <xsd:simpleType name="CFactor">
-      <xsd:annotation>
-         <xsd:documentation>A measurement of thermal conductivity of a material and is used in the JA 4 tables for masonry and concrete walls  Units: Btu per h ft2 F</xsd:documentation>
-         <xsd:appinfo source="displaytermType">
-            <dtyp:displayterm>CFactor</dtyp:displayterm>
-         </xsd:appinfo>
-      </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="xsd:string">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="CaliforniaCounty">
       <xsd:annotation>
@@ -281,11 +325,22 @@
          <xsd:enumeration value="West"/>
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="CFactor">
+      <xsd:annotation>
+         <xsd:documentation>A measurement of thermal conductivity of a material and is used in the JA 4 tables for masonry and concrete walls  Units: Btu per h ft2 F</xsd:documentation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>CFactor</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="City">
       <xsd:annotation>
          <xsd:documentation>Part of an address</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:City"/>
+      <xsd:restriction base="dtyp:City">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ClimateZone">
       <xsd:annotation>
@@ -495,9 +550,10 @@
    </xsd:simpleType>
    <xsd:simpleType name="ConditionedFloorArea5Percent">
       <xsd:annotation>
-         <xsd:documentation>Units: ft2</xsd:documentation>
+         <xsd:documentation>  Units: ft2</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ConditioningType">
       <xsd:annotation>
@@ -539,25 +595,31 @@
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ContactCompany">
-      <xsd:restriction base="xsd:string"/>
+      <xsd:restriction base="xsd:string">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ContactEmailAddress">
-      <xsd:restriction base="xsd:string"/>
+      <xsd:restriction base="xsd:string">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ContactName">
-      <xsd:restriction base="xsd:string"/>
+      <xsd:restriction base="xsd:string">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ContactRole">
-      <xsd:restriction base="dtyp:EnumerationConstant"/>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ContactTelephoneNumber">
-      <xsd:restriction base="xsd:string"/>
+      <xsd:restriction base="xsd:string">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="CoolingDegreeDays">
       <xsd:annotation>
-         <xsd:documentation>Units: F</xsd:documentation>
+         <xsd:documentation>  Units: F</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="DemisingSurface">
       <xsd:annotation>
@@ -566,7 +628,8 @@
             <dtyp:displayterm value="false">No</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="xsd:boolean"/>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="Density">
       <xsd:annotation>
@@ -575,22 +638,18 @@
             <dtyp:displayterm>Density</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="DesignCoolingLoad">
       <xsd:annotation>
-         <xsd:documentation>Units: Btu per h</xsd:documentation>
+         <xsd:documentation>  Units: Btu per h</xsd:documentation>
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Calculated Cooling Load</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
-   </xsd:simpleType>
-   <xsd:simpleType name="DesignDBRange">
-      <xsd:annotation>
-         <xsd:documentation>Units: F</xsd:documentation>
-      </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="DesignDayType">
       <xsd:annotation>
@@ -608,13 +667,22 @@
       <xsd:annotation>
          <xsd:documentation>Name of file containing design day information</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="xsd:token"/>
+      <xsd:restriction base="xsd:token">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="DesignDBRange">
+      <xsd:annotation>
+         <xsd:documentation>  Units: F</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="DesignInfiltrationRate">
       <xsd:annotation>
          <xsd:documentation>Design infiltration airflow  Units: ft3 per min ft2</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="DwellingUnitClothesWasher">
       <xsd:annotation>
@@ -623,25 +691,29 @@
             <dtyp:displayterm value="false">No</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="xsd:boolean"/>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="DwellingUnitConditionedFloorArea">
       <xsd:annotation>
-         <xsd:documentation>Units: ft2</xsd:documentation>
+         <xsd:documentation>  Units: ft2</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:IntegerNonnegative"/>
+      <xsd:restriction base="dtyp:IntegerNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="DwellingUnitConditionedFloorAreaWithAddition">
       <xsd:annotation>
-         <xsd:documentation>Units: ft2</xsd:documentation>
+         <xsd:documentation>  Units: ft2</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:IntegerNonnegative"/>
+      <xsd:restriction base="dtyp:IntegerNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="DwellingUnitCount">
       <xsd:annotation>
-         <xsd:documentation>Units: none</xsd:documentation>
+         <xsd:documentation>  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:IntegerNonnegative"/>
+      <xsd:restriction base="dtyp:IntegerNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="DwellingUnitDishwasher">
       <xsd:annotation>
@@ -650,31 +722,46 @@
             <dtyp:displayterm value="false">No</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="xsd:boolean"/>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="DwellingUnitEnclosureArea">
       <xsd:annotation>
-         <xsd:documentation>Units: ft2</xsd:documentation>
+         <xsd:documentation>  Units: ft2</xsd:documentation>
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Dwelling Unit Enclosure Area</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="ResidentialDwellingUnitName">
+      <xsd:restriction base="dtyp:ObjectNamePermissive">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="DwellingUnitsSharedWallArea">
       <xsd:annotation>
-         <xsd:documentation>Units: ft2</xsd:documentation>
+         <xsd:documentation>  Units: ft2</xsd:documentation>
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Dwelling unit wall area shared with other dwelling units</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="DwellingUnitsWithAdditionsCount">
       <xsd:annotation>
-         <xsd:documentation>Units: none</xsd:documentation>
+         <xsd:documentation>  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:IntegerNonnegative"/>
+      <xsd:restriction base="dtyp:IntegerNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="DwellingUnitsWithAlterationsCount">
+      <xsd:annotation>
+         <xsd:documentation>  Units: none</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:IntegerNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="Elevation">
       <xsd:annotation>
@@ -683,7 +770,8 @@
             <dtyp:displayterm>Elevation</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="EnclosedSpace">
       <xsd:annotation>
@@ -692,7 +780,8 @@
             <dtyp:displayterm value="false">No</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="xsd:boolean"/>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ExteriorSolarAbsorptance">
       <xsd:annotation>
@@ -704,7 +793,8 @@ ExtWall/IntWall: 0.7
 Ceilings: 0.7
 ExtFlr/IntFlr: 0.7  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ExteriorSolarAbsorptanceRequired">
       <xsd:annotation>
@@ -716,7 +806,8 @@ ExtWall/IntWall: 0.7
 Ceilings: 0.7
 ExtFlr/IntFlr: 0.7  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ExteriorThermalAbsorptance">
       <xsd:annotation>
@@ -727,7 +818,8 @@ ExtWall/IntWall: 0.9
 Ceilings: 0.9
 ExtFlr/IntFlr: 0.9  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ExteriorThermalAbsorptanceRequired">
       <xsd:annotation>
@@ -738,7 +830,8 @@ ExtWall/IntWall: 0.9
 Ceilings: 0.9
 ExtFlr/IntFlr: 0.9  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ExteriorVisibleAbsorptance">
       <xsd:annotation>
@@ -748,7 +841,8 @@ ExtWall/IntWall: 0.5
 Ceilings: 0.3
 ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ExteriorVisibleAbsorptanceRequired">
       <xsd:annotation>
@@ -758,28 +852,15 @@ ExtWall/IntWall: 0.5
 Ceilings: 0.3
 ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
-   </xsd:simpleType>
-   <xsd:simpleType name="FFactor">
-      <xsd:annotation>
-         <xsd:documentation>The quantity of heat that will flow through a unit area of the material when the temperature difference through the material is 1 degree F.  Units: Btu per h ft F</xsd:documentation>
-         <xsd:appinfo source="displaytermType">
-            <dtyp:displayterm>FFactor</dtyp:displayterm>
-         </xsd:appinfo>
-      </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
-   </xsd:simpleType>
-   <xsd:simpleType name="FFactorLimit">
-      <xsd:annotation>
-         <xsd:documentation>Prescribed value for the F-Factor of a construction assembly.  Units: Btu per h ft F</xsd:documentation>
-      </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="FenestrationConstructionUFactor">
       <xsd:annotation>
          <xsd:documentation>The overall coefficient of thermal transmittance through a layer or construction assembly. It includes air film resistance at both surfaces.  Units: Btu per h ft2 F</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="FenestrationOrientation">
       <xsd:annotation>
@@ -797,41 +878,63 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
          <xsd:enumeration value="West"/>
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="FFactor">
+      <xsd:annotation>
+         <xsd:documentation>The quantity of heat that will flow through a unit area of the material when the temperature difference through the material is 1 degree F.  Units: Btu per h ft F</xsd:documentation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>FFactor</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="FFactorLimit">
+      <xsd:annotation>
+         <xsd:documentation>Prescribed value for the F-Factor of a construction assembly.  Units: Btu per h ft F</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="FieldName">
       <xsd:annotation>
          <xsd:documentation>This property is part of a user defined field in an SDD data exchange or report schema that allows clients the ability to add new fields to data that are needed either temporarily or as a placeholder for elements that will be added in the next version of the schema.</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="xsd:string"/>
+      <xsd:restriction base="xsd:string">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="FieldValue">
       <xsd:annotation>
          <xsd:documentation>This property is part of a user defined field in an SDD data exchange or report schema that allows clients the ability to add new fields to data that are needed either temporarily or as a placeholder for elements that will be added in the next version of the schema.</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="xsd:string"/>
+      <xsd:restriction base="xsd:string">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="FieldValueType">
       <xsd:annotation>
          <xsd:documentation>This property is part of a user defined field in an SDD data exchange or report schema.  Use this element to record data type, units, and other information needed when it is permanently added to the schema.</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="xsd:string"/>
+      <xsd:restriction base="xsd:string">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="FirstFloorToHighestCeilingHeight">
       <xsd:annotation>
-         <xsd:documentation>Units: ft</xsd:documentation>
+         <xsd:documentation>  Units: ft</xsd:documentation>
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Vertical Distance from lowest above-grade floor to highest ceiling height</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="FloorArea">
       <xsd:annotation>
-         <xsd:documentation>Units: ft2</xsd:documentation>
+         <xsd:documentation>  Units: ft2</xsd:documentation>
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Floor Area</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="FloorToCeilingHeight">
       <xsd:annotation>
@@ -840,19 +943,22 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
             <dtyp:displayterm>Floor To Ceiling Height</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="GasEquipmentLatentFraction">
       <xsd:annotation>
-         <xsd:documentation>Units: none</xsd:documentation>
+         <xsd:documentation>  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="GasEquipmentLostFraction">
       <xsd:annotation>
-         <xsd:documentation>Units: none</xsd:documentation>
+         <xsd:documentation>  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="HeatCapacity">
       <xsd:annotation>
@@ -861,13 +967,15 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
             <dtyp:displayterm>Heat Capacity</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="HeatingDegreeDays">
       <xsd:annotation>
-         <xsd:documentation>Units: F</xsd:documentation>
+         <xsd:documentation>  Units: F</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="HotWaterHeatingRate">
       <xsd:annotation>
@@ -876,19 +984,22 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
             <dtyp:displayterm>Hot Water Heating Rate</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="HotWaterHeatingRateSimulation">
       <xsd:annotation>
-         <xsd:documentation>Units: gal per h</xsd:documentation>
+         <xsd:documentation>  Units: gal per h</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="HotWaterHeatingTotal">
       <xsd:annotation>
-         <xsd:documentation>Units: gal per h</xsd:documentation>
+         <xsd:documentation>  Units: gal per h</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ImprovementStatus">
       <xsd:annotation>
@@ -921,30 +1032,27 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
    </xsd:simpleType>
    <xsd:simpleType name="InteriorLightingSystemNonRegulatedPower">
       <xsd:annotation>
-         <xsd:documentation>Units: W</xsd:documentation>
+         <xsd:documentation>  Units: W</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="InteriorLightingSystemRegulatedPower">
       <xsd:annotation>
-         <xsd:documentation>Units: W</xsd:documentation>
+         <xsd:documentation>  Units: W</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
-   </xsd:simpleType>
-   <xsd:simpleType name="InteriorLightingSystemResidentialSpaceName">
-      <xsd:annotation>
-         <xsd:documentation>This is the residential space that is served by the interior lighting system</xsd:documentation>
-      </xsd:annotation>
-      <xsd:restriction base="dtyp:ObjectNamePermissive"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="KitchenExhaustMinimumAirFlow">
       <xsd:annotation>
-         <xsd:documentation>Units: ft3 per min</xsd:documentation>
+         <xsd:documentation>  Units: ft3 per min</xsd:documentation>
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Minimum Airflow</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="KitchenExhaustOperation">
       <xsd:annotation>
@@ -1000,7 +1108,8 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
             <dtyp:displayterm>Latent Heat Rate Per Occupant</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="Latitude">
       <xsd:annotation>
@@ -1009,7 +1118,8 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
             <dtyp:displayterm>Latitude</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:Latitude"/>
+      <xsd:restriction base="dtyp:Latitude">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="LoadPercentageHourly">
       <xsd:annotation>
@@ -1018,13 +1128,15 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
             <dtyp:displayterm>Load Percentage Hourly</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="LoadScheduleName">
       <xsd:annotation>
          <xsd:documentation>Unique identifying name for a load schedule.</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:ObjectNamePermissive"/>
+      <xsd:restriction base="dtyp:ObjectNamePermissive">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="LoadScheduleType">
       <xsd:annotation>
@@ -1057,7 +1169,8 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
             <dtyp:displayterm>Longitude</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:Longitude"/>
+      <xsd:restriction base="dtyp:Longitude">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ManufacturerName">
       <xsd:annotation>
@@ -1065,7 +1178,8 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
             <dtyp:displayterm>Manufacturer Name</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="xsd:token"/>
+      <xsd:restriction base="xsd:token">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="MassPerUnitArea">
       <xsd:annotation>
@@ -1074,7 +1188,8 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
             <dtyp:displayterm>Mass Per Unit Area</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="MonthDay">
       <xsd:annotation>
@@ -1124,7 +1239,8 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
       <xsd:annotation>
          <xsd:documentation>This is a descriptor used in residential projects that consist of multifamily buildings and/or subdivisions of residences</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="xsd:token"/>
+      <xsd:restriction base="xsd:token">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="NaturalGasOnSite">
       <xsd:annotation>
@@ -1133,7 +1249,8 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
             <dtyp:displayterm value="false">No</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="xsd:boolean"/>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="NaturalVentilationMethod">
       <xsd:annotation>
@@ -1179,27 +1296,31 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
    </xsd:simpleType>
    <xsd:simpleType name="OverhangDepth">
       <xsd:annotation>
-         <xsd:documentation>Units: ft</xsd:documentation>
+         <xsd:documentation>  Units: ft</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="PartitionWindowDoorArea">
       <xsd:annotation>
-         <xsd:documentation>Units: ft2</xsd:documentation>
+         <xsd:documentation>  Units: ft2</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="PermitDay">
       <xsd:annotation>
          <xsd:documentation>The day that the permit application is submitted to the building department. Used to determine applicability of Standards requirements that become effective at future dates.  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:IntegerNonnegative"/>
+      <xsd:restriction base="dtyp:IntegerNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="PermitMonth">
       <xsd:annotation>
          <xsd:documentation>The month that the permit application is submitted to the building department. Used to determine applicability of Standards requirements that become effective at future dates.  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:IntegerNonnegative"/>
+      <xsd:restriction base="dtyp:IntegerNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="PermitScope">
       <xsd:annotation>
@@ -1231,16 +1352,19 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
       <xsd:annotation>
          <xsd:documentation>The year that the permit application is submitted to the building department. Used to determine applicability of Standards requirements that become effective at future dates.  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:IntegerNonnegative"/>
-   </xsd:simpleType>
-   <xsd:simpleType name="PrimarySideDaylightingControlName">
-      <xsd:restriction base="dtyp:ObjectNamePermissive"/>
+      <xsd:restriction base="dtyp:IntegerNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="PrimarySideDaylightingControlledLightingPower">
       <xsd:annotation>
-         <xsd:documentation>Units: W</xsd:documentation>
+         <xsd:documentation>  Units: W</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="PrimarySideDaylightingControlName">
+      <xsd:restriction base="dtyp:ObjectNamePermissive">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="PrimarySideDaylightingControls">
       <xsd:annotation>
@@ -1249,13 +1373,15 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
             <dtyp:displayterm value="false">No</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="xsd:boolean"/>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="PrimarySideDaylightingIlluminanceSetPoint">
       <xsd:annotation>
-         <xsd:documentation>Units: lux</xsd:documentation>
+         <xsd:documentation>  Units: lux</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ProjectName">
       <xsd:annotation>
@@ -1264,16 +1390,8 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
             <dtyp:displayterm>Project Name</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="xsd:token"/>
-   </xsd:simpleType>
-   <xsd:simpleType name="RValue">
-      <xsd:annotation>
-         <xsd:documentation>A measure of thermal resistance of a type of Material found in construction layers or Insulation in a pre-defined ConstructionAssembly.  It is usually expressed in whole number units of (hr x ft2 x degrees F)/Btu but can be a decimal value e.g.  JA IV 4.1.5 Wood Based Sheathing R-values  Units: h ft2 F per Btu</xsd:documentation>
-         <xsd:appinfo source="displaytermType">
-            <dtyp:displayterm>R Value</dtyp:displayterm>
-         </xsd:appinfo>
-      </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="xsd:token">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="RelativePosition">
       <xsd:annotation>
@@ -1293,9 +1411,10 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
    </xsd:simpleType>
    <xsd:simpleType name="RelativePositionDegrees">
       <xsd:annotation>
-         <xsd:documentation>Units: deg arc</xsd:documentation>
+         <xsd:documentation>  Units: deg arc</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:IntegerNonnegative"/>
+      <xsd:restriction base="dtyp:IntegerNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="RelativeSolarHeatGain">
       <xsd:annotation>
@@ -1304,13 +1423,15 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
             <dtyp:displayterm>Relative Solar Heat Gain</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="RelativeSolarHeatGainLimit">
       <xsd:annotation>
          <xsd:documentation>This is the regulatory limit for the RelativeSolarHeatGain of a building element  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="RelocatablePublicSchoolBuilding">
       <xsd:annotation>
@@ -1319,13 +1440,15 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
             <dtyp:displayterm value="false">No</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="xsd:boolean"/>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ResidentialBuildingTotalConditionedFloorArea">
       <xsd:annotation>
          <xsd:documentation>All conditioned floor area in the Building project.  It can be derived from all conditioned area in the Zones  Units: ft2</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:IntegerNonnegative"/>
+      <xsd:restriction base="dtyp:IntegerNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ResidentialBuildingType">
       <xsd:annotation>
@@ -1359,15 +1482,14 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
    </xsd:simpleType>
    <xsd:simpleType name="ResidentialBuildingZoneCount">
       <xsd:annotation>
-         <xsd:documentation>Units: none</xsd:documentation>
+         <xsd:documentation>  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:ItemCount"/>
+      <xsd:restriction base="dtyp:ItemCount">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ResidentialDwellingUnitDescriptor">
-      <xsd:restriction base="xsd:string"/>
-   </xsd:simpleType>
-   <xsd:simpleType name="ResidentialDwellingUnitName">
-      <xsd:restriction base="dtyp:ObjectNamePermissive"/>
+      <xsd:restriction base="xsd:string">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ResidentialLowriseBuildingType">
       <xsd:annotation>
@@ -1383,8 +1505,16 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
          <xsd:enumeration value="SingleFamily"/>
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="InteriorLightingSystemResidentialSpaceName">
+      <xsd:annotation>
+         <xsd:documentation>This is the residential space that is served by the interior lighting system</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:ObjectNamePermissive">
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="ResidentialSpaceName">
-      <xsd:restriction base="dtyp:ObjectNamePermissive"/>
+      <xsd:restriction base="dtyp:ObjectNamePermissive">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ResidentialSpaceType">
       <xsd:annotation>
@@ -1416,9 +1546,10 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
    </xsd:simpleType>
    <xsd:simpleType name="RightFinAngle">
       <xsd:annotation>
-         <xsd:documentation>Units: deg arc</xsd:documentation>
+         <xsd:documentation>  Units: deg arc</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="RoofDeckInsulation">
       <xsd:annotation>
@@ -1451,7 +1582,8 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
             <dtyp:displayterm>Room Cavity Ratio</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="Roughness">
       <xsd:annotation>
@@ -1525,36 +1657,15 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
          <xsd:enumeration value="NEMA"/>
       </xsd:restriction>
    </xsd:simpleType>
-   <xsd:simpleType name="SHGC">
+   <xsd:simpleType name="RValue">
       <xsd:annotation>
-         <xsd:documentation>The ratio of the solar heat gain entering a space, through the subject fenestration product, to the incident solar radiation.   Solar heat gain includes directly transmitted solar heat and absorbed solar radiation which is then re-radiated, conducted or convected into the space.  often referred to as SHGC.  Units: none</xsd:documentation>
+         <xsd:documentation>A measure of thermal resistance of a type of Material found in construction layers or Insulation in a pre-defined ConstructionAssembly.  It is usually expressed in whole number units of (hr x ft2 x degrees F)/Btu but can be a decimal value e.g.  JA IV 4.1.5 Wood Based Sheathing R-values  Units: h ft2 F per Btu</xsd:documentation>
          <xsd:appinfo source="displaytermType">
-            <dtyp:displayterm>Solar Heat Gain Coefficient</dtyp:displayterm>
-         </xsd:appinfo>
-         <xsd:appinfo source="CBECCresXML">
-            <dtyp:CBECCresXMLterm>AltSHGC; WinSHGC</dtyp:CBECCresXMLterm>
-            <dtyp:termConditions>{{CONDITIONS}}</dtyp:termConditions>
+            <dtyp:displayterm>R Value</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
-   </xsd:simpleType>
-   <xsd:simpleType name="SHGC_CenterOfGlass">
-      <xsd:annotation>
-         <xsd:documentation>The ratio of the solar heat gain entering a space, through the subject fenestration product, to the incident solar radiation.   Solar heat gain includes directly transmitted solar heat and absorbed solar radiation which is then re-radiated, conducted or convected into the space.  often referred to as SHGC.  Units: none</xsd:documentation>
-      </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
-   </xsd:simpleType>
-   <xsd:simpleType name="SHGC_Limit">
-      <xsd:annotation>
-         <xsd:documentation>This is the regulatory limit for the SolarHeatGain of a building element  Units: none</xsd:documentation>
-      </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
-   </xsd:simpleType>
-   <xsd:simpleType name="SHGC_LimitSkylight">
-      <xsd:annotation>
-         <xsd:documentation>This is the regulatory limit for the SolarHeatGain of skylight fenestration  Units: none</xsd:documentation>
-      </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ScheduleCategory">
       <xsd:annotation>
@@ -1598,14 +1709,16 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
          <xsd:enumeration value="Temperature"/>
       </xsd:restriction>
    </xsd:simpleType>
-   <xsd:simpleType name="SecondarySideDaylightingControlName">
-      <xsd:restriction base="dtyp:ObjectNamePermissive"/>
-   </xsd:simpleType>
    <xsd:simpleType name="SecondarySideDaylightingControlledLightingPower">
       <xsd:annotation>
-         <xsd:documentation>Units: W</xsd:documentation>
+         <xsd:documentation>  Units: W</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="SecondarySideDaylightingControlName">
+      <xsd:restriction base="dtyp:ObjectNamePermissive">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SecondarySideDaylightingControls">
       <xsd:annotation>
@@ -1614,13 +1727,63 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
             <dtyp:displayterm value="false">No</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="xsd:boolean"/>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SecondarySideDaylightingIlluminanceSetPoint">
       <xsd:annotation>
-         <xsd:documentation>Units: lux</xsd:documentation>
+         <xsd:documentation>  Units: lux</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="SHGC">
+      <xsd:annotation>
+         <xsd:documentation>The ratio of the solar heat gain entering a space, through the subject fenestration product, to the incident solar radiation.   Solar heat gain includes directly transmitted solar heat and absorbed solar radiation which is then re-radiated, conducted or convected into the space.  often referred to as SHGC.  Units: none</xsd:documentation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Solar Heat Gain Coefficient</dtyp:displayterm>
+         </xsd:appinfo>
+         <xsd:appinfo source="CBECCresXML">
+            <dtyp:CBECCresXMLterm>AltSHGC; WinSHGC</dtyp:CBECCresXMLterm>
+            <dtyp:termConditions>{{CONDITIONS}}</dtyp:termConditions>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="SHGC_CenterOfGlass">
+      <xsd:annotation>
+         <xsd:documentation>The ratio of the solar heat gain entering a space, through the subject fenestration product, to the incident solar radiation.   Solar heat gain includes directly transmitted solar heat and absorbed solar radiation which is then re-radiated, conducted or convected into the space.  often referred to as SHGC.  Units: none</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="SHGC_Limit">
+      <xsd:annotation>
+         <xsd:documentation>This is the regulatory limit for the SolarHeatGain of a building element  Units: none</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="SHGC_LimitSkylight">
+      <xsd:annotation>
+         <xsd:documentation>This is the regulatory limit for the SolarHeatGain of skylight fenestration  Units: none</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="SingleFamilyDwellingAttached">
+      <xsd:annotation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Single Family Dwelling Attached</dtyp:displayterm>
+         </xsd:appinfo>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Yes</dtyp:displayterm>
+            <dtyp:displayterm value="false">No</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SiteCounty">
       <xsd:annotation>
@@ -1765,28 +1928,33 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SkylightRequirementException">
-      <xsd:restriction base="dtyp:EnumerationConstant"/>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SkylightRequirementExceptionArea">
       <xsd:annotation>
-         <xsd:documentation>Units: ft2</xsd:documentation>
+         <xsd:documentation>  Units: ft2</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SkylightRequirementExceptionFraction">
       <xsd:annotation>
-         <xsd:documentation>Units: none</xsd:documentation>
+         <xsd:documentation>  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
-   </xsd:simpleType>
-   <xsd:simpleType name="SkylitDaylightingControlName">
-      <xsd:restriction base="dtyp:ObjectNamePermissive"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SkylitDaylightingControlledLightingPower">
       <xsd:annotation>
-         <xsd:documentation>Units: W</xsd:documentation>
+         <xsd:documentation>  Units: W</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="SkylitDaylightingControlName">
+      <xsd:restriction base="dtyp:ObjectNamePermissive">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SkylitDaylightingControls">
       <xsd:annotation>
@@ -1795,25 +1963,29 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
             <dtyp:displayterm value="false">No</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="xsd:boolean"/>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SkylitDaylightingIlluminanceSetPoint">
       <xsd:annotation>
-         <xsd:documentation>Units: lux</xsd:documentation>
+         <xsd:documentation>  Units: lux</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SlabInsulationHorizontalLength">
       <xsd:annotation>
-         <xsd:documentation>Units: ft</xsd:documentation>
+         <xsd:documentation>  Units: ft</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SlabInsulationVerticalILength">
       <xsd:annotation>
-         <xsd:documentation>Units: in</xsd:documentation>
+         <xsd:documentation>  Units: in</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SolarAbsorptance">
       <xsd:annotation>
@@ -1822,25 +1994,29 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
             <dtyp:displayterm>Solar Absorptance</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SolarHeatGainCoefficientCEC">
       <xsd:annotation>
          <xsd:documentation>The solar heat gain coefficient default defined in the Title 24 standards for fenestration products  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SolarHeatGainCoefficientEffective">
       <xsd:annotation>
          <xsd:documentation>The effective solar heat gain coefficient for fenestration in combination with any attached exterior shading device  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SolarHeatGainCoefficientExteriorShading">
       <xsd:annotation>
          <xsd:documentation>The solar heat gain coefficient defined for exterior shading device  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SolarHeatGainCoefficientNFRC">
       <xsd:annotation>
@@ -1850,7 +2026,8 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
             <dtyp:termConditions>{{CONDITIONS}}</dtyp:termConditions>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SolarReflectanceAged">
       <xsd:annotation>
@@ -1859,7 +2036,8 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
             <dtyp:displayterm>Solar Reflectance Aged</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SolarReflectanceInitial">
       <xsd:annotation>
@@ -1870,13 +2048,15 @@ NOTE: For roofs, differentiate between the initial Solar Reflectance value and t
             <dtyp:displayterm>Solar Reflectance</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SpaceArea">
       <xsd:annotation>
-         <xsd:documentation>Units: ft2</xsd:documentation>
+         <xsd:documentation>  Units: ft2</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SpecificHeat">
       <xsd:annotation>
@@ -1885,7 +2065,8 @@ NOTE: For roofs, differentiate between the initial Solar Reflectance value and t
             <dtyp:displayterm>Specific Heat</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="StatusEAA">
       <xsd:annotation>
@@ -1908,19 +2089,22 @@ NOTE: For roofs, differentiate between the initial Solar Reflectance value and t
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="StreetAddress">
-      <xsd:restriction base="dtyp:StreetAddress"/>
+      <xsd:restriction base="dtyp:StreetAddress">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SummerInsideDesignDryBulb">
       <xsd:annotation>
          <xsd:documentation>The design dry bulb temperature is the used for equipment sizing calculations for cooling during the summer.  According to the Standards, cooling design temperatures must be less or equal to the 0.5 percent Cooling Dry Bulb and Mean Coincident Wet Bulb values reported in the weather data in JA2.  Units: F</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SummerOutsideDesignDryBulb">
       <xsd:annotation>
          <xsd:documentation>The design dry bulb temperature is the used for equipment sizing calculations for cooling during the summer.  According to the Standards, cooling design temperatures must be less or equal to the 0.5 percent Cooling Dry Bulb and Mean Coincident Wet Bulb values reported in the weather data in JA2.  Units: F</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="T24Part6Section">
       <xsd:annotation>
@@ -1929,16 +2113,18 @@ NOTE: For roofs, differentiate between the initial Solar Reflectance value and t
             <dtyp:displayterm>Title24 Part6 Section</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="xsd:token"/>
+      <xsd:restriction base="xsd:token">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="TDV">
       <xsd:annotation>
-         <xsd:documentation>Units: Btu</xsd:documentation>
+         <xsd:documentation>  Units: Btu</xsd:documentation>
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Time Dependent Valuation</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ThermalAbsorptance">
       <xsd:annotation>
@@ -1947,7 +2133,8 @@ NOTE: For roofs, differentiate between the initial Solar Reflectance value and t
             <dtyp:displayterm>Thermal Absorptance</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ThermalConductivity">
       <xsd:annotation>
@@ -1956,13 +2143,15 @@ NOTE: For roofs, differentiate between the initial Solar Reflectance value and t
             <dtyp:displayterm>Thermal Conductivity</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ThermalEmittance">
       <xsd:annotation>
          <xsd:documentation>Thermal Emittance for a roof is the ratio of the electromagnetic radiation emitted by a surface to that of a perfect black body at the same temperature.  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ThermalEmittanceLimit">
       <xsd:annotation>
@@ -1971,13 +2160,15 @@ NOTE: For roofs, differentiate between the initial Solar Reflectance value and t
             <dtyp:displayterm>Emissivity</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ThermalZoneName">
       <xsd:annotation>
          <xsd:documentation>This is a reference to the thermal zone that serves a given space.</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:ObjectNamePermissive"/>
+      <xsd:restriction base="dtyp:ObjectNamePermissive">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="Thickness">
       <xsd:annotation>
@@ -1986,7 +2177,8 @@ NOTE: For roofs, differentiate between the initial Solar Reflectance value and t
             <dtyp:displayterm>Thickness</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="TotalConditionedFloorArea">
       <xsd:annotation>
@@ -1995,16 +2187,18 @@ NOTE: For roofs, differentiate between the initial Solar Reflectance value and t
             <dtyp:displayterm>Total Conditioned Floor Area</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="TotalConditionedVolume">
       <xsd:annotation>
-         <xsd:documentation>Units: ft3</xsd:documentation>
+         <xsd:documentation>  Units: ft3</xsd:documentation>
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Total Conditioned Volume</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="TotalGrossFloorArea">
       <xsd:annotation>
@@ -2013,7 +2207,8 @@ NOTE: For roofs, differentiate between the initial Solar Reflectance value and t
             <dtyp:displayterm>Building Total Floor Area</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="TotalStoryCount">
       <xsd:annotation>
@@ -2022,7 +2217,8 @@ NOTE: For roofs, differentiate between the initial Solar Reflectance value and t
             <dtyp:displayterm>Total Story Count</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:IntegerNonnegative"/>
+      <xsd:restriction base="dtyp:IntegerNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="TotalUnconditionedFloorArea">
       <xsd:annotation>
@@ -2031,13 +2227,15 @@ NOTE: For roofs, differentiate between the initial Solar Reflectance value and t
             <dtyp:displayterm>Total Unconditioned Floor Area</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="TypeOtherDescription">
       <xsd:annotation>
          <xsd:documentation>Text describing type not in list</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="xsd:token"/>
+      <xsd:restriction base="xsd:token">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="UFactor">
       <xsd:annotation>
@@ -2046,70 +2244,81 @@ NOTE: For roofs, differentiate between the initial Solar Reflectance value and t
             <dtyp:displayterm>UFactor</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:Decimal3PlacesNonnegative"/>
+      <xsd:restriction base="dtyp:Decimal3PlacesNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="UFactorCenterOfGlass">
       <xsd:annotation>
          <xsd:documentation>The overall coefficient of thermal transmittance through glass of a fenestration product.  Units: Btu per h ft2 F</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="UFactorFenestrationAverage">
       <xsd:annotation>
-         <xsd:documentation>Units: Btu per h ft2 F</xsd:documentation>
+         <xsd:documentation>  Units: Btu per h ft2 F</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:Decimal3PlacesNonnegative"/>
+      <xsd:restriction base="dtyp:Decimal3PlacesNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="UFactorLimit">
       <xsd:annotation>
          <xsd:documentation>This is the regulatory limit for the UFactor of a building element  Units: Btu per h ft2 F</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:Decimal3PlacesNonnegative"/>
+      <xsd:restriction base="dtyp:Decimal3PlacesNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="UFactorLimitSkylight">
       <xsd:annotation>
          <xsd:documentation>This is the regulatory limit for the UFactor of a Skylight fenestration  Units: Btu per h ft2 F</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="UFactorMassWallTotal">
       <xsd:annotation>
-         <xsd:documentation>Units: Btu per h ft2 F</xsd:documentation>
+         <xsd:documentation>  Units: Btu per h ft2 F</xsd:documentation>
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Total Mass Wall U-factor</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:Decimal3PlacesNonnegative"/>
+      <xsd:restriction base="dtyp:Decimal3PlacesNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="UFactorWinterDesign">
       <xsd:annotation>
          <xsd:documentation>This is the specified winter design UFactor for a construction assemly  Units: Btu per h ft2 F</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:Decimal3Places"/>
+      <xsd:restriction base="dtyp:Decimal3Places">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="VentilationAirChangesPerHour">
       <xsd:annotation>
-         <xsd:documentation>Units: ft3 per min</xsd:documentation>
+         <xsd:documentation>  Units: ft3 per min</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="VentilationPerArea">
       <xsd:annotation>
-         <xsd:documentation>Units: ft3 per min ft2</xsd:documentation>
+         <xsd:documentation>  Units: ft3 per min ft2</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="VentilationPerPerson">
       <xsd:annotation>
-         <xsd:documentation>Units: ft3 per min person</xsd:documentation>
+         <xsd:documentation>  Units: ft3 per min person</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="VentilationPerSpace">
       <xsd:annotation>
-         <xsd:documentation>Units: ft3 per min</xsd:documentation>
+         <xsd:documentation>  Units: ft3 per min</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="VentilationRate">
       <xsd:annotation>
@@ -2118,7 +2327,8 @@ NOTE: For roofs, differentiate between the initial Solar Reflectance value and t
             <dtyp:displayterm>Ventilation Rate</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="VisibleAbsorptance">
       <xsd:annotation>
@@ -2127,7 +2337,8 @@ NOTE: For roofs, differentiate between the initial Solar Reflectance value and t
             <dtyp:displayterm>Visible Absorptance</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="VisibleTransmittance">
       <xsd:annotation>
@@ -2136,7 +2347,8 @@ NOTE: For roofs, differentiate between the initial Solar Reflectance value and t
             <dtyp:displayterm>Visible Transmittance</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="Volume">
       <xsd:annotation>
@@ -2145,28 +2357,32 @@ NOTE: For roofs, differentiate between the initial Solar Reflectance value and t
             <dtyp:displayterm>Space Volume</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="WeatherPath">
       <xsd:annotation>
          <xsd:documentation>Directory path where design day weather files are located on the user's computer.</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="xsd:token"/>
+      <xsd:restriction base="xsd:token">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="WeatherShieldingFactor">
       <xsd:annotation>
-         <xsd:documentation>Units: none</xsd:documentation>
+         <xsd:documentation>  Units: none</xsd:documentation>
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Weather Shielding Factor (WSF)</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="WeatherStation">
       <xsd:annotation>
          <xsd:documentation>86 different weather stations that provide weather data for different climate zones.</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:EnumerationConstant"/>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="WeatherStationName">
       <xsd:annotation>
@@ -2174,13 +2390,15 @@ NOTE: For roofs, differentiate between the initial Solar Reflectance value and t
             <dtyp:displayterm>Weather Station</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="xsd:token"/>
+      <xsd:restriction base="xsd:token">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="WeatherStationNumber">
       <xsd:annotation>
          <xsd:documentation>A numeric value for each of the 86 weather stations used for table lookup  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:IntegerNonnegative"/>
+      <xsd:restriction base="dtyp:IntegerNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="WholeBuildingOccupancy">
       <xsd:annotation>
@@ -2200,51 +2418,59 @@ NOTE: For roofs, differentiate between the initial Solar Reflectance value and t
       <xsd:annotation>
          <xsd:documentation>This is the minimum ventilation rate required for a low-rise residential building when required to use a whole house fan.  Units: ft3 per min</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="WindDirection">
       <xsd:annotation>
-         <xsd:documentation>Units: deg arc</xsd:documentation>
+         <xsd:documentation>  Units: deg arc</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
-   </xsd:simpleType>
-   <xsd:simpleType name="WindSpeed">
-      <xsd:annotation>
-         <xsd:documentation>Units: mph</xsd:documentation>
-      </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="WindowArea">
       <xsd:annotation>
-         <xsd:documentation>Units: ft2</xsd:documentation>
+         <xsd:documentation>  Units: ft2</xsd:documentation>
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Window Area</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="WindSpeed">
+      <xsd:annotation>
+         <xsd:documentation>  Units: mph</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="WinterInsideDesignDryBulb">
       <xsd:annotation>
          <xsd:documentation>The design dry bulb temperature is the used for equipment sizing calculations.  Units: F</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="WinterOutsideDesignDryBulb">
       <xsd:annotation>
          <xsd:documentation>The design dry bulb temperature is the used for equipment sizing calculations.   According to the Standards, Heating design temperatures shall be no lower than the Heating Winter Median of Extremes values reported in the weather data in JA2.  Units: F</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="YearBuilt">
       <xsd:annotation>
-         <xsd:documentation>Units: none</xsd:documentation>
+         <xsd:documentation>  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="xsd:gYear"/>
+      <xsd:restriction base="xsd:gYear">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ZoneCount">
       <xsd:annotation>
-         <xsd:documentation>Units: none</xsd:documentation>
+         <xsd:documentation>  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:ItemCount"/>
+      <xsd:restriction base="dtyp:ItemCount">
+      </xsd:restriction>
    </xsd:simpleType>
 </xsd:schema>
