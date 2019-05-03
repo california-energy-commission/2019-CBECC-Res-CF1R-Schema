@@ -575,7 +575,7 @@
             <dtyp:displayterm value="InsulationSprayFoamHighRvalueHERS">High R-value Spray Foam Insulation</dtyp:displayterm>
             <dtyp:displayterm value="KitchenRangeHoodHERS">Kitchen range hood</dtyp:displayterm>
             <dtyp:displayterm value="None">-- None --</dtyp:displayterm>
-            <dtyp:displayterm value="QualityInsulationInstallationHERS">High Quality Insulation Installation (QII)</dtyp:displayterm>
+            <dtyp:displayterm value="QualityInsulationInstallationHERS">Quality insulation installation (QII)</dtyp:displayterm>
             <dtyp:displayterm value="VerifiedExistingConditionsHERS">Verified Existing Conditions</dtyp:displayterm>
             <dtyp:displayterm value="WholeHouseFanHERS">Whole House Fan Airflow and Fan Efficacy</dtyp:displayterm>
             <dtyp:displayterm value="ZonalSystemBypassDuctConditionsHERS">Bypass duct conditions in zonal system(s)</dtyp:displayterm>
@@ -718,6 +718,17 @@
          <xsd:documentation>This is a documentation tag for instructions on how to calculate a property or the rules for applying it.</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="xsd:token">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="CanFanEfficacyProtocolsTestSystem">
+      <xsd:annotation>
+         <xsd:documentation>CF2R-MCH-01a</xsd:documentation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Yes</dtyp:displayterm>
+            <dtyp:displayterm value="false">No</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="CanRA3_3AirflowProtocolsTestSystem">
@@ -1010,6 +1021,10 @@
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:City">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="CmRevision">
+      <xsd:restriction base="xsd:string">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="CommentsToPermitAuthority">
@@ -3007,7 +3022,7 @@
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="Fail">Fail - one or more applicable requirements are not met. Enter reason for failure in corrections notes field below</dtyp:displayterm>
-            <dtyp:displayterm value="N/A">This field or section is not applicable</dtyp:displayterm>
+            <dtyp:displayterm value="N/A">n/a</dtyp:displayterm>
             <dtyp:displayterm value="Pass">Pass - all applicable requirements are met.</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
@@ -3184,7 +3199,7 @@
             <dtyp:displayterm value="ExemptDuctSystemNotAllNew">Exempt - Duct System not entirely new</dtyp:displayterm>
             <dtyp:displayterm value="ExemptEvaporativeSystem">Exempt - Evaporative System</dtyp:displayterm>
             <dtyp:displayterm value="ExemptNoCooling">Exempt - No Cooling</dtyp:displayterm>
-            <dtyp:displayterm value="ExemptRA3_3Protocols">Exempt - RA3.3 Protocols are N/A</dtyp:displayterm>
+            <dtyp:displayterm value="ExemptRA3_3Protocols">Exempt - Approved Protocols are N/A</dtyp:displayterm>
             <dtyp:displayterm value="HERS_FanEfficacyAirflowRate">HERS verified fan efficacy (W/cfm) and airflow rate (cfm/ton)</dtyp:displayterm>
             <dtyp:displayterm value="HERS_ReturnDuctDesignTable150">HERS verified return duct design per Table 150.0-B, C</dtyp:displayterm>
          </xsd:appinfo>
@@ -3538,6 +3553,16 @@
       <xsd:restriction base="xsd:string">
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="DWHR_HERS_VerificationRequired">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Required</dtyp:displayterm>
+            <dtyp:displayterm value="false">Not Required</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="DWHR_InstallAngle">
       <xsd:annotation>
          <xsd:documentation>  Units: none</xsd:documentation>
@@ -3572,7 +3597,7 @@
             <dtyp:displayterm>DWHR Name</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:String50Char">
+      <xsd:restriction base="xsd:token">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="DWHR_PercentShowerServed">
@@ -6293,6 +6318,19 @@
          <xsd:enumeration value="ManufacturerSpec"/>
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="NewDuctingInstalled">
+      <xsd:annotation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Any New Ducting Installed?</dtyp:displayterm>
+         </xsd:appinfo>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Yes</dtyp:displayterm>
+            <dtyp:displayterm value="false">No</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="NominalCFM50">
       <xsd:annotation>
          <xsd:documentation>This is the fan flow if building pressure was induced to exactly 50Pa  Units: ft3 per min</xsd:documentation>
@@ -6347,7 +6385,8 @@
    <xsd:simpleType name="NotApplicableMessage">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
-            <dtyp:displayterm value="N/A">This field or section is not applicable</dtyp:displayterm>
+            <dtyp:displayterm value="N/A">n/a</dtyp:displayterm>
+            <dtyp:displayterm value="n/a">n/a</dtyp:displayterm>
             <dtyp:displayterm value="N/A - no ducts replaced">N/A - no ducts replaced</dtyp:displayterm>
             <dtyp:displayterm value="N/A - not a central DHW system">N/A - not a central DHW system</dtyp:displayterm>
             <dtyp:displayterm value="N/A.   External calculations are required.">N/A.   External calculations are required.</dtyp:displayterm>
@@ -6357,6 +6396,7 @@
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstantPermissive">
          <xsd:enumeration value="N/A"/>
+         <xsd:enumeration value="n/a"/>
          <xsd:enumeration value="N/A - no ducts replaced"/>
          <xsd:enumeration value="N/A - not a central DHW system"/>
          <xsd:enumeration value="N/A.   External calculations are required."/>
@@ -8340,13 +8380,13 @@ Time Dependent Valuation (TDV) Gas Propane energy is calculated by multiplying t
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="No">No</dtyp:displayterm>
-            <dtyp:displayterm value="NotApplicable">N/A</dtyp:displayterm>
+            <dtyp:displayterm value="NA">n/a</dtyp:displayterm>
             <dtyp:displayterm value="Yes">Yes</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="No"/>
-         <xsd:enumeration value="NotApplicable"/>
+         <xsd:enumeration value="NA"/>
          <xsd:enumeration value="Yes"/>
       </xsd:restriction>
    </xsd:simpleType>
@@ -8778,6 +8818,7 @@ Document Data</dtyp:displayterm>
       </xsd:sequence>
       <xsd:attribute name="complianceDocumentGUID" type="comp:ComplianceDocumentGUID" use="required"></xsd:attribute>
       <xsd:attribute name="complianceDocumentSchemaVersion" type="comp:ComplianceDocumentSchemaVersion" use="required"></xsd:attribute>
+      <xsd:attribute name="cmRevision" type="comp:CmRevision" use="required"></xsd:attribute>
       <xsd:attribute name="displayTag" type="comp:ComplianceDocumentDisplayTag" use="required"></xsd:attribute>
       <xsd:attribute name="payloadDocument" type="comp:ComplianceDocumentTag" use="required"></xsd:attribute>
       <xsd:attribute name="processedDate" type="comp:ComplianceApplicationDate" use="required"></xsd:attribute>

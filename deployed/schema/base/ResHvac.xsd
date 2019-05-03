@@ -2419,6 +2419,7 @@
             <dtyp:displayterm value="AOSmithPHPT80">AO Smith PHPT 80</dtyp:displayterm>
             <dtyp:displayterm value="AOSmithSHPT50">AO Smith SHPT 50</dtyp:displayterm>
             <dtyp:displayterm value="AOSmithSHPT80">AO Smith SHPT 80</dtyp:displayterm>
+            <dtyp:displayterm value="GE201250">GE 2012 50</dtyp:displayterm>
             <dtyp:displayterm value="GE201450">GE 2014 50</dtyp:displayterm>
             <dtyp:displayterm value="GE201480">GE 2014 80</dtyp:displayterm>
             <dtyp:displayterm value="RheemHB50">Rheem HB 50</dtyp:displayterm>
@@ -2441,6 +2442,7 @@
          <xsd:enumeration value="AOSmithPHPT80"/>
          <xsd:enumeration value="AOSmithSHPT50"/>
          <xsd:enumeration value="AOSmithSHPT80"/>
+         <xsd:enumeration value="GE201250"/>
          <xsd:enumeration value="GE201450"/>
          <xsd:enumeration value="GE201480"/>
          <xsd:enumeration value="RheemHB50"/>
@@ -2696,14 +2698,14 @@
          </xsd:appinfo>
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="CoilAC">AC Coil</dtyp:displayterm>
-            <dtyp:displayterm value="CoilAndNonfurnaceAH">Non-furnace Airhandler + Coil</dtyp:displayterm>
+            <dtyp:displayterm value="CoilAndNonfurnaceAHU">Non-furnace AHU + Coil</dtyp:displayterm>
             <dtyp:displayterm value="CoilHP">HP Coil</dtyp:displayterm>
             <dtyp:displayterm value="FancoilAHU">Fancoil AHU</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="CoilAC"/>
-         <xsd:enumeration value="CoilAndNonfurnaceAH"/>
+         <xsd:enumeration value="CoilAndNonfurnaceAHU"/>
          <xsd:enumeration value="CoilHP"/>
          <xsd:enumeration value="FancoilAHU"/>
       </xsd:restriction>
@@ -2712,6 +2714,14 @@
       <xsd:annotation>
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Number of Indoor Units</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:IntegerNonnegative"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="IndoorUnitsTotalCount">
+      <xsd:annotation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Total Number of Indoor Units</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:IntegerNonnegative"/>
@@ -3093,8 +3103,12 @@
             <dtyp:displayterm value="CentralPackagedHP">Central packaged HP</dtyp:displayterm>
             <dtyp:displayterm value="CentralSplitAC">Central split AC</dtyp:displayterm>
             <dtyp:displayterm value="CentralSplitHP">Central split HP</dtyp:displayterm>
-            <dtyp:displayterm value="DuctlessMultiSplitAC">Ductless Multi-Split Air Conditioner</dtyp:displayterm>
-            <dtyp:displayterm value="DuctlessMultiSplitHP">Ductless Multi-Split Heat Pump</dtyp:displayterm>
+            <dtyp:displayterm value="DuctedDuctlessMultiSplitAC">Multi-Split AC-ducted+ductless</dtyp:displayterm>
+            <dtyp:displayterm value="DuctedDuctlessMultiSplitHP">Multi-split HP-ducted+ductless</dtyp:displayterm>
+            <dtyp:displayterm value="DuctedMultiSplitAC">Multi-Split AC-ducted</dtyp:displayterm>
+            <dtyp:displayterm value="DuctedMultiSplitHP">Multi-split HP-ducted</dtyp:displayterm>
+            <dtyp:displayterm value="DuctlessMultiSplitAC">Multi-Split AC-ductless</dtyp:displayterm>
+            <dtyp:displayterm value="DuctlessMultiSplitHP">Multi-Split HP-ductless</dtyp:displayterm>
             <dtyp:displayterm value="DuctlessSplitAC">Ductless mini-split AC</dtyp:displayterm>
             <dtyp:displayterm value="DuctlessSplitHP">Ductless mini-split HP</dtyp:displayterm>
             <dtyp:displayterm value="DuctlessVRF_AC">Ductless VRF Air Conditioner</dtyp:displayterm>
@@ -3116,9 +3130,9 @@
             <dtyp:displayterm value="RoomHP">Room HP</dtyp:displayterm>
             <dtyp:displayterm value="SmallDuctHighVelocityAC">Small Duct High Velocity Air Conditioner</dtyp:displayterm>
             <dtyp:displayterm value="SmallDuctHighVelocityHP">Small Duct High Velocity Heat Pump</dtyp:displayterm>
-            <dtyp:displayterm value="VCHP_IndoorUnitDucted">VCHP Indoor Unit Ducted</dtyp:displayterm>
-            <dtyp:displayterm value="VCHP_IndoorUnitDuctedAndDuctless">VCHP Indoor Unit Ducted + Ductless</dtyp:displayterm>
-            <dtyp:displayterm value="VCHP_IndoorUnitDuctless">VCHP Indoor Unit Ductless</dtyp:displayterm>
+            <dtyp:displayterm value="VCHP_IndoorUnitDucted">VCHP-ducted</dtyp:displayterm>
+            <dtyp:displayterm value="VCHP_IndoorUnitDuctedAndDuctless">VCHP-ducted+ductless</dtyp:displayterm>
+            <dtyp:displayterm value="VCHP_IndoorUnitDuctless">VCHP-ductless</dtyp:displayterm>
          </xsd:appinfo>
          <xsd:appinfo source="CBECCresXML">
             <dtyp:CBECCresXMLterm value="AirToWaterHeatPump">AirToWaterHeatPump - Air to water heat pump (able to heat DHW)</dtyp:CBECCresXMLterm>
@@ -3128,6 +3142,10 @@
             <dtyp:CBECCresXMLterm value="CentralPackagedHP">central packaged HP</dtyp:CBECCresXMLterm>
             <dtyp:CBECCresXMLterm value="CentralSplitAC">central split AC</dtyp:CBECCresXMLterm>
             <dtyp:CBECCresXMLterm value="CentralSplitHP">central split HP</dtyp:CBECCresXMLterm>
+            <dtyp:CBECCresXMLterm value="DuctedDuctlessMultiSplitAC"/>
+            <dtyp:CBECCresXMLterm value="DuctedDuctlessMultiSplitHP"/>
+            <dtyp:CBECCresXMLterm value="DuctedMultiSplitAC"/>
+            <dtyp:CBECCresXMLterm value="DuctedMultiSplitHP"/>
             <dtyp:CBECCresXMLterm value="DuctlessMultiSplitAC"/>
             <dtyp:CBECCresXMLterm value="DuctlessMultiSplitHP"/>
             <dtyp:CBECCresXMLterm value="DuctlessSplitAC">ductless split AC</dtyp:CBECCresXMLterm>
@@ -3164,6 +3182,10 @@
          <xsd:enumeration value="CentralPackagedHP"/>
          <xsd:enumeration value="CentralSplitAC"/>
          <xsd:enumeration value="CentralSplitHP"/>
+         <xsd:enumeration value="DuctedDuctlessMultiSplitAC"/>
+         <xsd:enumeration value="DuctedDuctlessMultiSplitHP"/>
+         <xsd:enumeration value="DuctedMultiSplitAC"/>
+         <xsd:enumeration value="DuctedMultiSplitHP"/>
          <xsd:enumeration value="DuctlessMultiSplitAC"/>
          <xsd:enumeration value="DuctlessMultiSplitHP"/>
          <xsd:enumeration value="DuctlessSplitAC"/>
@@ -3352,8 +3374,10 @@
             <dtyp:displayterm value="CentralSplitHP">Central split HP</dtyp:displayterm>
             <dtyp:displayterm value="CombinedHydronic">Combined hydronic</dtyp:displayterm>
             <dtyp:displayterm value="CombinedHydronicForcedAir">Combined hydronic  + forced air</dtyp:displayterm>
+            <dtyp:displayterm value="DuctedDuctlessMultiSplitHP">Multi-split HP-ducted+ductless</dtyp:displayterm>
+            <dtyp:displayterm value="DuctedMultiSplitHP">Multi-split HP-ducted</dtyp:displayterm>
             <dtyp:displayterm value="DuctlessMiniSplitHP">Ductless MiniSplit HP</dtyp:displayterm>
-            <dtyp:displayterm value="DuctlessMultiSplitHP">Ductless Multi-Split Heat Pump</dtyp:displayterm>
+            <dtyp:displayterm value="DuctlessMultiSplitHP">Multi-split HP-ductless</dtyp:displayterm>
             <dtyp:displayterm value="DuctlessSplitHP">Ductless mini-split HP</dtyp:displayterm>
             <dtyp:displayterm value="DuctlessVRF_HP">Ductless VRF Heat Pump</dtyp:displayterm>
             <dtyp:displayterm value="Electric">Electric</dtyp:displayterm>
@@ -3367,13 +3391,14 @@
             <dtyp:displayterm value="HydronicForcedAir">Hydronic + forced air</dtyp:displayterm>
             <dtyp:displayterm value="HydronicHP">Hydronic HP</dtyp:displayterm>
             <dtyp:displayterm value="HydronicHP_ForcedAir">Hydronic HP + forced air</dtyp:displayterm>
+            <dtyp:displayterm value="NoHeating">No Heating</dtyp:displayterm>
             <dtyp:displayterm value="NonAirSourceHP">Non-air-source Heat Pump</dtyp:displayterm>
             <dtyp:displayterm value="RoomHP">Room HP</dtyp:displayterm>
             <dtyp:displayterm value="SmallDuctHighVelocityHP">Small Duct High Velocity Heat Pump</dtyp:displayterm>
             <dtyp:displayterm value="VCHP">VCHP</dtyp:displayterm>
-            <dtyp:displayterm value="VCHP_IndoorUnitDucted">VCHP Indoor Unit Ducted</dtyp:displayterm>
-            <dtyp:displayterm value="VCHP_IndoorUnitDuctedAndDuctless">VCHP Indoor Unit Ducted + Ductless</dtyp:displayterm>
-            <dtyp:displayterm value="VCHP_IndoorUnitDuctless">VCHP Indoor Unit Ductless</dtyp:displayterm>
+            <dtyp:displayterm value="VCHP_IndoorUnitDucted">VCHP-ducted</dtyp:displayterm>
+            <dtyp:displayterm value="VCHP_IndoorUnitDuctedAndDuctless">VCHP-ducted+ductless</dtyp:displayterm>
+            <dtyp:displayterm value="VCHP_IndoorUnitDuctless">VCHP-ductless</dtyp:displayterm>
             <dtyp:displayterm value="WoodHeat">Wood Heat</dtyp:displayterm>
          </xsd:appinfo>
          <xsd:appinfo source="CBECCresXML">
@@ -3385,6 +3410,8 @@
             <dtyp:CBECCresXMLterm value="CentralSplitHP">central split HP</dtyp:CBECCresXMLterm>
             <dtyp:CBECCresXMLterm value="CombinedHydronic">combined hydronic</dtyp:CBECCresXMLterm>
             <dtyp:CBECCresXMLterm value="CombinedHydronicForcedAir">combined hydronic+forced air</dtyp:CBECCresXMLterm>
+            <dtyp:CBECCresXMLterm value="DuctedDuctlessMultiSplitHP"/>
+            <dtyp:CBECCresXMLterm value="DuctedMultiSplitHP"/>
             <dtyp:CBECCresXMLterm value="DuctlessMiniSplitHP"/>
             <dtyp:CBECCresXMLterm value="DuctlessMultiSplitHP"/>
             <dtyp:CBECCresXMLterm value="DuctlessSplitHP">ductless split HP</dtyp:CBECCresXMLterm>
@@ -3400,6 +3427,7 @@
             <dtyp:CBECCresXMLterm value="HydronicForcedAir">hydronic+forced air</dtyp:CBECCresXMLterm>
             <dtyp:CBECCresXMLterm value="HydronicHP">hydronic HP</dtyp:CBECCresXMLterm>
             <dtyp:CBECCresXMLterm value="HydronicHP_ForcedAir">hydronic HP+forced air</dtyp:CBECCresXMLterm>
+            <dtyp:CBECCresXMLterm value="NoHeating"/>
             <dtyp:CBECCresXMLterm value="NonAirSourceHP"/>
             <dtyp:CBECCresXMLterm value="RoomHP"/>
             <dtyp:CBECCresXMLterm value="SmallDuctHighVelocityHP">Small Duct High Velocity Heat Pump</dtyp:CBECCresXMLterm>
@@ -3419,6 +3447,8 @@
          <xsd:enumeration value="CentralSplitHP"/>
          <xsd:enumeration value="CombinedHydronic"/>
          <xsd:enumeration value="CombinedHydronicForcedAir"/>
+         <xsd:enumeration value="DuctedDuctlessMultiSplitHP"/>
+         <xsd:enumeration value="DuctedMultiSplitHP"/>
          <xsd:enumeration value="DuctlessMiniSplitHP"/>
          <xsd:enumeration value="DuctlessMultiSplitHP"/>
          <xsd:enumeration value="DuctlessSplitHP"/>
@@ -3434,6 +3464,7 @@
          <xsd:enumeration value="HydronicForcedAir"/>
          <xsd:enumeration value="HydronicHP"/>
          <xsd:enumeration value="HydronicHP_ForcedAir"/>
+         <xsd:enumeration value="NoHeating"/>
          <xsd:enumeration value="NonAirSourceHP"/>
          <xsd:enumeration value="RoomHP"/>
          <xsd:enumeration value="SmallDuctHighVelocityHP"/>
@@ -3470,6 +3501,7 @@
             <dtyp:displayterm value="FancoilAHU">Fancoil AHU</dtyp:displayterm>
             <dtyp:displayterm value="IndoorCoil">Indoor coil</dtyp:displayterm>
             <dtyp:displayterm value="NoCoolingComponentsAltered">No Cooling Component Altered</dtyp:displayterm>
+            <dtyp:displayterm value="NonFurnaceAHU">Non-furnace AHU</dtyp:displayterm>
             <dtyp:displayterm value="OutdoorCondensingUnit">Outdoor condensing unit</dtyp:displayterm>
             <dtyp:displayterm value="OutdoorPackageUnit">Outdoor package unit</dtyp:displayterm>
             <dtyp:displayterm value="RefrigerantLineset">Refrigerant lineset</dtyp:displayterm>
@@ -3482,13 +3514,14 @@
          <xsd:enumeration value="FancoilAHU"/>
          <xsd:enumeration value="IndoorCoil"/>
          <xsd:enumeration value="NoCoolingComponentsAltered"/>
+         <xsd:enumeration value="NonFurnaceAHU"/>
          <xsd:enumeration value="OutdoorCondensingUnit"/>
          <xsd:enumeration value="OutdoorPackageUnit"/>
          <xsd:enumeration value="RefrigerantLineset"/>
          <xsd:enumeration value="TXV_EXV"/>
       </xsd:restriction>
    </xsd:simpleType>
-   <xsd:simpleType name="ResidentialHvacHeatiingComponentType">
+   <xsd:simpleType name="ResidentialHvacHeatingComponentType">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="AllNewHeatingComponents">All new heating components</dtyp:displayterm>
@@ -3502,6 +3535,7 @@
             <dtyp:displayterm value="IndoorCoil">Indoor coil</dtyp:displayterm>
             <dtyp:displayterm value="NoHeatingComponentsAltered">No Heating Component Altered</dtyp:displayterm>
             <dtyp:displayterm value="OutdoorCondensingUnit">Outdoor condensing unit</dtyp:displayterm>
+            <dtyp:displayterm value="OutdoorPackageUnit">Outdoor package Unit</dtyp:displayterm>
             <dtyp:displayterm value="RefrigerantLineset">Refrigerant lineset</dtyp:displayterm>
             <dtyp:displayterm value="TXV_EXV">TXV or EXV</dtyp:displayterm>
          </xsd:appinfo>
@@ -3517,6 +3551,7 @@
             <dtyp:CBECCresXMLterm value="IndoorCoil"/>
             <dtyp:CBECCresXMLterm value="NoHeatingComponentsAltered"/>
             <dtyp:CBECCresXMLterm value="OutdoorCondensingUnit"/>
+            <dtyp:CBECCresXMLterm value="OutdoorPackageUnit"/>
             <dtyp:CBECCresXMLterm value="RefrigerantLineset"/>
             <dtyp:CBECCresXMLterm value="TXV_EXV"/>
          </xsd:appinfo>
@@ -3533,6 +3568,7 @@
          <xsd:enumeration value="IndoorCoil"/>
          <xsd:enumeration value="NoHeatingComponentsAltered"/>
          <xsd:enumeration value="OutdoorCondensingUnit"/>
+         <xsd:enumeration value="OutdoorPackageUnit"/>
          <xsd:enumeration value="RefrigerantLineset"/>
          <xsd:enumeration value="TXV_EXV"/>
       </xsd:restriction>

@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.lmonte.com/besm/lit" version="2019.1.000" xmlns:com="http://www.lmonte.com/besm/com" xmlns:d="http://www.lmonte.com/besm/d" xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:lit="http://www.lmonte.com/besm/lit" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema
+   targetNamespace="http://www.lmonte.com/besm/lit"
+   xmlns:lit="http://www.lmonte.com/besm/lit"
+   xmlns:com="http://www.lmonte.com/besm/com"
+   xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
+   xmlns:d="http://www.lmonte.com/besm/d"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.000">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
    <xsd:simpleType name="InteriorLightingSystemName">
       <xsd:annotation>
          <xsd:documentation>Unique identification name for an InteriorLightingSystem instance</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:ObjectNamePermissive"/>
+      <xsd:restriction base="dtyp:ObjectNamePermissive">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="InteriorLightingSystemPower">
       <xsd:annotation>
-         <xsd:documentation>Units: W</xsd:documentation>
+         <xsd:documentation>  Units: W</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="IsLightingControlSystemOrEMCS_Present">
       <xsd:annotation>
@@ -21,43 +30,50 @@
             <dtyp:displayterm value="false">No</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="xsd:boolean"/>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="KitchenLuminaireHighEfficacySameTypeTotalPower">
       <xsd:annotation>
-         <xsd:documentation>Units: W</xsd:documentation>
+         <xsd:documentation>  Units: W</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="KitchenLuminaireLowEfficacySameTypeTotalPower">
       <xsd:annotation>
-         <xsd:documentation>Units: W</xsd:documentation>
+         <xsd:documentation>  Units: W</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="KitchenLuminairesHighEfficacyAllTypesTotalPower">
       <xsd:annotation>
-         <xsd:documentation>Units: W</xsd:documentation>
+         <xsd:documentation>  Units: W</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="KitchenLuminairesLowEfficacyAdditionalPowerAllowance">
       <xsd:annotation>
-         <xsd:documentation>Units: W</xsd:documentation>
+         <xsd:documentation>  Units: W</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="KitchenLuminairesLowEfficacyAllTypesTotalPower">
       <xsd:annotation>
-         <xsd:documentation>Units: W</xsd:documentation>
+         <xsd:documentation>  Units: W</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="KitchenLuminairesTotalLowEfficacyPowerAllowed">
       <xsd:annotation>
-         <xsd:documentation>Units: W</xsd:documentation>
+         <xsd:documentation>  Units: W</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="LightingControlDevice">
       <xsd:annotation>
@@ -96,16 +112,18 @@
             <dtyp:displayterm>Lighting Control Scheme</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:EnumerationConstant"/>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="LightingPowerReductionPercent">
       <xsd:annotation>
-         <xsd:documentation>Units: none</xsd:documentation>
+         <xsd:documentation>  Units: none</xsd:documentation>
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Percent Lighting Power Reduction for Space</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="LuminaireCategory">
       <xsd:annotation>
@@ -133,24 +151,28 @@
       <xsd:annotation>
          <xsd:documentation>Description of the luminaire</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="xsd:string"/>
+      <xsd:restriction base="xsd:string">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="LuminaireMountingHeight">
       <xsd:annotation>
          <xsd:documentation>Distance from the finished floor to the bottom of the luminaire  Units: ft</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="LuminaireName">
       <xsd:annotation>
          <xsd:documentation>Unique identification name for a Luminaire instance.</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="xsd:token"/>
+      <xsd:restriction base="xsd:token">
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="LuminairePower">
       <xsd:annotation>
-         <xsd:documentation>Units: W</xsd:documentation>
+         <xsd:documentation>  Units: W</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
    </xsd:simpleType>
 </xsd:schema>

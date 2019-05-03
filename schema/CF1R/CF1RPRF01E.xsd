@@ -45,7 +45,6 @@
             <xsd:element name="Report" type="xsd:base64Binary" id="Sign2"/>
             <xsd:element name="Report2" type="xsd:base64Binary" id="Sign3"/>
             <xsd:element name="Input" type="xsd:base64Binary" id="Sign4"/>
-            <xsd:element name="ProposedModel" type="xsd:base64Binary" id="Sign5"/>
          </xsd:sequence>
          <xsd:attribute name="revision" use="required" type="xsd:string" fixed="rev 20190401"/>
          <xsd:attribute name="doc" use="required" type="comp:ComplianceDocumentTag" fixed="CF1RPRF01E"/>
@@ -489,7 +488,7 @@
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_EnergyDesignRatings">
+         <xsd:element name="Section_EnergyDesignRatings" minOccurs="0">
             <xsd:annotation>
                <xsd:documentation source="FieldText"></xsd:documentation>
                <xsd:appinfo source="CBECCresXML">
@@ -828,7 +827,7 @@
                </xsd:choice>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_EnergyUseSummary">
+         <xsd:element name="Section_EnergyUseSummary" >
             <xsd:annotation>
                <xsd:documentation source="FieldText"></xsd:documentation>
                <xsd:appinfo source="CBECCresXML">
@@ -1830,14 +1829,24 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Db04_ChargingRate" type="hvac:ChargingRate" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Rate (kW)</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Db04_ChargingRate" type="hvac:ChargingRate" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Rate (kW)</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Db04_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Rate (kW)</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:element name="Db05_DischargingEfficiency" type="hvac:DischargingEfficiency" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Efficiency</xsd:documentation>
@@ -1847,14 +1856,24 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Db06_DischargingRate" type="hvac:DischargingRate" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Rate (kW)</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Db06_DischargingRate" type="hvac:DischargingRate" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Rate (kW)</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Db06_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Rate (kW)</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:sequence minOccurs="0" maxOccurs="unbounded">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">User Defined Fields</xsd:documentation>
@@ -2303,7 +2322,7 @@
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_G">
+         <xsd:element name="Section_G" >
             <xsd:annotation>
                <xsd:documentation source="FieldText">ZONE INFORMATION</xsd:documentation>
                <xsd:appinfo source="CBECCresXML">
@@ -3200,7 +3219,7 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="L11_AtticName" type="env:AtticName"  minOccurs="0">
+                                    <xsd:element name="L11_ConstructionAssemblyNamePerformanceRes" type="comp:ConstructionAssemblyNamePerformanceRes"  minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Existing Construction</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -4193,17 +4212,17 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Q08a_Thickness" type="com:Thickness" >
+                                    <xsd:element name="Q08a_Thickness" type="com:Thickness"  minOccurs="0">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Assembly Thickness (inches)</xsd:documentation>
+                                          <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Q08b_InsulationThickness" type="env:InsulationThickness" >
+                                    <xsd:element name="Q08b_InsulationThickness" type="env:InsulationThickness"  minOccurs="0">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Insulation Depth (inches)</xsd:documentation>
+                                          <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -4305,7 +4324,7 @@
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_S">
+         <xsd:element name="Section_S" minOccurs="0">
             <xsd:annotation>
                <xsd:documentation source="FieldText">WATER HEATING SYSTEMS</xsd:documentation>
                <xsd:appinfo source="CBECCresXML">
@@ -4313,7 +4332,7 @@
                </xsd:appinfo>
             </xsd:annotation>
             <xsd:complexType>
-               <xsd:choice minOccurs="0">
+               <xsd:choice >
                   <xsd:element name="TableWaterHeatingSF" >
                      <xsd:annotation>
                         <xsd:documentation source="FieldText"></xsd:documentation>
@@ -4412,25 +4431,7 @@
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
-                                    <xsd:choice maxOccurs="1">
-                                       <xsd:element name="S07_DWHR_RatedEffectiveness" type="comp:DWHR_RatedEffectiveness" >
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Shower Drain Water Heat Recovery Efficiency</xsd:documentation>
-                                             <xsd:appinfo source="CBECCresXML">
-                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                             </xsd:appinfo>
-                                          </xsd:annotation>
-                                       </xsd:element>
-                                       <xsd:element name="S07_NotApplicableMessage" type="comp:NotApplicableMessage" >
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Shower Drain Water Heat Recovery Efficiency</xsd:documentation>
-                                             <xsd:appinfo source="CBECCresXML">
-                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                             </xsd:appinfo>
-                                          </xsd:annotation>
-                                       </xsd:element>
-                                    </xsd:choice>
-                                    <xsd:element name="S08_CompactDistributionType" type="hvac:CompactDistributionType" >
+                                    <xsd:element name="S07_CompactDistributionType" type="hvac:CompactDistributionType" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Compact Distribution</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -4439,7 +4440,7 @@
                                        </xsd:annotation>
                                     </xsd:element>
                                     <xsd:choice maxOccurs="1">
-                                       <xsd:element name="S09_WaterHeatingSystemHERS_VerificationName" type="comp:WaterHeatingSystemHERS_VerificationName" >
+                                       <xsd:element name="S08_WaterHeatingSystemHERS_VerificationName" type="comp:WaterHeatingSystemHERS_VerificationName" >
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">HERS Verification</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
@@ -4447,7 +4448,7 @@
                                              </xsd:appinfo>
                                           </xsd:annotation>
                                        </xsd:element>
-                                       <xsd:element name="S09_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                       <xsd:element name="S08_NotApplicableMessage" type="comp:NotApplicableMessage" >
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">HERS Verification</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
@@ -4456,7 +4457,7 @@
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
-                                    <xsd:element name="S10_StatusEAA" type="com:StatusEAA"  minOccurs="0">
+                                    <xsd:element name="S09_StatusEAA" type="com:StatusEAA"  minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Status</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">This field is required if ProjectScopePerformance in GENERAL INFORMATION equals AdditionAlteration</xsd:documentation>
@@ -4469,7 +4470,7 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="S11_VerifiedExistingCondition" type="comp:VerifiedExistingCondition"  minOccurs="0">
+                                    <xsd:element name="S10_VerifiedExistingCondition" type="comp:VerifiedExistingCondition"  minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Verified Existing Condition</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">If ProjectScopePerformance in GENERAL INFORMATION equals AdditionAlteration a value is required, Else no value is required and "n/a" is displayed in report.</xsd:documentation>
@@ -4479,7 +4480,7 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="S12_WaterHeatingSystemName" type="hvac:WaterHeatingSystemName"  minOccurs="0">
+                                    <xsd:element name="S11_WaterHeatingSystemName" type="hvac:WaterHeatingSystemName"  minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Existing Water Heating System</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -4616,25 +4617,7 @@
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
-                                    <xsd:choice maxOccurs="1">
-                                       <xsd:element name="S09_DWHR_RatedEffectiveness" type="comp:DWHR_RatedEffectiveness" >
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Shower Drain Water Heat Recovery Efficiency</xsd:documentation>
-                                             <xsd:appinfo source="CBECCresXML">
-                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                             </xsd:appinfo>
-                                          </xsd:annotation>
-                                       </xsd:element>
-                                       <xsd:element name="S09_NotApplicableMessage" type="comp:NotApplicableMessage" >
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Shower Drain Water Heat Recovery Efficiency</xsd:documentation>
-                                             <xsd:appinfo source="CBECCresXML">
-                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                             </xsd:appinfo>
-                                          </xsd:annotation>
-                                       </xsd:element>
-                                    </xsd:choice>
-                                    <xsd:element name="S10_CompactDistributionType" type="hvac:CompactDistributionType" >
+                                    <xsd:element name="S09_CompactDistributionType" type="hvac:CompactDistributionType" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Compact Distribution</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -4643,7 +4626,7 @@
                                        </xsd:annotation>
                                     </xsd:element>
                                     <xsd:choice maxOccurs="1">
-                                       <xsd:element name="S11_WaterHeatingSystemHERS_VerificationName" type="comp:WaterHeatingSystemHERS_VerificationName" >
+                                       <xsd:element name="S10_WaterHeatingSystemHERS_VerificationName" type="comp:WaterHeatingSystemHERS_VerificationName" >
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">HERS Verification</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
@@ -4651,7 +4634,7 @@
                                              </xsd:appinfo>
                                           </xsd:annotation>
                                        </xsd:element>
-                                       <xsd:element name="S11_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                       <xsd:element name="S10_NotApplicableMessage" type="comp:NotApplicableMessage" >
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">HERS Verification</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
@@ -4660,7 +4643,7 @@
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
-                                    <xsd:element name="S12_StatusEAA" type="com:StatusEAA"  minOccurs="0">
+                                    <xsd:element name="S11_StatusEAA" type="com:StatusEAA"  minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Status</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">This field is required if ProjectScopePerformance in GENERAL INFORMATION equals AdditionAlteration</xsd:documentation>
@@ -4673,7 +4656,7 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="S13_VerifiedExistingCondition" type="comp:VerifiedExistingCondition"  minOccurs="0">
+                                    <xsd:element name="S12_VerifiedExistingCondition" type="comp:VerifiedExistingCondition"  minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Verified Existing Condition</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">If ProjectScopePerformance in GENERAL INFORMATION equals AdditionAlteration a value is required, Else no value is required and "n/a" is displayed in report.</xsd:documentation>
@@ -4683,7 +4666,7 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="S14_WaterHeatingSystemName" type="hvac:WaterHeatingSystemName"  minOccurs="0">
+                                    <xsd:element name="S13_WaterHeatingSystemName" type="hvac:WaterHeatingSystemName"  minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Existing Water Heating System</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -4993,14 +4976,6 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="T15_WaterHeaterName" type="hvac:WaterHeaterName"  minOccurs="0">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Existing Water Heater</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
                                     <xsd:sequence minOccurs="0" maxOccurs="unbounded">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">User Defined Fields</xsd:documentation>
@@ -5015,6 +4990,231 @@
                                        <xsd:element name="TUserDefined_FieldValueType" type="com:FieldValueType" >
                                        </xsd:element>
                                     </xsd:sequence>
+                                 </xsd:sequence>
+                              </xsd:complexType>
+                           </xsd:element>
+                        </xsd:sequence>
+                     </xsd:complexType>
+                  </xsd:element>
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="Section_Tcd" minOccurs="0">
+            <xsd:annotation>
+               <xsd:documentation source="FieldText">Water Heating - Compact Distribution</xsd:documentation>
+               <xsd:appinfo source="CBECCresXML">
+                  <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+               </xsd:appinfo>
+               <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="TableCompact" >
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText"></xsd:documentation>
+                        <xsd:appinfo source="CBECCresXML">
+                           <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                        </xsd:appinfo>
+                     </xsd:annotation>
+                     <xsd:complexType>
+                        <xsd:sequence>
+                           <xsd:element name="Row" minOccurs="1" maxOccurs="unbounded">
+                              <xsd:complexType>
+                                 <xsd:sequence>
+                                    <xsd:element name="Tcd01_ResidentialDwellingUnitDescriptor" type="com:ResidentialDwellingUnitDescriptor" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Dwelling Unit type</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Tcd02_WaterHeatingSystemName" type="hvac:WaterHeatingSystemName" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Water Heating System Name</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Tcd03_WaterHeaterToBath" type="comp:WaterHeaterToBath" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Master Bath distance of furthest fixture to Water Heater (ft)</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tcd03_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Master Bath distance of furthest fixture to Water Heater (ft)</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Tcd04_WaterHeaterToKitchen" type="comp:WaterHeaterToKitchen" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Kitchen distance of furthest fixture to Water Heater (ft)</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tcd04_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Kitchen distance of furthest fixture to Water Heater (ft)</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Tcd05_WaterHeaterToFurthest3rdFixture" type="comp:WaterHeaterToFurthest3rdFixture" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Furthest Third furthest fixture to Water Heater (ft)</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tcd05_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Furthest Third furthest fixture to Water Heater (ft)</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Tcd06_CompactDistributionHERS_VerificationName" type="comp:CompactDistributionHERS_VerificationName" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">HERS Verification</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tcd06_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">HERS Verification</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:element name="Tcd07_WaterHeaterWeightedDistance" type="comp:WaterHeaterWeightedDistance" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">Not reported in PDF</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Tcd08_WaterHeaterQualificationDistance" type="comp:WaterHeaterQualificationDistance" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">Not reported in PDF</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                 </xsd:sequence>
+                              </xsd:complexType>
+                           </xsd:element>
+                        </xsd:sequence>
+                     </xsd:complexType>
+                  </xsd:element>
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="Section_Tdw" minOccurs="0">
+            <xsd:annotation>
+               <xsd:documentation source="FieldText">Water Heating - Drain Water Heat Recovery</xsd:documentation>
+               <xsd:appinfo source="CBECCresXML">
+                  <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+               </xsd:appinfo>
+               <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="TableDWHR" >
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText"></xsd:documentation>
+                        <xsd:appinfo source="CBECCresXML">
+                           <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                        </xsd:appinfo>
+                     </xsd:annotation>
+                     <xsd:complexType>
+                        <xsd:sequence>
+                           <xsd:element name="Row" minOccurs="1" maxOccurs="unbounded">
+                              <xsd:complexType>
+                                 <xsd:sequence>
+                                    <xsd:element name="Tdw01_ResidentialDwellingUnitDescriptor" type="com:ResidentialDwellingUnitDescriptor" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Dwelling Unit type</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Tdw02_DWHR_Name" type="comp:DWHR_Name" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">DHW System &amp; DWHR Names</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Tdw03_DWHR_Configuration" type="comp:DWHR_Configuration" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Installation Configuration</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Tdw04_DWHR_DrainCount" type="comp:DWHR_DrainCount" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Shower Drains</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Tdw05_DWHR_RatedEffectiveness" type="comp:DWHR_RatedEffectiveness" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Shower Drain Water Heat Recovery Efficiency (%)</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Tdw06_DWHR_HERS_VerificationRequired" type="comp:DWHR_HERS_VerificationRequired" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">HERS Verification</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Tdw07_DWHR_PercentShowerServed" type="comp:DWHR_PercentShowerServed" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">NOT REPORTED IN PDF</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
                                  </xsd:sequence>
                               </xsd:complexType>
                            </xsd:element>
@@ -5982,6 +6182,150 @@
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
+         <xsd:element name="Section_Ii" minOccurs="0">
+            <xsd:annotation>
+               <xsd:documentation source="FieldText">HVAC Distribution - Verified Duct Design</xsd:documentation>
+               <xsd:documentation source="CalculationsAndRules">This section contains data required by the downstream compliance report, CF2R-MCH29-H</xsd:documentation>
+               <xsd:appinfo source="CBECCresXML">
+                  <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+               </xsd:appinfo>
+               <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="TableDuctDesign" >
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText"></xsd:documentation>
+                        <xsd:appinfo source="CBECCresXML">
+                           <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                        </xsd:appinfo>
+                     </xsd:annotation>
+                     <xsd:complexType>
+                        <xsd:sequence>
+                           <xsd:element name="Row" minOccurs="1" maxOccurs="unbounded">
+                              <xsd:complexType>
+                                 <xsd:sequence>
+                                    <xsd:element name="Ii01_SpaceConditioningDistributionSystemName" type="hvac:SpaceConditioningDistributionSystemName" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Distribution System</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Ii02_AirSegmentName" type="hvac:AirSegmentName" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Duct Segment Identification</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Ii03_AirSegmentType" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Suppy/ Return</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                       <xsd:simpleType>
+                                          <xsd:restriction base="hvac:AirSegmentType">
+                                             <xsd:enumeration value="Return"/>
+                                             <xsd:enumeration value="Supply"/>
+                                          </xsd:restriction>
+                                       </xsd:simpleType>
+                                    </xsd:element>
+                                    <xsd:element name="Ii04_DuctNominalDiameter" type="hvac:DuctNominalDiameter" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Nominal Diam. (in)</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Ii05_DuctLength" type="hvac:DuctLength" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Length (ft)</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Ii06_DuctRValue" type="hvac:DuctRValue" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Duct R-value</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Ii07_InsulationRValue" type="env:InsulationRValue" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Attic Insul. R-value</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Ii08_InsulationThickness" type="env:InsulationThickness" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Attic Insul. Depth (in)</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Ii09_InsulationType" type="env:InsulationType" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Attic Insul. Type</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Ii10_DuctBuriedLevel" type="hvac:DuctBuriedLevel" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Duct Burial Level</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Ii10_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Duct Burial Level</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:element name="Ii11_BuriedDuctInsulationDevice" type="hvac:BuriedDuctInsulationDevice" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Containment System</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Ii12_StatusEAA" type="hvac:StatusEAA" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Status</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                 </xsd:sequence>
+                              </xsd:complexType>
+                           </xsd:element>
+                        </xsd:sequence>
+                     </xsd:complexType>
+                  </xsd:element>
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
          <xsd:element name="Section_Bb" minOccurs="0">
             <xsd:annotation>
                <xsd:documentation source="FieldText">HVAC DISTRIBUTION - HERS VERIFICATION</xsd:documentation>
@@ -6503,393 +6847,14 @@
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_Gg" minOccurs="0">
+         <xsd:element name="Section_TitleVerifyAndAlteredHERS" minOccurs="0">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">Water Heating - Compact Distribution</xsd:documentation>
+               <xsd:documentation source="FieldText"></xsd:documentation>
+               <xsd:documentation source="AdditionalRequirements">HERS RATER VERIFICATION OF EXISTING CONDITIONS</xsd:documentation>
                <xsd:appinfo source="CBECCresXML">
                   <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                </xsd:appinfo>
-               <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
             </xsd:annotation>
-            <xsd:complexType>
-               <xsd:sequence>
-                  <xsd:element name="TableCompact" >
-                     <xsd:annotation>
-                        <xsd:documentation source="FieldText"></xsd:documentation>
-                        <xsd:appinfo source="CBECCresXML">
-                           <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                        </xsd:appinfo>
-                     </xsd:annotation>
-                     <xsd:complexType>
-                        <xsd:sequence>
-                           <xsd:element name="Row" minOccurs="1" maxOccurs="unbounded">
-                              <xsd:complexType>
-                                 <xsd:sequence>
-                                    <xsd:element name="Gg01_ResidentialDwellingUnitDescriptor" type="com:ResidentialDwellingUnitDescriptor" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Dwelling Unit type</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Gg02_WaterHeatingSystemName" type="hvac:WaterHeatingSystemName" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Water Heating System Name</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:choice maxOccurs="1">
-                                       <xsd:element name="Gg03_WaterHeaterToBath" type="comp:WaterHeaterToBath" >
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Master Bath distance of furthest fixture to Water Heater (ft)</xsd:documentation>
-                                             <xsd:appinfo source="CBECCresXML">
-                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                             </xsd:appinfo>
-                                          </xsd:annotation>
-                                       </xsd:element>
-                                       <xsd:element name="Gg03_NotApplicableMessage" type="comp:NotApplicableMessage" >
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Master Bath distance of furthest fixture to Water Heater (ft)</xsd:documentation>
-                                             <xsd:appinfo source="CBECCresXML">
-                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                             </xsd:appinfo>
-                                          </xsd:annotation>
-                                       </xsd:element>
-                                    </xsd:choice>
-                                    <xsd:choice maxOccurs="1">
-                                       <xsd:element name="Gg04_WaterHeaterToKitchen" type="comp:WaterHeaterToKitchen" >
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Kitchen distance of furthest fixture to Water Heater (ft)</xsd:documentation>
-                                             <xsd:appinfo source="CBECCresXML">
-                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                             </xsd:appinfo>
-                                          </xsd:annotation>
-                                       </xsd:element>
-                                       <xsd:element name="Gg04_NotApplicableMessage" type="comp:NotApplicableMessage" >
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Kitchen distance of furthest fixture to Water Heater (ft)</xsd:documentation>
-                                             <xsd:appinfo source="CBECCresXML">
-                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                             </xsd:appinfo>
-                                          </xsd:annotation>
-                                       </xsd:element>
-                                    </xsd:choice>
-                                    <xsd:choice maxOccurs="1">
-                                       <xsd:element name="Gg05_WaterHeaterToFurthest3rdFixture" type="comp:WaterHeaterToFurthest3rdFixture" >
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Furthest Third furthest fixture to Water Heater (ft)</xsd:documentation>
-                                             <xsd:appinfo source="CBECCresXML">
-                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                             </xsd:appinfo>
-                                          </xsd:annotation>
-                                       </xsd:element>
-                                       <xsd:element name="Gg05_NotApplicableMessage" type="comp:NotApplicableMessage" >
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Furthest Third furthest fixture to Water Heater (ft)</xsd:documentation>
-                                             <xsd:appinfo source="CBECCresXML">
-                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                             </xsd:appinfo>
-                                          </xsd:annotation>
-                                       </xsd:element>
-                                    </xsd:choice>
-                                    <xsd:choice maxOccurs="1">
-                                       <xsd:element name="Gg06_CompactDistributionHERS_VerificationName" type="comp:CompactDistributionHERS_VerificationName" >
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">HERS Verification</xsd:documentation>
-                                             <xsd:appinfo source="CBECCresXML">
-                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                             </xsd:appinfo>
-                                          </xsd:annotation>
-                                       </xsd:element>
-                                       <xsd:element name="Gg06_NotApplicableMessage" type="comp:NotApplicableMessage" >
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">HERS Verification</xsd:documentation>
-                                             <xsd:appinfo source="CBECCresXML">
-                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                             </xsd:appinfo>
-                                          </xsd:annotation>
-                                       </xsd:element>
-                                    </xsd:choice>
-                                    <xsd:element name="Gg07_WaterHeaterWeightedDistance" type="comp:WaterHeaterWeightedDistance" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Not reported in PDF</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Gg08_WaterHeaterQualificationDistance" type="comp:WaterHeaterQualificationDistance" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Not reported in PDF</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                 </xsd:sequence>
-                              </xsd:complexType>
-                           </xsd:element>
-                        </xsd:sequence>
-                     </xsd:complexType>
-                  </xsd:element>
-               </xsd:sequence>
-            </xsd:complexType>
-         </xsd:element>
-         <xsd:element name="Section_Hh" minOccurs="0">
-            <xsd:annotation>
-               <xsd:documentation source="FieldText">Water Heating - Drain Water Heat Recovery</xsd:documentation>
-               <xsd:appinfo source="CBECCresXML">
-                  <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-               </xsd:appinfo>
-               <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
-            </xsd:annotation>
-            <xsd:complexType>
-               <xsd:sequence>
-                  <xsd:element name="TableDWHR" >
-                     <xsd:annotation>
-                        <xsd:documentation source="FieldText"></xsd:documentation>
-                        <xsd:appinfo source="CBECCresXML">
-                           <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                        </xsd:appinfo>
-                     </xsd:annotation>
-                     <xsd:complexType>
-                        <xsd:sequence>
-                           <xsd:element name="Row" minOccurs="1" maxOccurs="unbounded">
-                              <xsd:complexType>
-                                 <xsd:sequence>
-                                    <xsd:element name="Hh01_ResidentialDwellingUnitDescriptor" type="com:ResidentialDwellingUnitDescriptor" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Dwelling Unit type</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Hh02_DWHR_Name" type="comp:DWHR_Name" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">DHW System &amp; DWHR Names</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Hh03_DWHR_Configuration" type="comp:DWHR_Configuration" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Installation Configuration</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Hh04_DWHR_DrainCount" type="comp:DWHR_DrainCount" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Shower Drains</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Hh05_DWHR_RatedEffectiveness" type="comp:DWHR_RatedEffectiveness" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Shower Drain Water Heat Recovery Efficiency (%)</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:choice maxOccurs="1">
-                                       <xsd:element name="Hh06_DWHR_HERS_VerificationName" type="comp:DWHR_HERS_VerificationName" >
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">HERS Verification</xsd:documentation>
-                                             <xsd:appinfo source="CBECCresXML">
-                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                             </xsd:appinfo>
-                                          </xsd:annotation>
-                                       </xsd:element>
-                                       <xsd:element name="Hh06_NotApplicableMessage" type="comp:NotApplicableMessage" >
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">HERS Verification</xsd:documentation>
-                                             <xsd:appinfo source="CBECCresXML">
-                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                             </xsd:appinfo>
-                                          </xsd:annotation>
-                                       </xsd:element>
-                                    </xsd:choice>
-                                    <xsd:element name="Hh07_DWHR_PercentShowerServed" type="comp:DWHR_PercentShowerServed" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">NOT REPORTED IN PDF</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                 </xsd:sequence>
-                              </xsd:complexType>
-                           </xsd:element>
-                        </xsd:sequence>
-                     </xsd:complexType>
-                  </xsd:element>
-               </xsd:sequence>
-            </xsd:complexType>
-         </xsd:element>
-         <xsd:element name="Section_Ii" minOccurs="0">
-            <xsd:annotation>
-               <xsd:documentation source="FieldText">HVAC Distribution - Verified Duct Design</xsd:documentation>
-               <xsd:documentation source="CalculationsAndRules">This section contains data required by the downstream compliance report, CF2R-MCH29-H</xsd:documentation>
-               <xsd:appinfo source="CBECCresXML">
-                  <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-               </xsd:appinfo>
-               <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
-            </xsd:annotation>
-            <xsd:complexType>
-               <xsd:sequence>
-                  <xsd:element name="TableDuctDesign" >
-                     <xsd:annotation>
-                        <xsd:documentation source="FieldText"></xsd:documentation>
-                        <xsd:appinfo source="CBECCresXML">
-                           <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                        </xsd:appinfo>
-                     </xsd:annotation>
-                     <xsd:complexType>
-                        <xsd:sequence>
-                           <xsd:element name="Row" minOccurs="1" maxOccurs="unbounded">
-                              <xsd:complexType>
-                                 <xsd:sequence>
-                                    <xsd:element name="Ii01_SpaceConditioningDistributionSystemName" type="hvac:SpaceConditioningDistributionSystemName" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Distribution System</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Ii02_AirSegmentName" type="hvac:AirSegmentName" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Duct Segment Identification</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Ii03_AirSegmentType" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Suppy/ Return</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                       <xsd:simpleType>
-                                          <xsd:restriction base="hvac:AirSegmentType">
-                                             <xsd:enumeration value="Return"/>
-                                             <xsd:enumeration value="Supply"/>
-                                          </xsd:restriction>
-                                       </xsd:simpleType>
-                                    </xsd:element>
-                                    <xsd:element name="Ii04_DuctNominalDiameter" type="hvac:DuctNominalDiameter" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Nominal Diam. (in)</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Ii05_DuctLength" type="hvac:DuctLength" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Length (ft)</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Ii06_DuctRValue" type="hvac:DuctRValue" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Duct R-value</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Ii07_InsulationRValue" type="env:InsulationRValue" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Attic Insul. R-value</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Ii08_InsulationThickness" type="env:InsulationThickness" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Attic Insul. Depth (in)</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Ii09_InsulationType" type="env:InsulationType" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Attic Insul. Type</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:choice maxOccurs="1">
-                                       <xsd:element name="Ii10_DuctBuriedLevel" type="hvac:DuctBuriedLevel" >
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Duct Burial Level</xsd:documentation>
-                                             <xsd:appinfo source="CBECCresXML">
-                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                             </xsd:appinfo>
-                                          </xsd:annotation>
-                                       </xsd:element>
-                                       <xsd:element name="Ii10_NotApplicableMessage" type="comp:NotApplicableMessage" >
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Duct Burial Level</xsd:documentation>
-                                             <xsd:appinfo source="CBECCresXML">
-                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                             </xsd:appinfo>
-                                          </xsd:annotation>
-                                       </xsd:element>
-                                    </xsd:choice>
-                                    <xsd:element name="Ii11_BuriedDuctInsulationDevice" type="hvac:BuriedDuctInsulationDevice" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Containment System</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Ii12_StatusEAA" type="hvac:StatusEAA" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Status</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                 </xsd:sequence>
-                              </xsd:complexType>
-                           </xsd:element>
-                        </xsd:sequence>
-                     </xsd:complexType>
-                  </xsd:element>
-                  <xsd:element name="TitleVerfiyAndAlteredHERS" minOccurs="0">
-                     <xsd:annotation>
-                        <xsd:documentation source="FieldText"></xsd:documentation>
-                        <xsd:documentation source="AdditionalRequirements">HERS RATER VERIFICATION OF EXISTING CONDITIONS</xsd:documentation>
-                        <xsd:appinfo source="CBECCresXML">
-                           <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                        </xsd:appinfo>
-                     </xsd:annotation>
-                  </xsd:element>
-               </xsd:sequence>
-            </xsd:complexType>
          </xsd:element>
          <xsd:element name="Section_Jj" minOccurs="0">
             <xsd:annotation>
@@ -6963,13 +6928,13 @@
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_AtticVA" minOccurs="1">
+         <xsd:element name="Section_AtticVA" minOccurs="0">
             <xsd:annotation>
                <xsd:documentation source="FieldText">ATTIC - VERIFIED &amp; ALTERED</xsd:documentation>
                <xsd:appinfo source="CBECCresXML">
                   <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                </xsd:appinfo>
-               <xsd:documentation source="MinOccurs">This section is required.</xsd:documentation>
+               <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
@@ -7555,7 +7520,7 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="OoHeating">
+                                    <xsd:element name="OoHeating" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText"></xsd:documentation>
                                        </xsd:annotation>
@@ -7609,7 +7574,7 @@
                                           </xsd:choice>
                                        </xsd:complexType>
                                     </xsd:element>
-                                    <xsd:element name="OoCooling">
+                                    <xsd:element name="OoCooling" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText"></xsd:documentation>
                                        </xsd:annotation>
@@ -8028,6 +7993,14 @@
                                           </xsd:annotation>
                                        </xsd:element>
                                        <xsd:element name="Rr05_UniformEnergyFactor" type="hvac:UniformEnergyFactor" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Energy Factor or Efficiency</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Rr05_EnergyFactor" type="hvac:EnergyFactor" >
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Energy Factor or Efficiency</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
