@@ -3299,7 +3299,7 @@
                                     </xsd:element>
                                     <xsd:element name="M03a_PartitionName" type="env:PartitionName" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Surface (Orientation-Azimuth)</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Surface</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">Display: PartitionName (PartitiionRelativePosition - Azimth)</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>ExtWall:Name</dtyp:CBECCresXMLterm>
@@ -3309,7 +3309,7 @@
                                     </xsd:element>
                                     <xsd:element name="M03b_RelativePosition" type="com:RelativePosition" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Surface (Orientation-Azimuth)</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Orientation</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>ExtWall:Orientation</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -3317,7 +3317,7 @@
                                     </xsd:element>
                                     <xsd:element name="M03c_Azimuth" type="dtyp:Azimuth" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Surface (Orientation-Azimuth)</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Azimuth</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>ExtWall:Azimuth</dtyp:CBECCresXMLterm>
                                              <dtyp:termConditions>Note that Azimuth is also a property of Win and Skylt</dtyp:termConditions>
@@ -3335,7 +3335,7 @@
                                     </xsd:element>
                                     <xsd:element name="M05_Height" type="dtyp:Height"  minOccurs="0">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Heigth (ft)</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Height (ft)</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">This field is present if  ResidentialFenestrationType equals Window</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>Win:Height</dtyp:CBECCresXMLterm>
