@@ -33,6 +33,16 @@
          <xsd:enumeration value="MeasuredACH50"/>
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="ACH50Adjusted">
+      <xsd:annotation>
+         <xsd:documentation>  Units: ACH</xsd:documentation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>ACH 50</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="ACH50Altered">
       <xsd:annotation>
          <xsd:documentation>  Units: ACH</xsd:documentation>
@@ -310,6 +320,22 @@
          <xsd:enumeration value="BlowerDoorRevenueMeter"/>
          <xsd:enumeration value="CaptureHoodPortableMeter"/>
          <xsd:enumeration value="CaptureHoodRevenueMeter"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="AirHandlerFurnaceTypeRequired">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="FancoilAHU">Fancoil air-handling unit</dtyp:displayterm>
+            <dtyp:displayterm value="FurnaceAHU">Furnace air-handling unit</dtyp:displayterm>
+            <dtyp:displayterm value="NonFurnaceAHU">Non-furnace air-handling unit</dtyp:displayterm>
+            <dtyp:displayterm value="NoRequiredType">No</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="FancoilAHU"/>
+         <xsd:enumeration value="FurnaceAHU"/>
+         <xsd:enumeration value="NonFurnaceAHU"/>
+         <xsd:enumeration value="NoRequiredType"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="AirLeakageRateMeasuredACH50">
@@ -2475,6 +2501,16 @@
       <xsd:restriction base="xsd:string">
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="CoolingVent_VerificationRequired">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Yes</dtyp:displayterm>
+            <dtyp:displayterm value="false">No</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="CoolRoofComplianceMethod">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
@@ -2888,6 +2924,19 @@
       <xsd:restriction base="xsd:boolean">
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="DoesHeatPumpHSPF_Comply">
+      <xsd:annotation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Does Heat Pump HSPF Comply</dtyp:displayterm>
+         </xsd:appinfo>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">System Passes HSPF Verification</dtyp:displayterm>
+            <dtyp:displayterm value="false">System Fails</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="DoesInsulationHaveAirSpace">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
@@ -3003,6 +3052,16 @@
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="true">Outdoor temperature is within range for using Superheat refrigerant charge verification method.</dtyp:displayterm>
             <dtyp:displayterm value="false">Superheat refrigerant charge verification method is not allowed to be used when the outdoor temperature is less than 55F or greater than 115F, do not proceed.</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="DoesSystemComplyWithAirflowRateVerification">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">SC System complies with Minimum System Airflow Rate Verification</dtyp:displayterm>
+            <dtyp:displayterm value="false">SC System does not comply with Minimum System Airflow Rate Verification</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="xsd:boolean">
@@ -4680,6 +4739,10 @@
       <xsd:restriction base="dtyp:DecimalNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="HeatPumpSystemHERS_VerificationName">
+      <xsd:restriction base="xsd:string">
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="HERS_MeasuresCompletionStatus">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
@@ -6275,6 +6338,16 @@
          <xsd:enumeration value="SystemDoesNotComplyCF2RMCH28Required"/>
          <xsd:enumeration value="SystemDoesNotComplyCF3RMCH23Required"/>
          <xsd:enumeration value="SystemDoesNotComplyCF3RMCH28Required"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="MinimumContinuousAirflow">
+      <xsd:annotation>
+         <xsd:documentation>  Units: ft3 per min</xsd:documentation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Required Minimum Continuous Ventilation Airflow</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="MinReadingAcknowledge">
@@ -8190,6 +8263,7 @@ Time Dependent Valuation (TDV) Gas Propane energy is calculated by multiplying t
             <dtyp:displayterm value="Compliance2015">Compliance 2015</dtyp:displayterm>
             <dtyp:displayterm value="Compliance2016">Compliance 2016</dtyp:displayterm>
             <dtyp:displayterm value="Compliance2017">Compliance 2017</dtyp:displayterm>
+            <dtyp:displayterm value="Compliance2019">Compliance 2019</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
@@ -8198,6 +8272,17 @@ Time Dependent Valuation (TDV) Gas Propane energy is calculated by multiplying t
          <xsd:enumeration value="Compliance2015"/>
          <xsd:enumeration value="Compliance2016"/>
          <xsd:enumeration value="Compliance2017"/>
+         <xsd:enumeration value="Compliance2019"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="TotalContinuousAirflow">
+      <xsd:annotation>
+         <xsd:documentation>  Units: ft3 per min</xsd:documentation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Total Continuous Ventialtion Airflow</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="TotalEnergyUse">
@@ -8323,6 +8408,32 @@ Time Dependent Valuation (TDV) Gas Propane energy is calculated by multiplying t
       <xsd:restriction base="dtyp:DecimalNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="VerificationRequiredCapacity17F">
+      <xsd:annotation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Heat Pump Capacity at 17F Verification Required</dtyp:displayterm>
+         </xsd:appinfo>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Yes</dtyp:displayterm>
+            <dtyp:displayterm value="false">No</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="VerificationRequiredCapacity47F">
+      <xsd:annotation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Heat Pump Capacity at 47F Verification Required</dtyp:displayterm>
+         </xsd:appinfo>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Yes</dtyp:displayterm>
+            <dtyp:displayterm value="false">No</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="VerificationRequiredEER">
       <xsd:annotation>
          <xsd:appinfo source="displaytermType">
@@ -8340,6 +8451,19 @@ Time Dependent Valuation (TDV) Gas Propane energy is calculated by multiplying t
       <xsd:annotation>
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Heat Pump Heating Output Verification Required</dtyp:displayterm>
+         </xsd:appinfo>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Yes</dtyp:displayterm>
+            <dtyp:displayterm value="false">No</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="VerificationRequiredHSPF">
+      <xsd:annotation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>HSPF Performance Verification Required</dtyp:displayterm>
          </xsd:appinfo>
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="true">Yes</dtyp:displayterm>

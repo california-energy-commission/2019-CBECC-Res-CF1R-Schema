@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.lmonte.com/besm/hvac" version="2019.1.000" xmlns:com="http://www.lmonte.com/besm/com" xmlns:d="http://www.lmonte.com/besm/d" xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:hvac="http://www.lmonte.com/besm/hvac" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.lmonte.com/besm/hvac" version="2019.1.001" xmlns:com="http://www.lmonte.com/besm/com" xmlns:d="http://www.lmonte.com/besm/d" xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:hvac="http://www.lmonte.com/besm/hvac" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
    <xsd:simpleType name="AOSmithHPTU50SimulationGroup">
@@ -1477,7 +1477,7 @@
       <xsd:annotation>
          <xsd:documentation>Units: none</xsd:documentation>
          <xsd:appinfo source="displaytermType">
-            <dtyp:displayterm>Efficiency AFUE</dtyp:displayterm>
+            <dtyp:displayterm>AFUE</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
@@ -1652,16 +1652,16 @@
             <dtyp:displayterm>Efficiency Type</dtyp:displayterm>
          </xsd:appinfo>
          <xsd:appinfo source="displayterm">
-            <dtyp:displayterm value="AFUE">Annual Fuel Utilization Efficiency (AFUE)</dtyp:displayterm>
-            <dtyp:displayterm value="COP">Coefficient Of Performance (COP)</dtyp:displayterm>
-            <dtyp:displayterm value="EER">Energy Efficiency Ratio (EER)</dtyp:displayterm>
-            <dtyp:displayterm value="EnergyFactor">Energy Factor (EF)</dtyp:displayterm>
-            <dtyp:displayterm value="HSPF">Heating Seasonal Performance Factor (HSPF)</dtyp:displayterm>
-            <dtyp:displayterm value="IEER">Integrated Energy Efficiency Ratio (IEER)</dtyp:displayterm>
+            <dtyp:displayterm value="AFUE">AFUE</dtyp:displayterm>
+            <dtyp:displayterm value="COP">COP</dtyp:displayterm>
+            <dtyp:displayterm value="EER">EER</dtyp:displayterm>
+            <dtyp:displayterm value="EnergyFactor">EF</dtyp:displayterm>
+            <dtyp:displayterm value="HSPF">HSPF</dtyp:displayterm>
+            <dtyp:displayterm value="IEER">IEER</dtyp:displayterm>
             <dtyp:displayterm value="NEEA">NEEA</dtyp:displayterm>
-            <dtyp:displayterm value="SEER">Seasonal Energy Efficiency Ratio (SEER)</dtyp:displayterm>
-            <dtyp:displayterm value="ThermalEfficiency">Thermal Efficiency (TE)</dtyp:displayterm>
-            <dtyp:displayterm value="UniformEnergyFactor">Uniform Energy Factor (UEF)</dtyp:displayterm>
+            <dtyp:displayterm value="SEER">SEER</dtyp:displayterm>
+            <dtyp:displayterm value="ThermalEfficiency">TE</dtyp:displayterm>
+            <dtyp:displayterm value="UniformEnergyFactor">UEF</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
