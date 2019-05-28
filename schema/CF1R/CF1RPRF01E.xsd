@@ -7083,8 +7083,7 @@
                                        <xsd:element name="Y04_EfficiencyCOP"
                                           type="hvac:EfficiencyCOP">
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Heating
-                                                HSPF/COP</xsd:documentation>
+                                             <xsd:documentation source="FieldText">HSPF/COP</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>HVACHtPump:COP47</dtyp:CBECCresXMLterm>
                                              </xsd:appinfo>
@@ -7093,8 +7092,7 @@
                                        <xsd:element name="Y04_EfficiencyHSPF"
                                           type="hvac:EfficiencyHSPF">
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Heating
-                                                HSPF/COP</xsd:documentation>
+                                             <xsd:documentation source="FieldText">HSPF/COP</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                              </xsd:appinfo>
@@ -7104,8 +7102,7 @@
                                     <xsd:element name="Y05_HeatPumpHeatCapacity47F"
                                        type="comp:HeatPumpHeatCapacity47F" minOccurs="0">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Heating Cap
-                                             47</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Cap 47</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -7124,8 +7121,7 @@
                                     <xsd:element name="Y06_HeatPumpHeatCapacity17F"
                                        type="comp:HeatPumpHeatCapacity17F" minOccurs="0">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Heating Cap
-                                             17</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Cap 17</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -7144,8 +7140,7 @@
                                     <xsd:element name="Y07_EfficiencySEER"
                                        type="hvac:EfficiencySEER">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Cooling
-                                             SEER</xsd:documentation>
+                                          <xsd:documentation source="FieldText">SEER</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -7153,8 +7148,7 @@
                                     </xsd:element>
                                     <xsd:element name="Y08_EfficiencyEER" type="hvac:EfficiencyEER">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Cooling
-                                             EER</xsd:documentation>
+                                          <xsd:documentation source="FieldText">EER</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -7173,8 +7167,7 @@
                                     <xsd:element name="Y10_CondenserSpeedType"
                                        type="hvac:CondenserSpeedType">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Mulit-speed
-                                             Compressor</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Compressor Type</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -7532,8 +7525,7 @@
                                     </xsd:element>
                                     <xsd:element name="AaColumn0405Label" minOccurs="0">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Duct Insulation
-                                             R-value</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Duct Ins. R-value</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -7588,8 +7580,7 @@
                                     </xsd:element>
                                     <xsd:element name="AaColumn0809Label" minOccurs="0">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Duct Surface
-                                             Area</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Surface Area</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -8205,8 +8196,7 @@
                                     <xsd:element name="Dd03_FanEfficacyRequired"
                                        type="hvac:FanEfficacyRequired">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Required Fan
-                                             Efficiency (Watts/CFM)</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Required Fan Power(Watts/CFM)</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>HERSFan:FanEffRptMsg</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
