@@ -1782,7 +1782,7 @@
             <dtyp:displayterm value="EnergyFactor">EF</dtyp:displayterm>
             <dtyp:displayterm value="HSPF">HSPF</dtyp:displayterm>
             <dtyp:displayterm value="IEER">IEER</dtyp:displayterm>
-            <dtyp:displayterm value="NEEA">NEEA</dtyp:displayterm>
+            <dtyp:displayterm value="NEEA">NEEA Rated</dtyp:displayterm>
             <dtyp:displayterm value="SEER">SEER</dtyp:displayterm>
             <dtyp:displayterm value="ThermalEfficiency">TE</dtyp:displayterm>
             <dtyp:displayterm value="UniformEnergyFactor">UEF</dtyp:displayterm>
@@ -3563,7 +3563,7 @@
             <dtyp:displayterm value="BPM_Fan">Brushless Permanent Magnet</dtyp:displayterm>
             <dtyp:displayterm value="FixedSpeed">Fixed speed</dtyp:displayterm>
             <dtyp:displayterm value="IAQStandAloneFan">IAQ stand alone fan</dtyp:displayterm>
-            <dtyp:displayterm value="SingleSpeedPSC">PSC Permanent Split Capacitor</dtyp:displayterm>
+            <dtyp:displayterm value="SingleSpeedPSC">Single speed PSC furnace fan</dtyp:displayterm>
             <dtyp:displayterm value="VariableSpeedFan">Variable speed</dtyp:displayterm>
             <dtyp:displayterm value="WholeHouseFan">Whole house</dtyp:displayterm>
          </xsd:appinfo>

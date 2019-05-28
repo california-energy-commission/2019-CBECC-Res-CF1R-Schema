@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.lmonte.com/besm/env" version="2019.1.001" xmlns:com="http://www.lmonte.com/besm/com" xmlns:d="http://www.lmonte.com/besm/d" xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:env="http://www.lmonte.com/besm/env" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.lmonte.com/besm/env" version="2019.1.002" xmlns:com="http://www.lmonte.com/besm/com" xmlns:d="http://www.lmonte.com/besm/d" xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:env="http://www.lmonte.com/besm/env" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
    <xsd:simpleType name="AirInfiltrationRate">
@@ -210,18 +210,18 @@
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="NoInsulation">No insulation</dtyp:displayterm>
             <dtyp:displayterm value="Other">Other</dtyp:displayterm>
-            <dtyp:displayterm value="R0">R 0</dtyp:displayterm>
-            <dtyp:displayterm value="R11">R 11</dtyp:displayterm>
-            <dtyp:displayterm value="R13">R 13</dtyp:displayterm>
-            <dtyp:displayterm value="R15">R 15</dtyp:displayterm>
-            <dtyp:displayterm value="R19">R 19</dtyp:displayterm>
-            <dtyp:displayterm value="R21">R 21</dtyp:displayterm>
-            <dtyp:displayterm value="R22">R 22</dtyp:displayterm>
-            <dtyp:displayterm value="R23">R 23</dtyp:displayterm>
-            <dtyp:displayterm value="R24">R 24</dtyp:displayterm>
-            <dtyp:displayterm value="R25">R 25</dtyp:displayterm>
-            <dtyp:displayterm value="R30">R 30</dtyp:displayterm>
-            <dtyp:displayterm value="R38">R 38</dtyp:displayterm>
+            <dtyp:displayterm value="R0">R-0</dtyp:displayterm>
+            <dtyp:displayterm value="R11">R-11</dtyp:displayterm>
+            <dtyp:displayterm value="R13">R-13</dtyp:displayterm>
+            <dtyp:displayterm value="R15">R-15</dtyp:displayterm>
+            <dtyp:displayterm value="R19">R-19</dtyp:displayterm>
+            <dtyp:displayterm value="R21">R-21</dtyp:displayterm>
+            <dtyp:displayterm value="R22">R-22</dtyp:displayterm>
+            <dtyp:displayterm value="R23">R-23</dtyp:displayterm>
+            <dtyp:displayterm value="R24">R-24</dtyp:displayterm>
+            <dtyp:displayterm value="R25">R-25</dtyp:displayterm>
+            <dtyp:displayterm value="R30">R-30</dtyp:displayterm>
+            <dtyp:displayterm value="R38">R-38</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
