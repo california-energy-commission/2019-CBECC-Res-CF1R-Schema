@@ -4345,8 +4345,7 @@
                                     </xsd:element>
                                     <xsd:element name="P05a_SlabInsulationThermalResistance" type="env:SlabInsulationThermalResistance" minOccurs="0">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Edge Insul. R-value
-                                             &amp;amp; Depth</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Edge Insul. R-value &amp; Depth</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">If there
                                              is not insultation result = R0</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -4358,8 +4357,7 @@
                                     </xsd:element>
                                     <xsd:element name="P05b_SlabInsulationOther" type="env:SlabInsulationOther" minOccurs="0">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Edge Insul. R-value
-                                             &amp;amp; Depth</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Edge Insul. R-value &amp; Depth</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">If
                                              insulation result = Other, the value is stored in this
                                              string</xsd:documentation>
@@ -4372,8 +4370,7 @@
                                     </xsd:element>
                                     <xsd:element name="P05c_SlabInsulationVerticalILength" type="com:SlabInsulationVerticalILength" minOccurs="0">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Edge Insul. R-value
-                                             &amp;amp; Depth</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Edge Insul. R-value &amp; Depth</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">If
                                              SlabInsulationThermalResistance == R0 this field is not
                                              required</xsd:documentation>
@@ -4456,8 +4453,7 @@
                                     </xsd:element>
                                     <xsd:element name="P10a_SlabInsulationThermalResistance" type="env:SlabInsulationThermalResistance" minOccurs="0">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Edge Insul. R-value
-                                             &amp;amp; Depth</xsd:documentation>
+                                          <xsd:documentation source="FieldText">EEdge Insul. R-value &amp; Depth</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">If there
                                              is not insultation result = R0</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -4469,8 +4465,7 @@
                                     </xsd:element>
                                     <xsd:element name="P10b_SlabInsulationOther" type="env:SlabInsulationOther" minOccurs="0">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Edge Insul. R-value
-                                             &amp;amp; Depth</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Edge Insul. R-value &amp; Depth</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">If
                                              insulation result = Other, the value is stored in this
                                              string</xsd:documentation>
@@ -4483,8 +4478,7 @@
                                     </xsd:element>
                                     <xsd:element name="P10c_SlabInsulationVerticalILength" type="com:SlabInsulationVerticalILength" minOccurs="0">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Edge Insul. R-value
-                                             &amp;amp; Depth</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Edge Insul. R-value &amp; Depth</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">If
                                              SlabInsulationThermalResistance == R0 this field is not
                                              required</xsd:documentation>
@@ -7831,8 +7825,7 @@
          </xsd:element>
          <xsd:element name="Section_Jj" minOccurs="0">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">OPAQUE SURFACES - VERIFIED &amp;amp;
-                  ALTERED</xsd:documentation>
+               <xsd:documentation source="FieldText">OPAQUE SURFACES - VERIFIED &amp; ALTERED</xsd:documentation>
                <xsd:documentation source="CalculationsAndRules">This section is required if section
                   J or section L or section K have existing constructions recorded for
                   verification</xsd:documentation>
@@ -7947,8 +7940,7 @@
          </xsd:element>
          <xsd:element name="Section_AtticVA" minOccurs="0">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">ATTIC - VERIFIED &amp;amp;
-                  ALTERED</xsd:documentation>
+               <xsd:documentation source="FieldText">ATTIC - VERIFIED &amp; ALTERED</xsd:documentation>
                <xsd:appinfo source="CBECCresXML">
                   <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                </xsd:appinfo>
@@ -8042,8 +8034,7 @@
          </xsd:element>
          <xsd:element name="Section_Kk" minOccurs="0">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">FENESTRATION/ GLAZING - VERIFIED &amp;amp;
-                  ALTERED</xsd:documentation>
+               <xsd:documentation source="FieldText">FENESTRATION/ GLAZING - VERIFIED &amp; ALTERED</xsd:documentation>
                <xsd:appinfo source="CBECCresXML">
                   <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                </xsd:appinfo>
@@ -8105,7 +8096,7 @@
                                     <xsd:choice maxOccurs="1">
                                        <xsd:element name="Kk04_Height" type="dtyp:Height">
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Heigth
+                                             <xsd:documentation source="FieldText">Height
                                                 (ft)</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
@@ -8114,7 +8105,7 @@
                                        </xsd:element>
                                        <xsd:element name="Kk04_NotApplicableMessage" type="comp:NotApplicableMessage">
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Heigth
+                                             <xsd:documentation source="FieldText">Height
                                                 (ft)</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
@@ -8195,8 +8186,7 @@
          </xsd:element>
          <xsd:element name="Section_Ll" minOccurs="0">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">OPAQUE DOORS - VERIFIED &amp;amp;
-                  ALTERED</xsd:documentation>
+               <xsd:documentation source="FieldText">OPAQUE DOORS - VERIFIED &amp; ALTERED</xsd:documentation>
                <xsd:appinfo source="CBECCresXML">
                   <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                </xsd:appinfo>
@@ -8263,8 +8253,7 @@
          </xsd:element>
          <xsd:element name="Section_OverhangVA" minOccurs="0">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">OVERHANGS AND FINS - VERIFIED &amp;amp;
-                  ALTERED</xsd:documentation>
+               <xsd:documentation source="FieldText">OVERHANGS AND FINS - VERIFIED &amp; ALTERED</xsd:documentation>
                <xsd:appinfo source="CBECCresXML">
                   <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                </xsd:appinfo>
@@ -8419,8 +8408,7 @@
          </xsd:element>
          <xsd:element name="Section_Mm" minOccurs="0">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">SLAB FLOORS - VERIFIED &amp;amp;
-                  ALTERED</xsd:documentation>
+               <xsd:documentation source="FieldText">SLAB FLOORS - VERIFIED &amp; ALTERED</xsd:documentation>
                <xsd:appinfo source="CBECCresXML">
                   <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                </xsd:appinfo>
@@ -8507,8 +8495,7 @@
          </xsd:element>
          <xsd:element name="Section_Nn" minOccurs="0">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">BUILDING ENVELOPE LEAKAGE - VERIFIED &amp;amp;
-                  ALTERED</xsd:documentation>
+               <xsd:documentation source="FieldText">BUILDING ENVELOPE LEAKAGE - VERIFIED &amp; ALTERED</xsd:documentation>
                <xsd:appinfo source="CBECCresXML">
                   <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                </xsd:appinfo>
@@ -8559,8 +8546,7 @@
          </xsd:element>
          <xsd:element name="Section_Oo" minOccurs="0">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">HVAC SYSTEMS - VERIFIED &amp;amp;
-                  ALTERED</xsd:documentation>
+               <xsd:documentation source="FieldText">HVAC SYSTEMS - VERIFIED &amp; ALTERED</xsd:documentation>
                <xsd:appinfo source="CBECCresXML">
                   <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                </xsd:appinfo>
@@ -8796,8 +8782,7 @@
          </xsd:element>
          <xsd:element name="Section_Pp" minOccurs="0">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">HVAC DISTRIBUTION SYSTEMS - VERIFIED &amp;amp;
-                  ALTERED</xsd:documentation>
+               <xsd:documentation source="FieldText">HVAC DISTRIBUTION SYSTEMS - VERIFIED &amp; ALTERED</xsd:documentation>
                <xsd:appinfo source="CBECCresXML">
                   <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                </xsd:appinfo>
@@ -8946,8 +8931,7 @@
          </xsd:element>
          <xsd:element name="Section_Qq" minOccurs="0">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">WATER HEATING SYSTEMS - VERIFIED &amp;amp;
-                  ALTERED</xsd:documentation>
+               <xsd:documentation source="FieldText">WATER HEATING SYSTEMS - VERIFIED &amp; ALTERED</xsd:documentation>
                <xsd:appinfo source="CBECCresXML">
                   <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                </xsd:appinfo>
@@ -9037,8 +9021,7 @@
          </xsd:element>
          <xsd:element name="Section_Rr" minOccurs="0">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">WATER HEATERS - VERIFIED &amp;amp;
-                  ALTERED</xsd:documentation>
+               <xsd:documentation source="FieldText">WATER HEATERS - VERIFIED &amp; ALTERED</xsd:documentation>
                <xsd:appinfo source="CBECCresXML">
                   <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                </xsd:appinfo>
