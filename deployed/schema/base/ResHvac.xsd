@@ -1540,7 +1540,7 @@
       <xsd:annotation>
          <xsd:documentation>Units: Btu per W h</xsd:documentation>
          <xsd:appinfo source="displaytermType">
-            <dtyp:displayterm>Efficiency HSPF</dtyp:displayterm>
+            <dtyp:displayterm>HSPF</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
@@ -1681,7 +1681,7 @@
       <xsd:annotation>
          <xsd:documentation>The ratio of the energy delivered by the water heater divided by the energy used, in the same units.This property is used for Energy Factor values and the new Uniform Energy Factor  values which has a more sophisticated approach to establishing efficiency as Energy Factor.  Units: none</xsd:documentation>
          <xsd:appinfo source="displaytermType">
-            <dtyp:displayterm>Energy Factor</dtyp:displayterm>
+            <dtyp:displayterm>EF</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
@@ -4217,7 +4217,7 @@
       <xsd:annotation>
          <xsd:documentation>The full load of a boiler or water heater or heating coil  efficiency calculated as the ratio of heat transferred to the water divided by the heat input of the fuel.  Units: none</xsd:documentation>
          <xsd:appinfo source="displaytermType">
-            <dtyp:displayterm>Thermal Efficiency</dtyp:displayterm>
+            <dtyp:displayterm>TE</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
@@ -4291,7 +4291,7 @@
       <xsd:annotation>
          <xsd:documentation>Units: none</xsd:documentation>
          <xsd:appinfo source="displaytermType">
-            <dtyp:displayterm>Water Heater Uniform Energy Factor</dtyp:displayterm>
+            <dtyp:displayterm>UEF</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
@@ -4406,7 +4406,7 @@
       <xsd:annotation>
          <xsd:documentation>The full load efficiency of a water heater at AFUE rated conditions  Units: none</xsd:documentation>
          <xsd:appinfo source="displaytermType">
-            <dtyp:displayterm>Water Heater AFUE</dtyp:displayterm>
+            <dtyp:displayterm>AFUE</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:Decimal3Places"/>

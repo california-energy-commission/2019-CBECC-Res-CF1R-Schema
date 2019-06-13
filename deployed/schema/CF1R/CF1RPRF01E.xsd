@@ -8449,7 +8449,7 @@
                                     <xsd:element name="Mm03a_SlabInsulationThermalResistance" type="env:SlabInsulationThermalResistance" minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Edge Insul. R-value
-                                             &amp;amp; Depth</xsd:documentation>
+                                             &amp; Depth</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -8458,7 +8458,7 @@
                                     <xsd:element name="Mm03b_SlabInsulationVerticalILength" type="com:SlabInsulationVerticalILength" minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Edge Insul. R-value
-                                             &amp;amp; Depth</xsd:documentation>
+                                             &amp; Depth</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
