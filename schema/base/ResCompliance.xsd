@@ -4657,12 +4657,6 @@
       <xsd:restriction base="dtyp:DecimalNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
-   <xsd:simpleType name="GeometryInputType">
-      <xsd:restriction base="dtyp:EnumerationConstant">
-         <xsd:enumeration value="Detailed"/>
-         <xsd:enumeration value="Simplified"/>
-      </xsd:restriction>
-   </xsd:simpleType>
    <xsd:simpleType name="HeatingSystemFeatureHERS">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
@@ -4938,7 +4932,7 @@
             <dtyp:displayterm>Induced Enclosure Pressure Difference</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative">
+      <xsd:restriction base="dtyp:Decimal">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="InstalledIndoorCoilManufacturer">
@@ -7952,6 +7946,7 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
             <dtyp:displayterm value="AdvancedWallFraming">Advanced wall framing included (see opaque surface constructions)</dtyp:displayterm>
             <dtyp:displayterm value="AtticReliefVentFreeArea">Attic Relief Vent Free Area</dtyp:displayterm>
             <dtyp:displayterm value="BatterySystem">Battery System</dtyp:displayterm>
+            <dtyp:displayterm value="BatteryWithSelfUtilCredit">Battery System (Self Utilization Credit Taken)</dtyp:displayterm>
             <dtyp:displayterm value="CentralParallelPiping">Central parallel piping</dtyp:displayterm>
             <dtyp:displayterm value="CoolRoofInstalled">Cool roof</dtyp:displayterm>
             <dtyp:displayterm value="DuctHighInsulation">Ducts with high level of insulation</dtyp:displayterm>
@@ -7974,6 +7969,7 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
             <dtyp:displayterm value="NoSpecialFeatures">NO SPECIAL FEATURES REQUIRED</dtyp:displayterm>
             <dtyp:displayterm value="PipeInsulationAllLines">Pipe insulation, all lines</dtyp:displayterm>
             <dtyp:displayterm value="PointOfUseDHW">Point of use</dtyp:displayterm>
+            <dtyp:displayterm value="PrecoolingCreditTaken">Precooling Credit Taken</dtyp:displayterm>
             <dtyp:displayterm value="PV2kWSystem">PV System: 2.0 kW</dtyp:displayterm>
             <dtyp:displayterm value="RaisedHeelTruss">Raised heel truss</dtyp:displayterm>
             <dtyp:displayterm value="RecirculationDemandControlMF">Multi-family: Recirculation demand control</dtyp:displayterm>
@@ -7997,6 +7993,7 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
          <xsd:enumeration value="AdvancedWallFraming"/>
          <xsd:enumeration value="AtticReliefVentFreeArea"/>
          <xsd:enumeration value="BatterySystem"/>
+         <xsd:enumeration value="BatteryWithSelfUtilCredit"/>
          <xsd:enumeration value="CentralParallelPiping"/>
          <xsd:enumeration value="CoolRoofInstalled"/>
          <xsd:enumeration value="DuctHighInsulation"/>
@@ -8019,6 +8016,7 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
          <xsd:enumeration value="NoSpecialFeatures"/>
          <xsd:enumeration value="PipeInsulationAllLines"/>
          <xsd:enumeration value="PointOfUseDHW"/>
+         <xsd:enumeration value="PrecoolingCreditTaken"/>
          <xsd:enumeration value="PV2kWSystem"/>
          <xsd:enumeration value="RaisedHeelTruss"/>
          <xsd:enumeration value="RecirculationDemandControlMF"/>
@@ -8752,6 +8750,10 @@ Time Dependent Valuation (TDV) Gas Propane energy is calculated by multiplying t
       <xsd:restriction base="dtyp:Zipcode">
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:complexType name="CAL_Green">
+      <xsd:sequence>
+      </xsd:sequence>
+   </xsd:complexType>
    <xsd:complexType name="CF1R_ComplianceDocument">
       <xsd:annotation>
          <xsd:appinfo source="displaytermType">
