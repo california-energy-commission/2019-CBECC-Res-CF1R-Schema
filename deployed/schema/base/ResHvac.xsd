@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.lmonte.com/besm/hvac" version="2019.1.002" xmlns:com="http://www.lmonte.com/besm/com" xmlns:d="http://www.lmonte.com/besm/d" xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:hvac="http://www.lmonte.com/besm/hvac" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.lmonte.com/besm/hvac" version="2019.1.000" xmlns:com="http://www.lmonte.com/besm/com" xmlns:d="http://www.lmonte.com/besm/d" xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:hvac="http://www.lmonte.com/besm/hvac" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
    <xsd:simpleType name="AOSmithHPTU50SimulationGroup">
@@ -1540,7 +1540,7 @@
       <xsd:annotation>
          <xsd:documentation>Units: Btu per W h</xsd:documentation>
          <xsd:appinfo source="displaytermType">
-            <dtyp:displayterm>HSPF</dtyp:displayterm>
+            <dtyp:displayterm>Efficiency HSPF</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
@@ -1681,7 +1681,7 @@
       <xsd:annotation>
          <xsd:documentation>The ratio of the energy delivered by the water heater divided by the energy used, in the same units.This property is used for Energy Factor values and the new Uniform Energy Factor  values which has a more sophisticated approach to establishing efficiency as Energy Factor.  Units: none</xsd:documentation>
          <xsd:appinfo source="displaytermType">
-            <dtyp:displayterm>EF</dtyp:displayterm>
+            <dtyp:displayterm>Energy Factor</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
@@ -4217,7 +4217,7 @@
       <xsd:annotation>
          <xsd:documentation>The full load of a boiler or water heater or heating coil  efficiency calculated as the ratio of heat transferred to the water divided by the heat input of the fuel.  Units: none</xsd:documentation>
          <xsd:appinfo source="displaytermType">
-            <dtyp:displayterm>TE</dtyp:displayterm>
+            <dtyp:displayterm>Thermal Efficiency</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
@@ -4291,7 +4291,7 @@
       <xsd:annotation>
          <xsd:documentation>Units: none</xsd:documentation>
          <xsd:appinfo source="displaytermType">
-            <dtyp:displayterm>UEF</dtyp:displayterm>
+            <dtyp:displayterm>Water Heater Uniform Energy Factor</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
@@ -4406,7 +4406,7 @@
       <xsd:annotation>
          <xsd:documentation>The full load efficiency of a water heater at AFUE rated conditions  Units: none</xsd:documentation>
          <xsd:appinfo source="displaytermType">
-            <dtyp:displayterm>AFUE</dtyp:displayterm>
+            <dtyp:displayterm>Water Heater AFUE</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:Decimal3Places"/>
