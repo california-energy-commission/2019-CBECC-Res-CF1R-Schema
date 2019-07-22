@@ -4767,6 +4767,13 @@
       <xsd:restriction base="dtyp:EnumerationConstantPermissive">
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="HERSCount">
+      <xsd:annotation>
+         <xsd:documentation>  Units: none</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:IntegerNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="HSPP_PSPP_ComplianceMethod">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">

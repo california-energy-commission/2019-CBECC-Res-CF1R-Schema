@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.lmonte.com/besm/hvac" version="2019.1.000" xmlns:com="http://www.lmonte.com/besm/com" xmlns:d="http://www.lmonte.com/besm/d" xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:hvac="http://www.lmonte.com/besm/hvac" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.lmonte.com/besm/hvac" version="2019.1.001" xmlns:com="http://www.lmonte.com/besm/com" xmlns:d="http://www.lmonte.com/besm/d" xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:hvac="http://www.lmonte.com/besm/hvac" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
    <xsd:simpleType name="AOSmithHPTU50SimulationGroup">
@@ -472,7 +472,7 @@
    <xsd:simpleType name="ArrayType">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
-            <dtyp:displayterm value="FixedArray">Fixed (open rack)</dtyp:displayterm>
+            <dtyp:displayterm value="FixedArray">Fixed (roof mount)</dtyp:displayterm>
             <dtyp:displayterm value="Tracking1Axis">Tracking (one axis)</dtyp:displayterm>
             <dtyp:displayterm value="Tracking2Axis">Tracking (two axis)</dtyp:displayterm>
          </xsd:appinfo>
@@ -1297,6 +1297,12 @@
          <xsd:enumeration value="RvalueVerifiedDuctSystem"/>
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="DuctRValueNum">
+      <xsd:annotation>
+         <xsd:documentation>Units: h ft2 F per Btu</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+   </xsd:simpleType>
    <xsd:simpleType name="DuctSpaceType">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
@@ -1658,7 +1664,8 @@
             <dtyp:displayterm value="EnergyFactor">EF</dtyp:displayterm>
             <dtyp:displayterm value="HSPF">HSPF</dtyp:displayterm>
             <dtyp:displayterm value="IEER">IEER</dtyp:displayterm>
-            <dtyp:displayterm value="NEEA">NEEA Rated</dtyp:displayterm>
+            <dtyp:displayterm value="NEEA">NEEA</dtyp:displayterm>
+            <dtyp:displayterm value="SCOP">SCOP</dtyp:displayterm>
             <dtyp:displayterm value="SEER">SEER</dtyp:displayterm>
             <dtyp:displayterm value="ThermalEfficiency">TE</dtyp:displayterm>
             <dtyp:displayterm value="UniformEnergyFactor">UEF</dtyp:displayterm>
@@ -1672,6 +1679,7 @@
          <xsd:enumeration value="HSPF"/>
          <xsd:enumeration value="IEER"/>
          <xsd:enumeration value="NEEA"/>
+         <xsd:enumeration value="SCOP"/>
          <xsd:enumeration value="SEER"/>
          <xsd:enumeration value="ThermalEfficiency"/>
          <xsd:enumeration value="UniformEnergyFactor"/>
@@ -2773,6 +2781,15 @@
    <xsd:simpleType name="InverterModelName">
       <xsd:restriction base="dtyp:String50Char"/>
    </xsd:simpleType>
+   <xsd:simpleType name="IsSystemSDHV">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Yes</dtyp:displayterm>
+            <dtyp:displayterm value="false">No</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean"/>
+   </xsd:simpleType>
    <xsd:simpleType name="MaximumCoolingWperCFM">
       <xsd:annotation>
          <xsd:documentation>Units: W per ft3 per min</xsd:documentation>
@@ -3130,6 +3147,7 @@
             <dtyp:displayterm value="RoomHP">Room HP</dtyp:displayterm>
             <dtyp:displayterm value="SmallDuctHighVelocityAC">Small Duct High Velocity Air Conditioner</dtyp:displayterm>
             <dtyp:displayterm value="SmallDuctHighVelocityHP">Small Duct High Velocity Heat Pump</dtyp:displayterm>
+            <dtyp:displayterm value="VCHP">VCHP</dtyp:displayterm>
             <dtyp:displayterm value="VCHP_IndoorUnitDucted">VCHP-ducted</dtyp:displayterm>
             <dtyp:displayterm value="VCHP_IndoorUnitDuctedAndDuctless">VCHP-ducted+ductless</dtyp:displayterm>
             <dtyp:displayterm value="VCHP_IndoorUnitDuctless">VCHP-ductless</dtyp:displayterm>
@@ -3169,6 +3187,7 @@
             <dtyp:CBECCresXMLterm value="RoomHP"/>
             <dtyp:CBECCresXMLterm value="SmallDuctHighVelocityAC"/>
             <dtyp:CBECCresXMLterm value="SmallDuctHighVelocityHP"/>
+            <dtyp:CBECCresXMLterm value="VCHP"/>
             <dtyp:CBECCresXMLterm value="VCHP_IndoorUnitDucted"/>
             <dtyp:CBECCresXMLterm value="VCHP_IndoorUnitDuctedAndDuctless"/>
             <dtyp:CBECCresXMLterm value="VCHP_IndoorUnitDuctless"/>
@@ -3209,6 +3228,7 @@
          <xsd:enumeration value="RoomHP"/>
          <xsd:enumeration value="SmallDuctHighVelocityAC"/>
          <xsd:enumeration value="SmallDuctHighVelocityHP"/>
+         <xsd:enumeration value="VCHP"/>
          <xsd:enumeration value="VCHP_IndoorUnitDucted"/>
          <xsd:enumeration value="VCHP_IndoorUnitDuctedAndDuctless"/>
          <xsd:enumeration value="VCHP_IndoorUnitDuctless"/>
@@ -3263,6 +3283,7 @@
          <xsd:documentation>This describes the type of mechanism is used to distribute hot water in a dwelling unit in a low-rise residential buildings</xsd:documentation>
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="CompactDistributionDrainHeatRecoveryHERS">HERS Verified Compact Hot Water Distribution and drain water heat recovery</dtyp:displayterm>
+            <dtyp:displayterm value="CompactHotWaterDistributionSystemBasic">Basic Compact Hot Water Distribution System</dtyp:displayterm>
             <dtyp:displayterm value="CompactHotWaterDistributionSystemHERS">HERS Verified Compact Hot Water Distribution System</dtyp:displayterm>
             <dtyp:displayterm value="DemandRecirculation">Demand recirculation</dtyp:displayterm>
             <dtyp:displayterm value="DemandRecirculationManualControl">Demand Recirculation Manual Control</dtyp:displayterm>
@@ -3283,6 +3304,7 @@
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="CompactDistributionDrainHeatRecoveryHERS"/>
+         <xsd:enumeration value="CompactHotWaterDistributionSystemBasic"/>
          <xsd:enumeration value="CompactHotWaterDistributionSystemHERS"/>
          <xsd:enumeration value="DemandRecirculation"/>
          <xsd:enumeration value="DemandRecirculationManualControl"/>
@@ -3982,10 +4004,19 @@
    <xsd:simpleType name="SizeRangeComputerRoomAC">
       <xsd:restriction base="dtyp:EnumerationConstant"/>
    </xsd:simpleType>
+   <xsd:simpleType name="SizeRangeFurnaceAC">
+      <xsd:restriction base="dtyp:EnumerationConstant"/>
+   </xsd:simpleType>
    <xsd:simpleType name="SizeRangeFurnaceUnitHeater">
       <xsd:restriction base="dtyp:EnumerationConstant"/>
    </xsd:simpleType>
-   <xsd:simpleType name="SizeRangeSplitSystemsSPV_ACHP">
+   <xsd:simpleType name="SizeRangeHeatPumpAC">
+      <xsd:restriction base="dtyp:EnumerationConstant"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="SizeRangeRoomACHP">
+      <xsd:restriction base="dtyp:EnumerationConstant"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="SizeRangeSPV_ACHP">
       <xsd:restriction base="dtyp:EnumerationConstant"/>
    </xsd:simpleType>
    <xsd:simpleType name="SizeRangeUnitaryCondensersAC">
@@ -4071,7 +4102,25 @@
       <xsd:annotation>
          <xsd:documentation>Units: Btu per h</xsd:documentation>
          <xsd:appinfo source="displaytermType">
-            <dtyp:displayterm>Stand-by Loss</dtyp:displayterm>
+            <dtyp:displayterm>Standby Loss</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="StandbyLossMaxAllowed">
+      <xsd:annotation>
+         <xsd:documentation>Units: Btu per h</xsd:documentation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Maximum Standby Loss</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="StandbyLossMaxAllowedFraction">
+      <xsd:annotation>
+         <xsd:documentation>Units: none</xsd:documentation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Maximum Standby Loss</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
@@ -4295,6 +4344,15 @@
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="VRF_HasHeatRecovery">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Yes</dtyp:displayterm>
+            <dtyp:displayterm value="false">No</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean"/>
    </xsd:simpleType>
    <xsd:simpleType name="VentilationArea">
       <xsd:annotation>
