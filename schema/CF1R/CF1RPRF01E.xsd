@@ -12,7 +12,7 @@
    xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
    xmlns:altova="http://www.altova.com/xml-schema-extensions"
-   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.000">
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.001">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="../base/ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/bld" schemaLocation="../base/ResBuilding.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/env" schemaLocation="../base/ResEnvelope.xsd"/>
@@ -342,6 +342,14 @@
                      </xsd:element>
                   </xsd:choice>
                   <xsd:element name="A26_TotalConditionedVolume" type="com:TotalConditionedVolume" >
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                        <xsd:appinfo source="CBECCresXML">
+                           <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                        </xsd:appinfo>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="A27_HERSCount" type="comp:HERSCount" >
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
                         <xsd:appinfo source="CBECCresXML">
@@ -2995,15 +3003,43 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="K04_RelativePosition" type="com:RelativePosition" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Orientation</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>CathedralCeiling:Orientation</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="K05_PartitionGrossArea" type="env:PartitionGrossArea" >
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="K04_Azimuth" type="dtyp:Azimuth" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Azimuth</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>CathedralCeiling:RoofPitch</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="K04_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Azimuth</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>CathedralCeiling:RoofPitch</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="K05_RelativePosition" type="com:RelativePosition" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Orientation</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>CathedralCeiling:Orientation</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="K05_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Orientation</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>CathedralCeiling:Orientation</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:element name="K06_PartitionGrossArea" type="env:PartitionGrossArea" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Area (ft[d:sup]2[/d:sup])</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -3011,7 +3047,7 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="K06_SkylightArea" type="env:SkylightArea" >
+                                    <xsd:element name="K07_SkylightArea" type="env:SkylightArea" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Skylight Area (ft[d:sup]2[/d:sup])</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -3019,7 +3055,7 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="K07_RoofRise" type="env:RoofRise" >
+                                    <xsd:element name="K08_RoofRise" type="env:RoofRise" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Roof Rise (x in 12)</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -3027,23 +3063,7 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="K08_RoofPitch" type="env:RoofPitch" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Roof Pitch</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>CathedralCeiling:RoofPitch</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="K09_Tilt" type="dtyp:Tilt" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Roof Tilt (deg)</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>CathedralCeiling:RoofTilt</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="K10_RoofReflectance" type="env:RoofReflectance" >
+                                    <xsd:element name="K09_RoofReflectance" type="env:RoofReflectance" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Roof Reflectance</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -3051,7 +3071,7 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="K11_RoofEmittance" type="env:RoofEmittance" >
+                                    <xsd:element name="K10_RoofEmittance" type="env:RoofEmittance" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Roof Emittance</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -3059,15 +3079,15 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="K12_FramingFactor" type="env:FramingFactor" >
+                                    <xsd:element name="K11_CoolRoofToBeInstalled" type="comp:CoolRoofToBeInstalled" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Framing Factor</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Cool Roof</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>CathedralCeiling:FramingFactor</dtyp:CBECCresXMLterm>
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="K13_StatusEAA" type="com:StatusEAA"  minOccurs="0">
+                                    <xsd:element name="K12_StatusEAA" type="com:StatusEAA"  minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Status</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">This field is required if ProjectScopePerformance in GENERAL INFORMATION equals AdditionAlteration</xsd:documentation>
@@ -3076,7 +3096,7 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="K14_VerifiedExistingCondition" type="comp:VerifiedExistingCondition"  minOccurs="0">
+                                    <xsd:element name="K13_VerifiedExistingCondition" type="comp:VerifiedExistingCondition"  minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Verified Existing Condition</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">If ProjectScopePerformance in GENERAL INFORMATION equals AdditionAlteration a value is required, Else no value is required and "n/a" is displayed in report.</xsd:documentation>
@@ -3086,7 +3106,7 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="K15_ConstructionAssemblyNamePerformanceRes" type="comp:ConstructionAssemblyNamePerformanceRes"  minOccurs="0">
+                                    <xsd:element name="K14_ConstructionAssemblyNamePerformanceRes" type="comp:ConstructionAssemblyNamePerformanceRes"  minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Existing Construction</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -4200,7 +4220,7 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Q06a_ContinuousInsulationOptionRes" type="env:ContinuousInsulationOptionRes"  minOccurs="0">
+                                    <xsd:element name="Q06a_InteriorContinuousInsulation" type="env:InteriorContinuousInsulation"  minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Interior/ Exterior Continuous R-value</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -4208,7 +4228,15 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Q06b_ContinuousInsulationOptionRes" type="env:ContinuousInsulationOptionRes"  minOccurs="0">
+                                    <xsd:element name="Q06b_ExteriorContinuousInsulation" type="env:ExteriorContinuousInsulation"  minOccurs="0">
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Interior/ Exterior Continuous R-value</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Q06_ContinuousInsulationString" type="env:ContinuousInsulationString"  minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Interior/ Exterior Continuous R-value</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -5809,7 +5837,7 @@
                                     <xsd:choice maxOccurs="1">
                                        <xsd:element name="Y04_EfficiencyCOP" type="hvac:EfficiencyCOP" >
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Heating HSPF/COP</xsd:documentation>
+                                             <xsd:documentation source="FieldText">HSPF/COP</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>HVACHtPump:COP47</dtyp:CBECCresXMLterm>
                                              </xsd:appinfo>
@@ -5817,7 +5845,7 @@
                                        </xsd:element>
                                        <xsd:element name="Y04_EfficiencyHSPF" type="hvac:EfficiencyHSPF" >
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Heating HSPF/COP</xsd:documentation>
+                                             <xsd:documentation source="FieldText">HSPF/COP</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                              </xsd:appinfo>
@@ -5826,7 +5854,7 @@
                                     </xsd:choice>
                                     <xsd:element name="Y05_HeatPumpHeatCapacity47F" type="comp:HeatPumpHeatCapacity47F"  minOccurs="0">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Heating Cap 47</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Cap 47</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -5842,7 +5870,7 @@
                                     </xsd:element>
                                     <xsd:element name="Y06_HeatPumpHeatCapacity17F" type="comp:HeatPumpHeatCapacity17F"  minOccurs="0">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Heating Cap 17</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Cap 17</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -5858,7 +5886,7 @@
                                     </xsd:element>
                                     <xsd:element name="Y07_EfficiencySEER" type="hvac:EfficiencySEER" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Cooling SEER</xsd:documentation>
+                                          <xsd:documentation source="FieldText">SEER</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -5866,7 +5894,7 @@
                                     </xsd:element>
                                     <xsd:element name="Y08_EfficiencyEER" type="hvac:EfficiencyEER" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Cooling EER</xsd:documentation>
+                                          <xsd:documentation source="FieldText">EER</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -5882,7 +5910,7 @@
                                     </xsd:element>
                                     <xsd:element name="Y10_CondenserSpeedType" type="hvac:CondenserSpeedType" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Mulit-speed Compressor</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Compressor Type</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
