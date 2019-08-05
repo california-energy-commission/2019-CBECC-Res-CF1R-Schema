@@ -6,7 +6,7 @@
    xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
    xmlns:d="http://www.lmonte.com/besm/d"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.000">
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.001">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
    <xsd:simpleType name="AdditionalReturnDuctCount">
@@ -1852,6 +1852,10 @@
          <xsd:enumeration value="Indirect"/>
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="ExhaustLocation">
+      <xsd:restriction base="xsd:token">
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="ExteriorTankInsulation">
       <xsd:annotation>
          <xsd:documentation>The R-Value of the insulation on the exterior of the water heater tank.  Units: h ft2 F per Btu</xsd:documentation>
@@ -3045,7 +3049,7 @@
    </xsd:simpleType>
    <xsd:simpleType name="PipeInsulationThickness">
       <xsd:annotation>
-         <xsd:documentation>Defines how thick insulation on pipes in a heating, cooling, water heating system is.  Units: in</xsd:documentation>
+         <xsd:documentation>  Units: in</xsd:documentation>
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Pipe Insulation Thickness</dtyp:displayterm>
          </xsd:appinfo>

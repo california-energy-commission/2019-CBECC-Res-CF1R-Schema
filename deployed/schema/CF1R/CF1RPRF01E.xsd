@@ -6882,7 +6882,15 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Ff08_CoolingVent_VerificationRequired" type="comp:CoolingVent_VerificationRequired">
+                                    <xsd:element name="Ff08_ExhaustLocation" type="hvac:ExhaustLocation">
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Exhausts to</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Ff09_CoolingVent_VerificationRequired" type="comp:CoolingVent_VerificationRequired">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">HERS Verification</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">If result  == true display term = Required</xsd:documentation>
