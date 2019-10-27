@@ -6,7 +6,7 @@
    xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
    xmlns:d="http://www.lmonte.com/besm/d"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.001">
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.099">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
    <xsd:simpleType name="AdditionalReturnDuctCount">
@@ -921,19 +921,6 @@
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="MultiSpeed"/>
          <xsd:enumeration value="SingleSpeed"/>
-      </xsd:restriction>
-   </xsd:simpleType>
-   <xsd:simpleType name="CondenserType">
-      <xsd:annotation>
-         <xsd:documentation>Defines the type condenser used for a chiller, or DX and heat pump coils</xsd:documentation>
-         <xsd:appinfo source="displayterm">
-            <dtyp:displayterm value="Air">Air</dtyp:displayterm>
-            <dtyp:displayterm value="Fluid">Fluid</dtyp:displayterm>
-         </xsd:appinfo>
-      </xsd:annotation>
-      <xsd:restriction base="dtyp:EnumerationConstant">
-         <xsd:enumeration value="Air"/>
-         <xsd:enumeration value="Fluid"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ContinuousAirflowRateInstalled">
@@ -2994,7 +2981,7 @@
             <dtyp:displayterm>Maximum Cooling W per CFM</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative">
+      <xsd:restriction base="dtyp:Decimal4Places">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="NaturalVentilationHeight">
@@ -3334,6 +3321,13 @@
          <xsd:minInclusive value="0"/>
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="ResidentialCoolingSystemCount">
+      <xsd:annotation>
+         <xsd:documentation>  Units: none</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:IntegerNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="ResidentialCoolingSystemName">
       <xsd:restriction base="dtyp:ObjectNamePermissive">
       </xsd:restriction>
@@ -3590,6 +3584,7 @@
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="BPM_Fan">Brushless Permanent Magnet</dtyp:displayterm>
             <dtyp:displayterm value="FixedSpeed">Fixed speed</dtyp:displayterm>
+            <dtyp:displayterm value="HvacFan">HVAC Fan</dtyp:displayterm>
             <dtyp:displayterm value="IAQStandAloneFan">IAQ stand alone fan</dtyp:displayterm>
             <dtyp:displayterm value="SingleSpeedPSC">Single speed PSC furnace fan</dtyp:displayterm>
             <dtyp:displayterm value="VariableSpeedFan">Variable speed</dtyp:displayterm>
@@ -3598,6 +3593,7 @@
          <xsd:appinfo source="CBECCresXML">
             <dtyp:CBECCresXMLterm value="BPM_Fan">BPM - Brushless Permanent Magnet</dtyp:CBECCresXMLterm>
             <dtyp:CBECCresXMLterm value="FixedSpeed"></dtyp:CBECCresXMLterm>
+            <dtyp:CBECCresXMLterm value="HvacFan"></dtyp:CBECCresXMLterm>
             <dtyp:CBECCresXMLterm value="IAQStandAloneFan"></dtyp:CBECCresXMLterm>
             <dtyp:CBECCresXMLterm value="SingleSpeedPSC">PSC - Permanent Split Capacitor</dtyp:CBECCresXMLterm>
             <dtyp:CBECCresXMLterm value="VariableSpeedFan"></dtyp:CBECCresXMLterm>
@@ -3607,10 +3603,18 @@
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="BPM_Fan"/>
          <xsd:enumeration value="FixedSpeed"/>
+         <xsd:enumeration value="HvacFan"/>
          <xsd:enumeration value="IAQStandAloneFan"/>
          <xsd:enumeration value="SingleSpeedPSC"/>
          <xsd:enumeration value="VariableSpeedFan"/>
          <xsd:enumeration value="WholeHouseFan"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="ResidentialHeatingSystemCount">
+      <xsd:annotation>
+         <xsd:documentation>  Units: none</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:IntegerNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ResidentialHeatingSystemName">
@@ -4886,6 +4890,10 @@
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:ObjectNamePermissive">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="WaterHeaterRatedInputString">
+      <xsd:restriction base="xsd:token">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="WaterHeaterRatedInputUnits">

@@ -7,7 +7,7 @@
    xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
    xmlns:d="http://www.lmonte.com/besm/d"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.001">
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.099">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/bld" schemaLocation="ResBuilding.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
@@ -440,6 +440,16 @@
          <xsd:enumeration value="Title24ProposedOnly"/>
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="AreaWeightAvgTotalArea">
+      <xsd:annotation>
+         <xsd:documentation>  Units: ft2</xsd:documentation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Area Weighted Average Total Area</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="AreaWeightedAverageFeature">
       <xsd:annotation>
          <xsd:appinfo source="displaytermType">
@@ -473,16 +483,6 @@
       <xsd:restriction base="dtyp:DecimalNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
-   <xsd:simpleType name="AreaWeightedAverageTotalArea">
-      <xsd:annotation>
-         <xsd:documentation>  Units: ft2</xsd:documentation>
-         <xsd:appinfo source="displaytermType">
-            <dtyp:displayterm>Area Weighted Average Total Area</dtyp:displayterm>
-         </xsd:appinfo>
-      </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative">
-      </xsd:restriction>
-   </xsd:simpleType>
    <xsd:simpleType name="AreaWeightedAverageUfactor">
       <xsd:annotation>
          <xsd:documentation>  Units: Btu per h ft2 F</xsd:documentation>
@@ -490,7 +490,7 @@
             <dtyp:displayterm>Area Weighted Average Ufactor</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative">
+      <xsd:restriction base="dtyp:Decimal4PlacesNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="AreDuctsEntirelyInConditionedSpace">
@@ -1032,7 +1032,7 @@
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="FixedCFVCS">Fixed CFVCS</dtyp:displayterm>
             <dtyp:displayterm value="NotCFVCS">Not a CFVCS</dtyp:displayterm>
-            <dtyp:displayterm value="VariableCFVCS">Variable  CFVCS</dtyp:displayterm>
+            <dtyp:displayterm value="VariableCFVCS">Variable CFVCS</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
@@ -1049,10 +1049,6 @@
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:City">
-      </xsd:restriction>
-   </xsd:simpleType>
-   <xsd:simpleType name="CmRevision">
-      <xsd:restriction base="xsd:string">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="CommentsToPermitAuthority">
@@ -2101,13 +2097,6 @@
          <xsd:enumeration value="SPV01c PV Compliance Credits and Exceptions to SRA requirements"/>
       </xsd:restriction>
    </xsd:simpleType>
-   <xsd:simpleType name="ComplianceManagerVersion">
-      <xsd:annotation>
-         <xsd:documentation>This is the version of the Compliance Manager component of the Title 24 residential performance compliance software used for  generating compliance results in a CF1R-PRF.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:restriction base="xsd:string">
-      </xsd:restriction>
-   </xsd:simpleType>
    <xsd:simpleType name="ComplianceMarginIAQ_VentilationEast">
       <xsd:annotation>
          <xsd:documentation>  Units: kTDV per ft2 per yr</xsd:documentation>
@@ -2330,6 +2319,17 @@
    <xsd:simpleType name="ComplianceSoftwareVersion">
       <xsd:annotation>
          <xsd:documentation>This is the version of the Title 24 residential performance compliance software used for generating compliance results in a CF1R-PRF.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="CompMgrRevision">
+      <xsd:restriction base="xsd:string">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="CompMgrVersion">
+      <xsd:annotation>
+         <xsd:documentation>This is the version of the Compliance Manager component of the Title 24 residential performance compliance software used for  generating compliance results in a CF1R-PRF.</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="xsd:string">
       </xsd:restriction>
@@ -3287,10 +3287,12 @@
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="DuctsSealedTested">Sealed and Tested</dtyp:displayterm>
+            <dtyp:displayterm value="Existing">Existing (not specified)</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="DuctsSealedTested"/>
+         <xsd:enumeration value="Existing"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="DuctLeakageDiagnosticTestCorrectionNotes">
@@ -8952,10 +8954,10 @@ Document Data</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:sequence>
+         <xsd:element name="compMgrRevision" type="comp:CompMgrRevision" ></xsd:element>
       </xsd:sequence>
       <xsd:attribute name="complianceDocumentGUID" type="comp:ComplianceDocumentGUID" use="required"></xsd:attribute>
       <xsd:attribute name="complianceDocumentSchemaVersion" type="comp:ComplianceDocumentSchemaVersion" use="required"></xsd:attribute>
-      <xsd:attribute name="cmRevision" type="comp:CmRevision" use="required"></xsd:attribute>
       <xsd:attribute name="displayTag" type="comp:ComplianceDocumentDisplayTag" use="required"></xsd:attribute>
       <xsd:attribute name="payloadDocument" type="comp:ComplianceDocumentTag" use="required"></xsd:attribute>
       <xsd:attribute name="processedDate" type="comp:ComplianceApplicationDate" use="required"></xsd:attribute>
