@@ -12,7 +12,7 @@
    xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
    xmlns:altova="http://www.altova.com/xml-schema-extensions"
-   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.099">
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.100">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="../base/ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/bld" schemaLocation="../base/ResBuilding.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/env" schemaLocation="../base/ResEnvelope.xsd"/>
@@ -3445,7 +3445,7 @@
                                           <xsd:documentation source="FieldText">Exterior Shading</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">This field is present if  ResidentialFenestrationType equals Window</xsd:documentation>
                                           <xsd:appinfo source="displayterm">
-                                             <dtyp:displayterm value="StandardBugScreen">Insect Screen (default)</dtyp:displayterm>
+                                             <dtyp:displayterm value="StandardBugScreen">Bug Screen</dtyp:displayterm>
                                           </xsd:appinfo>
                                           
                                           <xsd:appinfo source="CBECCresXML">
@@ -4462,18 +4462,18 @@
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
-                                    <xsd:element name="S04_WaterHeaterName" type="hvac:WaterHeaterName" >
+                                    <xsd:element name="S04_WaterHeaterName" type="hvac:WaterHeaterName"  maxOccurs="6">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Water Heater</xsd:documentation>
+                                          <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>DHWSys:DHWHeater</dtyp:CBECCresXMLterm>
                                              <dtyp:termConditions>XSLT has some complex logic here to determine index of DHWHeater and concatenate with HeaterMult</dtyp:termConditions>
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="S05_WaterHeaterCount" type="hvac:WaterHeaterCount" >
+                                    <xsd:element name="S05_WaterHeaterCount" type="hvac:WaterHeaterCount"  maxOccurs="6">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Number of Heaters</xsd:documentation>
+                                          <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>DHWSys:TotNumDHWHeaters</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -4551,6 +4551,15 @@
                                     <xsd:element name="S11_WaterHeatingSystemName" type="hvac:WaterHeatingSystemName"  minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Existing Water Heating System</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="S12_WaterHeaterNameCount" type="hvac:WaterHeaterNameCount"  maxOccurs="6">
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Water Heater Name (#)</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">This field concatenates the name from S04 with the count from S05 and should be displayed after S03  in the report pdf</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -4659,17 +4668,17 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="S06_WaterHeaterName" type="hvac:WaterHeaterName"  minOccurs="1" maxOccurs="5">
+                                    <xsd:element name="S06_WaterHeaterName" type="hvac:WaterHeaterName"  minOccurs="1" maxOccurs="6">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Water Heater</xsd:documentation>
+                                          <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>DHWSys:DHWHeater</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="S07_WaterHeaterCount" type="hvac:WaterHeaterCount" >
+                                    <xsd:element name="S07_WaterHeaterCount" type="hvac:WaterHeaterCount"  maxOccurs="6">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText"># of Water Heaters/System</xsd:documentation>
+                                          <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>DHWSys:TotNumDHWHeaters</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -4746,6 +4755,15 @@
                                     <xsd:element name="S13_WaterHeatingSystemName" type="hvac:WaterHeatingSystemName"  minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Existing Water Heating System</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="S14_WaterHeaterNameCount" type="hvac:WaterHeaterNameCount"  maxOccurs="6">
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Water Heater Name (#)</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">This field concatenates the name from S06 with the count from S07 and should be displayed after S05  in the report pdf</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -4838,7 +4856,7 @@
                                     </xsd:choice>
                                     <xsd:element name="T04_WaterHeaterCount" type="hvac:WaterHeaterCount" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Number of Units</xsd:documentation>
+                                          <xsd:documentation source="FieldText"># of Heaters in Building</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>DHWSysRpt:DHWHeaterCnt</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
