@@ -2200,12 +2200,12 @@
             <dtyp:displayterm value="RuudPROUH80RU350D">PROUH80 T2 RU350 D  (80 gal)</dtyp:displayterm>
             <dtyp:displayterm value="RuudPROUH80RU350D15">PROUH80 T2 RU350 D15  (80 gal)</dtyp:displayterm>
             <dtyp:displayterm value="RuudPROUH80RU350DCB">PROUH80 T2 RU350 DCB  (80 gal)</dtyp:displayterm>
-            <dtyp:displayterm value="SandenGS3_GAUS160QTA">GS3-45HPA-US &amp; GAUS-160QTA  (43 gal)</dtyp:displayterm>
-            <dtyp:displayterm value="SandenGS3_GAUS315EQTD">GS3-45HPA-US &amp; GAUS-315EQTD  (83 gal)</dtyp:displayterm>
-            <dtyp:displayterm value="SandenGS3_SAN43SSAQA">GS3-45HPA-US &amp; SAN-43SSAQA  (43 gal)</dtyp:displayterm>
-            <dtyp:displayterm value="SandenGS3_SAN83SSAQA">GS3-45HPA-US &amp; SAN-83SSAQA  (83 gal)</dtyp:displayterm>
-            <dtyp:displayterm value="SandenGUS_GAUS315EQTD">GUS-45HPA-US &amp; GAUS-1315EQTD  (83 gal)</dtyp:displayterm>
-            <dtyp:displayterm value="SandenGUS_SAN83SSAQA">GUS-45HPA-US &amp; SAN-83SSAQA  (83 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="SandenGS3_GAUS160QTA">GS3-45HPA-US &amp;amp; GAUS-160QTA  (43 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="SandenGS3_GAUS315EQTD">GS3-45HPA-US &amp;amp; GAUS-315EQTD  (83 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="SandenGS3_SAN43SSAQA">GS3-45HPA-US &amp;amp; SAN-43SSAQA  (43 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="SandenGS3_SAN83SSAQA">GS3-45HPA-US &amp;amp; SAN-83SSAQA  (83 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="SandenGUS_GAUS315EQTD">GUS-45HPA-US &amp;amp; GAUS-1315EQTD  (83 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="SandenGUS_SAN83SSAQA">GUS-45HPA-US &amp;amp; SAN-83SSAQA  (83 gal)</dtyp:displayterm>
             <dtyp:displayterm value="StateEP680DHPT">EP6 80 DHPT 102  (80 gal)</dtyp:displayterm>
             <dtyp:displayterm value="StateEPX60DHPT">EPX 60 DHPT  (60 gal)</dtyp:displayterm>
             <dtyp:displayterm value="StateEPX80DHPT">EPX 80 DHPT  (80 gal)</dtyp:displayterm>
@@ -3966,8 +3966,8 @@
             <dtyp:displayterm>Simulated Model Group Sanden 40</dtyp:displayterm>
          </xsd:appinfo>
          <xsd:appinfo source="displayterm">
-            <dtyp:displayterm value="SandenGS3_GAUS160QTA">GS3-45HPA-US &amp; GAUS-160QTA  (43 gal)</dtyp:displayterm>
-            <dtyp:displayterm value="SandenGS3_SAN43SSAQA">GS3-45HPA-US &amp; SAN-43SSAQA  (43 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="SandenGS3_GAUS160QTA">GS3-45HPA-US &amp;amp; GAUS-160QTA  (43 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="SandenGS3_SAN43SSAQA">GS3-45HPA-US &amp;amp; SAN-43SSAQA  (43 gal)</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
@@ -3981,10 +3981,10 @@
             <dtyp:displayterm>Simulated Model Group Sanden 80</dtyp:displayterm>
          </xsd:appinfo>
          <xsd:appinfo source="displayterm">
-            <dtyp:displayterm value="SandenGS3_GAUS315EQTD">GS3-45HPA-US &amp; GAUS-315EQTD  (83 gal)</dtyp:displayterm>
-            <dtyp:displayterm value="SandenGS3_SAN83SSAQA">GS3-45HPA-US &amp; SAN-83SSAQA  (83 gal)</dtyp:displayterm>
-            <dtyp:displayterm value="SandenGUS_GAUS315EQTD">GUS-45HPA-US &amp; GAUS-1315EQTD  (83 gal)</dtyp:displayterm>
-            <dtyp:displayterm value="SandenGUS_SAN83SSAQA">GUS-45HPA-US &amp; SAN-83SSAQA  (83 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="SandenGS3_GAUS315EQTD">GS3-45HPA-US &amp;amp; GAUS-315EQTD  (83 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="SandenGS3_SAN83SSAQA">GS3-45HPA-US &amp;amp; SAN-83SSAQA  (83 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="SandenGUS_GAUS315EQTD">GUS-45HPA-US &amp;amp; GAUS-1315EQTD  (83 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="SandenGUS_SAN83SSAQA">GUS-45HPA-US &amp;amp; SAN-83SSAQA  (83 gal)</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
