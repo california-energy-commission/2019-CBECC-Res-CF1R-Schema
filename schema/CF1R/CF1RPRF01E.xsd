@@ -260,10 +260,10 @@
                         </xsd:appinfo>
                      </xsd:annotation>
                   </xsd:element>
-                  <xsd:element name="A21_FirstFloorToHighestCeilingHeight" type="com:FirstFloorToHighestCeilingHeight" >
+                  <xsd:element name="A21_FirstFloorToHighestCeilingHeight" type="com:FirstFloorToHighestCeilingHeight"  minOccurs="0">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
-                        <xsd:documentation source="CalculationsAndRules">Value from IAQ dialog box, Maximum Vertical Distance.  Used in Cf2R-Mch27a</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">Value is not required If this is a multifamily project; Value from IAQ dialog box, Maximum Vertical Distance.  Used in CF2R-Mch27a</xsd:documentation>
                         <xsd:appinfo source="CBECCresXML">
                            <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                         </xsd:appinfo>
@@ -4703,9 +4703,10 @@
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
-                                    <xsd:element name="S09_CompactDistributionType" type="hvac:CompactDistributionType" >
+                                    <xsd:element name="S09_CompactDistributionType" type="hvac:CompactDistributionType"  minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Compact Distribution</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">This value is only required if this is a single family project</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -5441,18 +5442,20 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="U08_ResidentialDwellingUnitName" type="com:ResidentialDwellingUnitName" >
+                                    <xsd:element name="U08_ResidentialDwellingUnitName" type="com:ResidentialDwellingUnitName"  minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">This value is only required if this is a multifamily project</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>DwellUnit:Name</dtyp:CBECCresXMLterm>
                                              <dtyp:termConditions>XSLT uses DwellUnitRpt object instead of DwellUnit object, but it is not listed in Sharepoint.</dtyp:termConditions>
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="U09_ResidentialDwellingUnitDescriptor" type="com:ResidentialDwellingUnitDescriptor" >
+                                    <xsd:element name="U09_ResidentialDwellingUnitDescriptor" type="com:ResidentialDwellingUnitDescriptor"  minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">This value is only required if this is a multifamily project</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>DwellUnitRpt:DwellUnitTypeRef</dtyp:CBECCresXMLterm>
                                              <dtyp:termConditions>XSLT uses DwellUnitRpt object instead of DwellUnit object, but it is not listed in Sharepoint.</dtyp:termConditions>
