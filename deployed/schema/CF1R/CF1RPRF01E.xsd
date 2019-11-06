@@ -6175,7 +6175,7 @@
                                     </xsd:element>
                                     <xsd:element name="Aa04Supply_DuctRValue" type="hvac:DuctRValue">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Suppy</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Supply</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>HVACDist:DuctInsRvalue</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -6183,7 +6183,7 @@
                                     </xsd:element>
                                     <xsd:element name="Aa04bSupply_DuctRValueNum" type="hvac:DuctRValueNum">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Suppy</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Supply</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
