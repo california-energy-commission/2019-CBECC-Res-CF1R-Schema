@@ -12,7 +12,7 @@
    xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
    xmlns:altova="http://www.altova.com/xml-schema-extensions"
-   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.100">
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.102">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="../base/ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/bld" schemaLocation="../base/ResBuilding.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/env" schemaLocation="../base/ResEnvelope.xsd"/>
@@ -36,6 +36,7 @@
                   <xsd:sequence>
                      <xsd:element name="Header" type="comp:HeaderCF1RPerf" />
                      <xsd:element ref="cF1RPRF01E" />
+                     <xsd:element name="ProjectNotes" type="comp:ProjectNotes"  minOccurs="0"/>
                      <xsd:element name="DocAuthor" type="comp:DocumentAuthor" />
                      <xsd:element name="RespPerson" type="comp:ResponsiblePersonCF1R" />
                      <xsd:element name="Footer" type="comp:Footer" />
@@ -46,7 +47,7 @@
             <xsd:element name="Report2" type="xsd:base64Binary" id="Sign3"/>
             <xsd:element name="Input" type="xsd:base64Binary" id="Sign4"/>
          </xsd:sequence>
-         <xsd:attribute name="revision" use="required" type="xsd:string" fixed="rev 20190401"/>
+         <xsd:attribute name="revision" use="required" type="xsd:string" fixed="rev 20200101"/>
          <xsd:attribute name="doc" use="required" type="comp:ComplianceDocumentTag" fixed="CF1RPRF01E"/>
       </xsd:complexType>
    </xsd:element>
@@ -309,6 +310,7 @@
                      <xsd:element name="A24_ADUBedroomCount" type="com:ADUBedroomCount" >
                         <xsd:annotation>
                            <xsd:documentation source="FieldText">ADU Bedroom Count</xsd:documentation>
+                           <xsd:documentation source="CalculationsAndRules">Value must be 1 or greater</xsd:documentation>
                            <xsd:appinfo source="CBECCresXML">
                               <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                            </xsd:appinfo>
@@ -2910,6 +2912,14 @@
                                              <dtyp:CBECCresXMLterm>ExtWall:Status</dtyp:CBECCresXMLterm>
                                              <dtyp:termConditions>I don't see Status field in XSLT or PDF report.  See Calc&amp;Rules condition.</dtyp:termConditions>
                                           </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="J09a_WallException" type="comp:WallException"  minOccurs="0">
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Wall Exceptions</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>IntWall:Status</dtyp:CBECCresXMLterm>
                                              <dtyp:termConditions>I don't see Status field in XSLT or PDF report.  See Calc&amp;Rules condition.</dtyp:termConditions>
@@ -3418,6 +3428,11 @@
                                     <xsd:element name="M08a_FenestrationCertificationMethod" type="env:FenestrationCertificationMethod" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">U-factor Source</xsd:documentation>
+                                          <xsd:appinfo source="displayterm">
+                                             <dtyp:displayterm value="CECDefaultPerformance">Table 110.6-A</dtyp:displayterm>
+                                             <dtyp:displayterm value="NA6Equations">Eq. NA6-1</dtyp:displayterm>
+                                          </xsd:appinfo>
+                                          
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -3435,6 +3450,11 @@
                                     <xsd:element name="M09a_FenestrationCertificationMethod" type="env:FenestrationCertificationMethod" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">SHGC Source</xsd:documentation>
+                                          <xsd:appinfo source="displayterm">
+                                             <dtyp:displayterm value="CECDefaultPerformance">Table 110.6-B</dtyp:displayterm>
+                                             <dtyp:displayterm value="NA6Equations">Eq. NA6-2</dtyp:displayterm>
+                                          </xsd:appinfo>
+                                          
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -5548,22 +5568,42 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="V05_FanName" type="hvac:FanName" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Fan Name</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>HVACSys:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="V06_SpaceConditioningDistributionSystemName" type="hvac:SpaceConditioningDistributionSystemName" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Distribution Name</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>HVACSys:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="V05_FanName" type="hvac:FanName" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Fan Name</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>HVACSys:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="V05_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Fan Name</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="V06_SpaceConditioningDistributionSystemName" type="hvac:SpaceConditioningDistributionSystemName" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Distribution Name</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>HVACSys:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="V06_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Distribution Name</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:element name="V07_ThermostatType" type="hvac:ThermostatType" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Required Thermostat Type</xsd:documentation>
@@ -5905,6 +5945,9 @@
                                              <xsd:enumeration value="RoomHP"/>
                                              <xsd:enumeration value="SmallDuctHighVelocityHP"/>
                                              <xsd:enumeration value="VCHP"/>
+                                             <xsd:enumeration value="VCHP_IndoorUnitDucted"/>
+                                             <xsd:enumeration value="VCHP_IndoorUnitDuctedAndDuctless"/>
+                                             <xsd:enumeration value="VCHP_IndoorUnitDuctless"/>
                                           </xsd:restriction>
                                        </xsd:simpleType>
                                     </xsd:element>
@@ -6032,6 +6075,14 @@
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
+                                    <xsd:element name="Y12_IsFanCertifiedNonContinuous" type="comp:IsFanCertifiedNonContinuous"  minOccurs="0">
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Certified Non-Continuous Fan</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
                                     <xsd:sequence minOccurs="0" maxOccurs="unbounded">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">User Defined Fields</xsd:documentation>
@@ -6141,9 +6192,120 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Yhers09_VerificationRequiredCapacity17F" type="comp:VerificationRequiredCapacity17F" >
+                                    <xsd:element name="Yhers09_VerificationRequiredCapacity17F" type="comp:VerificationRequiredCapacity17F"  minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Verified Heating Cap 17</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                 </xsd:sequence>
+                              </xsd:complexType>
+                           </xsd:element>
+                        </xsd:sequence>
+                     </xsd:complexType>
+                  </xsd:element>
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="Section_Yvchp" minOccurs="0">
+            <xsd:annotation>
+               <xsd:documentation source="FieldText">VARIABLE CAPACITY HEAT PUMP COMPLIANCE OPTION  - HERS VERIFICATION</xsd:documentation>
+               <xsd:appinfo source="CBECCresXML">
+                  <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+               </xsd:appinfo>
+               <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="TableVCHP" >
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText"></xsd:documentation>
+                        <xsd:appinfo source="CBECCresXML">
+                           <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                        </xsd:appinfo>
+                     </xsd:annotation>
+                     <xsd:complexType>
+                        <xsd:sequence>
+                           <xsd:element name="Row" minOccurs="1" maxOccurs="unbounded">
+                              <xsd:complexType>
+                                 <xsd:sequence>
+                                    <xsd:element name="Yvchp01_HeatPumpSystemHERS_VerificationName" type="comp:HeatPumpSystemHERS_VerificationName" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Name</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Yvchp02_VerifyLowStaticVCHP" type="comp:VerifyLowStaticVCHP" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Certified Low-Static VCHP System</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Yvchp03_VerifyAirToHabitableRoomsVCHP" type="comp:VerifyAirToHabitableRoomsVCHP" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Airflow to Habitable Rooms</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Yvchp04_VerifyDuctlessInConditionedSpaceVCHP" type="comp:VerifyDuctlessInConditionedSpaceVCHP" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Ductless Units in Conditioned Space</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Yvchp05_VerifyWallThermostatVCHP" type="comp:VerifyWallThermostatVCHP" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Wall Mount Thermostat</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Yvchp06_VerifyFilterSizePressureDropVCHP" type="comp:VerifyFilterSizePressureDropVCHP" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Air Filter Sizing &amp; Pressure Drop Rating</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Yvchp07_VerifyLowLeakDuctsConditionedSpaceVCHP" type="comp:VerifyLowLeakDuctsConditionedSpaceVCHP" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Low Leakage Ducts in Conditioned Space</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Yvchp08_VerifyRequiredMinimumAirflowVCHP" type="comp:VerifyRequiredMinimumAirflowVCHP" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Minimum Airflow per RA3.3 and SC3.3.3.4.1</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Yvchp09_VerifyCertifiedNonContinuousFanVCHP" type="comp:VerifyCertifiedNonContinuousFanVCHP" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Certified non-continuous Fan</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Yvchp10_VerifyIndoorFanNonContinousVCHP" type="comp:VerifyIndoorFanNonContinousVCHP" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Indoor Fan not Running Continuously</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -6310,38 +6472,78 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Aa04Supply_DuctRValue" type="hvac:DuctRValue" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Supply</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>HVACDist:DuctInsRvalue</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Aa04bSupply_DuctRValueNum" type="hvac:DuctRValueNum" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Supply</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Aa05Return_DuctRValue" type="hvac:DuctRValue" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Return</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>HVACDist:DuctInsRvalue</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Aa05bReturn_DuctRValueNum" type="hvac:DuctRValueNum" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Return</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>HVACDist:DuctInsRvalue</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Aa04Supply_DuctRValue" type="hvac:DuctRValue" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Supply</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>HVACDist:DuctInsRvalue</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Aa04Supply_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Supply</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>HVACDist:DuctInsRvalue</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Aa04bSupply_DuctRValueNum" type="hvac:DuctRValueNum" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Supply</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Aa04bSupply_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Supply</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Aa05Return_DuctRValue" type="hvac:DuctRValue" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Return</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>HVACDist:DuctInsRvalue</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Aa05Return_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Return</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>HVACDist:DuctInsRvalue</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Aa05bReturn_DuctRValueNum" type="hvac:DuctRValueNum" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Return</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>HVACDist:DuctInsRvalue</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Aa05bReturn_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Return</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>HVACDist:DuctInsRvalue</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:element name="AaColumn0607Label" minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Duct Location</xsd:documentation>
@@ -6693,6 +6895,14 @@
                                           </xsd:appinfo>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>HERSDist:AltDuctLeakage</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Bb03b_DuctSystemLeakageTargetMessage" type="comp:DuctSystemLeakageTargetMessage" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Duct leakage target (%)</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>HERSDist:DuctLkgRptMsg</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
