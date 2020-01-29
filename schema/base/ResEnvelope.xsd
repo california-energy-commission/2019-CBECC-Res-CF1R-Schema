@@ -6,7 +6,7 @@
    xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
    xmlns:d="http://www.lmonte.com/besm/d"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.100">
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.104">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
    <xsd:simpleType name="AirInfiltrationRate">
@@ -690,9 +690,9 @@ Not Shared</dtyp:displayterm>
    <xsd:simpleType name="FenestrationCertificationMethod">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
-            <dtyp:displayterm value="CECDefaultPerformance">Tables 110.6-A and 110.6-B</dtyp:displayterm>
+            <dtyp:displayterm value="CECDefaultPerformance">Default 110.6</dtyp:displayterm>
             <dtyp:displayterm value="CF1R_ENV_02">Area-weighted Average Worksheet (CF1R-ENV-02)</dtyp:displayterm>
-            <dtyp:displayterm value="NA6Equations">Equations NA 6-1 and NA 6 -2</dtyp:displayterm>
+            <dtyp:displayterm value="NA6Equations">Equatio NA 6-1 and NA 6 -2</dtyp:displayterm>
             <dtyp:displayterm value="NFRCRated">NFRC</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
@@ -1372,14 +1372,14 @@ Not Shared</dtyp:displayterm>
       <xsd:annotation>
          <xsd:documentation>U factor of exterior insulation in a mass wall  construction assembly  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative">
+      <xsd:restriction base="dtyp:Decimal3PlacesNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="InsulationExteriorUFactorLimit">
       <xsd:annotation>
          <xsd:documentation>U factor limit for exterior insulation in a mass wall  construction assembly  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative">
+      <xsd:restriction base="dtyp:Decimal3PlacesNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="InsulationICF">
@@ -1404,14 +1404,14 @@ Not Shared</dtyp:displayterm>
       <xsd:annotation>
          <xsd:documentation>U factor of interior insulation in a mass wall  construction assembly  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative">
+      <xsd:restriction base="dtyp:Decimal3PlacesNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="InsulationInteriorUFactorLimit">
       <xsd:annotation>
          <xsd:documentation>U factor limit for interior insulation in a mass wall  construction assembly  Units: none</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative">
+      <xsd:restriction base="dtyp:Decimal3PlacesNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="InsulationMaterial">
@@ -1532,7 +1532,7 @@ Not Shared</dtyp:displayterm>
       <xsd:annotation>
          <xsd:documentation>This is  the measure of thermal  transmittance, U Factor,  through the insulation  Units: Btu per h ft2 F</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative">
+      <xsd:restriction base="dtyp:Decimal3PlacesNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="InsulationUFactorLimit">
@@ -1684,6 +1684,13 @@ Not Shared</dtyp:displayterm>
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="Hollow"/>
          <xsd:enumeration value="SolidUnit"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="MassLayerThickness">
+      <xsd:annotation>
+         <xsd:documentation>  Units: in</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="MassWallThickness">
@@ -1976,15 +1983,19 @@ Not Shared</dtyp:displayterm>
    <xsd:simpleType name="PartitionFramingMaterial">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="ConcreteBrickICF">Concrete brick ICF</dtyp:displayterm>
             <dtyp:displayterm value="EIFS">EIFS</dtyp:displayterm>
             <dtyp:displayterm value="Metal">Metal</dtyp:displayterm>
+            <dtyp:displayterm value="SIPS">SIPS</dtyp:displayterm>
             <dtyp:displayterm value="WoodFraming">Wood</dtyp:displayterm>
             <dtyp:displayterm value="Wood0_625Gypsum">Wood</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="ConcreteBrickICF"/>
          <xsd:enumeration value="EIFS"/>
          <xsd:enumeration value="Metal"/>
+         <xsd:enumeration value="SIPS"/>
          <xsd:enumeration value="WoodFraming"/>
          <xsd:enumeration value="Wood0_625Gypsum"/>
       </xsd:restriction>
@@ -2044,6 +2055,25 @@ Not Shared</dtyp:displayterm>
          <xsd:enumeration value="UndersideRoofDeck"/>
          <xsd:enumeration value="UndersideWithAirSpace"/>
          <xsd:enumeration value="UndersideWithBaffle"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="RaisedFloorFramingMaterialCBECC_Res">
+      <xsd:annotation>
+         <xsd:documentation>This property is for values in the CF1R-PRF from CBECC-Res reported in the CF2R-ENV-03</xsd:documentation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="ConcreteBrickICF">Concrete brick ICF</dtyp:displayterm>
+            <dtyp:displayterm value="SIPS_Floor">SIPS floor</dtyp:displayterm>
+            <dtyp:displayterm value="WoodFramedFloor">Wood framed floor</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="ConcreteBrickICF"/>
+         <xsd:enumeration value="SIPS_Floor"/>
+         <xsd:enumeration value="WoodFramedFloor"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="RaisedHeelTruss">
+      <xsd:restriction base="xsd:string">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ResidentialFenestrationType">
@@ -2252,6 +2282,10 @@ Not Shared</dtyp:displayterm>
          <xsd:documentation>This is the distance in inches that a roof rises vertically for the roof run of 12 inches to its ridge and is used in calculating the roof pitch or slope.  This is sometimes also referred to as pitch when the run is assumed to be 12 inches.  Units: in</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="RoofRiseString">
+      <xsd:restriction base="xsd:string">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="RoofRiseToRun">

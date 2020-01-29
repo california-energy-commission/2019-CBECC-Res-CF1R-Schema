@@ -7,7 +7,7 @@
    xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
    xmlns:d="http://www.lmonte.com/besm/d"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.102">
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.104">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/bld" schemaLocation="ResBuilding.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
@@ -755,7 +755,8 @@
       <xsd:annotation>
          <xsd:documentation>This is a documentation tag for instructions on how to calculate a property or the rules for applying it.</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="xsd:token">
+      <xsd:restriction base="xsd:string">
+         <xsd:whiteSpace value="preserve"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="CanFanEfficacyProtocolsTestSystem">
@@ -2353,6 +2354,10 @@
       <xsd:restriction base="xsd:string">
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="ComplianceSoftwareVersionDetail">
+      <xsd:restriction base="xsd:string">
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="ComplianceVCHP">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
@@ -2522,9 +2527,11 @@
    <xsd:simpleType name="CoolingSystemFeatureHERS">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="AirToHabitableRoomsVCHP">Airflow in habitable rooms (SC3.1.4.1.7)</dtyp:displayterm>
             <dtyp:displayterm value="AlteredRefrigerantCharge">Refrigerant Charge verification required if a refrigerant containing component is altered</dtyp:displayterm>
             <dtyp:displayterm value="FanEfficacy">Fan Efficacy Watts/CFM</dtyp:displayterm>
             <dtyp:displayterm value="MinimumAirflow">Minimum Airflow</dtyp:displayterm>
+            <dtyp:displayterm value="MinimumAirflowVCHP">Minimum Airflow according to RA3.3 and SC3.3.3.4.1</dtyp:displayterm>
             <dtyp:displayterm value="None">-- None --</dtyp:displayterm>
             <dtyp:displayterm value="RefrigerantCharge">Verified Refrigerant Charge</dtyp:displayterm>
             <dtyp:displayterm value="VerifiedEER">Verified EER</dtyp:displayterm>
@@ -2532,9 +2539,11 @@
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="AirToHabitableRoomsVCHP"/>
          <xsd:enumeration value="AlteredRefrigerantCharge"/>
          <xsd:enumeration value="FanEfficacy"/>
          <xsd:enumeration value="MinimumAirflow"/>
+         <xsd:enumeration value="MinimumAirflowVCHP"/>
          <xsd:enumeration value="None"/>
          <xsd:enumeration value="RefrigerantCharge"/>
          <xsd:enumeration value="VerifiedEER"/>
@@ -3530,7 +3539,7 @@
    <xsd:simpleType name="DuctsDeeplyBuriedComplianceCreditTaken">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
-            <dtyp:displayterm value="true">Credit taken: Installation should proceed according to the requirements in RA3.1.4.1.6</dtyp:displayterm>
+            <dtyp:displayterm value="true">Installation in accordance with RA3.1.4.1.6</dtyp:displayterm>
             <dtyp:displayterm value="false">Credit not taken</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
@@ -3555,6 +3564,16 @@
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="true">True</dtyp:displayterm>
             <dtyp:displayterm value="false">Not applicable</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="DuctsInCondExcept12CreditTaken">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Yes</dtyp:displayterm>
+            <dtyp:displayterm value="false">No</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="xsd:boolean">
@@ -4789,15 +4808,29 @@
    <xsd:simpleType name="HeatingSystemFeatureHERS">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
-            <dtyp:displayterm value="HeatPumpCapacity">Verified Heat Pump Rated Heating</dtyp:displayterm>
+            <dtyp:displayterm value="CertifiedNonContinuousFanVCHP">CEC certified model indoor fan off when not calling for conditioning (SC3.4.6)</dtyp:displayterm>
+            <dtyp:displayterm value="DuctlessInConditionedSpaceVCHP">Ductless indoor units located entirely in conditioned space (SC3.1.4.1.8)</dtyp:displayterm>
+            <dtyp:displayterm value="DuctsInConditionedSpaceTested">Ducts located entirely in conditioned space confirmed by duct leakage testing</dtyp:displayterm>
+            <dtyp:displayterm value="FilterPressureDropVCHP">Verified air filter pressure drop rating</dtyp:displayterm>
+            <dtyp:displayterm value="FilterSizeVCHP">Verified air filter sizing (SC3.1.4.7)</dtyp:displayterm>
+            <dtyp:displayterm value="HeatPumpCapacity">Verified heat pump rated heating capacity</dtyp:displayterm>
             <dtyp:displayterm value="HeatPumpHSPF">Verified Heat Pump HSPF</dtyp:displayterm>
+            <dtyp:displayterm value="LowStaticVCHP">CEC certified low-static VCHP system</dtyp:displayterm>
             <dtyp:displayterm value="None">-- None --</dtyp:displayterm>
+            <dtyp:displayterm value="WallThermostatVCHP">Wall-mounted thermostat in zones greater than 150 ft2 (SC3.4.5)</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="CertifiedNonContinuousFanVCHP"/>
+         <xsd:enumeration value="DuctlessInConditionedSpaceVCHP"/>
+         <xsd:enumeration value="DuctsInConditionedSpaceTested"/>
+         <xsd:enumeration value="FilterPressureDropVCHP"/>
+         <xsd:enumeration value="FilterSizeVCHP"/>
          <xsd:enumeration value="HeatPumpCapacity"/>
          <xsd:enumeration value="HeatPumpHSPF"/>
+         <xsd:enumeration value="LowStaticVCHP"/>
          <xsd:enumeration value="None"/>
+         <xsd:enumeration value="WallThermostatVCHP"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="HeatingSystemFeatureHERS_Data">
@@ -6641,7 +6674,6 @@
    <xsd:simpleType name="NotApplicableMessage">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
-            <dtyp:displayterm value="Minimized"></dtyp:displayterm>
             <dtyp:displayterm value="N/A">n/a</dtyp:displayterm>
             <dtyp:displayterm value="n/a">n/a</dtyp:displayterm>
             <dtyp:displayterm value="N/A - no ducts replaced">N/A - no ducts replaced</dtyp:displayterm>
@@ -6652,7 +6684,6 @@
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstantPermissive">
-         <xsd:enumeration value="Minimized"/>
          <xsd:enumeration value="N/A"/>
          <xsd:enumeration value="n/a"/>
          <xsd:enumeration value="N/A - no ducts replaced"/>
@@ -6982,20 +7013,22 @@
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="BatteryStorage">Battery storage (Trigger CF2R-PVB-02)</dtyp:displayterm>
             <dtyp:displayterm value="CZ15ReducedSize">CZ15 reduced PV size</dtyp:displayterm>
+            <dtyp:displayterm value="DeclaredEmergencyArea">AB-178 - Declared emergency area</dtyp:displayterm>
             <dtyp:displayterm value="HabitableStories2">2 habitable stories</dtyp:displayterm>
             <dtyp:displayterm value="HabitableStories3">3 habitable stories</dtyp:displayterm>
-            <dtyp:displayterm value="NoExceptionsNA">NA</dtyp:displayterm>
             <dtyp:displayterm value="LimitedSolarAccess">No PV - limited solar access (Trigger CF2R-SRA-01)</dtyp:displayterm>
+            <dtyp:displayterm value="NoExceptionsNA">NA</dtyp:displayterm>
             <dtyp:displayterm value="PlansBefore2020">Plan approved before 1/1/20</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="BatteryStorage"/>
          <xsd:enumeration value="CZ15ReducedSize"/>
+         <xsd:enumeration value="DeclaredEmergencyArea"/>
          <xsd:enumeration value="HabitableStories2"/>
          <xsd:enumeration value="HabitableStories3"/>
-         <xsd:enumeration value="NoExceptionsNA"/>
          <xsd:enumeration value="LimitedSolarAccess"/>
+         <xsd:enumeration value="NoExceptionsNA"/>
          <xsd:enumeration value="PlansBefore2020"/>
       </xsd:restriction>
    </xsd:simpleType>
@@ -8165,6 +8198,7 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
             <dtyp:displayterm value="BatteryWithSelfUtilCredit">Battery System (Self Utilization Credit Taken)</dtyp:displayterm>
             <dtyp:displayterm value="CentralParallelPiping">Central parallel piping</dtyp:displayterm>
             <dtyp:displayterm value="CompactDesignBasic">Compact distribution system basic credit</dtyp:displayterm>
+            <dtyp:displayterm value="ComplianceOptionVCHP">Variable capacity heat pump compliance option (verification details from VCHP Staff report, Appendix B, and RA3)</dtyp:displayterm>
             <dtyp:displayterm value="CoolRoofInstalled">Cool roof</dtyp:displayterm>
             <dtyp:displayterm value="DuctHighInsulation">Ducts with high level of insulation</dtyp:displayterm>
             <dtyp:displayterm value="DuctsInCrawlSpace">Ducts in crawl space</dtyp:displayterm>
@@ -8212,6 +8246,7 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
          <xsd:enumeration value="BatteryWithSelfUtilCredit"/>
          <xsd:enumeration value="CentralParallelPiping"/>
          <xsd:enumeration value="CompactDesignBasic"/>
+         <xsd:enumeration value="ComplianceOptionVCHP"/>
          <xsd:enumeration value="CoolRoofInstalled"/>
          <xsd:enumeration value="DuctHighInsulation"/>
          <xsd:enumeration value="DuctsInCrawlSpace"/>
@@ -8878,6 +8913,10 @@ Time Dependent Valuation (TDV) Gas Propane energy is calculated by multiplying t
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Indoor Fan not Running Continuously</dtyp:displayterm>
          </xsd:appinfo>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Required</dtyp:displayterm>
+            <dtyp:displayterm value="false">Not required</dtyp:displayterm>
+         </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="xsd:boolean">
       </xsd:restriction>
@@ -8935,6 +8974,14 @@ Time Dependent Valuation (TDV) Gas Propane energy is calculated by multiplying t
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="WallException">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="ExceptionNA">n/a</dtyp:displayterm>
+            <dtyp:displayterm value="ExceptionNone">none</dtyp:displayterm>
+            <dtyp:displayterm value="WallExtension">Extension</dtyp:displayterm>
+            <dtyp:displayterm value="WallSiding">Ex. w/ Siding</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="ExceptionNA"/>
          <xsd:enumeration value="ExceptionNone"/>

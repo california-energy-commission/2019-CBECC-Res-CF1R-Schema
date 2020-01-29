@@ -6,7 +6,7 @@
    xmlns:hvac="http://www.lmonte.com/besm/hvac"
    xmlns:d="http://www.lmonte.com/besm/d"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.102">
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.104">
    <xsd:import namespace="http://www.lmonte.com/besm/hvac" schemaLocation="ResHvac.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
    <xsd:simpleType name="AccessoryDwellingUnitIncluded">
@@ -97,6 +97,22 @@
          <xsd:enumeration value="FieldFabricated"/>
          <xsd:enumeration value="Manufactured"/>
          <xsd:enumeration value="SiteBuilt"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="AzimuthRange">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="105To300">105-300</dtyp:displayterm>
+            <dtyp:displayterm value="150To270">150-270</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="105To300"/>
+         <xsd:enumeration value="150To270"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="AzimuthRangeString">
+      <xsd:restriction base="xsd:string">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="BedroomCount">

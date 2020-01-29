@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.lmonte.com/besm/CF1RPRF01E" version="2019.1.102" xmlns="http://www.lmonte.com/besm/CF1RPRF01E" xmlns:altova="http://www.altova.com/xml-schema-extensions" xmlns:bld="http://www.lmonte.com/besm/bld" xmlns:com="http://www.lmonte.com/besm/com" xmlns:comp="http://www.lmonte.com/besm/comp" xmlns:d="http://www.lmonte.com/besm/d" xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:env="http://www.lmonte.com/besm/env" xmlns:hvac="http://www.lmonte.com/besm/hvac" xmlns:lit="http://www.lmonte.com/besm/lit" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.lmonte.com/besm/CF1RPRF01E" version="2019.1.104" xmlns="http://www.lmonte.com/besm/CF1RPRF01E" xmlns:altova="http://www.altova.com/xml-schema-extensions" xmlns:bld="http://www.lmonte.com/besm/bld" xmlns:com="http://www.lmonte.com/besm/com" xmlns:comp="http://www.lmonte.com/besm/comp" xmlns:d="http://www.lmonte.com/besm/d" xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:env="http://www.lmonte.com/besm/env" xmlns:hvac="http://www.lmonte.com/besm/hvac" xmlns:lit="http://www.lmonte.com/besm/lit" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
    <xsd:import namespace="http://www.lmonte.com/besm/bld" schemaLocation="../base/ResBuilding.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="../base/ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/comp" schemaLocation="../base/ResCompliance.xsd"/>
@@ -75,6 +75,14 @@
                         <xsd:documentation source="FieldText">Software Version</xsd:documentation>
                         <xsd:appinfo source="CBECCresXML">
                            <dtyp:CBECCresXMLterm>Project:SoftwareVersion</dtyp:CBECCresXMLterm>
+                        </xsd:appinfo>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="A07b_ComplianceSoftwareVersionDetail" type="comp:ComplianceSoftwareVersionDetail" minOccurs="0">
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                        <xsd:appinfo source="CBECCresXML">
+                           <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                         </xsd:appinfo>
                      </xsd:annotation>
                   </xsd:element>
@@ -1629,7 +1637,15 @@
                                        </xsd:annotation>
                                     </xsd:element>
                                     <xsd:choice maxOccurs="1">
-                                       <xsd:element name="Da07_Azimuth" type="dtyp:Azimuth">
+                                       <xsd:element name="Da07_AzimuthRange" type="com:AzimuthRange">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Azimuth (deg)</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Da07_AzimuthRangeString" type="com:AzimuthRangeString" minOccurs="0">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Azimuth (deg)</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
@@ -1685,6 +1701,14 @@
                                     </xsd:choice>
                                     <xsd:choice maxOccurs="1">
                                        <xsd:element name="Da10_RoofRise" type="env:RoofRise">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Tilt: (x in 12)</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Da10_RoofRiseString" type="env:RoofRiseString">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Tilt: (x in 12)</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
@@ -2831,6 +2855,14 @@
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
+                                    <xsd:element name="J09a_WallException" type="comp:WallException" minOccurs="0">
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Wall Exceptions</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
                                     <xsd:element name="J09_StatusEAA" type="com:StatusEAA" minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Status</xsd:documentation>
@@ -2838,14 +2870,6 @@
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>ExtWall:Status</dtyp:CBECCresXMLterm>
                                              <dtyp:termConditions>I don't see Status field in XSLT or PDF report.  See Calc&amp;amp;Rules condition.</dtyp:termConditions>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="J09a_WallException" type="comp:WallException" minOccurs="0">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Wall Exceptions</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>IntWall:Status</dtyp:CBECCresXMLterm>
@@ -4127,6 +4151,14 @@
                                                    </xsd:appinfo>
                                                 </xsd:annotation>
                                              </xsd:element>
+                                             <xsd:element name="Q04f_RaisedHeelTruss" type="env:RaisedHeelTruss" minOccurs="0">
+                                                <xsd:annotation>
+                                                   <xsd:documentation source="FieldText"/>
+                                                   <xsd:appinfo source="CBECCresXML">
+                                                      <dtyp:CBECCresXMLterm>Cons:FramingRpt</dtyp:CBECCresXMLterm>
+                                                   </xsd:appinfo>
+                                                </xsd:annotation>
+                                             </xsd:element>
                                           </xsd:sequence>
                                        </xsd:complexType>
                                     </xsd:element>
@@ -4198,6 +4230,14 @@
                                        </xsd:annotation>
                                     </xsd:element>
                                     <xsd:element name="Q08b_InsulationThickness" type="env:InsulationThickness" minOccurs="0">
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Q08c_MassLayerThickness" type="env:MassLayerThickness" minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -6336,6 +6376,9 @@
                                        <xsd:element name="Aa04Supply_DuctRValue" type="hvac:DuctRValue">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Supply</xsd:documentation>
+                                             <xsd:appinfo source="displayterm">
+                                                <dtyp:displayterm value="RvalueVerifiedDuctSystem">See duct design</dtyp:displayterm>
+                                             </xsd:appinfo>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>HVACDist:DuctInsRvalue</dtyp:CBECCresXMLterm>
                                              </xsd:appinfo>
@@ -6372,6 +6415,9 @@
                                        <xsd:element name="Aa05Return_DuctRValue" type="hvac:DuctRValue">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Return</xsd:documentation>
+                                             <xsd:appinfo source="displayterm">
+                                                <dtyp:displayterm value="RvalueVerifiedDuctSystem">See duct design</dtyp:displayterm>
+                                             </xsd:appinfo>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>HVACDist:DuctInsRvalue</dtyp:CBECCresXMLterm>
                                              </xsd:appinfo>
@@ -6758,9 +6804,9 @@
                                     </xsd:element>
                                     <xsd:element name="Bb03b_DuctSystemLeakageTargetMessage" type="comp:DuctSystemLeakageTargetMessage">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Duct leakage target (%)</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Duct Leakage Target Message</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>HERSDist:DuctLkgRptMsg</dtyp:CBECCresXMLterm>
+                                             <dtyp:CBECCresXMLterm>HERSDist:AltDuctLeakage</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
@@ -6769,6 +6815,14 @@
                                           <xsd:documentation source="FieldText">Verified Duct Location</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>HERSDist:DuctLocation</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Bb04a_DuctsInCondExcept12CreditTaken" type="comp:DuctsInCondExcept12CreditTaken">
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>HERSDist:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
@@ -8003,6 +8057,14 @@
                                                          </xsd:annotation>
                                                       </xsd:element>
                                                       <xsd:element name="Oo03d_EfficiencyHSPF" type="hvac:EfficiencyHSPF" minOccurs="0">
+                                                         <xsd:annotation>
+                                                            <xsd:documentation source="FieldText">Efficiency</xsd:documentation>
+                                                            <xsd:appinfo source="CBECCresXML">
+                                                               <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                                            </xsd:appinfo>
+                                                         </xsd:annotation>
+                                                      </xsd:element>
+                                                      <xsd:element name="Oo03e_EfficiencyCOP" type="hvac:EfficiencyCOP" minOccurs="0">
                                                          <xsd:annotation>
                                                             <xsd:documentation source="FieldText">Efficiency</xsd:documentation>
                                                             <xsd:appinfo source="CBECCresXML">
