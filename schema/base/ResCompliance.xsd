@@ -7,7 +7,7 @@
    xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
    xmlns:d="http://www.lmonte.com/besm/d"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.104">
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.106">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/bld" schemaLocation="ResBuilding.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
@@ -6679,6 +6679,7 @@
             <dtyp:displayterm value="N/A - no ducts replaced">N/A - no ducts replaced</dtyp:displayterm>
             <dtyp:displayterm value="N/A - not a central DHW system">N/A - not a central DHW system</dtyp:displayterm>
             <dtyp:displayterm value="N/A.   External calculations are required.">N/A.   External calculations are required.</dtyp:displayterm>
+            <dtyp:displayterm value="NoData">---</dtyp:displayterm>
             <dtyp:displayterm value="Not Applicable">Not applicable</dtyp:displayterm>
             <dtyp:displayterm value="NotApplicable">N/A</dtyp:displayterm>
          </xsd:appinfo>
@@ -6689,6 +6690,7 @@
          <xsd:enumeration value="N/A - no ducts replaced"/>
          <xsd:enumeration value="N/A - not a central DHW system"/>
          <xsd:enumeration value="N/A.   External calculations are required."/>
+         <xsd:enumeration value="NoData"/>
          <xsd:enumeration value="Not Applicable"/>
          <xsd:enumeration value="NotApplicable"/>
       </xsd:restriction>

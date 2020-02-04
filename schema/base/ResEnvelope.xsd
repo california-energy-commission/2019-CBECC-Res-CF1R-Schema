@@ -6,7 +6,7 @@
    xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
    xmlns:d="http://www.lmonte.com/besm/d"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.104">
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.106">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
    <xsd:simpleType name="AirInfiltrationRate">
@@ -2858,7 +2858,7 @@ of exposed exterior glazing at the jamb of a window to the outward edge of a fin
             <dtyp:displayterm>Window Floor Ratio</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:Decimal4PlacesNonnegative">
+      <xsd:restriction base="dtyp:Decimal3PlacesNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="WindowFrameAndDividerName">

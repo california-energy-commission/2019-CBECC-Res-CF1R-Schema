@@ -6,7 +6,7 @@
    xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
    xmlns:d="http://www.lmonte.com/besm/d"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.105">
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.106">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
    <xsd:simpleType name="AdditionalReturnDuctCount">
@@ -180,6 +180,15 @@
          <xsd:documentation>  Units: F</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="AnnualSolarAccess">
+      <xsd:annotation>
+         <xsd:documentation>  Units: percent</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:IntegerNonnegative">
+         <xsd:maxInclusive value="100"/>
+         <xsd:minInclusive value="0"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="AOSmithHPTU50SimulationGroup">

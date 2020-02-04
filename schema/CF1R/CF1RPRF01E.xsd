@@ -12,7 +12,7 @@
    xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
    xmlns:altova="http://www.altova.com/xml-schema-extensions"
-   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.105">
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.106">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="../base/ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/bld" schemaLocation="../base/ResBuilding.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/env" schemaLocation="../base/ResEnvelope.xsd"/>
@@ -1686,7 +1686,7 @@
                                        </xsd:annotation>
                                     </xsd:element>
                                     <xsd:choice maxOccurs="1">
-                                       <xsd:element name="Da07_AzimuthRange" type="com:AzimuthRange" >
+                                       <xsd:element name="Da07_Azimuth" type="dtyp:Azimuth" >
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Azimuth (deg)</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
@@ -1694,7 +1694,7 @@
                                              </xsd:appinfo>
                                           </xsd:annotation>
                                        </xsd:element>
-                                       <xsd:element name="Da07_AzimuthRangeString" type="com:AzimuthRangeString"  minOccurs="0">
+                                       <xsd:element name="Da07_AzimuthRange" type="com:AzimuthRange" >
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Azimuth (deg)</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
@@ -1711,6 +1711,14 @@
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
+                                    <xsd:element name="Da07_AzimuthRangeString" type="com:AzimuthRangeString"  minOccurs="0">
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Azimuth (deg)</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
                                     <xsd:choice maxOccurs="1">
                                        <xsd:element name="Da08_TiltMeasurementType" type="env:TiltMeasurementType" >
                                           <xsd:annotation>
@@ -1792,6 +1800,14 @@
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
+                                    <xsd:element name="Da12_AnnualSolarAccess" type="hvac:AnnualSolarAccess" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Annual Solar Access (%)</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
                                     <xsd:sequence minOccurs="0" maxOccurs="unbounded">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">User Defined Fields</xsd:documentation>
@@ -1881,7 +1897,7 @@
                                     </xsd:element>
                                     <xsd:element name="Db03_ChargingEfficiency" type="hvac:ChargingEfficiency" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Efficiency</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Charging Efficiency</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -1907,7 +1923,7 @@
                                     </xsd:choice>
                                     <xsd:element name="Db05_DischargingEfficiency" type="hvac:DischargingEfficiency" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Efficiency</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Discharging Efficiency</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">Value assigned depends on what the user entered in the software.</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
@@ -3406,24 +3422,56 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="M04_Width" type="dtyp:Width"  minOccurs="0">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Width (ft)</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">This field is present if  ResidentialFenestrationType equals Window</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>Win:Width</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="M05_Height" type="dtyp:Height"  minOccurs="0">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Height (ft)</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">This field is present if  ResidentialFenestrationType equals Window</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>Win:Height</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="M04_Width" type="dtyp:Width" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Width (ft)</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">This data is present if  ResidentialFenestrationType equals Window</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>Win:Width</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="M04_NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Width (ft)</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If no data result = NoData display term ----</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                          <xsd:simpleType>
+                                             <xsd:restriction base="comp:NotApplicableMessage">
+                                                <xsd:enumeration value="NoData"/>
+                                             </xsd:restriction>
+                                          </xsd:simpleType>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="M05_Height" type="dtyp:Height" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Height (ft)</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">This data is present if  ResidentialFenestrationType equals Window</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>Win:Height</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="M05_NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Height (ft)</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If no data result = NoData display term ----</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                          <xsd:simpleType>
+                                             <xsd:restriction base="comp:NotApplicableMessage">
+                                                <xsd:enumeration value="NoData"/>
+                                             </xsd:restriction>
+                                          </xsd:simpleType>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:element name="M06_FenestrationIdenticalCount" type="env:FenestrationIdenticalCount" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Mult.</xsd:documentation>
@@ -5458,7 +5506,7 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Tchp05_LoopTankHeaterType" type="hvac:LoopTankHeaterType" >
+                                    <xsd:element name="Tchp05_LoopTankHeaterType" type="hvac:LoopTankHeaterType"  minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Loop Tank Heater Type</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -5974,30 +6022,34 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="W04a_EfficiencyType" >
+                                    <xsd:sequence maxOccurs="1">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Heating Efficiency Type</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
                                        </xsd:annotation>
-                                       <xsd:simpleType>
-                                          <xsd:restriction base="hvac:EfficiencyType">
-                                             <xsd:enumeration value="AFUE"/>
-                                          </xsd:restriction>
-                                       </xsd:simpleType>
-                                    </xsd:element>
-                                    <xsd:element name="W04_EfficiencyAFUE" type="hvac:EfficiencyAFUE" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Efficiency</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>SCSysRpt:MinHeatEffic</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>SCSysRpt:HeatEfficType</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                       <xsd:element name="W04_EfficiencyType" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Heating Efficiency</xsd:documentation>
+                                          </xsd:annotation>
+                                          <xsd:simpleType>
+                                             <xsd:restriction base="hvac:EfficiencyType">
+                                                <xsd:enumeration value="AFUE"/>
+                                             </xsd:restriction>
+                                          </xsd:simpleType>
+                                       </xsd:element>
+                                       <xsd:element name="W04_EfficiencyAFUE" type="hvac:EfficiencyAFUE"  maxOccurs="1">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Heating Efficiency</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>SCSysRpt:HeatEfficType</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:sequence>
                                     <xsd:sequence minOccurs="0" maxOccurs="unbounded">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">User Defined Fields</xsd:documentation>
@@ -6068,22 +6120,42 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="X04_EfficiencyEER" type="hvac:EfficiencyEER"  minOccurs="0">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Efficiency EER</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>SCSysRpt:MinCoolEER</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="X05_EfficiencySEER" type="hvac:EfficiencySEER"  minOccurs="0">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Efficiency SEER</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>SCSysRpt:MinCoolSEER</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="X04_EfficiencyEER" type="hvac:EfficiencyEER" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Efficiency EER</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>SCSysRpt:MinCoolEER</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="X04_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Efficiency EER</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="X05_EfficiencySEER" type="hvac:EfficiencySEER" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Efficiency SEER</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>SCSysRpt:MinCoolSEER</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="X05_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Efficiency SEER</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:element name="X06_ResidentialCoolingZoneType" type="hvac:ResidentialCoolingZoneType"  minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Zonally Controlled</xsd:documentation>
@@ -6272,14 +6344,24 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Y07_EfficiencySEER" type="hvac:EfficiencySEER" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">SEER</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Y07_EfficiencySEER" type="hvac:EfficiencySEER" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">SEER</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Y07_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">SEER</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:element name="Y08_EfficiencyEER" type="hvac:EfficiencyEER" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">EER</xsd:documentation>
@@ -6961,7 +7043,7 @@
          </xsd:element>
          <xsd:element name="Section_Ii" minOccurs="0">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">HVAC Distribution - Verified Duct Design</xsd:documentation>
+               <xsd:documentation source="FieldText">HVAC DISTRIBUTION - VERIFIED DUCT DESIGN</xsd:documentation>
                <xsd:documentation source="CalculationsAndRules">This section contains data required by the downstream compliance report, CF2R-MCH29-H</xsd:documentation>
                <xsd:appinfo source="CBECCresXML">
                   <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
@@ -7078,14 +7160,24 @@
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
-                                    <xsd:element name="Ii11_BuriedDuctInsulationDevice" type="hvac:BuriedDuctInsulationDevice" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Containment System</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Ii11_BuriedDuctInsulationDevice" type="hvac:BuriedDuctInsulationDevice" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Containment System</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Ii11_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Containment System</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:element name="Ii12_StatusEAA" type="hvac:StatusEAA" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Status</xsd:documentation>
@@ -7146,7 +7238,7 @@
                                     </xsd:element>
                                     <xsd:element name="Bb03_DuctSystemLeakageTarget" type="comp:DuctSystemLeakageTarget" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Duct leakage target (%)</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Duct Leakage Target (%)</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>HERSDist:DuctLkgRptMsg</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -7374,7 +7466,7 @@
                                     </xsd:element>
                                     <xsd:element name="Dd03_FanEfficacyRequired" type="hvac:FanEfficacyRequired" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Required Fan Efficiency (Watts/CFM)</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Required Fan Efficacy (Watts/CFM)</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>HERSFan:FanEffRptMsg</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
