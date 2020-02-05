@@ -6,7 +6,7 @@
    xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
    xmlns:d="http://www.lmonte.com/besm/d"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.106">
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.107">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
    <xsd:simpleType name="AdditionalReturnDuctCount">
@@ -178,6 +178,13 @@
    <xsd:simpleType name="AirSystemHeatingSupplyAirStageTemperatureDifference">
       <xsd:annotation>
          <xsd:documentation>  Units: F</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="AngleFromTrueNorth">
+      <xsd:annotation>
+         <xsd:documentation>  Units: deg arc</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative">
       </xsd:restriction>
@@ -3252,7 +3259,13 @@
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="LoopTankHeaterType">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="ElectricResistance">Commercial Electric Resistance</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="ElectricResistance"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="MaximumCoolingWperCFM">
@@ -4557,12 +4570,6 @@
    </xsd:simpleType>
    <xsd:simpleType name="SizeRangeFurnaceAC">
       <xsd:restriction base="dtyp:EnumerationConstant">
-         <xsd:enumeration value="GTE45000CoolGTE225000Heat"/>
-         <xsd:enumeration value="GTE45000CoolLT225000Heat"/>
-         <xsd:enumeration value="LT45000CoolGTE225000Heat"/>
-         <xsd:enumeration value="LT45000CoolLT225000Heat"/>
-         <xsd:enumeration value="LT65000CoolGTE225000Heat"/>
-         <xsd:enumeration value="LT65000CoolLT225000Heat"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SizeRangeFurnaceUnitHeater">
@@ -4633,7 +4640,7 @@
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SolarWaterHeatingCollectorManufacturer">
-      <xsd:restriction base="dtyp:String50Char">
+      <xsd:restriction base="xsd:string">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SolarWaterHeatingCollectorModelNumber">
@@ -5265,6 +5272,10 @@
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="WaterHeatingSolarSystemName">
+      <xsd:restriction base="xsd:token">
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="WaterHeatingStandbyLossApplianceDatabaseValue">

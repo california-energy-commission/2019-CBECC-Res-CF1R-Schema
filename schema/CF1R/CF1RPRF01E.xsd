@@ -12,7 +12,7 @@
    xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
    xmlns:altova="http://www.altova.com/xml-schema-extensions"
-   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.106">
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.107">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="../base/ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/bld" schemaLocation="../base/ResBuilding.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/env" schemaLocation="../base/ResEnvelope.xsd"/>
@@ -4590,7 +4590,7 @@
                                     <xsd:choice maxOccurs="1">
                                        <xsd:element name="S06_WaterHeatingSolarFraction" type="hvac:WaterHeatingSolarFraction" >
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Solar Fraction (%)</xsd:documentation>
+                                             <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">If there is no value for this field, display "n/a"</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
@@ -4600,7 +4600,25 @@
                                        </xsd:element>
                                        <xsd:element name="S06_NotApplicableMessage" type="comp:NotApplicableMessage" >
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Solar Fraction (%)</xsd:documentation>
+                                             <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="S06_WaterHeatingSolarSystemName" type="hvac:WaterHeatingSolarSystemName" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Solar Heating System</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="S06_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Solar Heating System</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                              </xsd:appinfo>
@@ -4795,7 +4813,7 @@
                                     <xsd:choice maxOccurs="1">
                                        <xsd:element name="S08_WaterHeatingSolarFraction" type="hvac:WaterHeatingSolarFraction" >
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Solar Fraction (%)</xsd:documentation>
+                                             <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">If there is no value for this field, display "n/a"</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>DHWSys:SolFracAnnRpt</dtyp:CBECCresXMLterm>
@@ -4804,7 +4822,25 @@
                                        </xsd:element>
                                        <xsd:element name="S08_NotApplicableMessage" type="comp:NotApplicableMessage" >
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Solar Fraction (%)</xsd:documentation>
+                                             <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="S08_WaterHeatingSolarSystemName" type="hvac:WaterHeatingSolarSystemName" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Solar Heating System</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="S08_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Solar Heating System</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                              </xsd:appinfo>
@@ -5453,7 +5489,7 @@
          </xsd:element>
          <xsd:element name="Section_Tchp" minOccurs="0">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">WATER HEATERS</xsd:documentation>
+               <xsd:documentation source="FieldText">WATER HEATERS - CHPWH</xsd:documentation>
                <xsd:documentation source="CalculationsAndRules">This section is required for central heat pump water heaters</xsd:documentation>
                <xsd:appinfo source="CBECCresXML">
                   <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
@@ -5474,7 +5510,7 @@
                            <xsd:element name="Row" minOccurs="1" maxOccurs="unbounded">
                               <xsd:complexType>
                                  <xsd:sequence>
-                                    <xsd:element name="Tchp01_WaterHeatingSystemName" type="hvac:WaterHeatingSystemName" >
+                                    <xsd:element name="Tchp01_WaterHeatingSolarSystemName" type="hvac:WaterHeatingSolarSystemName" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Name</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -5561,7 +5597,7 @@
                            <xsd:element name="Row" minOccurs="1" maxOccurs="unbounded">
                               <xsd:complexType>
                                  <xsd:sequence>
-                                    <xsd:element name="Tsh01_WaterHeatingSystemName" type="hvac:WaterHeatingSystemName" >
+                                    <xsd:element name="Tsh01_WaterHeatingSolarSystemName" type="hvac:WaterHeatingSolarSystemName" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Name</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -5601,7 +5637,7 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Tsh06_SolarWaterHeatingCollectorAngleFromNorth" type="comp:SolarWaterHeatingCollectorAngleFromNorth" >
+                                    <xsd:element name="Tsh06_AngleFromTrueNorth" type="hvac:AngleFromTrueNorth" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Azimuth from North</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -5625,27 +5661,17 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:choice maxOccurs="1">
-                                       <xsd:element name="Tsh09_SolarWaterSystemSRCC_CertificationNumber" type="hvac:SolarWaterSystemSRCC_CertificationNumber" >
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">SRCC/IAPMO Number</xsd:documentation>
-                                             <xsd:appinfo source="CBECCresXML">
-                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                             </xsd:appinfo>
-                                          </xsd:annotation>
-                                       </xsd:element>
-                                       <xsd:element name="Tsh09_SolarWaterSystemIAPMO_FileNumber" type="hvac:SolarWaterSystemIAPMO_FileNumber" >
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">SRCC/IAPMO Number</xsd:documentation>
-                                             <xsd:appinfo source="CBECCresXML">
-                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                             </xsd:appinfo>
-                                          </xsd:annotation>
-                                       </xsd:element>
-                                    </xsd:choice>
+                                    <xsd:element name="Tsh09_SolarWaterSystemSRCC_CertificationNumber" type="hvac:SolarWaterSystemSRCC_CertificationNumber" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">SRCC/IAPMO Number</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
                                     <xsd:element name="Tsh10_SolarWaterHeatingSavingsFraction" type="comp:SolarWaterHeatingSavingsFraction" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Annual Solar Savings Fraction</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Solar Savings Fraction</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
