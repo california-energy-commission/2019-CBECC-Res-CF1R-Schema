@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.lmonte.com/besm/hvac" version="2019.1.107" xmlns:com="http://www.lmonte.com/besm/com" xmlns:d="http://www.lmonte.com/besm/d" xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:hvac="http://www.lmonte.com/besm/hvac" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.lmonte.com/besm/hvac" version="2019.1.108" xmlns:com="http://www.lmonte.com/besm/com" xmlns:d="http://www.lmonte.com/besm/d" xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:hvac="http://www.lmonte.com/besm/hvac" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
    <xsd:simpleType name="AOSmithHPTU50SimulationGroup">
@@ -261,6 +261,12 @@
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Additional Return Duct Count</dtyp:displayterm>
          </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:IntegerNonnegative"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="AdjustedSensibleRecoveryEfficiency">
+      <xsd:annotation>
+         <xsd:documentation>Units: none</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="dtyp:IntegerNonnegative"/>
    </xsd:simpleType>
@@ -2775,6 +2781,18 @@
       </xsd:annotation>
       <xsd:restriction base="dtyp:IntegerNonnegative"/>
    </xsd:simpleType>
+   <xsd:simpleType name="HighRatedCFM_ASRE">
+      <xsd:restriction base="dtyp:IntegerNonnegative"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="HighRatedCFM_SRE">
+      <xsd:restriction base="dtyp:IntegerNonnegative"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="HighRatedFanFlowCapacity">
+      <xsd:annotation>
+         <xsd:documentation>Units: ft3 per min</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+   </xsd:simpleType>
    <xsd:simpleType name="HvacAutoSizing">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
@@ -3067,6 +3085,18 @@
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="ElectricResistance"/>
       </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="LowRatedCFM_ASRE">
+      <xsd:restriction base="dtyp:IntegerNonnegative"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="LowRatedCFM_SRE">
+      <xsd:restriction base="dtyp:IntegerNonnegative"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="LowRatedFanFlowCapacity">
+      <xsd:annotation>
+         <xsd:documentation>Units: ft3 per min</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative"/>
    </xsd:simpleType>
    <xsd:simpleType name="MaximumCoolingWperCFM">
       <xsd:annotation>
@@ -4305,6 +4335,12 @@
       </xsd:annotation>
       <xsd:restriction base="dtyp:IntegerNonnegative"/>
    </xsd:simpleType>
+   <xsd:simpleType name="SensibleRecoveryEfficiency">
+      <xsd:annotation>
+         <xsd:documentation>Units: none</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:IntegerNonnegative"/>
+   </xsd:simpleType>
    <xsd:simpleType name="SizeRangeComputerRoomAC">
       <xsd:restriction base="dtyp:EnumerationConstant"/>
    </xsd:simpleType>
@@ -4331,6 +4367,12 @@
    </xsd:simpleType>
    <xsd:simpleType name="SizeRangeVariableRefrigerantFlow">
       <xsd:restriction base="dtyp:EnumerationConstant"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="SolarWaterHeatingCollectorAngleFromNorth">
+      <xsd:annotation>
+         <xsd:documentation>Units: deg arc</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative"/>
    </xsd:simpleType>
    <xsd:simpleType name="SolarWaterHeatingCollectorArea">
       <xsd:annotation>
@@ -4836,7 +4878,6 @@
          </xsd:appinfo>
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="Electricity">Electricity</dtyp:displayterm>
-            <dtyp:displayterm value="HeatPumpWaterHeater">Heat Pump Boiler</dtyp:displayterm>
             <dtyp:displayterm value="NaturalGas">Natural Gas</dtyp:displayterm>
             <dtyp:displayterm value="Oil">Oil</dtyp:displayterm>
             <dtyp:displayterm value="PropaneGas">Propane gas</dtyp:displayterm>
@@ -4845,7 +4886,6 @@
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="Electricity"/>
-         <xsd:enumeration value="HeatPumpWaterHeater"/>
          <xsd:enumeration value="NaturalGas"/>
          <xsd:enumeration value="Oil"/>
          <xsd:enumeration value="PropaneGas"/>
