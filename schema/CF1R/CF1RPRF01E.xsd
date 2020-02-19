@@ -263,7 +263,7 @@
                   </xsd:element>
                   <xsd:element name="A20_NaturalGasOnSite" type="com:NaturalGasOnSite" >
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                        <xsd:documentation source="FieldText">Is Natural Gas Available?</xsd:documentation>
                         <xsd:appinfo source="CBECCresXML">
                            <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                         </xsd:appinfo>
@@ -377,7 +377,7 @@
                   </xsd:element>
                   <xsd:element name="A29_GasType" type="com:GasType" >
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Is Natural Gas Available?</xsd:documentation>
+                        <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
                         <xsd:appinfo source="CBECCresXML">
                            <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                         </xsd:appinfo>
@@ -5010,7 +5010,7 @@
                                     <xsd:choice maxOccurs="1">
                                        <xsd:element name="T05_StorageCapacity" type="hvac:StorageCapacity" >
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Tank Volume (gal)</xsd:documentation>
+                                             <xsd:documentation source="FieldText">Tank Vol. (gal)</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>DHWSysRpt:TankVolumeRpt</dtyp:CBECCresXMLterm>
                                              </xsd:appinfo>
@@ -5018,7 +5018,7 @@
                                        </xsd:element>
                                        <xsd:element name="T05_NotApplicableMessage" type="comp:NotApplicableMessage" >
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Tank Volume (gal)</xsd:documentation>
+                                             <xsd:documentation source="FieldText">Tank Vol. (gal)</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                              </xsd:appinfo>
@@ -5045,7 +5045,7 @@
                                     <xsd:choice maxOccurs="1">
                                        <xsd:element name="T06_WaterHeaterAFUE" type="hvac:WaterHeaterAFUE" >
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Uniform Energy Factor / Energy Factor / Efficiency</xsd:documentation>
+                                             <xsd:documentation source="FieldText">Energy Factor or Efficiency</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>DHWSysRpt:EfficiencyRpt</dtyp:CBECCresXMLterm>
                                              </xsd:appinfo>
@@ -5053,7 +5053,7 @@
                                        </xsd:element>
                                        <xsd:element name="T06_EnergyFactor" type="hvac:EnergyFactor" >
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Uniform Energy Factor / Energy Factor / Efficiency</xsd:documentation>
+                                             <xsd:documentation source="FieldText">Energy Factor or Efficiency</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>DHWSysRpt:EfficiencyRpt</dtyp:CBECCresXMLterm>
                                              </xsd:appinfo>
@@ -5061,7 +5061,7 @@
                                        </xsd:element>
                                        <xsd:element name="T06_UniformEnergyFactor" type="hvac:UniformEnergyFactor" >
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Uniform Energy Factor / Energy Factor / Efficiency</xsd:documentation>
+                                             <xsd:documentation source="FieldText">Energy Factor or Efficiency</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                              </xsd:appinfo>
@@ -5069,7 +5069,7 @@
                                        </xsd:element>
                                        <xsd:element name="T06_EfficiencyType" >
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Uniform Energy Factor / Energy Factor / Efficiency</xsd:documentation>
+                                             <xsd:documentation source="FieldText">Energy Factor or Efficiency</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">This reports that the value is whatever the NEEA rated value is</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
@@ -5083,7 +5083,7 @@
                                        </xsd:element>
                                        <xsd:element name="T06_ThermalEfficiency" type="hvac:ThermalEfficiency" >
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Uniform Energy Factor / Energy Factor / Efficiency</xsd:documentation>
+                                             <xsd:documentation source="FieldText">Energy Factor or Efficiency</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                              </xsd:appinfo>
@@ -5101,7 +5101,7 @@
                                     <xsd:choice maxOccurs="1">
                                        <xsd:element name="T07_WaterHeaterElectricFiredRatedInput" type="hvac:WaterHeaterElectricFiredRatedInput"  minOccurs="0">
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Input Rating/ Pilot</xsd:documentation>
+                                             <xsd:documentation source="FieldText">Input Rating or Pilot</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>DHWSysRpt:InputRatingRpt</dtyp:CBECCresXMLterm>
                                                 <dtyp:termConditions>Use this schema choice element If  DHWHeater:HeaterElementType=0 for Electric Resistance</dtyp:termConditions>
@@ -5110,7 +5110,7 @@
                                        </xsd:element>
                                        <xsd:element name="T07_WaterHeaterGasFiredRatedInput" type="hvac:WaterHeaterGasFiredRatedInput"  minOccurs="0">
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Input Rating/ Pilot</xsd:documentation>
+                                             <xsd:documentation source="FieldText">Input Rating or Pilot</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                                 <dtyp:termConditions>Use this schema choice element If  DHWHeater:HeaterElementType=1 for Gas</dtyp:termConditions>
@@ -5119,7 +5119,7 @@
                                        </xsd:element>
                                        <xsd:element name="T07_WaterHeaterRatedInputString" type="hvac:WaterHeaterRatedInputString"  minOccurs="0">
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Input Rating/ Pilot</xsd:documentation>
+                                             <xsd:documentation source="FieldText">Input Rating or Pilot</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                              </xsd:appinfo>
@@ -5148,7 +5148,7 @@
                                     <xsd:choice maxOccurs="1">
                                        <xsd:element name="T09_WaterHeaterStandbyLossFraction" type="hvac:WaterHeaterStandbyLossFraction" >
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Standby Loss / Recovery Eff</xsd:documentation>
+                                             <xsd:documentation source="FieldText">Standby Loss or Recovery Eff.</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">If there is no value for this field, display "n/a".</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>DHWSysRpt:StandbyLossRpt</dtyp:CBECCresXMLterm>
@@ -5157,7 +5157,7 @@
                                        </xsd:element>
                                        <xsd:element name="T09_NotApplicableMessage" type="comp:NotApplicableMessage" >
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Standby Loss / Recovery Eff</xsd:documentation>
+                                             <xsd:documentation source="FieldText">Standby Loss or Recovery Eff.</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                              </xsd:appinfo>
@@ -5170,7 +5170,7 @@
                                     <xsd:choice maxOccurs="1">
                                        <xsd:element name="T10_WaterHeaterFirstHourRating" type="hvac:WaterHeaterFirstHourRating"  minOccurs="0">
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">First Hour Rating / Flow Rate</xsd:documentation>
+                                             <xsd:documentation source="FieldText">1st Hr. Rating or Flow Rate</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">If there is no value for this field, display "n/a".</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>DHWSysRpt:FirstHourRatingRpt</dtyp:CBECCresXMLterm>
@@ -5179,7 +5179,7 @@
                                        </xsd:element>
                                        <xsd:element name="T10_WaterHeaterFlowRate" type="hvac:WaterHeaterFlowRate"  minOccurs="0">
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">First Hour Rating / Flow Rate</xsd:documentation>
+                                             <xsd:documentation source="FieldText">1st Hr. Rating or Flow Rate</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">If there is no value for this field, display "n/a".</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>DHWSysRpt:RatedFlowRpt</dtyp:CBECCresXMLterm>
@@ -5188,17 +5188,24 @@
                                        </xsd:element>
                                     </xsd:choice>
                                     <xsd:sequence minOccurs="0" maxOccurs="unbounded">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">NEEA Heat Pump Brand / Model</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">If there is no value for this field, display "n/a".</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>DHWSysRpt:MakeAndModel</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                       <xsd:element name="T11_HeatPumpWaterHeaterBrand" type="hvac:HeatPumpWaterHeaterBrand" >
-                                       </xsd:element>
-                                       <xsd:element name="T11_HeatPumpWaterHeaterModel" type="hvac:HeatPumpWaterHeaterModel" >
-                                       </xsd:element>
+                                       <xsd:element name="T11_HeatPumpWaterHeaterBrand" type="hvac:HeatPumpWaterHeaterBrand">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">NEEA Heat Pump Brand or Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If there is no value for this field, display "n/a".</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>DHWSysRpt:MakeAndModel</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>                                       
+                                       <xsd:element name="T11_HeatPumpWaterHeaterModel" type="hvac:HeatPumpWaterHeaterModel">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">NEEA Heat Pump Brand or Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If there is no value for this field, display "n/a".</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>DHWSysRpt:MakeAndModel</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>                                       
                                     </xsd:sequence>
                                     <xsd:element name="T11a_HeatPumpWaterHeaterSimulationGroup" type="hvac:HeatPumpWaterHeaterSimulationGroup"  minOccurs="0">
                                        <xsd:annotation>
