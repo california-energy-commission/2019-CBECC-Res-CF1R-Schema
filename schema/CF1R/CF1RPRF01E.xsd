@@ -202,7 +202,7 @@
                   </xsd:element>
                   <xsd:element name="A14_NewConditionedFloorArea" type="bld:NewConditionedFloorArea" >
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">New Cond. Floor Area (ft[d:sup]2[/d:sup])</xsd:documentation>
+                        <xsd:documentation source="FieldText">Addition Cond. Floor Area (ft[d:sup]2[/d:sup])</xsd:documentation>
                         <xsd:appinfo source="CBECCresXML">
                            <dtyp:CBECCresXMLterm>Project:CondFloorArea</dtyp:CBECCresXMLterm>
                         </xsd:appinfo>
@@ -377,7 +377,7 @@
                   </xsd:element>
                   <xsd:element name="A29_GasType" type="com:GasType" >
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                        <xsd:documentation source="FieldText">Is Natural Gas Available?</xsd:documentation>
                         <xsd:appinfo source="CBECCresXML">
                            <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                         </xsd:appinfo>
@@ -5001,7 +5001,7 @@
                                     </xsd:choice>
                                     <xsd:element name="T04_WaterHeaterCount" type="hvac:WaterHeaterCount" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText"># of Heaters in Building</xsd:documentation>
+                                          <xsd:documentation source="FieldText"># Units</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>DHWSysRpt:DHWHeaterCnt</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -5510,7 +5510,7 @@
                            <xsd:element name="Row" minOccurs="1" maxOccurs="unbounded">
                               <xsd:complexType>
                                  <xsd:sequence>
-                                    <xsd:element name="Tchp01_WaterHeatingSolarSystemName" type="hvac:WaterHeatingSolarSystemName" >
+                                    <xsd:element name="Tchp01_WaterHeatingSystemName" type="hvac:WaterHeatingSolarSystemName" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Name</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
