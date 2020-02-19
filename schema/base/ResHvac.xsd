@@ -5204,6 +5204,7 @@
             <dtyp:displayterm value="Oil">Oil</dtyp:displayterm>
             <dtyp:displayterm value="PropaneGas">Propane gas</dtyp:displayterm>
             <dtyp:displayterm value="WaterHeatingHP">Heat Pump</dtyp:displayterm>
+            <dtyp:displayterm value="HeatPumpWaterHeater">Heat Pump</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
@@ -5212,6 +5213,7 @@
          <xsd:enumeration value="Oil"/>
          <xsd:enumeration value="PropaneGas"/>
          <xsd:enumeration value="WaterHeatingHP"/>
+         <xsd:enumeration value="HeatPumpWaterHeater"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="WaterHeaterGasFiredRatedInput">
