@@ -12,7 +12,7 @@
    xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
    xmlns:altova="http://www.altova.com/xml-schema-extensions"
-   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.108">
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.2.000">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="../base/ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/bld" schemaLocation="../base/ResBuilding.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/env" schemaLocation="../base/ResEnvelope.xsd"/>
@@ -47,7 +47,7 @@
             <xsd:element name="Report2" type="xsd:base64Binary" id="Sign3"/>
             <xsd:element name="Input" type="xsd:base64Binary" id="Sign4"/>
          </xsd:sequence>
-         <xsd:attribute name="revision" use="required" type="xsd:string" fixed="rev 20200101"/>
+         <xsd:attribute name="revision" use="required" type="xsd:string" fixed="rev 20200601"/>
          <xsd:attribute name="doc" use="required" type="comp:ComplianceDocumentTag" fixed="CF1RPRF01E"/>
       </xsd:complexType>
    </xsd:element>
@@ -4032,45 +4032,72 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="P04_SlabPerimeter" type="env:SlabPerimeter" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Perimeter (ft)</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>SlabFloor:Perimeter</dtyp:CBECCresXMLterm>
-                                             <dtyp:termConditions>No UndFloor:Perimeter property?</dtyp:termConditions>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="P05a_SlabInsulationThermalResistance" type="env:SlabInsulationThermalResistance"  minOccurs="0">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Edge Insul. R-value and Depth</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">If there is not insulation result = R0</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>SlabFloor:EdgeInsulRValue</dtyp:CBECCresXMLterm>
-                                             <dtyp:termConditions>No UndFloor:EdgeInsulRValue?</dtyp:termConditions>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="P05b_SlabInsulationOther" type="env:SlabInsulationOther"  minOccurs="0">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Edge Insul. R-value and Depth</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">If  insulation result = Other, the value is stored in this string</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>SlabFloor:EdgeInsulRValue</dtyp:CBECCresXMLterm>
-                                             <dtyp:termConditions>No UndFloor:EdgeInsulRValue?</dtyp:termConditions>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="P05c_SlabInsulationVerticalILength" type="com:SlabInsulationVerticalILength"  minOccurs="0">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Edge Insul. R-value and Depth</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">If SlabInsulationThermalResistance == R0 this field is not required; Else display term for result is result+"-in."</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>SlabFloor:EdgeInsulDepth</dtyp:CBECCresXMLterm>
-                                             <dtyp:termConditions>No UndFloor:EdgeInsulDepth?</dtyp:termConditions>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="P04_SlabPerimeter" type="env:SlabPerimeter" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Perimeter (ft)</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>SlabFloor:Perimeter</dtyp:CBECCresXMLterm>
+                                                <dtyp:termConditions>No UndFloor:Perimeter property?</dtyp:termConditions>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="P04_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Perimeter (ft)</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="P05a_SlabInsulationThermalResistance" type="env:SlabInsulationThermalResistance" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Edge Insul. R-value and Depth</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>SlabFloor:EdgeInsulRValue</dtyp:CBECCresXMLterm>
+                                                <dtyp:termConditions>No UndFloor:EdgeInsulRValue?</dtyp:termConditions>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="P05b_SlabInsulationOther" type="env:SlabInsulationOther" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Edge Insul. R-value and Depth</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>SlabFloor:EdgeInsulRValue</dtyp:CBECCresXMLterm>
+                                                <dtyp:termConditions>No UndFloor:EdgeInsulRValue?</dtyp:termConditions>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="P05a_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Edge Insul. R-value and Depth</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="P05c_SlabInsulationVerticalILength" type="com:SlabInsulationVerticalILength" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Edge Insul. R-value and Depth</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>SlabFloor:EdgeInsulDepth</dtyp:CBECCresXMLterm>
+                                                <dtyp:termConditions>No UndFloor:EdgeInsulDepth?</dtyp:termConditions>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="P05c_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Edge Insul. R-value and Depth</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:element name="P06_SlabCarpetedFraction" type="env:SlabCarpetedFraction" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Carpeted Fraction</xsd:documentation>
@@ -5001,7 +5028,7 @@
                                     </xsd:choice>
                                     <xsd:element name="T04_WaterHeaterCount" type="hvac:WaterHeaterCount" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText"># Units</xsd:documentation>
+                                          <xsd:documentation source="FieldText"># of Units</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>DHWSysRpt:DHWHeaterCnt</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -5148,7 +5175,7 @@
                                     <xsd:choice maxOccurs="1">
                                        <xsd:element name="T09_WaterHeaterStandbyLossFraction" type="hvac:WaterHeaterStandbyLossFraction" >
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Standby Loss or Recovery Eff.</xsd:documentation>
+                                             <xsd:documentation source="FieldText">Standby Loss or Recovery Eff</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">If there is no value for this field, display "n/a".</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>DHWSysRpt:StandbyLossRpt</dtyp:CBECCresXMLterm>
@@ -5157,7 +5184,7 @@
                                        </xsd:element>
                                        <xsd:element name="T09_NotApplicableMessage" type="comp:NotApplicableMessage" >
                                           <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Standby Loss or Recovery Eff.</xsd:documentation>
+                                             <xsd:documentation source="FieldText">Standby Loss or Recovery Eff</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                              </xsd:appinfo>
@@ -5187,26 +5214,24 @@
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
-                                    <xsd:sequence minOccurs="0" maxOccurs="unbounded">
-                                       <xsd:element name="T11_HeatPumpWaterHeaterBrand" type="hvac:HeatPumpWaterHeaterBrand">
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">NEEA Heat Pump Brand or Model</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">If there is no value for this field, display "n/a".</xsd:documentation>
-                                             <xsd:appinfo source="CBECCresXML">
-                                                <dtyp:CBECCresXMLterm>DHWSysRpt:MakeAndModel</dtyp:CBECCresXMLterm>
-                                             </xsd:appinfo>
-                                          </xsd:annotation>
-                                       </xsd:element>                                       
-                                       <xsd:element name="T11_HeatPumpWaterHeaterModel" type="hvac:HeatPumpWaterHeaterModel">
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">NEEA Heat Pump Brand or Model</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">If there is no value for this field, display "n/a".</xsd:documentation>
-                                             <xsd:appinfo source="CBECCresXML">
-                                                <dtyp:CBECCresXMLterm>DHWSysRpt:MakeAndModel</dtyp:CBECCresXMLterm>
-                                             </xsd:appinfo>
-                                          </xsd:annotation>
-                                       </xsd:element>                                       
-                                    </xsd:sequence>
+                                    <xsd:element name="T11_HeatPumpWaterHeaterBrand" type="hvac:HeatPumpWaterHeaterBrand"  minOccurs="0">
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">NEEA Heat Pump Brand or Model</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">If there is no value for this field, display "n/a".</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>DHWSysRpt:MakeAndModel</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="T11_HeatPumpWaterHeaterModel" type="hvac:HeatPumpWaterHeaterModel"  minOccurs="0">
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">NEEA Heat Pump Brand or Model</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">If there is no value for this field, display "n/a".</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>DHWSysRpt:MakeAndModel</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
                                     <xsd:element name="T11a_HeatPumpWaterHeaterSimulationGroup" type="hvac:HeatPumpWaterHeaterSimulationGroup"  minOccurs="0">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Simulated Equipment Make and Model</xsd:documentation>
@@ -5517,7 +5542,7 @@
                            <xsd:element name="Row" minOccurs="1" maxOccurs="unbounded">
                               <xsd:complexType>
                                  <xsd:sequence>
-                                    <xsd:element name="Tchp01_WaterHeatingSystemName" type="hvac:WaterHeatingSolarSystemName" >
+                                    <xsd:element name="Tchp01_WaterHeatingSystemName" type="hvac:WaterHeatingSystemName" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Name</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -8047,6 +8072,155 @@
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
+                                 </xsd:sequence>
+                              </xsd:complexType>
+                           </xsd:element>
+                        </xsd:sequence>
+                     </xsd:complexType>
+                  </xsd:element>
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="Section_CCeilingVA" minOccurs="0">
+            <xsd:annotation>
+               <xsd:documentation source="FieldText">CATHEDRAL CEILING - VERIFIED AND ALTERED</xsd:documentation>
+               <xsd:documentation source="CalculationsAndRules">This section is required if section  K has existing cathedral ceiling constructions recorded for verification</xsd:documentation>
+               <xsd:appinfo source="CBECCresXML">
+                  <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+               </xsd:appinfo>
+               <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="TableCCeilingExisting" >
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText"></xsd:documentation>
+                        <xsd:appinfo source="CBECCresXML">
+                           <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                        </xsd:appinfo>
+                     </xsd:annotation>
+                     <xsd:complexType>
+                        <xsd:sequence>
+                           <xsd:element name="Row" minOccurs="1" maxOccurs="unbounded">
+                              <xsd:complexType>
+                                 <xsd:sequence>
+                                    <xsd:element name="CCeilingVA01_PartitionName" type="env:PartitionName" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Name</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="CCeilingVA02_ThermalZoneName" type="com:ThermalZoneName" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Zone</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="CCeilingVA03_ConstructionAssemblyNamePerformanceRes" type="comp:ConstructionAssemblyNamePerformanceRes" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Existing Construction</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="CCeilingVA04_ConstructionAssemblyType" type="comp:ConstructionAssemblyType" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Surface Type</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="CCeilingVA05_Azimuth" type="dtyp:Azimuth" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Azimuth</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="CCeilingVA05_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Azimuth</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="CCeilingVA06_RelativePosition" type="com:RelativePosition" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Orientation</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="CCeilingVA06_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Orientation</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:element name="CCeilingVA07_CavityInsulationRes" type="env:CavityInsulationRes" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Total Cavity R-value</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="CCeilingVA08_RoofRise" type="env:RoofRise" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Rise</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="CCeilingVA09_RoofReflectance" type="env:RoofReflectance" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Reflectance</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="CCeilingVA10_RoofEmittance" type="env:RoofEmittance" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Emittance</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="CCeilingVA11_RadiantBarrierToBeInstalled" type="comp:RadiantBarrierToBeInstalled" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Radiant Barrier</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">Defauilt result = false</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="CCeilingVA12_CoolRoofToBeInstalled" type="comp:CoolRoofToBeInstalled" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Cool Roof</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
                                  </xsd:sequence>
                               </xsd:complexType>
                            </xsd:element>
