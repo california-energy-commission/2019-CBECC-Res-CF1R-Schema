@@ -1670,6 +1670,9 @@ Not Shared</dtyp:displayterm>
          <xsd:enumeration value="StrawBaleWall"/>
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="NonStdSprayFoam">
+      <xsd:restriction base="xsd:boolean"/>
+   </xsd:simpleType>
    <xsd:simpleType name="OpaqueSurfaceType">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">

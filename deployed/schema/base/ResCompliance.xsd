@@ -6240,14 +6240,21 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
    <xsd:simpleType name="NewDuctingInstalled">
       <xsd:annotation>
          <xsd:appinfo source="displaytermType">
-            <dtyp:displayterm>Any New Ducting Installed?</dtyp:displayterm>
+            <dtyp:displayterm>Was Any New Ducting Installed?</dtyp:displayterm>
          </xsd:appinfo>
          <xsd:appinfo source="displayterm">
-            <dtyp:displayterm value="true">Yes</dtyp:displayterm>
-            <dtyp:displayterm value="false">No</dtyp:displayterm>
+            <dtyp:displayterm value="NoNewDucts">No</dtyp:displayterm>
+            <dtyp:displayterm value="ReturnOnly">Return Only</dtyp:displayterm>
+            <dtyp:displayterm value="SupplyAndReturn">Both Supply and Return</dtyp:displayterm>
+            <dtyp:displayterm value="SupplyOnly">Supply Only</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
-      <xsd:restriction base="xsd:boolean"/>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="NoNewDucts"/>
+         <xsd:enumeration value="ReturnOnly"/>
+         <xsd:enumeration value="SupplyAndReturn"/>
+         <xsd:enumeration value="SupplyOnly"/>
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="NominalCFM50">
       <xsd:annotation>
@@ -6380,6 +6387,9 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="xsd:boolean"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="PVExceptionString">
+      <xsd:restriction base="xsd:token"/>
    </xsd:simpleType>
    <xsd:simpleType name="PV_AdjustedMinimumSize">
       <xsd:annotation>
@@ -6672,6 +6682,7 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="BatteryStorage">Battery storage (Trigger CF2R-PVB-02)</dtyp:displayterm>
+            <dtyp:displayterm value="CommunitySolar">CommunitySolar</dtyp:displayterm>
             <dtyp:displayterm value="CZ15ReducedSize">CZ15 reduced PV size</dtyp:displayterm>
             <dtyp:displayterm value="DeclaredEmergencyArea">AB-178 - Declared emergency area</dtyp:displayterm>
             <dtyp:displayterm value="HabitableStories2">2 habitable stories</dtyp:displayterm>
@@ -6683,6 +6694,7 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="BatteryStorage"/>
+         <xsd:enumeration value="CommunitySolar"/>
          <xsd:enumeration value="CZ15ReducedSize"/>
          <xsd:enumeration value="DeclaredEmergencyArea"/>
          <xsd:enumeration value="HabitableStories2"/>
@@ -6877,6 +6889,7 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
             <dtyp:displayterm value="FenestrationGlazingWindowMinimumFt2Replacement">Replacing Fenestration/Glazing less than or equal to 75 ft2  Windows</dtyp:displayterm>
             <dtyp:displayterm value="HeatingSystemAlteration">Space heating system</dtyp:displayterm>
             <dtyp:displayterm value="InsulationAlteration">Insulation</dtyp:displayterm>
+            <dtyp:displayterm value="KitchenHoodNewReplace">Kitchen Range Hood Installation (new or reploacement)</dtyp:displayterm>
             <dtyp:displayterm value="KitchenRemodelAlteration">Kitchen Remodel</dtyp:displayterm>
             <dtyp:displayterm value="RoofAlterationGT50Percent">Roof replacement greater than 50 %</dtyp:displayterm>
             <dtyp:displayterm value="WaterHeatingAlteration">Water heating</dtyp:displayterm>
@@ -6893,6 +6906,7 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
          <xsd:enumeration value="FenestrationGlazingWindowMinimumFt2Replacement"/>
          <xsd:enumeration value="HeatingSystemAlteration"/>
          <xsd:enumeration value="InsulationAlteration"/>
+         <xsd:enumeration value="KitchenHoodNewReplace"/>
          <xsd:enumeration value="KitchenRemodelAlteration"/>
          <xsd:enumeration value="RoofAlterationGT50Percent"/>
          <xsd:enumeration value="WaterHeatingAlteration"/>
@@ -7857,6 +7871,7 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
             <dtyp:displayterm value="BalancedIAQVentilation">Indoor air quality, balanced fan</dtyp:displayterm>
             <dtyp:displayterm value="BatterySystem">Battery System</dtyp:displayterm>
             <dtyp:displayterm value="BatteryWithSelfUtilCredit">Battery System (Self Utilization Credit Taken)</dtyp:displayterm>
+            <dtyp:displayterm value="CentralHeatPumpWaterHeater">Central Heat Pump Water Heater</dtyp:displayterm>
             <dtyp:displayterm value="CentralParallelPiping">Central parallel piping</dtyp:displayterm>
             <dtyp:displayterm value="CompactDesignBasic">Compact distribution system basic credit</dtyp:displayterm>
             <dtyp:displayterm value="ComplianceOptionVCHP">Variable capacity heat pump compliance option (verification details from VCHP Staff report, Appendix B, and RA3)</dtyp:displayterm>
@@ -7884,6 +7899,19 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
             <dtyp:displayterm value="PointOfUseDHW">Point of use</dtyp:displayterm>
             <dtyp:displayterm value="PrecoolingCreditTaken">Precooling Credit Taken</dtyp:displayterm>
             <dtyp:displayterm value="PV2kWSystem">PV System: 2.0 kW</dtyp:displayterm>
+            <dtyp:displayterm value="PVArrayTrackingOneAxis">PV Array Type: Tracking (one axis)</dtyp:displayterm>
+            <dtyp:displayterm value="PVArrayTrackingTwoAxis">PV Array Type: Tracking (two axis)</dtyp:displayterm>
+            <dtyp:displayterm value="PVCommunitySolar">PV Community Solar</dtyp:displayterm>
+            <dtyp:displayterm value="PVException2HabitableStories">PV Exception: 2 Habitable Stories</dtyp:displayterm>
+            <dtyp:displayterm value="PVException3HabitableStories">PV Exception: 3 Habitable Stories</dtyp:displayterm>
+            <dtyp:displayterm value="PVExceptionAB178EmergencyArea">PV Exception: AB178 Emergency Area</dtyp:displayterm>
+            <dtyp:displayterm value="PVExceptionEffectSolarAccess">PV Exception: Effective Solar Access</dtyp:displayterm>
+            <dtyp:displayterm value="PVExceptionPriorSolarReadyZone">PV Exception: Prior Solar Ready Zone</dtyp:displayterm>
+            <dtyp:displayterm value="PVExceptionSolarAccessAndHomeArea">PV Exception: Solar Access and Home area</dtyp:displayterm>
+            <dtyp:displayterm value="PVModuleTypePremium">PV Module Type: Premium</dtyp:displayterm>
+            <dtyp:displayterm value="PVModuleTypeThinFilm">PV Module Type: Thin Film</dtyp:displayterm>
+            <dtyp:displayterm value="PVPowerElecDCPowerOption">PV Power Electric DC Power Option</dtyp:displayterm>
+            <dtyp:displayterm value="PVPowerElecMicroinverters">PV Power Electric Microinverters</dtyp:displayterm>
             <dtyp:displayterm value="RaisedHeelTruss">Raised heel truss (height above top plate)</dtyp:displayterm>
             <dtyp:displayterm value="RecirculationDemandControlMF">Multifamily: Recirculating demand control</dtyp:displayterm>
             <dtyp:displayterm value="RecirculationDemandControlOccup">Recirculating with demand control, occupancy/motion sensor</dtyp:displayterm>
@@ -7894,8 +7922,8 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
             <dtyp:displayterm value="RecirculationTempModulationMF">Multifamily: Recirculating with temperature modulation</dtyp:displayterm>
             <dtyp:displayterm value="SIPAssembly">Structurally insulated panel (SIP) assembly</dtyp:displayterm>
             <dtyp:displayterm value="SlabEdgeInsulation">Slab Edge Insulation</dtyp:displayterm>
-            <dtyp:displayterm value="SolarWaterHeatingCreditMF">Solar water heating credit, Multi-family buildng special feature and additional documentation</dtyp:displayterm>
-            <dtyp:displayterm value="SolarWaterHeatingCreditSF">Solar water heating credit, single family building Special feature and additional documentation</dtyp:displayterm>
+            <dtyp:displayterm value="SolarWaterHeatingCreditMF">Solar water heating credit, multifamily building</dtyp:displayterm>
+            <dtyp:displayterm value="SolarWaterHeatingCreditSF">Solar water heating credit, single family building</dtyp:displayterm>
             <dtyp:displayterm value="WholeHouseFan">Whole house fan</dtyp:displayterm>
             <dtyp:displayterm value="WindowOverhangsFins">Window overhangs and/or fins</dtyp:displayterm>
             <dtyp:displayterm value="ZonalHeatingControls">Zonal heating controls</dtyp:displayterm>
@@ -7907,6 +7935,7 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
          <xsd:enumeration value="BalancedIAQVentilation"/>
          <xsd:enumeration value="BatterySystem"/>
          <xsd:enumeration value="BatteryWithSelfUtilCredit"/>
+         <xsd:enumeration value="CentralHeatPumpWaterHeater"/>
          <xsd:enumeration value="CentralParallelPiping"/>
          <xsd:enumeration value="CompactDesignBasic"/>
          <xsd:enumeration value="ComplianceOptionVCHP"/>
@@ -7934,6 +7963,19 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
          <xsd:enumeration value="PointOfUseDHW"/>
          <xsd:enumeration value="PrecoolingCreditTaken"/>
          <xsd:enumeration value="PV2kWSystem"/>
+         <xsd:enumeration value="PVArrayTrackingOneAxis"/>
+         <xsd:enumeration value="PVArrayTrackingTwoAxis"/>
+         <xsd:enumeration value="PVCommunitySolar"/>
+         <xsd:enumeration value="PVException2HabitableStories"/>
+         <xsd:enumeration value="PVException3HabitableStories"/>
+         <xsd:enumeration value="PVExceptionAB178EmergencyArea"/>
+         <xsd:enumeration value="PVExceptionEffectSolarAccess"/>
+         <xsd:enumeration value="PVExceptionPriorSolarReadyZone"/>
+         <xsd:enumeration value="PVExceptionSolarAccessAndHomeArea"/>
+         <xsd:enumeration value="PVModuleTypePremium"/>
+         <xsd:enumeration value="PVModuleTypeThinFilm"/>
+         <xsd:enumeration value="PVPowerElecDCPowerOption"/>
+         <xsd:enumeration value="PVPowerElecMicroinverters"/>
          <xsd:enumeration value="RaisedHeelTruss"/>
          <xsd:enumeration value="RecirculationDemandControlMF"/>
          <xsd:enumeration value="RecirculationDemandControlOccup"/>
@@ -8723,6 +8765,22 @@ Time Dependent Valuation (TDV) Gas Propane energy is calculated by multiplying t
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:Decimal4PlacesNonnegative"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="WaterHeatingSystemAlteredOption">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="Option1GasPropane">1</dtyp:displayterm>
+            <dtyp:displayterm value="Option2HP">2</dtyp:displayterm>
+            <dtyp:displayterm value="Option3Tier3HP">3</dtyp:displayterm>
+            <dtyp:displayterm value="Option4NoGasElectric">4</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="Option1GasPropane"/>
+         <xsd:enumeration value="Option2HP"/>
+         <xsd:enumeration value="Option3Tier3HP"/>
+         <xsd:enumeration value="Option4NoGasElectric"/>
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="WaterHeatingSystemHERS_VerificationName">
       <xsd:restriction base="xsd:string"/>
