@@ -6,7 +6,7 @@
    xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
    xmlns:d="http://www.lmonte.com/besm/d"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.109">
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.110">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="DataTypes.xsd"/>
    <xsd:simpleType name="AdditionalReturnDuctCount">
@@ -2848,11 +2848,16 @@
             <dtyp:displayterm value="GE201250">GE 2012 50</dtyp:displayterm>
             <dtyp:displayterm value="GE201450">GE 2014 50</dtyp:displayterm>
             <dtyp:displayterm value="GE201480">GE 2014 80</dtyp:displayterm>
+            <dtyp:displayterm value="NyleC125A_CWP_SP">Nyle C125A-CWP-SP</dtyp:displayterm>
             <dtyp:displayterm value="NyleC125A_SP">Nyle C125A-SP</dtyp:displayterm>
+            <dtyp:displayterm value="NyleC185A_CWP_SP">Nyle C185A-CWP-SP</dtyp:displayterm>
             <dtyp:displayterm value="NyleC185A_SP">Nyle C185A-SP</dtyp:displayterm>
+            <dtyp:displayterm value="NyleC250A_CWP_SP">Nyle C250A-CWP-SP</dtyp:displayterm>
             <dtyp:displayterm value="NyleC250A_SP">Nyle C250A-SP</dtyp:displayterm>
             <dtyp:displayterm value="NyleC25A_SP">Nyle C25A-SP</dtyp:displayterm>
+            <dtyp:displayterm value="NyleC60A_CWP_SP">Nyle C60A-CWP-SP</dtyp:displayterm>
             <dtyp:displayterm value="NyleC60A_SP">Nyle C60A-SP</dtyp:displayterm>
+            <dtyp:displayterm value="NyleC90A_CWP_SP">Nyle C90A-CWP-SP</dtyp:displayterm>
             <dtyp:displayterm value="NyleC90A_SP">Nyle C90A-SP</dtyp:displayterm>
             <dtyp:displayterm value="Rheem2020Build40">Rheem 2020 Build 40</dtyp:displayterm>
             <dtyp:displayterm value="Rheem2020Build50">Rheem 2020 Build 50</dtyp:displayterm>
@@ -2893,11 +2898,16 @@
          <xsd:enumeration value="GE201250"/>
          <xsd:enumeration value="GE201450"/>
          <xsd:enumeration value="GE201480"/>
+         <xsd:enumeration value="NyleC125A_CWP_SP"/>
          <xsd:enumeration value="NyleC125A_SP"/>
+         <xsd:enumeration value="NyleC185A_CWP_SP"/>
          <xsd:enumeration value="NyleC185A_SP"/>
+         <xsd:enumeration value="NyleC250A_CWP_SP"/>
          <xsd:enumeration value="NyleC250A_SP"/>
          <xsd:enumeration value="NyleC25A_SP"/>
+         <xsd:enumeration value="NyleC60A_CWP_SP"/>
          <xsd:enumeration value="NyleC60A_SP"/>
+         <xsd:enumeration value="NyleC90A_CWP_SP"/>
          <xsd:enumeration value="NyleC90A_SP"/>
          <xsd:enumeration value="Rheem2020Build40"/>
          <xsd:enumeration value="Rheem2020Build50"/>

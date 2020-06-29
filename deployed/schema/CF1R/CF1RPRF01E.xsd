@@ -1064,7 +1064,7 @@
                            </xsd:element>
                            <xsd:element name="SelfUtilCredit">
                               <xsd:annotation>
-                                 <xsd:documentation source="FieldText">Self Utilization Credit</xsd:documentation>
+                                 <xsd:documentation source="FieldText">Self Utilization/Flexibility Credit</xsd:documentation>
                                  <xsd:appinfo source="CBECCresXML">
                                     <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                  </xsd:appinfo>
@@ -1431,7 +1431,7 @@
                            </xsd:element>
                            <xsd:element name="SelfUtilCredit" minOccurs="4" maxOccurs="4">
                               <xsd:annotation>
-                                 <xsd:documentation source="FieldText">Self Utilization Credit</xsd:documentation>
+                                 <xsd:documentation source="FieldText">Self Utilization/Flexibility Credit</xsd:documentation>
                                  <xsd:documentation source="CalculationsAndRules">There are four set of PV Offset values, one for each cardinal direction reported in this order:  North Facing, East Facing, South Facing and West Facing</xsd:documentation>
                                  <xsd:appinfo source="CBECCresXML">
                                     <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
