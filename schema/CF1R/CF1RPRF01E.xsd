@@ -12,7 +12,7 @@
    xmlns:dtyp="http://www.lmonte.com/besm/dtyp"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
    xmlns:altova="http://www.altova.com/xml-schema-extensions"
-   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.110">
+   elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1.300">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="../base/ResCommon.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/bld" schemaLocation="../base/ResBuilding.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/env" schemaLocation="../base/ResEnvelope.xsd"/>
@@ -47,7 +47,7 @@
             <xsd:element name="Report2" type="xsd:base64Binary" id="Sign3"/>
             <xsd:element name="Input" type="xsd:base64Binary" id="Sign4"/>
          </xsd:sequence>
-         <xsd:attribute name="revision" use="required" type="xsd:string" fixed="rev 20200601"/>
+         <xsd:attribute name="revision" use="required" type="xsd:string" fixed="rev 20200901"/>
          <xsd:attribute name="doc" use="required" type="comp:ComplianceDocumentTag" fixed="CF1RPRF01E"/>
       </xsd:complexType>
    </xsd:element>
@@ -4538,7 +4538,7 @@
                   </xsd:element>
                   <xsd:element name="R02_IsSprayFoamInsulationHERSVerificationRequired" type="comp:IsSprayFoamInsulationHERSVerificationRequired" >
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Quality Installation of Spray Foam Insulation</xsd:documentation>
+                        <xsd:documentation source="FieldText">High R-value Spray Foam Insulation</xsd:documentation>
                         <xsd:appinfo source="CBECCresXML">
                            <dtyp:CBECCresXMLterm>HERSOther:SprayFoamHighR</dtyp:CBECCresXMLterm>
                            <dtyp:termConditions>Report requires logic on this value to display Required, Not Required</dtyp:termConditions>
@@ -5648,7 +5648,7 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Tchp06_StorageCapacity" type="hvac:StorageCapacity" >
+                                    <xsd:element name="Tchp04_StorageCapacity" type="hvac:StorageCapacity" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Primary Tank Volume (gal)</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -5711,14 +5711,25 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Tsh03_SolarWaterHeatingCollectorBrand" type="hvac:SolarWaterHeatingCollectorBrand" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Collector Brand</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Tsh03_SolarWaterHeatingCollectorBrand" type="hvac:SolarWaterHeatingCollectorBrand" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Collector Brand</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tsh03_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Collector Brand</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Use NotApplicableMessage If Tsh11_SolarWaterHeatingCertificationType == OG300</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:element name="Tsh04_SolarWaterHeatingCollectorModelNumber" type="hvac:SolarWaterHeatingCollectorModelNumber" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Collector Model</xsd:documentation>
@@ -5727,49 +5738,112 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Tsh05_SolarWaterHeatingCollectorCount" type="hvac:SolarWaterHeatingCollectorCount" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Number of Collectors</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Tsh06_SolarWaterHeatingCollectorAngleFromNorth" type="hvac:SolarWaterHeatingCollectorAngleFromNorth" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Azimuth from North</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Tsh07_SolarWaterHeatingCollectorSlope" type="hvac:SolarWaterHeatingCollectorSlope" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Tilt from Horizontal</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Tsh08_VolumeCapacity" type="hvac:VolumeCapacity" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Tank Volume (gal)</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Tsh09_SolarWaterSystemSRCC_CertificationNumber" type="hvac:SolarWaterSystemSRCC_CertificationNumber" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">SRCC/IAPMO Number</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Tsh05_SolarWaterHeatingCollectorCount" type="hvac:SolarWaterHeatingCollectorCount" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Number of Collectors</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tsh05_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Number of Collectors</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Use NotApplicableMessage If Tsh11_SolarWaterHeatingCertificationType == OG300</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Tsh06_SolarWaterHeatingCollectorAngleFromNorth" type="hvac:SolarWaterHeatingCollectorAngleFromNorth" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Azimuth from North</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tsh06_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Azimuth from North</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Use NotApplicableMessage If Tsh11_SolarWaterHeatingCertificationType == OG300</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Tsh07_SolarWaterHeatingCollectorSlope" type="hvac:SolarWaterHeatingCollectorSlope" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Tilt from Horizontal</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tsh07_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Tilt from Horizontal</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Use NotApplicableMessage If Tsh11_SolarWaterHeatingCertificationType == OG300</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Tsh08_VolumeCapacity" type="hvac:VolumeCapacity" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Tank Volume (gal)</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tsh08_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Tank Volume (gal)</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Use NotApplicableMessage If Tsh11_SolarWaterHeatingCertificationType == OG300</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Tsh09_SolarWaterSystemSRCC_CertificationNumber" type="hvac:SolarWaterSystemSRCC_CertificationNumber" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">SRCC/IAPMO Number</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tsh09_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">SRCC/IAPMO Number</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Use NotApplicableMessage If Tsh11_SolarWaterHeatingCertificationType == OG300</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:element name="Tsh10_SolarWaterHeatingSavingsFraction" type="comp:SolarWaterHeatingSavingsFraction" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Solar Savings Fraction</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Tsh11_SolarWaterHeatingCertificationType" type="comp:SolarWaterHeatingCertificationType" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -6383,6 +6457,9 @@
                                              <xsd:enumeration value="CentralLargePackagedHP"/>
                                              <xsd:enumeration value="CentralPackagedHP"/>
                                              <xsd:enumeration value="CentralSplitHP"/>
+                                             <xsd:enumeration value="DuctedDuctlessMultiSplitHP"/>
+                                             <xsd:enumeration value="DuctedMiniSplitHP"/>
+                                             <xsd:enumeration value="DuctedMultiSplitHP"/>
                                              <xsd:enumeration value="DuctlessMiniSplitHP"/>
                                              <xsd:enumeration value="DuctlessMultiSplitHP"/>
                                              <xsd:enumeration value="DuctlessVRF_HP"/>
