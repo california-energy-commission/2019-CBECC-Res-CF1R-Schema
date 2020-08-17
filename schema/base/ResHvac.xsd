@@ -3642,6 +3642,10 @@
       <xsd:restriction base="xsd:boolean">
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="LoopTankBrandModel">
+      <xsd:restriction base="xsd:token">
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="LoopTankCapacity">
       <xsd:annotation>
          <xsd:documentation>  Units: gal</xsd:documentation>
@@ -3652,32 +3656,11 @@
    <xsd:simpleType name="LoopTankHeaterType">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
-            <dtyp:displayterm value="ElectricResistance">Commercial Electric Resistance</dtyp:displayterm>
+            <dtyp:displayterm value="ElectricResistance">Electric Resistance</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="ElectricResistance"/>
-      </xsd:restriction>
-   </xsd:simpleType>
-   <xsd:simpleType name="LoopTankLocation">
-      <xsd:annotation>
-         <xsd:appinfo source="displaytermType">
-            <dtyp:displayterm>Loop Tank Location</dtyp:displayterm>
-         </xsd:appinfo>
-         <xsd:appinfo source="displayterm">
-            <dtyp:displayterm value="Conditioned">Conditioned</dtyp:displayterm>
-            <dtyp:displayterm value="Garage">Garage</dtyp:displayterm>
-            <dtyp:displayterm value="Outside">Outside</dtyp:displayterm>
-            <dtyp:displayterm value="TankZone">Tank Zone</dtyp:displayterm>
-            <dtyp:displayterm value="Unconditioned">Unconditioned</dtyp:displayterm>
-         </xsd:appinfo>
-      </xsd:annotation>
-      <xsd:restriction base="dtyp:EnumerationConstant">
-         <xsd:enumeration value="Conditioned"/>
-         <xsd:enumeration value="Garage"/>
-         <xsd:enumeration value="Outside"/>
-         <xsd:enumeration value="TankZone"/>
-         <xsd:enumeration value="Unconditioned"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="LoopTankTotalInsulation">
@@ -3688,6 +3671,20 @@
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="LoopTankType">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="ElectricResistance">Electric Resistance</dtyp:displayterm>
+            <dtyp:displayterm value="LargeCompressor">Large Compressor</dtyp:displayterm>
+            <dtyp:displayterm value="NEEA">NEEA</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="ElectricResistance"/>
+         <xsd:enumeration value="LargeCompressor"/>
+         <xsd:enumeration value="NEEA"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="LowRatedCFM_ASRE">
@@ -3773,6 +3770,25 @@
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="PipeLocation">
+      <xsd:annotation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Pipe Location</dtyp:displayterm>
+         </xsd:appinfo>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="ConditionedSpace">Conditioned Space</dtyp:displayterm>
+            <dtyp:displayterm value="SemiConditionedSpace">Semi-conditioned Space</dtyp:displayterm>
+            <dtyp:displayterm value="UnconditionedSpace">Unconditioned Space</dtyp:displayterm>
+            <dtyp:displayterm value="Underground">Underground</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="ConditionedSpace"/>
+         <xsd:enumeration value="SemiConditionedSpace"/>
+         <xsd:enumeration value="UnconditionedSpace"/>
+         <xsd:enumeration value="Underground"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="PipeNominalDiameter">
@@ -5536,13 +5552,22 @@
          <xsd:enumeration value="UnconditionedSpace"/>
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="TankCountCHPWH">
+      <xsd:annotation>
+         <xsd:documentation>  Units: none</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:IntegerNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="TankLocation">
       <xsd:annotation>
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Tank Location</dtyp:displayterm>
          </xsd:appinfo>
          <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="Attic">Attic</dtyp:displayterm>
             <dtyp:displayterm value="Conditioned">Conditioned</dtyp:displayterm>
+            <dtyp:displayterm value="CrawlSpace">Crawl Space</dtyp:displayterm>
             <dtyp:displayterm value="Garage">Garage</dtyp:displayterm>
             <dtyp:displayterm value="Outside">Outside</dtyp:displayterm>
             <dtyp:displayterm value="TankZone">Tank Zone</dtyp:displayterm>
@@ -5550,7 +5575,9 @@
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="Attic"/>
          <xsd:enumeration value="Conditioned"/>
+         <xsd:enumeration value="CrawlSpace"/>
          <xsd:enumeration value="Garage"/>
          <xsd:enumeration value="Outside"/>
          <xsd:enumeration value="TankZone"/>
@@ -5800,6 +5827,31 @@
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:Decimal3Places">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="WaterHeaterAirSource">
+      <xsd:annotation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Air Source</dtyp:displayterm>
+         </xsd:appinfo>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="Attic">Attic</dtyp:displayterm>
+            <dtyp:displayterm value="Conditioned">Conditioned</dtyp:displayterm>
+            <dtyp:displayterm value="CrawlSpace">Crawl Space</dtyp:displayterm>
+            <dtyp:displayterm value="Garage">Garage</dtyp:displayterm>
+            <dtyp:displayterm value="Outside">Outside</dtyp:displayterm>
+            <dtyp:displayterm value="TankZone">Tank Zone</dtyp:displayterm>
+            <dtyp:displayterm value="Unconditioned">Unconditioned</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="Attic"/>
+         <xsd:enumeration value="Conditioned"/>
+         <xsd:enumeration value="CrawlSpace"/>
+         <xsd:enumeration value="Garage"/>
+         <xsd:enumeration value="Outside"/>
+         <xsd:enumeration value="TankZone"/>
+         <xsd:enumeration value="Unconditioned"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="WaterHeaterCount">

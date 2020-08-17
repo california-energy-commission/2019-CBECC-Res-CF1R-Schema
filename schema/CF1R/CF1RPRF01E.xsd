@@ -5632,33 +5632,273 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Tchp04_LoopTankCapacity" type="hvac:LoopTankCapacity" >
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Tchp04_StorageCapacity" type="hvac:StorageCapacity" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Primary Tank Volume (gal)</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tchp04_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Primary Tank Volume (gal)</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Tchp05_TankCountCHPWH" type="hvac:TankCountCHPWH" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Tank Count</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tchp05_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Tank Count</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Tchp06_PrimaryTankTotalInsulation" type="hvac:PrimaryTankTotalInsulation" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Tank R-value</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tchp06_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Tank R-value</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:element name="Tchp07_TankLocation" type="hvac:TankLocation" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Loop Tank Volume (gal)</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Tank Location</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Tchp05_LoopTankHeaterType" type="hvac:LoopTankHeaterType"  minOccurs="0">
+                                    <xsd:element name="Tchp08_WaterHeaterAirSource" type="hvac:WaterHeaterAirSource" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Loop Tank Heater Type</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Air Source</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Tchp04_StorageCapacity" type="hvac:StorageCapacity" >
+                                 </xsd:sequence>
+                              </xsd:complexType>
+                           </xsd:element>
+                        </xsd:sequence>
+                     </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="TableLoopTank" minOccurs="0">
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText"></xsd:documentation>
+                        <xsd:appinfo source="CBECCresXML">
+                           <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                        </xsd:appinfo>
+                     </xsd:annotation>
+                     <xsd:complexType>
+                        <xsd:sequence>
+                           <xsd:element name="Row" minOccurs="1" maxOccurs="unbounded">
+                              <xsd:complexType>
+                                 <xsd:sequence>
+                                    <xsd:element name="Tchplt01_LoopTankType" type="hvac:LoopTankType" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Primary Tank Volume (gal)</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Tank Type</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Tchp07_RecirculationPumpPower" type="hvac:RecirculationPumpPower" >
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Tchplt02_LoopTankBrandModel" type="hvac:LoopTankBrandModel" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Brand/Model</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tchplt02_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Brand/Model</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:element name="Tchplt03_CompressorCountCHPWH" type="hvac:CompressorCountCHPWH" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Recirc Pump Power (Watts)</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Count</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Tchplt04" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText"></xsd:documentation>
+                                       </xsd:annotation>
+                                       <xsd:complexType>
+                                          <xsd:choice >
+                                             <xsd:element name="Tchplt04" >
+                                                <xsd:annotation>
+                                                   <xsd:documentation source="FieldText">Tank Volume/Count</xsd:documentation>
+                                                   <xsd:appinfo source="CBECCresXML">
+                                                      <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                                   </xsd:appinfo>
+                                                </xsd:annotation>
+                                                <xsd:complexType>
+                                                   <xsd:sequence>
+                                                      <xsd:element name="Tchplt04a_LoopTankCapacity" type="hvac:LoopTankCapacity" >
+                                                         <xsd:annotation>
+                                                            <xsd:documentation source="FieldText"></xsd:documentation>
+                                                            <xsd:appinfo source="CBECCresXML">
+                                                               <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                                            </xsd:appinfo>
+                                                         </xsd:annotation>
+                                                      </xsd:element>
+                                                      <xsd:element name="Tchplt04b_TankCountCHPWH" type="hvac:TankCountCHPWH" >
+                                                         <xsd:annotation>
+                                                            <xsd:documentation source="FieldText"></xsd:documentation>
+                                                            <xsd:appinfo source="CBECCresXML">
+                                                               <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                                            </xsd:appinfo>
+                                                         </xsd:annotation>
+                                                      </xsd:element>
+                                                   </xsd:sequence>
+                                                </xsd:complexType>
+                                             </xsd:element>
+                                             <xsd:element name="Tchplt04_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                                <xsd:annotation>
+                                                   <xsd:documentation source="FieldText">Tank Volume/Count</xsd:documentation>
+                                                   <xsd:appinfo source="CBECCresXML">
+                                                      <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                                   </xsd:appinfo>
+                                                </xsd:annotation>
+                                             </xsd:element>
+                                          </xsd:choice>
+                                       </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Tchplt05_LoopTankTotalInsulation" type="hvac:LoopTankTotalInsulation" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Tank R-value</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tchplt05_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Tank R-value</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:element name="Tchplt06_TankLocation" type="hvac:TankLocation" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Tank Location</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Tchplt07_WaterHeaterAirSource" type="hvac:WaterHeaterAirSource" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Air Source</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                 </xsd:sequence>
+                              </xsd:complexType>
+                           </xsd:element>
+                        </xsd:sequence>
+                     </xsd:complexType>
+                  </xsd:element>
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="Section_Trlp" minOccurs="0">
+            <xsd:annotation>
+               <xsd:documentation source="FieldText">RECIRCULATION LOOPS</xsd:documentation>
+               <xsd:appinfo source="CBECCresXML">
+                  <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+               </xsd:appinfo>
+               <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="TableRecirLoop" >
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText"></xsd:documentation>
+                        <xsd:appinfo source="CBECCresXML">
+                           <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                        </xsd:appinfo>
+                     </xsd:annotation>
+                     <xsd:complexType>
+                        <xsd:sequence>
+                           <xsd:element name="Row" minOccurs="1" maxOccurs="unbounded">
+                              <xsd:complexType>
+                                 <xsd:sequence>
+                                    <xsd:element name="Trlp01_WaterHeatingSystemName" type="hvac:WaterHeatingSystemName" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Water Heating System Name</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Trlp02_RecirculationLoopCount" type="hvac:RecirculationLoopCount" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Number of Recirculation Loops</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Trlp03_PipeInsulationThickness" type="hvac:PipeInsulationThickness" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Loop Insulation Thickness</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Trlp04_PipeLocation" type="hvac:PipeLocation" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Recirculation Loop Location</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Trlp05_RecirculationPumpPower" type="hvac:RecirculationPumpPower" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Recirculation Pump Power</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
