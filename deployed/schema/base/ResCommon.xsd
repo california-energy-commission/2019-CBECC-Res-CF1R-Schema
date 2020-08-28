@@ -39,6 +39,15 @@
          <xsd:enumeration value="None"/>
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="AdditionConditionedFloorArea">
+      <xsd:annotation>
+         <xsd:documentation>Units: ft2</xsd:documentation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Addition Conditioned Floor Area</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+   </xsd:simpleType>
    <xsd:simpleType name="AdditionTotalConditionedFloorArea">
       <xsd:annotation>
          <xsd:documentation>All conditioned floor area in an addition project.  It can be derived from all conditioned area in the Zones  Units: ft2</xsd:documentation>
@@ -119,6 +128,15 @@
          <xsd:documentation>Units: none</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="dtyp:ItemCount"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="BuildingAzimuth">
+      <xsd:annotation>
+         <xsd:documentation>the angle between the model Y axis and True North, measured clockwise from the Y Axis in Degrees  Units: deg arc</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:Decimal">
+         <xsd:maxInclusive value="360"/>
+         <xsd:minInclusive value="0"/>
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="BuildingName">
       <xsd:restriction base="dtyp:ObjectNamePermissive"/>
@@ -525,12 +543,6 @@
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
    </xsd:simpleType>
-   <xsd:simpleType name="DesignDBRange">
-      <xsd:annotation>
-         <xsd:documentation>Units: F</xsd:documentation>
-      </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
-   </xsd:simpleType>
    <xsd:simpleType name="DesignDayType">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
@@ -548,6 +560,12 @@
          <xsd:documentation>Name of file containing design day information</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="xsd:token"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="DesignDryBulbRange">
+      <xsd:annotation>
+         <xsd:documentation>Units: F</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative"/>
    </xsd:simpleType>
    <xsd:simpleType name="DesignInfiltrationRate">
       <xsd:annotation>
@@ -732,12 +750,6 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
    </xsd:simpleType>
-   <xsd:simpleType name="FenestrationConstructionUFactor">
-      <xsd:annotation>
-         <xsd:documentation>The overall coefficient of thermal transmittance through a layer or construction assembly. It includes air film resistance at both surfaces.  Units: Btu per h ft2 F</xsd:documentation>
-      </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
-   </xsd:simpleType>
    <xsd:simpleType name="FenestrationOrientation">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
@@ -879,13 +891,13 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
       <xsd:annotation>
          <xsd:documentation>Method used for modeling uncontrolled air leakage or infiltration.</xsd:documentation>
          <xsd:appinfo source="displayterm">
-            <dtyp:displayterm value="AirChangesPerHour_Infiltration">Infiltration air changes per hour</dtyp:displayterm>
-            <dtyp:displayterm value="FlowAreaInfiltration">Infiltration flow area</dtyp:displayterm>
+            <dtyp:displayterm value="AirChangesPerHour">Infiltration air changes per hour</dtyp:displayterm>
+            <dtyp:displayterm value="FlowArea">Infiltration flow area</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
-         <xsd:enumeration value="AirChangesPerHour_Infiltration"/>
-         <xsd:enumeration value="FlowAreaInfiltration"/>
+         <xsd:enumeration value="AirChangesPerHour"/>
+         <xsd:enumeration value="FlowArea"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="InteriorLightingSystemNonRegulatedPower">
@@ -1126,15 +1138,6 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
          <xsd:enumeration value="FlowPerArea"/>
          <xsd:enumeration value="FlowPerPerson"/>
          <xsd:enumeration value="FlowPerZone"/>
-      </xsd:restriction>
-   </xsd:simpleType>
-   <xsd:simpleType name="NorthAngle">
-      <xsd:annotation>
-         <xsd:documentation>the angle between the model Y axis and True North, measured clockwise from the Y Axis in Degrees  Units: deg arc</xsd:documentation>
-      </xsd:annotation>
-      <xsd:restriction base="dtyp:Decimal">
-         <xsd:maxInclusive value="360"/>
-         <xsd:minInclusive value="0"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="OA_SpaceRequiredMin">
@@ -1385,6 +1388,7 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
             <dtyp:displayterm value="CrawlSpace">Crawl space</dtyp:displayterm>
             <dtyp:displayterm value="Garage">Garage</dtyp:displayterm>
             <dtyp:displayterm value="Kitchen">Kitchen</dtyp:displayterm>
+            <dtyp:displayterm value="LaundryRoom">Laundry room</dtyp:displayterm>
             <dtyp:displayterm value="LivingRoom">Living room</dtyp:displayterm>
             <dtyp:displayterm value="StorageResidential">Storage room</dtyp:displayterm>
          </xsd:appinfo>
@@ -1397,6 +1401,7 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
          <xsd:enumeration value="CrawlSpace"/>
          <xsd:enumeration value="Garage"/>
          <xsd:enumeration value="Kitchen"/>
+         <xsd:enumeration value="LaundryRoom"/>
          <xsd:enumeration value="LivingRoom"/>
          <xsd:enumeration value="StorageResidential"/>
       </xsd:restriction>
@@ -1655,21 +1660,6 @@ ExtFlr/IntFlr: 0.8  Units: none</xsd:documentation>
          <xsd:enumeration value="NaturalGas"/>
          <xsd:enumeration value="Propane"/>
       </xsd:restriction>
-   </xsd:simpleType>
-   <xsd:simpleType name="SkylightRequirementException">
-      <xsd:restriction base="dtyp:EnumerationConstant"/>
-   </xsd:simpleType>
-   <xsd:simpleType name="SkylightRequirementExceptionArea">
-      <xsd:annotation>
-         <xsd:documentation>Units: ft2</xsd:documentation>
-      </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
-   </xsd:simpleType>
-   <xsd:simpleType name="SkylightRequirementExceptionFraction">
-      <xsd:annotation>
-         <xsd:documentation>Units: none</xsd:documentation>
-      </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
    </xsd:simpleType>
    <xsd:simpleType name="SkylitDaylightingControlName">
       <xsd:restriction base="dtyp:ObjectNamePermissive"/>
@@ -2032,12 +2022,6 @@ NOTE: For roofs, differentiate between the initial Solar Reflectance value and t
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
-   </xsd:simpleType>
-   <xsd:simpleType name="WeatherPath">
-      <xsd:annotation>
-         <xsd:documentation>Directory path where design day weather files are located on the user's computer.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:restriction base="xsd:token"/>
    </xsd:simpleType>
    <xsd:simpleType name="WeatherShieldingFactor">
       <xsd:annotation>

@@ -3321,6 +3321,7 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
             <dtyp:displayterm value="ExemptEvaporativeSystem">Exempt - Evaporative System</dtyp:displayterm>
             <dtyp:displayterm value="ExemptNoCooling">Exempt - No Cooling</dtyp:displayterm>
             <dtyp:displayterm value="ExemptRA3_3Protocols">Exempt - Approved Protocols N/A</dtyp:displayterm>
+            <dtyp:displayterm value="ExemptVCHP">Exempt - VCHP System</dtyp:displayterm>
             <dtyp:displayterm value="HERS_FanEfficacyAirflowRate">HERS verified fan efficacy (W/cfm) and airflow rate (cfm/ton)</dtyp:displayterm>
             <dtyp:displayterm value="HERS_ReturnDuctDesignTable150">HERS verified return duct design per Table 150.0-B, C</dtyp:displayterm>
          </xsd:appinfo>
@@ -3330,6 +3331,7 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
          <xsd:enumeration value="ExemptEvaporativeSystem"/>
          <xsd:enumeration value="ExemptNoCooling"/>
          <xsd:enumeration value="ExemptRA3_3Protocols"/>
+         <xsd:enumeration value="ExemptVCHP"/>
          <xsd:enumeration value="HERS_FanEfficacyAirflowRate"/>
          <xsd:enumeration value="HERS_ReturnDuctDesignTable150"/>
       </xsd:restriction>
@@ -4112,12 +4114,6 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
    </xsd:simpleType>
-   <xsd:simpleType name="EnergyUseStandard">
-      <xsd:annotation>
-         <xsd:documentation>Units: kTDV per ft2 per yr</xsd:documentation>
-      </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
-   </xsd:simpleType>
    <xsd:simpleType name="EnergyUseStandardDesign">
       <xsd:annotation>
          <xsd:documentation>Units: kTDV per ft2 per yr</xsd:documentation>
@@ -4191,6 +4187,12 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
       <xsd:restriction base="dtyp:DecimalNonnegative"/>
    </xsd:simpleType>
    <xsd:simpleType name="EnergyUseStandardSpaceHeatingEast">
+      <xsd:annotation>
+         <xsd:documentation>Units: kTDV per ft2 per yr</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="EnergyUseStandardSpaceHeatingNorth">
       <xsd:annotation>
          <xsd:documentation>Units: kTDV per ft2 per yr</xsd:documentation>
       </xsd:annotation>
@@ -6169,6 +6171,16 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
       </xsd:annotation>
       <xsd:restriction base="xsd:boolean"/>
    </xsd:simpleType>
+   <xsd:simpleType name="MinimumAirflowRateAlternative">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="RequiredVerificationTable150BC">Verification of Table 150.0-B or C Alternative Return Duct Design Criteria is Required</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="RequiredVerificationTable150BC"/>
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="MinimumAirflowRateRequired">
       <xsd:annotation>
          <xsd:documentation>Units: ft3 per min</xsd:documentation>
@@ -7910,7 +7922,7 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
             <dtyp:displayterm value="PVExceptionSolarAccessAndHomeArea">PV Exception: Solar Access and Home area</dtyp:displayterm>
             <dtyp:displayterm value="PVModuleTypePremium">PV Module Type: Premium</dtyp:displayterm>
             <dtyp:displayterm value="PVModuleTypeThinFilm">PV Module Type: Thin Film</dtyp:displayterm>
-            <dtyp:displayterm value="PVPowerElecDCPowerOption">PV Power Electric DC Power Option</dtyp:displayterm>
+            <dtyp:displayterm value="PVPowerElecDCPowerOptimizer">PV Power Electric DC Power Optimizer</dtyp:displayterm>
             <dtyp:displayterm value="PVPowerElecMicroinverters">PV Power Electric Microinverters</dtyp:displayterm>
             <dtyp:displayterm value="RaisedHeelTruss">Raised heel truss (height above top plate)</dtyp:displayterm>
             <dtyp:displayterm value="RecirculationDemandControlMF">Multifamily: Recirculating demand control</dtyp:displayterm>
@@ -7974,7 +7986,7 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
          <xsd:enumeration value="PVExceptionSolarAccessAndHomeArea"/>
          <xsd:enumeration value="PVModuleTypePremium"/>
          <xsd:enumeration value="PVModuleTypeThinFilm"/>
-         <xsd:enumeration value="PVPowerElecDCPowerOption"/>
+         <xsd:enumeration value="PVPowerElecDCPowerOptimizer"/>
          <xsd:enumeration value="PVPowerElecMicroinverters"/>
          <xsd:enumeration value="RaisedHeelTruss"/>
          <xsd:enumeration value="RecirculationDemandControlMF"/>
@@ -8025,7 +8037,7 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
    </xsd:simpleType>
    <xsd:simpleType name="StreetAddress">
       <xsd:annotation>
-         <xsd:documentation>This value is a string to hold street information in an address associated with a project or a person on the project.</xsd:documentation>
+         <xsd:documentation>This value is a string to hold address information associated with a project or a person on the project.</xsd:documentation>
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Street address</dtyp:displayterm>
          </xsd:appinfo>
@@ -8080,12 +8092,14 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
             <dtyp:displayterm value="2013">2013</dtyp:displayterm>
             <dtyp:displayterm value="2016">2016</dtyp:displayterm>
             <dtyp:displayterm value="2019">2019</dtyp:displayterm>
+            <dtyp:displayterm value="2022">2022</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationYear">
          <xsd:enumeration value="2013"/>
          <xsd:enumeration value="2016"/>
          <xsd:enumeration value="2019"/>
+         <xsd:enumeration value="2022"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="TDV_Electricity">
