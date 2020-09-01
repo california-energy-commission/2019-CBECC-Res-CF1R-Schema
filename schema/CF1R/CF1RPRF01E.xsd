@@ -5710,7 +5710,7 @@
                   </xsd:element>
                   <xsd:element name="TableLoopTank" minOccurs="0">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText"></xsd:documentation>
+                        <xsd:documentation source="FieldText">CHPWH - LOOP TANK</xsd:documentation>
                         <xsd:appinfo source="CBECCresXML">
                            <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                         </xsd:appinfo>
@@ -6713,8 +6713,10 @@
                                              <xsd:enumeration value="DuctlessMultiSplitHP"/>
                                              <xsd:enumeration value="DuctlessVRF_HP"/>
                                              <xsd:enumeration value="GroundSourceHeatPump"/>
+                                             <xsd:enumeration value="PTHP"/>
                                              <xsd:enumeration value="RoomHP"/>
                                              <xsd:enumeration value="SmallDuctHighVelocityHP"/>
+                                             <xsd:enumeration value="SPVHP"/>
                                              <xsd:enumeration value="VCHP"/>
                                              <xsd:enumeration value="VCHP_IndoorUnitDucted"/>
                                              <xsd:enumeration value="VCHP_IndoorUnitDuctedAndDuctless"/>
@@ -6730,20 +6732,30 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Y04a_EfficiencyType" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Heating Efficiency Type</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                       <xsd:simpleType>
-                                          <xsd:restriction base="hvac:EfficiencyType">
-                                             <xsd:enumeration value="COP"/>
-                                             <xsd:enumeration value="HSPF"/>
-                                          </xsd:restriction>
-                                       </xsd:simpleType>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Y04a_EfficiencyType" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Heating Efficiency Type</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                          <xsd:simpleType>
+                                             <xsd:restriction base="hvac:EfficiencyType">
+                                                <xsd:enumeration value="COP"/>
+                                                <xsd:enumeration value="HSPF"/>
+                                             </xsd:restriction>
+                                          </xsd:simpleType>
+                                       </xsd:element>
+                                       <xsd:element name="Y04a_NotApplicableMessage" type="comp:NotApplicableMessage" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Heating Efficiency Type</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:choice maxOccurs="1">
                                        <xsd:element name="Y04_EfficiencyCOP" type="hvac:EfficiencyCOP" >
                                           <xsd:annotation>
