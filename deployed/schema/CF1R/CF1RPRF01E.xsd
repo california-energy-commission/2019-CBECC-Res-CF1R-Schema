@@ -6667,22 +6667,42 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Y06_HeatPumpHeatCapacity17F" type="comp:HeatPumpHeatCapacity17F" minOccurs="0">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Cap 17</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Y06a_EfficiencyCOP" type="hvac:EfficiencyCOP" minOccurs="0">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Efficiency COP at  17F</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Y06_HeatPumpHeatCapacity17F" type="comp:HeatPumpHeatCapacity17F" minOccurs="0">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Cap 17</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Y06_NotApplicableMessage" type="comp:NotApplicableMessage" minOccurs="0">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Cap 17</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Y06a_EfficiencyCOP" type="hvac:EfficiencyCOP" minOccurs="0">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Efficiency COP at  17F</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Y06a_NotApplicableMessage" type="comp:NotApplicableMessage" minOccurs="0">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Efficiency COP at  17F</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:choice maxOccurs="1">
                                        <xsd:element name="Y07_EfficiencySEER" type="hvac:EfficiencySEER">
                                           <xsd:annotation>
