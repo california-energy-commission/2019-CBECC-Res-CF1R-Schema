@@ -3684,7 +3684,9 @@
       <xsd:annotation>
          <xsd:documentation>Units: W</xsd:documentation>
       </xsd:annotation>
-      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+         <xsd:fractionDigits value="0"/>
+      </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="RecoveryEfficiency">
       <xsd:annotation>

@@ -5999,7 +5999,7 @@
                                     </xsd:element>
                                     <xsd:element name="Trlp03_PipeInsulationThickness" type="hvac:PipeInsulationThickness" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Loop Insulation Thickness</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Loop Insulation Thickness (in)</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -6015,7 +6015,7 @@
                                     </xsd:element>
                                     <xsd:element name="Trlp05_RecirculationPumpPower" type="hvac:RecirculationPumpPower" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Recirculation Pump Power</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Recirculation Pump Power (W)</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
