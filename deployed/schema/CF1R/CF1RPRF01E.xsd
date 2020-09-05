@@ -5601,14 +5601,24 @@
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
-                                    <xsd:element name="Tchp07_TankLocationString" type="hvac:TankLocationString">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Tank Location</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Tchp07_TankLocationString" type="hvac:TankLocationString">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Tank Location</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tchp07_NotApplicableMessage" type="comp:NotApplicableMessage">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Tank Location</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:element name="Tchp07a_TankLocation" type="hvac:TankLocation">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
@@ -5617,22 +5627,42 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Tchp08_AirSourceString" type="hvac:AirSourceString">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Air Source</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="Tchp08a_AirSource" type="hvac:AirSource">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Tchp08_AirSourceString" type="hvac:AirSourceString">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Air Source</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tchp08_NotApplicableMessage" type="comp:NotApplicableMessage">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Air Source</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Tchp08a_AirSource" type="hvac:AirSource">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tchp08a_NotApplicableMessage" type="comp:NotApplicableMessage">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
                                  </xsd:sequence>
                               </xsd:complexType>
                            </xsd:element>
@@ -5739,14 +5769,24 @@
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
-                                    <xsd:element name="Tchplt06_TankLocationString" type="hvac:TankLocationString">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Tank Location</xsd:documentation>
-                                          <xsd:appinfo source="CBECCresXML">
-                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
-                                          </xsd:appinfo>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Tchplt06_TankLocationString" type="hvac:TankLocationString">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Tank Location</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tchplt06_NotApplicableMessage" type="comp:NotApplicableMessage">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Tank Location</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:element name="Tchplt06a_TankLocation" type="hvac:TankLocation">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
