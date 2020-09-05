@@ -5497,14 +5497,48 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Tchp02_HeatPumpWaterHeaterBrand" type="hvac:HeatPumpWaterHeaterBrand">
+                                    <xsd:element name="Tchp02_HeatPumpWaterHeaterBrandModel" type="hvac:HeatPumpWaterHeaterBrandModel">
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">HPWH Compressor Type</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Brand/Model</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
+                                    <xsd:element name="Tchp02a_HeatPumpWaterHeaterBrand" type="hvac:HeatPumpWaterHeaterBrand">
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Tchp02b_HeatPumpWaterHeaterModel" type="hvac:HeatPumpWaterHeaterModel">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tchp02b_HeatPumpWaterHeatersTier3NEEA" type="hvac:HeatPumpWaterHeatersTier3NEEA">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tchp02b_HeatPumpWaterHeaterModelOther" type="hvac:HeatPumpWaterHeaterModelOther">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:element name="Tchp03_CompressorCountCHPWH" type="hvac:CompressorCountCHPWH">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Number of Compressors</xsd:documentation>
@@ -5567,7 +5601,7 @@
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
-                                    <xsd:element name="Tchp07_TankLocation" type="hvac:TankLocation">
+                                    <xsd:element name="Tchp07_TankLocationString" type="hvac:TankLocationString">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Tank Location</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -5575,9 +5609,25 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="Tchp08_WaterHeaterAirSource" type="hvac:WaterHeaterAirSource">
+                                    <xsd:element name="Tchp07a_TankLocation" type="hvac:TankLocation">
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Tchp08_AirSourceString" type="hvac:AirSourceString">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Air Source</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="Tchp08a_AirSource" type="hvac:AirSource">
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
                                              <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                           </xsd:appinfo>
@@ -5689,7 +5739,7 @@
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
-                                    <xsd:element name="Tchplt06_TankLocation" type="hvac:TankLocation">
+                                    <xsd:element name="Tchplt06_TankLocationString" type="hvac:TankLocationString">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Tank Location</xsd:documentation>
                                           <xsd:appinfo source="CBECCresXML">
@@ -5697,8 +5747,16 @@
                                           </xsd:appinfo>
                                        </xsd:annotation>
                                     </xsd:element>
+                                    <xsd:element name="Tchplt06a_TankLocation" type="hvac:TankLocation">
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                                          <xsd:appinfo source="CBECCresXML">
+                                             <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                          </xsd:appinfo>
+                                       </xsd:annotation>
+                                    </xsd:element>
                                     <xsd:choice maxOccurs="1">
-                                       <xsd:element name="Tchplt07_WaterHeaterAirSource" type="hvac:WaterHeaterAirSource">
+                                       <xsd:element name="Tchplt07_AirSourceString" type="hvac:AirSourceString">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Air Source</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
@@ -5709,6 +5767,24 @@
                                        <xsd:element name="Tchplt07_NotApplicableMessage" type="comp:NotApplicableMessage">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Air Source</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Tchplt07a_AirSource" type="hvac:AirSource">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
+                                             <xsd:appinfo source="CBECCresXML">
+                                                <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
+                                             </xsd:appinfo>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Tchplt07a_NotApplicableMessage" type="comp:NotApplicableMessage">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">NOT REPORTED IN PDF</xsd:documentation>
                                              <xsd:appinfo source="CBECCresXML">
                                                 <dtyp:CBECCresXMLterm>:</dtyp:CBECCresXMLterm>
                                              </xsd:appinfo>
