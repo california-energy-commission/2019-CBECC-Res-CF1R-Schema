@@ -1636,6 +1636,16 @@
       <xsd:restriction base="dtyp:DecimalNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="EfficiencyEER2">
+      <xsd:annotation>
+         <xsd:documentation>  Units: Btu per W h</xsd:documentation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Efficiency EER2</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="EfficiencyExistingValueAFUE">
       <xsd:annotation>
          <xsd:documentation>  Units: none</xsd:documentation>
@@ -1681,6 +1691,25 @@
          <xsd:documentation>  Units: Btu per W h</xsd:documentation>
          <xsd:appinfo source="displaytermType">
             <dtyp:displayterm>Efficiency HSPF</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="EfficiencyHSPF2">
+      <xsd:annotation>
+         <xsd:documentation>  Units: Btu per W h</xsd:documentation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Efficiency HSPF2</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="EfficiencyIEER">
+      <xsd:annotation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Efficiency IEER</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:DecimalNonnegative">
@@ -1817,6 +1846,16 @@
       <xsd:restriction base="dtyp:DecimalNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="EfficiencySEER2">
+      <xsd:annotation>
+         <xsd:documentation>  Units: Btu per W h</xsd:documentation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Efficiency SEER2</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="EfficiencyType">
       <xsd:annotation>
          <xsd:appinfo source="displaytermType">
@@ -1827,13 +1866,18 @@
             <dtyp:displayterm value="CEER">CEER</dtyp:displayterm>
             <dtyp:displayterm value="COP">COP</dtyp:displayterm>
             <dtyp:displayterm value="EER">EER</dtyp:displayterm>
+            <dtyp:displayterm value="EER2">EER2</dtyp:displayterm>
+            <dtyp:displayterm value="EER2SEER2">EER2/SEER2</dtyp:displayterm>
+            <dtyp:displayterm value="EERSEER">EER/SEER</dtyp:displayterm>
             <dtyp:displayterm value="EnergyFactor">EF</dtyp:displayterm>
             <dtyp:displayterm value="HP">HP</dtyp:displayterm>
             <dtyp:displayterm value="HSPF">HSPF</dtyp:displayterm>
+            <dtyp:displayterm value="HSPF2">HSPF2</dtyp:displayterm>
             <dtyp:displayterm value="IEER">IEER</dtyp:displayterm>
             <dtyp:displayterm value="NEEA">NEEA Rated</dtyp:displayterm>
             <dtyp:displayterm value="SCOP">SCOP</dtyp:displayterm>
             <dtyp:displayterm value="SEER">SEER</dtyp:displayterm>
+            <dtyp:displayterm value="SEER2">SEER2</dtyp:displayterm>
             <dtyp:displayterm value="ThermalEfficiency">TE</dtyp:displayterm>
             <dtyp:displayterm value="UniformEnergyFactor">UEF</dtyp:displayterm>
          </xsd:appinfo>
@@ -1843,13 +1887,18 @@
          <xsd:enumeration value="CEER"/>
          <xsd:enumeration value="COP"/>
          <xsd:enumeration value="EER"/>
+         <xsd:enumeration value="EER2"/>
+         <xsd:enumeration value="EER2SEER2"/>
+         <xsd:enumeration value="EERSEER"/>
          <xsd:enumeration value="EnergyFactor"/>
          <xsd:enumeration value="HP"/>
          <xsd:enumeration value="HSPF"/>
+         <xsd:enumeration value="HSPF2"/>
          <xsd:enumeration value="IEER"/>
          <xsd:enumeration value="NEEA"/>
          <xsd:enumeration value="SCOP"/>
          <xsd:enumeration value="SEER"/>
+         <xsd:enumeration value="SEER2"/>
          <xsd:enumeration value="ThermalEfficiency"/>
          <xsd:enumeration value="UniformEnergyFactor"/>
       </xsd:restriction>
