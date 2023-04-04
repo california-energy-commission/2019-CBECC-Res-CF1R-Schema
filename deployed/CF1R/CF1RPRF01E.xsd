@@ -1369,7 +1369,7 @@
                   <xsd:element name="Ea_beginNote1" minOccurs="0">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Begin Note 1</xsd:documentation>
-                        <xsd:documentation source="AdditionalRequirements">The following is a summary of the  features that must be field-verified by a certified HERS Rater as a condition for meeting the modeled energy performance for this computer analysis.  Additional detail is provided in the buildng tables below.  Registered CF2Rs and CF3Rs are required to be completed in the HERS Registry</xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements">The following is a summary of the  features that must be field-verified by a certified HERS Rater as a condition for meeting the modeled energy performance for this computer analysis.  Additional detail is provided in the building tables below.  Registered CF2Rs and CF3Rs are required to be completed in the HERS Registry</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="EaBuildingLabel" minOccurs="0">
