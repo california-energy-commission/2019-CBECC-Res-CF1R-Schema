@@ -2545,6 +2545,10 @@
             <dtyp:displayterm value="RheemPROH50T2RH310BM">PROH50 T2 RH310BM (50 gal)</dtyp:displayterm>
             <dtyp:displayterm value="RheemPROH65T2RH310BM">PROH65 T2 RH310BM (65 gal)</dtyp:displayterm>
             <dtyp:displayterm value="RheemPROH80T2RH310BM">PROH80 T2 RH310BM (80 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="RheemPROH40T2RH310UM">Rheem PRO H40 T2 RH310UM (40 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="RheemPROH50T2RH310UM">Rheem PRO H50 T2 RH310UM (50 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="RheemPROH65T2RH310UM">Rheem PRO H65 T2 RH310UM (65 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="RheemPROH80T2RH310UM">Rheem PRO H80 T2 RH310UM (80 gal)</dtyp:displayterm>
             <dtyp:displayterm value="RheemPROPH40T0RH120">PROPH40 T0 RH120 (40 gal)</dtyp:displayterm>
             <dtyp:displayterm value="RheemPROPH40T0RH120M">PROPH40 T0 RH120-M (40 gal, JA13)</dtyp:displayterm>
             <dtyp:displayterm value="RheemPROPH40T0RH120MSO">PROPH40 T0 RH120-MSO (40 gal, JA13)</dtyp:displayterm>
@@ -2855,6 +2859,10 @@
          <xsd:enumeration value="RheemPROH50T2RH310BM"/>
          <xsd:enumeration value="RheemPROH65T2RH310BM"/>
          <xsd:enumeration value="RheemPROH80T2RH310BM"/>
+         <xsd:enumeration value="RheemPROH40T2RH310UM"/>
+         <xsd:enumeration value="RheemPROH50T2RH310UM"/>
+         <xsd:enumeration value="RheemPROH65T2RH310UM"/>
+         <xsd:enumeration value="RheemPROH80T2RH310UM"/>
          <xsd:enumeration value="RheemPROPH40T0RH120"/>
          <xsd:enumeration value="RheemPROPH40T0RH120M"/>
          <xsd:enumeration value="RheemPROPH40T0RH120MSO"/>
@@ -5029,11 +5037,13 @@
          </xsd:appinfo>
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="RheemPROH40T2RH310BM">PROH40 T2 RH310BM  (40 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="RheemPROH40T2RH310UM">Rheem PRO H40 T2 RH310UM (40 gal)</dtyp:displayterm>
             <dtyp:displayterm value="RuudPROH40T2RU310BM">PROH40 T2 RU310BM  (40 gal)</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="RheemPROH40T2RH310BM"/>
+         <xsd:enumeration value="RheemPROH40T2RH310UM"/>
          <xsd:enumeration value="RuudPROH40T2RU310BM"/>
       </xsd:restriction>
    </xsd:simpleType>
@@ -5045,11 +5055,13 @@
          </xsd:appinfo>
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="RheemPROH50T2RH310BM">PROH50 T2 RH310BM  (50 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="RheemPROH50T2RH310UM">Rheem PRO H50 T2 RH310UM (50 gal)</dtyp:displayterm>
             <dtyp:displayterm value="RuudPROH50T2RU310BM">PROH50 T2 RU310BM  (50 gal)</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="RheemPROH50T2RH310BM"/>
+         <xsd:enumeration value="RheemPROH50T2RH310UM"/>
          <xsd:enumeration value="RuudPROH50T2RU310BM"/>
       </xsd:restriction>
    </xsd:simpleType>
@@ -5061,11 +5073,13 @@
          </xsd:appinfo>
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="RheemPROH65T2RH310BM">PROH65 T2 RH310BM  (65 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="RheemPROH65T2RH310UM">Rheem PRO H65 T2 RH310UM (65 gal)</dtyp:displayterm>
             <dtyp:displayterm value="RuudPROH65T2RU310BM">PROH65 T2 RU310BM  (65 gal)</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="RheemPROH65T2RH310BM"/>
+         <xsd:enumeration value="RheemPROH65T2RH310UM"/>
          <xsd:enumeration value="RuudPROH65T2RU310BM"/>
       </xsd:restriction>
    </xsd:simpleType>
@@ -5077,11 +5091,13 @@
          </xsd:appinfo>
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="RheemPROH80T2RH310BM">PROH80 T2 RH310BM  (80 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="RheemPROH80T2RH310UM">Rheem PRO H80 T2 RH310UM (80 gal)</dtyp:displayterm>
             <dtyp:displayterm value="RuudPROH80T2RU310BM">PROH80 T2 RU310BM  (80 gal)</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="RheemPROH80T2RH310BM"/>
+         <xsd:enumeration value="RheemPROH80T2RH310UM"/>
          <xsd:enumeration value="RuudPROH80T2RU310BM"/>
       </xsd:restriction>
    </xsd:simpleType>
